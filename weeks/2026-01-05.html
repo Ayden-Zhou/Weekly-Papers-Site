@@ -199,9 +199,11 @@ h1 .archive-link:hover {
 }
 .archive-group-title {
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
     margin-bottom: 0.8rem;
 }
 .archive-list {
@@ -217,8 +219,7 @@ h1 .archive-link:hover {
     padding: 1rem 1.4rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 1.2rem;
     line-height: 1.6;
     transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
         border-color 0.2s ease;
@@ -233,9 +234,22 @@ h1 .archive-link:hover {
     color: var(--link);
     text-decoration: none;
     font-size: 1.05rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 7rem;
 }
 .archive-date:hover {
     text-decoration: underline;
+}
+.archive-desc {
+    flex: 1;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .archive-count {
     color: var(--text-muted);
@@ -493,7 +507,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">本文提出了SonicMoE，一种针对混合专家模型（MoE）的加速与显存优化方案。随着MoE模型向高细粒度（Fine-grained）和高稀疏性发展，硬件效率面临挑战。SonicMoE通过设计内存高效的前向/后向算法，最小化后向传播的激活缓存（减少45%显存占用），并利用GPU内核重叠IO与计算。此外，文章提出了“Tile-aware Token Rounding”算法，解决了稀疏MoE中的计算浪费问题。在Hopper GPU上，SonicMoE相比ScatterMoE实现了1.86倍的吞吐量提升，有效支持了大规模细粒度MoE的高效训练。</div>
     </div>
-    <div class="footer">Last updated: 2026-02-23 21:04</div>
+    <div class="footer">Last updated: 2026-02-23 21:36</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

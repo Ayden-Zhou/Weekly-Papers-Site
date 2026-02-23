@@ -199,9 +199,11 @@ h1 .archive-link:hover {
 }
 .archive-group-title {
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
     margin-bottom: 0.8rem;
 }
 .archive-list {
@@ -217,8 +219,7 @@ h1 .archive-link:hover {
     padding: 1rem 1.4rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 1.2rem;
     line-height: 1.6;
     transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
         border-color 0.2s ease;
@@ -233,9 +234,22 @@ h1 .archive-link:hover {
     color: var(--link);
     text-decoration: none;
     font-size: 1.05rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 7rem;
 }
 .archive-date:hover {
     text-decoration: underline;
+}
+.archive-desc {
+    flex: 1;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .archive-count {
     color: var(--text-muted);
@@ -348,67 +362,70 @@ h1 .archive-link:hover {
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1><a href="index.html" class="archive-link">📚 Weekly Papers</a></h1><span class="header-sep">|</span><span class="archive-current">Archive</span></div>
     <div class="archive-group">
-        <div class="archive-group-title">2026-02</div>
+        <div class="archive-group-title">FEBRUARY 2026</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2026-02-02.html">2026-02-02</a><span class="archive-count">23 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-02-23.html">2026-02-23</a><span class="archive-desc">VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training</span><span class="archive-count">3 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-02-16.html">2026-02-16</a><span class="archive-desc">Less is Enough: Synthesizing Diverse Data in Feature Space of LLMs</span><span class="archive-count">2 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-02-09.html">2026-02-09</a><span class="archive-desc">The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies</span><span class="archive-count">13 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-02-02.html">2026-02-02</a><span class="archive-desc">ERNIE 5.0 Technical Report</span><span class="archive-count">23 papers</span></li>
         </ul>
     </div>
     <div class="archive-group">
-        <div class="archive-group-title">2026-01</div>
+        <div class="archive-group-title">JANUARY 2026</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-26.html">2026-01-26</a><span class="archive-count">17 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-19.html">2026-01-19</a><span class="archive-count">10 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-12.html">2026-01-12</a><span class="archive-count">23 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-05.html">2026-01-05</a><span class="archive-count">18 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-26.html">2026-01-26</a><span class="archive-desc">Learning to Discover at Test Time</span><span class="archive-count">17 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-19.html">2026-01-19</a><span class="archive-desc">STEM: Scaling Transformers with Embedding Modules</span><span class="archive-count">10 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-12.html">2026-01-12</a><span class="archive-desc">GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization</span><span class="archive-count">23 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-05.html">2026-01-05</a><span class="archive-desc">Step-DeepResearch Technical Report</span><span class="archive-count">18 papers</span></li>
         </ul>
     </div>
     <div class="archive-group">
-        <div class="archive-group-title">2025-12</div>
+        <div class="archive-group-title">DECEMBER 2025</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-29.html">2025-12-29</a><span class="archive-count">19 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-22.html">2025-12-22</a><span class="archive-count">31 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-15.html">2025-12-15</a><span class="archive-count">16 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-08.html">2025-12-08</a><span class="archive-count">18 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-29.html">2025-12-29</a><span class="archive-desc">Evaluating AI's ability to perform scientific research tasks</span><span class="archive-count">19 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-22.html">2025-12-22</a><span class="archive-desc">Memory in the Age of AI Agents</span><span class="archive-count">31 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-15.html">2025-12-15</a><span class="archive-desc">Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning</span><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-08.html">2025-12-08</a><span class="archive-desc">From Code Foundation Models to Agents and Applications: A Comprehensive Survey and Practical Guide to Code Intelligence</span><span class="archive-count">18 papers</span></li>
         </ul>
     </div>
     <div class="archive-group">
-        <div class="archive-group-title">2025-11</div>
+        <div class="archive-group-title">NOVEMBER 2025</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-30.html">2025-11-30</a><span class="archive-count">16 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-23.html">2025-11-23</a><span class="archive-count">6 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-16.html">2025-11-16</a><span class="archive-count">24 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-09.html">2025-11-09</a><span class="archive-count">21 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-02.html">2025-11-02</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-30.html">2025-11-30</a><span class="archive-desc">General Agentic Memory Via Deep Research</span><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-23.html">2025-11-23</a><span class="archive-desc">DeepSeek-OCR: Contexts Optical Compression</span><span class="archive-count">6 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-16.html">2025-11-16</a><span class="archive-desc">田渊栋采访</span><span class="archive-count">24 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-09.html">2025-11-09</a><span class="archive-desc">Thinking with Video: Video Generation as a Promising Multimodal Reasoning Paradigm</span><span class="archive-count">21 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-02.html">2025-11-02</a><span class="archive-desc">General Agentic Memory Via Deep Research</span><span class="archive-count">16 papers</span></li>
         </ul>
     </div>
     <div class="archive-group">
-        <div class="archive-group-title">2025-10</div>
+        <div class="archive-group-title">OCTOBER 2025</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-26.html">2025-10-26</a><span class="archive-count">22 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-19.html">2025-10-19</a><span class="archive-count">6 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-12.html">2025-10-12</a><span class="archive-count">13 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-05.html">2025-10-05</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-26.html">2025-10-26</a><span class="archive-desc">On-Policy Distillation</span><span class="archive-count">22 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-19.html">2025-10-19</a><span class="archive-desc">DeepSeek-OCR: Contexts Optical Compression</span><span class="archive-count">6 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-12.html">2025-10-12</a><span class="archive-desc">Less is More: Recursive Reasoning with Tiny Networks</span><span class="archive-count">13 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-05.html">2025-10-05</a><span class="archive-desc">Tri Dao采访：未来2-3年AI发展预测</span><span class="archive-count">16 papers</span></li>
         </ul>
     </div>
     <div class="archive-group">
-        <div class="archive-group-title">2025-09</div>
+        <div class="archive-group-title">SEPTEMBER 2025</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-28.html">2025-09-28</a><span class="archive-count">9 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-21.html">2025-09-21</a><span class="archive-count">13 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-14.html">2025-09-14</a><span class="archive-count">16 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-07.html">2025-09-07</a><span class="archive-count">20 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-28.html">2025-09-28</a><span class="archive-desc">SIM-CoT: Supervised Implicit Chain-of-Thought</span><span class="archive-count">9 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-21.html">2025-09-21</a><span class="archive-desc">【具身智能】Physical Intelligence的联合创始人：通用机器人即将颠覆世界_哔哩哔哩_bilibili</span><span class="archive-count">13 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-14.html">2025-09-14</a><span class="archive-desc">姚顺雨访谈</span><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-07.html">2025-09-07</a><span class="archive-desc">Why Language Models Hallucinate</span><span class="archive-count">20 papers</span></li>
         </ul>
     </div>
     <div class="archive-group">
-        <div class="archive-group-title">2025-08</div>
+        <div class="archive-group-title">AUGUST 2025</div>
         <ul class="archive-list">
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-31.html">2025-08-31</a><span class="archive-count">13 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-24.html">2025-08-24</a><span class="archive-count">7 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-17.html">2025-08-17</a><span class="archive-count">9 papers</span></li>
-            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-10.html">2025-08-10</a><span class="archive-count">14 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-31.html">2025-08-31</a><span class="archive-desc">Deep Think with Confidence</span><span class="archive-count">13 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-24.html">2025-08-24</a><span class="archive-desc">Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning</span><span class="archive-count">7 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-17.html">2025-08-17</a><span class="archive-desc">Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens</span><span class="archive-count">9 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-10.html">2025-08-10</a><span class="archive-desc">Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens</span><span class="archive-count">14 papers</span></li>
         </ul>
     </div>
-    <div class="footer">Last updated: 2026-02-23 21:04</div>
+    <div class="footer">Last updated: 2026-02-23 21:36</div>
     <script>
 function toggleTheme() {
     var cur = document.documentElement.getAttribute('data-theme');

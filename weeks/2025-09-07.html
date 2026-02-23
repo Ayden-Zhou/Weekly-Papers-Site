@@ -199,9 +199,11 @@ h1 .archive-link:hover {
 }
 .archive-group-title {
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
     margin-bottom: 0.8rem;
 }
 .archive-list {
@@ -217,8 +219,7 @@ h1 .archive-link:hover {
     padding: 1rem 1.4rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 1.2rem;
     line-height: 1.6;
     transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
         border-color 0.2s ease;
@@ -233,9 +234,22 @@ h1 .archive-link:hover {
     color: var(--link);
     text-decoration: none;
     font-size: 1.05rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 7rem;
 }
 .archive-date:hover {
     text-decoration: underline;
+}
+.archive-desc {
+    flex: 1;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .archive-count {
     color: var(--text-muted);
@@ -509,7 +523,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">**TLDR：** 提出通用深度调研系统 UDR，可包裹任意大模型，让用户无须微调即可自定义调研策略，并提供最小/扩展/密集三类示例策略与交互界面，支持灵活试验与组合工具链的研究流程。</div>
     </div>
-    <div class="footer">Last updated: 2026-02-23 21:04</div>
+    <div class="footer">Last updated: 2026-02-23 21:36</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
