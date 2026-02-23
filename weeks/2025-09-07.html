@@ -25,7 +25,7 @@
     --header-border: #ffffff;
 }
 [data-theme="light"] {
-    --bg: #f8f9fa;
+    --bg: #ffffff;
     --panel: #ffffff;
     --border: #dde1ea;
     --text: #1a1c23;
@@ -84,6 +84,9 @@ h1 {
     color: var(--text-muted);
     letter-spacing: 0.2px;
     font-weight: 600;
+}
+.header-row .archive-current {
+    color: var(--accent);
 }
 .header-row .header-sep {
     margin: 0 0.1rem;
@@ -210,25 +213,23 @@ h1 .archive-link:hover {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
 }
 .archive-item {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 12px;
-    padding: 1rem 1.4rem;
     display: flex;
     align-items: center;
     gap: 1.2rem;
-    line-height: 1.6;
-    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
-        border-color 0.2s ease;
+    padding: 0.72rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease;
+}
+.archive-item:first-child {
+    border-top: 1px solid var(--border);
 }
 .archive-item:hover {
-    background: var(--card-bg-hover);
-    border-color: var(--card-border-hover);
-    box-shadow: var(--card-shadow-hover);
-    transform: translateY(-1px);
+    background: rgba(107, 166, 255, 0.04);
+}
+[data-theme="light"] .archive-item:hover {
+    background: rgba(29, 97, 227, 0.04);
 }
 .archive-date {
     color: var(--link);
@@ -246,6 +247,7 @@ h1 .archive-link:hover {
     color: var(--text-muted);
     font-size: 0.92rem;
     line-height: 1.5;
+    height: calc(1.5em * 2);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -523,7 +525,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">**TLDR：** 提出通用深度调研系统 UDR，可包裹任意大模型，让用户无须微调即可自定义调研策略，并提供最小/扩展/密集三类示例策略与交互界面，支持灵活试验与组合工具链的研究流程。</div>
     </div>
-    <div class="footer">Last updated: 2026-02-23 21:36</div>
+    <div class="footer">Last updated: 2026-02-23 21:47</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
