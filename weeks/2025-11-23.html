@@ -258,8 +258,13 @@ h1 .archive-link:hover {
     font-size: 0.78rem;
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.04);
+    border: none;
+    background: rgba(255, 255, 255, 0.10);
+    min-width: 5.5rem;
+    text-align: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
 }
 .archive-link {
     margin-top: 2.5rem;
@@ -324,28 +329,21 @@ h1 .archive-link:hover {
     z-index: 999;
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.28rem 0.72rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.06);
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
     color: var(--text-muted);
-    font-size: 0.8rem;
-    font-family: inherit;
     cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    transition: color 0.2s ease;
+}
+.theme-toggle svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    flex-shrink: 0;
 }
 .theme-toggle:hover {
-    border-color: var(--card-border-hover);
-    background: rgba(107, 166, 255, 0.12);
     color: var(--link);
-}
-[data-theme="light"] .theme-toggle {
-    border-color: rgba(0, 0, 0, 0.12);
-    background: rgba(0, 0, 0, 0.04);
-}
-[data-theme="light"] .theme-toggle:hover {
-    background: rgba(29, 97, 227, 0.08);
 }
 [data-theme="light"] .action-btn {
     border-color: rgba(0, 0, 0, 0.10);
@@ -355,8 +353,7 @@ h1 .archive-link:hover {
     background: rgba(29, 97, 227, 0.08);
 }
 [data-theme="light"] .archive-count {
-    border-color: rgba(0, 0, 0, 0.10);
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.07);
 }
 </style>
 </head>
@@ -413,7 +410,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出通用研究情报管线RDR：系统抓取与解析海量论文，识别新兴趋势与跨域机会，并提供可执行的起点；在AI与机器人领域做端到端示范，主文阐述框架，附录给出大规模主题化结果与可复现资源。</div>
     </div>
-    <div class="footer">Last updated: 2026-02-23 21:47</div>
+    <div class="footer">Last updated: 2026-02-23 21:59</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
@@ -438,19 +435,22 @@ async function copyLinks(btn) {
 }
 </script>
     <script>
+var _ICON_MOON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+var _ICON_SUN = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+function _themeIcon(t) { return t === 'light' ? _ICON_MOON : _ICON_SUN; }
 function toggleTheme() {
     var cur = document.documentElement.getAttribute('data-theme');
     var next = cur === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
     var btn = document.getElementById('theme-toggle-btn');
-    if (btn) btn.textContent = next === 'light' ? '🌙 Dark' : '☀️ Light';
+    if (btn) btn.innerHTML = _themeIcon(next);
 }
 (function(){
     var btn = document.getElementById('theme-toggle-btn');
     if (!btn) return;
     var t = document.documentElement.getAttribute('data-theme');
-    btn.textContent = t === 'light' ? '🌙 Dark' : '☀️ Light';
+    btn.innerHTML = _themeIcon(t);
 })();
 </script>
 </body>
