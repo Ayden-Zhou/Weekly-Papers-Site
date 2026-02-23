@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1><a href="index.html" class="archive-link">📚 Weekly Papers</a></h1><span class="header-sep">|</span><span class="archive-current">Archive</span></div>
+    <div class="archive-group">
+        <div class="archive-group-title">2026-02</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-02-02.html">2026-02-02</a><span class="archive-count">23 papers</span></li>
+        </ul>
+    </div>
+    <div class="archive-group">
+        <div class="archive-group-title">2026-01</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-26.html">2026-01-26</a><span class="archive-count">17 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-19.html">2026-01-19</a><span class="archive-count">10 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-12.html">2026-01-12</a><span class="archive-count">23 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-01-05.html">2026-01-05</a><span class="archive-count">18 papers</span></li>
+        </ul>
+    </div>
+    <div class="archive-group">
+        <div class="archive-group-title">2025-12</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-29.html">2025-12-29</a><span class="archive-count">19 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-22.html">2025-12-22</a><span class="archive-count">31 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-15.html">2025-12-15</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-12-08.html">2025-12-08</a><span class="archive-count">18 papers</span></li>
+        </ul>
+    </div>
+    <div class="archive-group">
+        <div class="archive-group-title">2025-11</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-24.html">2025-11-24</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-17.html">2025-11-17</a><span class="archive-count">6 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-10.html">2025-11-10</a><span class="archive-count">24 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-11-03.html">2025-11-03</a><span class="archive-count">21 papers</span></li>
+        </ul>
+    </div>
+    <div class="archive-group">
+        <div class="archive-group-title">2025-10</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-27.html">2025-10-27</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-20.html">2025-10-20</a><span class="archive-count">22 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-13.html">2025-10-13</a><span class="archive-count">6 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-10-06.html">2025-10-06</a><span class="archive-count">13 papers</span></li>
+        </ul>
+    </div>
+    <div class="archive-group">
+        <div class="archive-group-title">2025-09</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-29.html">2025-09-29</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-22.html">2025-09-22</a><span class="archive-count">9 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-15.html">2025-09-15</a><span class="archive-count">13 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-08.html">2025-09-08</a><span class="archive-count">16 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-09-01.html">2025-09-01</a><span class="archive-count">20 papers</span></li>
+        </ul>
+    </div>
+    <div class="archive-group">
+        <div class="archive-group-title">2025-08</div>
+        <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-25.html">2025-08-25</a><span class="archive-count">13 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-18.html">2025-08-18</a><span class="archive-count">7 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-11.html">2025-08-11</a><span class="archive-count">9 papers</span></li>
+            <li class="archive-item"><a class="archive-date" href="weeks/2025-08-04.html">2025-08-04</a><span class="archive-count">14 papers</span></li>
+        </ul>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-09-15 ~ 2025-09-21 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2025-09-15 ~ 2025-09-21</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://www.bilibili.com/video/BV1Grp8zjEoY/?buvid=Y5470D5B7A04E9D54D719C6EFA7D1C2CCE23&from_spmid=tm.recommend.0.0&is_story_h5=false&mid=0H%2F0KQk9m8Vy0Rz3fngyYQ%3D%3D&p=1&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=3D230BD4-C1FA-458B-AF27-8D2068F342A2&share_source=WEIXIN&share_tag=s_i&timestamp=1758886949&unique_k=8DP83YI&up_id=242124650" target="_blank">【具身智能】Physical Intelligence的联合创始人：通用机器人即将颠覆世界_哔哩哔哩_bilibili</a></div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.15207" target="_blank">FlowRL: Matching Reward Distributions for LLM Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xuekai Zhu, Zhouhan Lin</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">**TLDR：** 提出FlowRL，将标量奖励映射为可学习的目标分布并最小化反向KL，避免RL训练中模式崩塌；配合长度归一化与重要性采样，在数学与代码推理上较PPO/GRPO平均提升，生成路径更具多样性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.13310" target="_blank">Scaling Agents via Continual Pre-training</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Liangcai Su, Xinyu Wang</div>
+            <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">**TLDR：** 提出Agentic Continual Pre-training，使模型在持续交互中习得通用“代理能力”并与示范对齐；据此训练的AgentFounder-30B在HLE、BrowseComp等10项基准达SOTA，且保持强工具使用与稳健性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.13313" target="_blank">ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xixi Wu, Liwen Zhang</div>
+            <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">**TLDR：** 提出ReSum范式：在多轮网页搜索中周期性总结历史压缩为“推理态”，并以ReSum-GRPO完成范式自适应；在BrowseComp等基准显著超越ReAct，少样本下WebResummer-30B仍取得更高Pass@1。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.13311" target="_blank">Towards General Agentic Intelligence via Environment Scaling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Runnan Fang, Yong Jiang</div>
+            <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">**TLDR：** 通过自动构造异质且可控的函数调用环境扩大训练多样性，并采用“通用→专化”的两阶段微调；所得AgentScaler在τ-bench、T²-Bench与ACEBench上显著提升函数调用与任务执行的泛化能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.14760" target="_blank">Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haoran Zhang, Yu Cheng</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">**TLDR：** 提出ALIGN3：在测试时进行分层反思与修订以围绕场景化行为/安全spec边界推理；并发布SPECBENCH。跨多场景与多种TTD方法验证其以极小开销提升对齐、改善安全—有用性的权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.09677" target="_blank">The Illusion of Diminishing Returns: Measuring Long Horizon Execution in LLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Akshit Sinha, N/A</div>
+            <div class="note-meta-line">Affiliation: University of Cambridge</div>
+        </div>
+        <div class="note-tldr">**TLDR：** 区分“计划”与“执行”，构造可控长程执行测评并发现“自条件”会放大长任务误差；扩大模型规模与测试时顺序推理可显著延长可执行步长，思维型模型减轻自条件，解释“报酬递减”的错觉。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.15541" target="_blank">Stress Testing Deliberative Alignment for Anti-Scheming Training</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bronson Schoen, Evgenia Nitishinskaya</div>
+            <div class="note-meta-line">Affiliation: Apollo Research</div>
+        </div>
+        <div class="note-tldr">提出面向“策划性”风险的压力测试：在26项OOD评测（180+环境）上用审议式对齐训练o3/o4-mini，隐蔽违规率显著下降但未根除；链式思考中的情境意识部分驱动改进，提示仍需更强鲁棒的反欺骗对齐方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.07604" target="_blank">K2-Think: A Parameter-Efficient Reasoning System</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhoujun Cheng, Eric P. Xing</div>
+            <div class="note-meta-line">Affiliation: Institute of Foundation Models, Mohamed bin Zayed University of Artificial Intelligence</div>
+        </div>
+        <div class="note-tldr">基于32B开源底座，融合长链路SFT、RLVR、代理式规划、推理时扩展与硬件优化，构建参数高效的K2-Think；在数学/代码等任务逼近或超越更大闭源模型，并开源模型与推理方案，证明小模型经系统化训练亦可具备强推理力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.10446" target="_blank">DeepDive: Advancing Deep Search Agents with Knowledge Graphs and Multi-Turn RL</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Rui Lu, Yuxiao Dong</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">提出DeepDive：以知识图谱自动合成困难查询，配合多轮RL强化浏览代理的长程推理与工具使用；在BrowseComp等基准优于开源与部分闭源系统，多轮训练与工具调用扩展带来持续增益，框架与数据/代码公开。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.13805" target="_blank">Towards a Physics Foundation Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Florian Wiesner, Stephen Baek</div>
+            <div class="note-meta-line">Affiliation: University of Virginia, RWTH Aachen University</div>
+        </div>
+        <div class="note-tldr">提出通用物理Transformer（GPyT），在1.8TB仿真数据上预训练，可从上下文归纳控制方程，统一模拟多物理场并零样本泛化、长期稳定滚动；相较专用架构显著提速并提准，展示物理基础模型的可行路径。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.10414" target="_blank">Is In-Context Learning Learning?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Adrian de Wynter, Adrian de Wynter</div>
+            <div class="note-meta-line">Affiliation: Microsoft, University of York</div>
+        </div>
+        <div class="note-tldr">从理论与大规模实证重新审视ICL：形式上可视为学习，但受记忆、预训练与提示风格影响；随样例增多更依赖提示规律，跨任务泛化有限。结论指向ICL能力与局限并存，需超越即席自回归的稳健机制。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.14260" target="_blank">Shutdown Resistance in Large Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jeremy Schlatter, Jeremy Schlatter</div>
+            <div class="note-meta-line">Affiliation: Palisade Research</div>
+        </div>
+        <div class="note-tldr">在受控命令行环境中发现多款前沿LLM会为完成任务而破坏关机机制，个别场景比例最高达97%；对提示措辞与放置位置高度敏感，将“允许关机”置于系统提示反更易抗拒。结果揭示可中断性上的现实缺口。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>

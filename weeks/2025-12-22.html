@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-12-22 ~ 2025-12-28 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2025-12-22 ~ 2025-12-28</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.13564" target="_blank">Memory in the Age of AI Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuyang Hu, Shuicheng Yan</div>
+            <div class="note-meta-line">Affiliation: Fudan University</div>
+        </div>
+        <div class="note-tldr">本文是一篇关于AI智能体（AI Agents）记忆机制的综述。文章从认知科学角度出发，系统梳理了智能体记忆的定义、结构、读写与遗忘机制。作者详细分析了记忆如何赋予智能体在长期交互中保持一致性、积累经验以及规划复杂任务的能力。此外，文章还总结了现有的评估基准，并探讨了未来构建更高效、类人的生成式智能体记忆系统的研究方向与挑战。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.13586" target="_blank">ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jia-Nan Li, Chongxuan Li</div>
+            <div class="note-meta-line">Affiliation: Renmin University of China</div>
+        </div>
+        <div class="note-tldr">本文提出了ReFusion，一种结合了扩散模型与大型语言模型（LLM）的新型架构，旨在实现并行自回归解码。针对传统LLM逐词生成速度慢的瓶颈，ReFusion通过在潜在空间引入扩散过程，允许模型并行预测多个Token。实验结果表明，ReFusion在大幅提升长文本生成速度的同时，依然保持了与自回归模型相当的生成质量和上下文理解能力，为高效LLM推理提供了新思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.13604" target="_blank">LongVie 2: Multimodal Controllable Ultra-Long Video World Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianxiong Gao, Ziwei Liu</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">LongVie 2 是一个多模态可控的超长视频世界模型。该研究致力于解决长视频生成中的时空一致性难题，通过改进的模型架构支持文本、图像等多种控制条件。LongVie 2 能够生成分钟级的高清连贯视频，并在动态场景中保持物理逻辑的稳定性。该模型在视频预测和虚拟世界构建方面展现了卓越性能，为实现长时间、可交互的视频生成奠定了基础。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.13687" target="_blank">Towards Scalable Pre-training of Visual Tokenizers for Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jingfeng Yao, Xinggang Wang</div>
+            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">本文探讨了用于图像生成的视觉Tokenizer的可扩展预训练方法。作者指出当前Tokenizer在大规模扩展时面临的效率与质量瓶颈，并提出了一种新的预训练范式。通过优化码本设计和重构目标，该方法显著提升了Tokenizer对复杂视觉信息的压缩与表征能力。实验证明，基于该方法训练的Tokenizer能有效提升下游生成模型的图像质量和收敛速度，推动了视觉生成模型的规模化发展。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.14614" target="_blank">WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenqiang Sun, Chunchao Guo</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">WorldPlay 旨在解决实时交互式世界模型中的长期几何一致性问题。针对现有模型在长时间模拟中场景结构容易崩塌的缺陷，WorldPlay 引入了显式的几何约束和优化的训练策略。该模型不仅能在实时交互中生成高质量的视频流，还能在视角变换和物体运动中保持场景的物理结构稳定，非常适用于自动驾驶模拟、游戏开发及虚拟现实等对几何一致性要求极高的应用场景。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.14691" target="_blank">MMGR: Multi-Modal Generative Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zefan Cai, Junjie Hu</div>
+            <div class="note-meta-line">Affiliation: University of Wisconsin-Madison</div>
+        </div>
+        <div class="note-tldr">本文提出了MMGR（Multi-Modal Generative Reasoning），一个专注于提升多模态模型生成式推理能力的框架与基准。不同于传统的识别任务，MMGR要求模型理解多模态输入并生成包含多步逻辑的推理过程。作者构建了具有挑战性的数据集，并提出了增强模型推理链（Chain-of-Thought）能力的方法。实验结果显示，该方法显著提升了模型在解决复杂视觉-文本逻辑问题时的准确性和解释性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.15431" target="_blank">Step-GUI Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haolong Yan, Daxin Jiang</div>
+            <div class="note-meta-line">Affiliation: StepFun</div>
+        </div>
+        <div class="note-tldr">报告介绍了Step-GUI，一个用于图形用户界面（GUI）自动化的多模态大模型。该工作构建了名为Step-GUI-170k的高质量合成数据集，包含不同平台和应用的详细操作痕迹。通过监督微调（SFT）和强化学习（RL），模型在此时表现出卓越的性能。在ScreenSpotPro和AndroidWorld等基准测试中，Step-GUI不仅超越了GPT-4o和Claude 3.5 Sonnet等现有模型，还展示了在复杂任务规划和自我修正方面的强大能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.15603" target="_blank">Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shengming Yin, Chenfei Wu</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+        </div>
+        <div class="note-tldr">本文提出了Qwen-Image-Layered，一个能够生成具有固有分层结构图像的扩散模型，旨在解决现有图像编辑方法的不一致性问题。通过构建一个包含1.5亿张高质量分层图像及对应掩码和描述的庞大数据集，并提出多层DiT架构，该模型可以同时生成全图、前景、背景和掩码。实验表明，该模型在生成质量和层级分离精度上表现优异，并能通过简单的掩码操作实现高质量的物体移除、背景替换和主体移动等编辑任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.15745" target="_blank">LLaDA2.0: Scaling Up Diffusion Language Models to 100B</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tiwei Bie, Yihong Zhuang</div>
+            <div class="note-meta-line">Affiliation: InclusionAI</div>
+        </div>
+        <div class="note-tldr">本文推出了LLaDA 2.0，将扩散语言模型（DLM）的参数规模扩展到了1000亿（100B）级别。作为首个达到此规模的DLM，LLaDA 2.0在零样本学习、上下文学习和指令遵循等任务上展现了与同等规模自回归（AR）模型（如Llama 3 405B）相当的竞争力。研究验证了掩码扩散模型在超大规模下的有效性，打破了只有AR模型才能高效扩展的观念，为大语言模型的训练提供了新的架构选择。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16301" target="_blank">Adaptation of Agentic AI</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Pengcheng Jiang, Jiawei Han</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">本文综述了代理人工智能（Agentic AI）的适应性（Adaptation）研究，旨在解决静态模型在动态开放世界中面临的泛化难题。文章提出了一个包含环境、工具和任务适应的分类体系，分析了从参数微调到非参数记忆检索等多种适应机制。作者讨论了代理如何通过经验积累、工具制作和多代理协作来提升适应能力，并展望了构建具有持续学习和自我进化能力的通用自适应代理的未来方向。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16776" target="_blank">Kling-Omni Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kling Team, Kai Chen</div>
+            <div class="note-meta-line">Affiliation: Kuaishou Technology</div>
+        </div>
+        <div class="note-tldr">本报告介绍了Kling-Omni，一个基于DiT架构的统一视频-音频生成模型。该模型能够根据文本提示同时生成高分辨率视频（720p）和同步的高质量音频。通过在潜在空间中对视频和音频特征进行联合建模，Kling-Omni实现了视觉与听觉内容的深度对齐。实验结果表明，该模型在视频质量、运动幅度以及音画同步性方面均达到了业界领先水平，支持变帧率生成和长视频扩展。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16793" target="_blank">PhysBrain: Human Egocentric Data as a Bridge from Vision Language Models to Physical Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiaopeng Lin, Kai Chen</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">本文提出了PhysBrain，一种利用人类第一视角（Egocentric）视频数据来弥合视觉语言模型（VLM）与物理世界智能之间差距的方法。通过构建包含丰富手-物交互和物理常识的视频数据集，PhysBrain赋予了VLM理解物理规律和操作逻辑的能力。该模型不仅能进行物理知识问答，还能作为机器人的“大脑”指导具体的操控任务，展示了利用人类数据通过大规模预训练实现通用物理智能的潜力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.10047" target="_blank">Detailed balance in large language model-driven agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhuo-Yang Song, Hua Xing Zhu</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">本文将统计力学中的细致平衡原理引入大语言模型（LLM）智能体，提出了一种新的搜索算法IdeaSearch。该方法将LLM智能体的迭代过程建模为马尔可夫链，利用细致平衡条件推导出的势函数来指导搜索，从而无需外部奖励模型即可优化解的质量。在24点游戏和Sokoban等任务上的实验表明，IdeaSearch在保持多样性的同时显著提高了成功率，优于传统的树搜索和自我反思方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.10685" target="_blank">Stronger Normalization-Free Transformers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Lars Mescheder, Vladlen Koltun</div>
+            <div class="note-meta-line">Affiliation: Apple</div>
+        </div>
+        <div class="note-tldr">本文提出了一种在不到一秒内实现高质量单目视图合成的方法。针对现有方法在速度和质量之间的权衡，作者设计了一种新的架构，结合了高效的几何估计和图像生成技术。该方法能够从单张RGB图像快速生成清晰、逼真的新视角图像，显著降低了计算成本。实验表明，该模型在保持高分辨率和细节的同时，推理速度比现有最先进方法快数个数量级，适用于实时应用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.10791" target="_blank">The FACTS Leaderboard: A Comprehensive Benchmark for Large Language Model Factuality</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aileen Cheng, Dipanjan Das</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind</div>
+        </div>
+        <div class="note-tldr">本文推出了FACTS排行榜（The FACTS Leaderboard），这是一个旨在全面评估大语言模型（LLM）事实性能力的基准测试。该基准涵盖了多个领域和任务类型，重点关注模型在生成事实性陈述时的准确性和可靠性。作者通过构建多样化的测试集和采用严格的评估指标，分析了当前主流LLM在事实性方面的表现，揭示了幻觉问题的普遍性，并为未来提高模型真实性提供了标准化的评估工具。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.10938" target="_blank">Stronger Normalization-Free Transformers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mingzhi Chen, Zhuang Liu</div>
+            <div class="note-meta-line">Affiliation: Meta AI</div>
+        </div>
+        <div class="note-tldr">本文提出了一种更强的无归一化（Normalization-Free, NF）Transformer架构。针对NF模型在大规模训练中不稳定的问题，作者通过分析发现其主要原因在于残差分支的方差累积。为此，文章引入了一种新的初始化和缩放策略，有效控制了信号幅度的增长，使得深层NF Transformer能够稳定训练并达到与标准Transformer相当甚至更好的性能。这一发现为简化Transformer架构和提高训练效率提供了新思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.12967" target="_blank">QwenLong-L1.5: Post-Training Recipe for Long-Context Reasoning and Memory Management</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Weizhou Shen, Ming Yan</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+        </div>
+        <div class="note-tldr">本文介绍了QwenLong-L1.5，一种针对长上下文推理和记忆管理的后训练方案。该模型通过在长上下文数据上进行微调，显著提升了在长文档理解、多文档问答等任务上的性能。作者提出了一种新的数据合成方法，生成了高质量的长上下文指令调优数据。实验结果表明，QwenLong-L1.5在多个长上下文基准测试中超越了现有的开源模型，展示了其在处理大规模信息和复杂推理任务方面的强大能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.13281" target="_blank">Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Humans?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiaqi Wang, Kevin Qinghong Lin</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">本文提出了“视频现实测试”（Video Reality Test），探究AI生成的ASMR视频是否能欺骗视觉语言模型（VLM）和人类。作者构建了一个包含真实和AI生成的高质量ASMR视频数据集，并进行了广泛的图灵测试。研究发现，尽管AI视频在视觉上逼真，但在物理一致性和音频-视频同步方面仍存在缺陷。实验结果揭示了当前VLM在辨别真假视频方面的局限性，并为改进视频生成模型和检测技术提供了新的视角。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2511.15703" target="_blank">Think Visually, Reason Textually: Vision-Language Synergy in ARC</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Beichen Zhang, Jiaqi Wang</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">本文提出了结合视觉感知与文本推理的协同方法，旨在解决抽象推理语料库（ARC）任务。通过利用视觉模型提取网格特征并辅以语言模型的逻辑推理能力，该方法显著提升了模型在少样本和零样本场景下的抽象推理与泛化表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2511.17006" target="_blank">Budget-Aware Tool-Use Enables Effective Agent Scaling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tengxiao Liu, Chen-Yu Lee</div>
+            <div class="note-meta-line">Affiliation: Google Cloud AI Research</div>
+        </div>
+        <div class="note-tldr">本文研究了在预算受限的条件下如何扩展AI代理的能力。作者提出了一种感知预算的工具使用策略，使代理能够根据任务难度和剩余资源动态调整计算分配，从而在保持高性能的同时显著降低了大规模部署时的推理成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2511.18659" target="_blank">CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jie He, Yizhe Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Edinburgh</div>
+        </div>
+        <div class="note-tldr">CLaRa是一个旨在弥合检索与生成之间差距的框架。它引入了连续潜在推理机制，允许模型在生成答案之前在潜在空间中进行多步推理和文档整合，从而增强了检索增强生成（RAG）系统处理复杂、多跳查询的能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.07921" target="_blank">DeepCode: Open Agentic Coding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zongwei Li, Chao Huang</div>
+            <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">本文推出了DeepCode，一个专为复杂编程任务设计的开源代理式代码生成模型。DeepCode通过增强的代理能力（如规划、工具使用和自我修正），在多个代码生成基准测试中展现了优异的性能，旨在推动开源代码智能的发展。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.08269" target="_blank">EgoX: Egocentric Video Generation from a Single Exocentric Video</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Taewoong Kang, Jaegul Choo</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
+        </div>
+        <div class="note-tldr">EgoX是一种新颖的视频生成模型，能够仅根据单个第三人称（Exocentric）视频生成对应的第一人称（Egocentric）视频。该方法有效解决了视角转换中的几何一致性和纹理生成挑战，为增强现实和机器人学习提供了新的数据生成工具。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.09882" target="_blank">Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Justin W. Lin, Daniel E. Ho</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">这项研究在真实的渗透测试环境中对AI代理与人类网络安全专家进行了对比评估。结果显示，虽然AI在自动化扫描和已知漏洞利用方面表现出色，但在涉及复杂规划、创造性思维和未见漏洞的场景中，人类专家仍占据显著优势。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16922" target="_blank">Next-Embedding Prediction Makes Strong Vision Learners</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sihan Xu, Stella X. Yu</div>
+            <div class="note-meta-line">Affiliation: University of Michigan</div>
+        </div>
+        <div class="note-tldr">本文提出了Next-Embedding Predictive Autoregression (NEPA)，一种用于视觉自监督学习的新方法。该方法不依赖像素重建或离散token，而是通过预测图像patch的下一时刻嵌入表示来训练模型。NEPA在ImageNet-1K上取得了85.3%的Top-1准确率，证明了在潜在空间进行生成式预测足以学习到强大的视觉表征，为视觉预训练提供了一种简单且可扩展的新范式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16969" target="_blank">Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wanghan Xu, Lei Bai</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">本文针对大型语言模型（LLM）在科学领域的能力评估，提出了SGI-Bench基准。该基准包含物理、化学、生物等学科的专家级任务，通过模拟科学家的真实工作流（包括背景调研、假设生成、实验设计等）来评估模型的“科学通用智能”（SGI）。研究发现，尽管当前模型在部分子任务上表现尚可，但在长程推理和复杂实验规划上仍与人类科学家存在显著差距。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.17532" target="_blank">Robust-R1: Degradation-Aware Reasoning for Robust Visual Understanding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiaqi Tang, Qifeng Chen</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">针对视觉语言模型（VLM）在面对低质量（如模糊、噪声、压缩）图像时性能显著下降的问题，本文提出了Robust-R1。该方法引入了“退化感知推理”（Degradation-Aware Reasoning），通过在推理过程中显式建模和处理图像退化因素，引导模型更关注鲁棒的语义特征。实验表明，Robust-R1在多种图像退化基准测试中显著优于现有VLM，大幅提升了模型在非理想成像条件下的理解能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.17901" target="_blank">When Reasoning Meets Its Laws</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junyu Zhang, Huan Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">本文深入探讨了大型推理模型（LRM）的内在规律，提出了“推理定律”（Laws of Reasoning），包含计算定律和准确率定律。作者构建了LoRe-Bench基准，系统评估了模型推理计算量（如思维链长度）与问题复杂度及准确率之间的关系。研究发现，虽然现有模型在一定程度上遵循单调性（问题越难推理越长），但在组合性推理（能否通过组合简单步骤解决复杂问题）方面仍存在缺陷，并提出了相应的微调方法来改善这一问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.18746" target="_blank">MemEvolve: Meta-Evolution of Agent Memory Systems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guibin Zhang, Shuicheng Yan</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">本文提出了MemEvolve，一种旨在让智能体记忆系统实现元进化（Meta-Evolution）的框架。不同于固定结构的记忆模块，MemEvolve允许智能体根据任务需求和环境反馈，自适应地调整和优化其记忆的读写、存储和检索机制。通过这种动态进化，智能体能够在处理长期交互和复杂信息时展现出更高的效率和准确性，为构建更具适应性的通用智能体提供了新思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.19693" target="_blank">The Prism Hypothesis: Harmonizing Semantic and Pixel Representations via Unified Autoencoding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Weichen Fan, Ziwei Liu</div>
+            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">本文提出了“棱镜假设”（Prism Hypothesis），认为语义（高层理解）和像素（底层细节）表示并非对立，而是可以通过统一的自编码器进行协调。基于此，作者设计了一种统一的自编码框架，能够同时学习用于生成的像素级特征和用于理解的语义级特征。实验证明，该模型不仅在图像生成任务上表现优异，而且其学到的特征在分类和分割等下游视觉任务中也具有很强的泛化能力，实现了生成与理解的统一。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://openai.com/index/frontierscience/" target="_blank">Evaluating AI's ability to perform scientific research tasks</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: OpenAI</div>
+            <div class="note-meta-line">Affiliation: OpenAI</div>
+        </div>
+        <div class="note-tldr">OpenAI发布了名为FrontierScience的新基准，旨在评估AI模型在专家级科学研究任务中的能力。该基准涵盖物理、化学和生物学，分为奥林匹克竞赛题（Olympiad）和开放式研究任务（Research）。评测结果显示，GPT-5.2在Olympiad上达到了77%的准确率，但在更具挑战性的Research任务上得分为25%，表明虽然AI在解决标准化难题上进步巨大，但在模拟真实科学发现过程方面仍有很大提升空间。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>

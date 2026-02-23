@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-09-08 ~ 2025-09-14 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2025-09-08 ~ 2025-09-14</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://mp.weixin.qq.com/s/2sNq-AMGP3CODOvkqxrb8w" target="_blank">姚顺雨访谈</a></div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.08827" target="_blank">A Survey of Reinforcement Learning for Large Reasoning Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kaiyan Zhang; Biqing Qi, Ning Ding, Bowen Zhou.</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University.</div>
+        </div>
+        <div class="note-tldr">**TLDR：**系统综述面向LRM的强化学习：梳理奖励设计（可验证/生成/稠密/无监督）、策略优化（PG/critic/离线/正则）、采样策略与训练资源，回顾自DeepSeek-R1以来的应用进展，并提出持续/记忆/模型驱动等未来方向与可扩展性挑战。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.06870" target="_blank">The Majority is not always right: RL training for solution aggregation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenting Zhao;</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta.</div>
+        </div>
+        <div class="note-tldr">**TLDR：**提出将“解答汇聚”本身作为可学习的推理技能：先生成多解，再用AggLM在可验证奖励下经RL整合纠错与合并步骤；在数学基准上优于多数投票和打分选择，且更节省tokens，表明多数并非总是最佳。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.05396" target="_blank">Talk Isn’t Always Cheap: Understanding Failure Modes in Multi-Agent Debate</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Andrea Wynn; Andrea Wynn, Harsh Satija.</div>
+            <div class="note-meta-line">Affiliation: Johns Hopkins University.</div>
+        </div>
+        <div class="note-tldr">**TLDR：**系统研究多智能体辩论的失效情形：异质能力或较弱代理的加入常使准确率随回合增加而下降；弱者会扰乱强者，过长讨论也会退化。论文刻画影响因素并提示需谨慎设计辩论与激励以抑制随从式错误。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.08755" target="_blank">AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhiheng Xi; Zhiheng Xi, Tao Gui, Qi Zhang.</div>
+            <div class="note-meta-line">Affiliation: Fudan University.</div>
+        </div>
+        <div class="note-tldr">**TLDR：**提出统一的交互式RL框架AgentGym-RL与逐步扩展交互回合的ScalingInter-RL，用于从零训练多轮决策型LLM代理；覆盖多场景并支持主流算法，在27项任务上与商用模型相当或更优，计划开源代码与数据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.04475" target="_blank">ParaThinker: Native Parallel Thinking as a New Paradigm to Scale LLM Test-time Compute</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hao Wen; Yuanchun Li.</div>
+            <div class="note-meta-line">Affiliation: Institute for AI Industry Research (AIR), Tsinghua University.</div>
+        </div>
+        <div class="note-tldr">**TLDR：**提出原生并行思考（ParaThinker）：让模型同步生成多条推理路径并聚合为更优答案，绕开顺序推理的“隧道视野”瓶颈；在推理基准上显著提升准确率且延迟开销小，揭示“宽度”优于单纯“深度”的测试时扩展范式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.04903" target="_blank">ACE-RL: Adaptive Constraint-Enhanced Reward for Long-form Generation Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianghao Chen, Jiajun Zhang</div>
+            <div class="note-meta-line">Affiliation: Institute of Automation, Chinese Academy of Sciences, School of Artificial Intelligence, University of Chinese Academy of Sciences, Zhongguancun Academy</div>
+        </div>
+        <div class="note-tldr">提出ACE-RL：将指令分解为可验证的细粒度约束，按满足度构造奖励并用RL优化长文生成，无需偏好对比数据。WritingBench上较SFT/RL分别提升20.7%/7.3%，并在多场景写作超过GPT-4o，显著提升长文质量与一致性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.01092" target="_blank">REFRAG: Rethinking RAG based Decoding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiaoqiang Lin, Aritra Ghosh</div>
+            <div class="note-meta-line">Affiliation: Meta Superintelligence Labs, National University of Singapore</div>
+        </div>
+        <div class="note-tldr">面向RAG推理提出REFRAG解码：以预计算压缩块嵌入替代原始检索token，利用稀疏注意力结构“压缩-感知-扩展”以降KV与TTFT开销；在多任务中保持精度的同时将首token时延提速30.85×（较前作3.75×），并将上下文扩展至16×。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.03646" target="_blank">Emergent Hierarchical Reasoning in LLMs through Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haozhe Wang, Wenhu Chen</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology, University of Waterloo</div>
+        </div>
+        <div class="note-tldr">实证揭示RL微调LLM的“两阶段”层级推理：先巩固低层执行，再转向高层策略规划；据此提出HICRA，将优化聚焦于高影响规划token，并以语义熵作为探索指针。方法在多基准超越GRPO等强基线，解释“aha”与“长度扩展”等现象。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.09372" target="_blank">VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yihao Wang, Donglin Wang</div>
+            <div class="note-meta-line">Affiliation: Beijing University of Posts and Telecommunications, Westlake University, OpenHelix Team</div>
+        </div>
+        <div class="note-tldr">针对VLA高成本，提出VLA-Adapter：系统分析感知-动作桥接条件，并以Bridge Attention在策略侧自适应注入最佳条件；仅0.5B骨干、无需机器人预训练即可达SOTA且推理更快；单张消费级GPU 8小时可训练强力VLA，显著降低门槛。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.08721" target="_blank">Sharing is Caring: Efficient LM Post-Training with Collective RL Experience Sharing</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jeffrey Amico, Gabriel Passamani Andrade</div>
+            <div class="note-meta-line">Affiliation: Gensyn</div>
+        </div>
+        <div class="note-tldr">提出去中心化异步后训练算法SAPO：各节点保有自策略，跨节点共享并采样回合以实现“经验共享”，无需同步与同构假设；在受控实验中累计奖励提升最高94%，并展示真实大规模测试网的可行性与扩展性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.07980" target="_blank">Parallel-R1: Towards Parallel Thinking via Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Affiliation: Tencent AI Lab Seattle, University of Maryland, College Park</div>
+        </div>
+        <div class="note-tldr">**Authours:** Tong Zheng, (not listed) **TLDR：** 提出用于激发并内化“并行思维”的RL框架Parallel-R1：先在易题用SFT灌输格式，再在难题用RL探索，并通过交替奖励在准确率与结构并行间折中；在MATH/AMC/AIME上显著提升，并观察训练策略由“探索”转向“验证”。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.09674" target="_blank">SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">**Authours:** Haozhan Li, Ning Ding **TLDR：** 面向机器人VLA，基于veRL构建高效在线RL：并行多环境渲染、VLA特定轨迹采样与优化，使OpenVLA-OFT在LIBERO与RoboTwin上超越SFT，并在真实任务中更稳健；同时报告训练中涌现的“pushcut”新动作模式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.09265" target="_blank">Harnessing Uncertainty: Entropy-Modulated Policy Gradients for Long-Horizon LLM Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Affiliation: ByteDance, ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">**Authours:** Jiawei Wang, Yang Wang **TLDR：** 提出熵调制策略梯度（EMPG）：按每步不确定性缩放梯度——放大全对的自信动作、强惩自信错误、减弱高熵探索噪声，并引入“未来清晰度”奖励引导可预测轨迹；在WebShop、ALFWorld、Deep Search显著优于强基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.08358" target="_blank"><think> So let's replace this phrase with insult... </think> Lessons learned from generation of toxic texts with LLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Affiliation: AIRI, Skoltech</div>
+        </div>
+        <div class="note-tldr">**Authours:** Sergey Pletenev, Sergey Pletenev **TLDR：** 探索用LLM从中性文本合成“有毒”数据以训练去毒化模型。结果显示纯合成数据导致明显降级，根因是词汇多样性匮乏：模型复用少数脏词，难以覆盖人类毒性语言的细粒度变化；当前仍需依赖人工标注数据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.06160" target="_blank">Reverse-Engineered Reasoning for Open-Ended Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Affiliation: ByteDance Seed, Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">**Authours:** Haozhe Wang, Ge Zhang **TLDR：** 提出REER：从高质量开放式答案出发，反向搜索能解释它的分步思考轨迹，以梯度无关方式规模化合成“深思”数据。构建DeepWriting-20K并训练DeepWriter-8B，在多项写作基准上接近或部分超越商用模型，证明无需RL/蒸馏亦可习得深推理。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>

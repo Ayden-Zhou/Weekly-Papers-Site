@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-02-02 ~ 2026-02-08 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2026-02-02 ~ 2026-02-08</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.04705" target="_blank">ERNIE 5.0 Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haifeng Wang, ERNIE Team</div>
+            <div class="note-meta-line">Affiliation: Baidu</div>
+        </div>
+        <div class="note-tldr">技术报告系统介绍 ERNIE 5.0 系列模型的整体设计与能力版图，涵盖训练/对齐思路、推理与多模态等关键能力，以及在多类任务与基准上的表现与局限，面向落地部署给出工程化经验与后续方向。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.03152" target="_blank">FASA: Efficient and Effective Temporal Action Segmentation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifei Wang, Yong Wang</div>
+            <div class="note-meta-line">Affiliation: AMAP, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">面向时间动作分割（TAS），本文提出 FASA，在保证分割质量的同时强调计算与效率友好。核心目标是减少长序列建模带来的冗余开销，使方法在长视频场景更可扩展，并在多个 TAS 基准上获得更好的精度-效率权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.04634" target="_blank">WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zelai Xu, Chao Yu</div>
+            <div class="note-meta-line">Affiliation: EE, Tsinghua University</div>
+        </div>
+        <div class="note-tldr">探索“宽度扩展”：用多智能体并行来做广域信息检索，而非单智能体多轮深推理。提出 lead-agent + 并行 subagent 架构，并用多智能体强化学习在 2 万条任务上端到端训练；WIDESEEK-R1-4B 在 WideSearch 上 item F1 达 40.0%，接近单智能体 DeepSeek-R1-671B，并随并行子智能体数量增加持续增益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.01785" target="_blank">CodeOCR: On the Effectiveness of Vision Language Models in Code Understanding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuling Shi, Xiaodong Gu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">首次系统评估“把代码渲染成图像”供视觉语言模型理解的可行性与收益。结果显示在显著降 token 的情况下仍能保持甚至提升表现，最高可达 8× 压缩；语法高亮等视觉线索在约 4× 压缩时对补全更有帮助；克隆检测等任务对视觉压缩尤为鲁棒，提示代码图像可能成为更省算力的推理输入形态。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.03786" target="_blank">AORCHESTRA: Automating Sub-Agent Creation for Agentic Orchestration</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianhao Ruan, Yuyu Luo</div>
+            <div class="note-meta-line">Affiliation: DeepWisdom, HKUST(GZ)</div>
+        </div>
+        <div class="note-tldr">提出统一的子智能体抽象：把任意 agent 表示为 ⟨Instruction, Context, Tools, Model⟩ 四元组，使“子智能体即按需生成的执行器”。AORCHESTRA 由中心编排器动态挑选上下文、工具与模型并自动生成子智能体，在 GAIA、SWE-Bench、Terminal-Bench 上相对最强基线取得约 16.28% 的提升，同时支持可控的性能-成本折中与可学习的编排策略。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.00919" target="_blank">Green-VLA: Staged Vision-Language-Action Model for Generalist Robots</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: I. Apanasevich, Manipulation Team</div>
+            <div class="note-meta-line">Affiliation: Sber Robotics Center</div>
+        </div>
+        <div class="note-tldr">提出面向通用机器人操控的分阶段 VLA 训练框架 Green-VLA，既支持在 Green 人形机器人上的真实部署，也强调跨不同机器人形态的泛化。训练按五阶段课程推进：L0 基础 VLM、L1 多模态 grounding、R0 多形态预训练、R1 形态特定适配、R2 强化学习策略对齐，以逐步获得可迁移且可落地的操控能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.20802" target="_blank">Reinforcement Learning via Self-Distillation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jonas Hübotter, Jonas Hübotter. :contentReference[oaicite:0]{index=0}</div>
+            <div class="note-meta-line">Affiliation: ETH Zurich. :contentReference[oaicite:1]{index=1}</div>
+        </div>
+        <div class="note-tldr">提出SDPO：把环境给出的“富文本反馈”（如运行错误、评测意见）当作自提示，让同一模型在“看过反馈后”充当自教师，并把其逐token分布蒸馏回策略，从而把稀疏0/1奖励变成密集信用分配信号。方法在LiveCodeBench等RLVR场景提升样本效率与最终准确率，并可用于测试时自蒸馏加速难题解的发现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.23265" target="_blank">PaperBanana: Automating Academic Illustration for AI Scientists</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dawei Zhu, Jinsung Yoon. :contentReference[oaicite:3]{index=3}</div>
+            <div class="note-meta-line">Affiliation: Peking University, Google Cloud AI Research. :contentReference[oaicite:4]{index=4}</div>
+        </div>
+        <div class="note-tldr">提出PaperBanana：用多智能体流程自动生成“可发表级”论文插图（方法图/统计图）。系统组织检索参考、规划内容与风格、渲染并自我批判迭代，结合VLM与图像生成模型提升一致性与美观度；同时发布PaperBananaBench（292个NeurIPS 2025方法图案例）用于评测，在忠实性、可读性等维度优于基线，并展示可拓展到高质量统计图生成。 :contentReference[oaicite:5]{index=5}</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.02276" target="_blank">Kimi K2.5: Visual Agentic Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tongtong Bai, Yulun Du. :contentReference[oaicite:6]{index=6}</div>
+            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team). :contentReference[oaicite:7]{index=7}</div>
+        </div>
+        <div class="note-tldr">发布开源多模态代理模型Kimi K2.5，强调文本-视觉联合优化：包含联合预训练、zero-vision SFT与联合RL，使两模态互相增益；并提出Agent Swarm并行编排框架，可把复杂任务动态拆分为异构子任务并并发执行以降延迟。作者报告其在编码、视觉、推理与代理任务上达到SOTA，并开放后训练权重以便研究与应用。 :contentReference[oaicite:8]{index=8}</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.04770" target="_blank">Generative Modeling via Drifting</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mingyang Deng, Mingyang Deng. :contentReference[oaicite:9]{index=9}</div>
+            <div class="note-meta-line">Affiliation: MIT. :contentReference[oaicite:10]{index=10}</div>
+        </div>
+        <div class="note-tldr">提出“Drifting Models”生成范式：不再像扩散/流模型那样在推理阶段多步迭代，而是在训练中让生成分布随优化过程“漂移”逼近数据分布，从而自然支持一步采样。核心是定义漂移场V，使当两分布匹配时达到平衡（V趋零），并用mini-batch估计V构造漂移目标来回归训练。实验在ImageNet 256×256实现1步生成的强性能（报告FID 1.54/1.61）。 :contentReference[oaicite:11]{index=11}</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.05192" target="_blank">First Proof</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mohammed Abouzaid, Mohammed Abouzaid. :contentReference[oaicite:12]{index=12}</div>
+            <div class="note-meta-line">Affiliation: Stanford University. :contentReference[oaicite:13]{index=13}</div>
+        </div>
+        <div class="note-tldr">提出用于评估AI“研究级数学证明”能力的开放题集：作者们从各自真实研究过程中抽取10个此前未公开的问题，短期内将已知答案加密以防数据泄漏，鼓励社区用现有系统尝试并分享完整交互记录。该设定旨在把“检索/记忆”与“真正推理证明”区分开，为更贴近真实数学研究工作流的基准奠基。 :contentReference[oaicite:14]{index=14}</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.16238" target="_blank">VibeTensor: System Software for Deep Learning, Fully Generated by AI Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bing Xu, Bing Xu</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">这篇论文发布了一个由LLM编码代理在高层人类指导下“端到端生成”的深度学习系统软件栈VibeTensor：提供Python与Node.js前端，底层是C++20/CUDA运行时，包含张量/存储、算子分发、反向自动微分与CUDA内存分配/图等组件。作者重点讨论生成与验证流程（构建、测试、差分检查等护栏）、仓库规模与基准评测，并总结系统级“vibe-coded”软件的常见失效模式与经验。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.21343" target="_blank">Self-Improving Pretraining: using post-trained models to pretrain better models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ellen Xiaoqing Tan, Olga Golovneva</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
+        </div>
+        <div class="note-tldr">提出“自我改进预训练”：把预训练从纯next-token预测改成“给定prefix生成suffix”的序列学习任务，并引入一个强的post-trained模型同时扮演suffix重写者与评审（judge）。训练时对原suffix、重写suffix与当前策略rollout进行比较，用RL奖励更高质量/更安全/更事实的候选，从而在预训练阶段就纠偏。实验报告在事实性与安全性上分别获得36.2%与18.5%的相对提升，并在整体生成质量对比中取得最高86.3%的胜率提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.20048" target="_blank">Insight Agents: An LLM-Based Multi-Agent System for Data Insights</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jincheng Bai, Jincheng Bai</div>
+            <div class="note-meta-line">Affiliation: Amazon</div>
+        </div>
+        <div class="note-tldr">面向电商卖家数据洞察，论文提出Insight Agents（IA）多智能体对话系统，采用plan-and-execute范式与分层结构：一个manager负责路由与调度，两个worker分别做数据呈现与洞察生成。manager结合轻量OOD检测与分类路由以兼顾准确率与时延；worker侧用API规划拆解问题，并动态注入领域知识提升解释质量。系统已在美国Amazon卖家场景上线，人工评测准确率约90%，P90时延低于15秒。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.12886" target="_blank">Communication Methods in Multi-Agent Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Christoph Wittner, Christoph Wittner</div>
+            <div class="note-meta-line">Affiliation: Telecooperation Institute, Johannes Kepler University Linz, Austria</div>
+        </div>
+        <div class="note-tldr">这是一篇关于多智能体强化学习（MARL）通信机制的综述与比较研究。作者梳理并深入分析了29篇相关工作，将方法按显式/隐式、注意力、图结构、层级/角色等类别归纳，讨论它们在部分可观测、非平稳性与动作空间爆炸等问题上的优势与代价。结论强调不存在“通用最优”的通信框架，选择应强依赖任务结构与环境约束，并指出需要更标准化的基准与更贴近真实条件的鲁棒性评测。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.14351" target="_blank">If You Want Coherence, Orchestrate a Team of Rivals: Multi-Agent Models of Organizational Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Gopal Vijayaraghavan, Gopal Vijayaraghavan</div>
+            <div class="note-meta-line">Affiliation: Isotopes AI, USA</div>
+        </div>
+        <div class="note-tldr">论文主张用“团队对立协作”（team of rivals）的组织结构提升AI代理系统可靠性：把规划、执行、批判、专家等角色拆分为边界清晰的独立代理，并设置互相制衡的激励以主动捕错。系统通过远程代码执行器将数据变换/工具调用与推理上下文隔离，避免原始工具输出污染上下文，从架构上强化“思考-动手”分离。作者在实际用例中报告能在用户暴露前拦截超过90%的内部错误，并讨论为正确性付出的成本与时延权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.22060" target="_blank">Vision-DeepResearch: Incentivizing DeepResearch Capability in Multimodal Large Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenxuan Huang, Yu Zeng</div>
+            <div class="note-meta-line">Affiliation: East China Normal University</div>
+        </div>
+        <div class="note-tldr">针对现有模型在视觉深度搜索中的局限，本文提出了Vision-DeepResearch范式，支持多轮、多实体及多尺度的视觉与文本搜索。通过冷启动监督与强化学习将搜索能力内化，该模型在六个事实性问答基准上显著超越了包括GPT-5在内的现有系统，能够处理强噪声环境下的复杂信息聚合任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.02185" target="_blank">Vision-DeepResearch Benchmark: Rethinking Visual and Textual Search for Multimodal Large Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yu Zeng, Wenxuan Huang</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">本文指出现有视觉搜索基准存在“非视觉中心”和“检索设定理想化”的缺陷，并提出了包含2000个实例的VDR-Bench。该基准通过严格的人工验证，强制要求模型进行真实的视觉证据检索与多跳推理。此外，作者还提出了一种多轮裁剪搜索策略，有效提升了模型在现实场景下的视觉检索性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.02084" target="_blank">Closing the Loop: Universal Repository Representation with RPG-Encoder</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jane Luo, Chengyu Yin</div>
+            <div class="note-meta-line">Affiliation: University of Michigan</div>
+        </div>
+        <div class="note-tldr">针对代码库代理中推理与表示断连的问题，本文提出了RPG-Encoder框架，将代码库理解与生成视为互逆过程。通过语义提升、结构重组和伪影锚定，该方法构建了通用的存储库规划图（RPG），在降低95.7%维护开销的同时，在SWE-bench Verified上实现了93.7%的SOTA理解准确率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.22975" target="_blank">Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ximing Lu, David Acuna</div>
+            <div class="note-meta-line">Affiliation: University of Washington</div>
+        </div>
+        <div class="note-tldr">针对强化学习（RL）中可验证数据稀缺的瓶颈，本文提出了“Golden Goose”方法，通过将教科书等不可验证文本转化为多项选择题，合成了无限的RLVR任务。生成的GooseReason数据集包含70万个任务，有效帮助模型突破了性能饱和，在数学和编程等15个基准上取得了显著提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.02276" target="_blank">Kimi K2.5: Visual Agentic Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kimi Team, Tongtong Bai</div>
+            <div class="note-meta-line">Affiliation: Moonshot AI</div>
+        </div>
+        <div class="note-tldr">介绍了Kimi K2.5，一个基于15万亿Token训练的开源多模态代理模型。该模型具备卓越的编程与视觉推理能力，并引入了“Agent Swarm”框架，能够根据任务需求动态生成并编排多达100个子代理并行协作。K2.5在多项基准测试中表现优异，尤其在长程任务执行效率上提升了4.5倍。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.21571" target="_blank">Shaping capabilities with token-level data filtering</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Neil Rathi, Alec Radford</div>
+            <div class="note-meta-line">Affiliation: OpenAI</div>
+        </div>
+        <div class="note-tldr">本文研究了Token级数据过滤对语言模型能力的影响。实验表明，针对性地过滤出具有特定特征（如高推理密度）的数据，可以显著增强模型在数学和推理任务上的表现，但可能导致其他领域（如创意写作）能力的退化。这一发现为通过精细化数据策展来定制模型行为提供了新视角。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2601.20245" target="_blank">How AI Impacts Skill Formation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Judy Hanwen Shen, Alex Tamkin</div>
+            <div class="note-meta-line">Affiliation: Anthropic</div>
+        </div>
+        <div class="note-tldr">通过随机对照试验，本文揭示了AI辅助工具对新手程序员技能形成的双刃剑效应。虽然AI显著提升了短期生产力，但过度依赖AI（如完全委托）会导致概念理解、代码阅读和调试能力的下降（测试得分降低17%）。作者建议采用保持认知参与的“增强”而非“自动化”模式，以兼顾效率与技能习得。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>

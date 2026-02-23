@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-09-29 ~ 2025-10-05 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2025-09-29 ~ 2025-10-05</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://www.bilibili.com/video/BV1Grp8zjEoY/?buvid=Y5470D5B7A04E9D54D719C6EFA7D1C2CCE23&from_spmid=tm.recommend.0.0&is_story_h5=false&mid=0H%2F0KQk9m8Vy0Rz3fngyYQ%3D%3D&p=1&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=3D230BD4-C1FA-458B-AF27-8D2068F342A2&share_source=WEIXIN&share_tag=s_i&timestamp=1758886949&unique_k=8DP83YI&up_id=242124650" target="_blank">Tri Dao采访：未来2-3年AI发展预测</a></div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.26507" target="_blank">The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Adrian Kosowski, Adrian Kosowski.</div>
+            <div class="note-meta-line">Affiliation: Pathway, Palo Alto, USA.</div>
+        </div>
+        <div class="note-tldr">提出受生物神经启发的BDH架构：以局部图动力学与可解释的ReLU-lowrank模块实现注意力与记忆，兼具可解释性与Transformer级性能。理论上连接大模型与脑模型，实证在10M–1B参数规模与翻译等任务上逼近GPT-2同规模表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.21519" target="_blank">Provable Scaling Laws of Feature Emergence from Learning Dynamics of Grokking</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuandong Tian, Yuandong Tian.</div>
+            <div class="note-meta-line">Affiliation: Meta Superintelligence Labs (FAIR).</div>
+        </div>
+        <div class="note-tldr">基于梯度动力学提出Li²框架，将grokking训练划分为惰性学习、独立特征学习与交互阶段；证明隐藏层特征是能量函数E的局部极大，给出样本规模与权重衰减等超参如何决定特征涌现与记忆/泛化边界的规模律，并解释部分优化器效果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.23365" target="_blank">Emergence of Superposition: Unveiling the Training Dynamics of Chain of Continuous Thought</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hanlin Zhu, Hanlin Zhu.</div>
+            <div class="note-meta-line">Affiliation: UC Berkeley.</div>
+        </div>
+        <div class="note-tldr">理论解析连续CoT训练动力学：提出思维生成与预测两阶段，证明指数匹配logit保持有界，从而在局部搜索与多路径探索间取得平衡并产生“叠加”推理；在图可达性任务与实证跟踪中验证该机制与优势。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.25848" target="_blank">More Thought, Less Accuracy? On the Dual Nature of Reasoning in Vision-Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinyu Tian, Zhaoyuan Yang.</div>
+            <div class="note-meta-line">Affiliation: Australian National University.</div>
+        </div>
+        <div class="note-tldr">提出多模态推理的“双刃剑”现象：更长思维链常削弱图像感知，导致识别错误。作者定义“视觉遗忘”，并提出VAPO，以视觉锚点与感知奖励在推理过程中强制关注图像，在多项VLM基准上提高准确率并减缓推理塌缩。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.02263" target="_blank">RLAD: Training LLMs to Discover Abstractions for Solving Reasoning Problems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuxiao Qu, Ankait Singh.</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
+        </div>
+        <div class="note-tldr">提出RLAD：先生成“抽象”以总结中间步骤，再用强化学习在抽象指导下求解；该解耦减少冗长且退化的链式探索。实验表明在相同测试算力下，优先生成高质量抽象比生成更多样本更有效，并提升对更难问题的泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.22637" target="_blank">Variational Reasoning for Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiangxin Zhou, Tianyu Pang.</div>
+            <div class="note-meta-line">Affiliation: Sea AI Lab, UCAS, CASIA.</div>
+        </div>
+        <div class="note-tldr">将“思维轨迹”视为潜变量，构建变分推理框架：ELBO到多轨迹IWAE上界，并用前向KL稳定训练；同时解释RFT与二元奖励RL（如GRPO）为隐式加权的前向KL。该方法在Qwen系列多项推理任务上稳定提升，统一概率视角与RL实践。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.22611" target="_blank">Quantile Advantage Estimation for Entropy-Safe Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junkang Wu, Xiangnan He.</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China.</div>
+        </div>
+        <div class="note-tldr">指出RLVR训练既有熵塌缩也有熵爆炸风险。提出分组K分位数基线的QAE，替代均值基线以自适应控制探索—利用，实现“两侧熵安全”理论保证。实验证明在Qwen3-8B/14B等上稳定提升pass@1，并减少无效更新。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.25454" target="_blank">DeepSearch: Overcome the Bottleneck of Reinforcement Learning with Verifiable Rewards via Monte Carlo Tree Search</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Fang Wu, Yejin Choi.</div>
+            <div class="note-meta-line">Affiliation: Stanford University.</div>
+        </div>
+        <div class="note-tldr">将MCTS直接融入RLVR训练，提出全局前沿选择、基于熵的监督与自适应重放缓存，系统扩展搜索覆盖与精细回溯。在数学推理上以1.5B模型达新SOTA，较延长训练节省5.7×GPU时，表明“训练期探索”优于蛮力扩步。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.25137" target="_blank">The Era of Real-World Human Interaction: RL from User Conversations</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chuanyang Jin, Jason Weston.</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta, Johns Hopkins University.</div>
+        </div>
+        <div class="note-tldr">提出从真实用户对话中进行强化学习（RLHI）以替代静态标注后训练，包含“用户引导重写”和“基于用户长期画像的奖励”两法。在WildChat等数据上显著提升个性化、指令跟随与推理基准，表明有机交互可成为可扩展监督。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.22230" target="_blank">In Their Own Words: Reasoning Traces Tailored for Small Models Make Them Better Reasoners</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jaehoon Kim, Dongha Lee.</div>
+            <div class="note-meta-line">Affiliation: Yonsei University.</div>
+        </div>
+        <div class="note-tldr">直接蒸馏大模型推理链到小模型会因分布失配而降性能。提出反向投机解码（RSD）：教师提议、学生按自身概率接受，过滤低概率token，生成“学生友好”推理轨迹；在Qwen小模型上对AIME等基准显著增益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.19894" target="_blank">PromptCoT 2.0: Scaling Prompt Synthesis for Large Language Model Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xueliang Zhao, Wei Wu.</div>
+            <div class="note-meta-line">Affiliation: The University of Hong Kong, Ant Group.</div>
+        </div>
+        <div class="note-tldr">将推理链纳入提示合成并用EM联合优化，支持自博弈与SFT两种训练。相较PromptCoT 1.0与开源语料，PromptCoT 2.0在数学与编程基准大幅提升；仅用合成题也能把7B模型准确率从个位数推至60%+。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2509.24527" target="_blank">Training Agents Inside of Scalable World Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Danijar Hafner, Timothy Lillicrap.</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind.</div>
+        </div>
+        <div class="note-tldr">提出Dreamer 4：在可扩展世界模型内进行“想象训练”，结合捷径forcing与高效变换器，单GPU可实时交互。仅用离线数据即在Minecraft达成挖钻石，显著超越先前世界模型，展示从海量非标注视频学得通用知识的潜力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.01346" target="_blank">Aristotle: IMO-level Automated Theorem Proving</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: The Harmonic Team, The Harmonic Team.</div>
+            <div class="note-meta-line">Affiliation: Harmonic.</div>
+        </div>
+        <div class="note-tldr">介绍Aristotle：结合Lean形式证明、非形式推理与几何求解器，实现IMO级自动定理证明；在2025年IMO题上达到金牌等效（六题中五题给出正式解）。通过生成与形式化引理并用Lean验证，展现可扩展的数学推理能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.03164" target="_blank">Why Do We Need Warm-up? A Theoretical Perspective</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Foivos Alimisis, Aurelien Lucchi.</div>
+            <div class="note-meta-line">Affiliation: University of Basel, Switzerland.</div>
+        </div>
+        <div class="note-tldr">提出以损失次优度线性上界曲率的(H0,H1)-平滑性，证明在该条件下梯度下降配合warm-up步长可获得更快收敛的上下界；并在语言与视觉模型上验证，给出warm-up有效性与适用范围的理论解释。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.03198" target="_blank">Memory Forcing: Spatio-Temporal Memory for Consistent Scene Generation on Minecraft</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junchao Huang, Li Jiang.</div>
+            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong, Shenzhen, Shenzhen Loop Area Institute.</div>
+        </div>
+        <div class="note-tldr">为Minecraft交互生成提出Memory Forcing：以混合训练与链式前向训练在探索/重访间自适应取舍2，并引入几何索引空间内存、点到帧检索与增量3D重建高效召回历史；在保持计算可控下显著提升长期空间一致性与生成质量。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>

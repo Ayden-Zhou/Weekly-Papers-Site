@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-01-05 ~ 2026-01-11 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2026-01-05 ~ 2026-01-11</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.20491" target="_blank">Step-DeepResearch Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chen Hu, Yibo Zhu.</div>
+            <div class="note-meta-line">Affiliation: StepFun.</div>
+        </div>
+        <div class="note-tldr">该报告详细介绍了阶跃星辰（StepFun）开发的 Step-DeepResearch 系统。该系统通过引入多步规划、自我修正以及深度检索机制，显著提升了大型语言模型在处理复杂、长程研究任务时的表现。Step-DeepResearch 在多个极具挑战性的研究性基准测试中展现了卓越的性能，能够自动执行从文献调研到撰写深度报告的完整闭环科研流程。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.21218" target="_blank">Latent Implicit Visual Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kelvin Li, Roei Herzig.</div>
+            <div class="note-meta-line">Affiliation: UC Berkeley.</div>
+        </div>
+        <div class="note-tldr">本文提出了一种“潜在隐式视觉推理”框架，旨在解决现有视觉语言模型在复杂几何与空间逻辑推理上的局限。不同于传统的显式思维链，该方法在模型的潜在特征空间内进行多步隐式演化，从而捕捉更细致的视觉关系。实验表明，该机制显著提升了模型在视觉推理基准（如Blink和MMBench）上的准确率，尤其在需要精密空间分析的任务中表现突出。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.19428" target="_blank">Attention Is Not What You Need</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhang Chong, Zhang Chong.</div>
+            <div class="note-meta-line">Affiliation: Independent Researcher.</div>
+        </div>
+        <div class="note-tldr">这篇论文挑战了当前以注意力机制为核心的架构范式，提出了一种基于代数几何视角的新型序列建模方法。作者通过数学论证指出，注意力机制在处理极长序列时存在效率瓶颈与归纳偏差问题。文中提出了一种替代性的算子结构，旨在不依赖传统注意力矩阵的前提下，实现更高效的信息聚合与演化，为下一代非Transformer架构提供了理论探索。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.22047" target="_blank">MAI-UI Technical Report: Real-World Centric Foundation GUI Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hanzhang Zhou, Steven Hoi.</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group.</div>
+        </div>
+        <div class="note-tldr">本报告介绍了由阿里巴巴开发的 MAI-UI 智能体系统。该系统专注于现实世界的图形用户界面（GUI）操作，通过大规模真实场景数据训练，解决了智能体在跨平台、跨应用操作时的鲁棒性问题。MAI-UI 引入了环境感知与长期记忆模块，使其能够像人类一样理解并执行复杂的软件指令，在多项移动端与桌面端 GUI 自动化评测中刷新了纪录。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.23707" target="_blank">Training AI Co-Scientists Using Rubric Rewards</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shashwat Goel, Chenxi Whitehouse.</div>
+            <div class="note-meta-line">Affiliation: Meta AI.</div>
+        </div>
+        <div class="note-tldr">本文探讨了如何通过“量表奖励”（Rubric Rewards）来训练人工智能科研助手。作者认为传统的单一目标奖励难以衡量科研的创造性与严谨性，因此设计了一套细粒度的评估准则作为强化学习的反馈信号。通过这种方法训练的 AI Co-Scientists 在实验设计、假设生成及论文初稿撰写方面表现出更高的专业性和逻辑连贯性，为 AI 赋能科学发现提供了新路径。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.23675" target="_blank">End-to-End Test-Time Training for Long Context</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Arnuv Tandon, Yu Sun.</div>
+            <div class="note-meta-line">Affiliation: Stanford University.</div>
+        </div>
+        <div class="note-tldr">本文提出了一种端到端的测试时训练（TTT）方法，专门用于增强模型处理超长上下文的能力。该方法允许模型在推理阶段针对当前输入序列动态更新其权重，从而有效缓解长序列中的信息遗忘与注意力衰减问题。相比于固定权重的模型，该方法在数万甚至数十万字的长文档分析任务中，能够以极低的额外计算开销换取显著的理解精度提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.24880" target="_blank">mHC: Manifold-Constrained Hyper-Connections</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhenda Xie, Zhenda Xie</div>
+            <div class="note-meta-line">Affiliation: DeepSeek</div>
+        </div>
+        <div class="note-tldr">论文提出了流形约束超连接（mHC），这是一种即插即用的模块，用于优化Transformer架构。mHC通过将隐藏状态约束在流形空间内，改善了梯度的传播和模型的训练稳定性。实验表明，mHC在多种语言模型基准测试中提升了性能，特别是在深层网络训练中表现出更好的收敛性和鲁棒性，为构建更深、更强大的大模型提供了新的思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.23165" target="_blank">Evaluating Parameter Efficient Methods for RLVR</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qingyu Yin, Jinjin Gu</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University</div>
+        </div>
+        <div class="note-tldr">本文评估了参数高效微调（PEFT）方法（如LoRA）在验证奖励强化学习（RLVR）中的表现。研究发现，虽然PEFT方法在参数量上远小于全量微调，但在特定条件下（如适当的秩和学习率），它们能够达到与全量微调相当的性能。这项工作为在计算资源受限的情况下进行高效的强化学习对齐提供了实证依据和指导。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.24601" target="_blank">Recursive Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alex L. Zhang, Omar Khattab</div>
+            <div class="note-meta-line">Affiliation: MIT</div>
+        </div>
+        <div class="note-tldr">论文介绍了递归语言模型（RLMs），这是一种能够通过递归调用自身来生成中间推理步骤（“思想”）的架构。与传统的链式思维（CoT）不同，RLM允许模型在生成最终答案之前，动态地展开任意深度的推理树。这种方法显著增强了模型解决复杂问题的能力，使其能够处理需要多步规划和回溯的任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://cdn.openai.com/pdf/d57827c6-10bc-47fe-91aa-0fde55bd3901/monitoring-monitorability.pdf" target="_blank">Monitoring Monitorability</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Melody Y. Guan, Bowen Baker</div>
+            <div class="note-meta-line">Affiliation: OpenAI</div>
+        </div>
+        <div class="note-tldr">OpenAI 提出了“可监控性”（Monitorability）这一新指标，用于衡量人类或自动化系统检测AI模型错误行为的难易程度。研究表明，利用思维链（CoT）可以显著提高模型的可监控性，且不会因强化学习优化而明显降低。论文还提出了一套评估套件，发现较长的CoT通常更易于监控，并建议在提升模型能力的同时，应同步提升监控机制的能力以确保安全。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.13898" target="_blank">Let's (not) just put things in Context: Test-Time Training for Long-Context LLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Rachit Bansal, Aston Zhang</div>
+            <div class="note-meta-line">Affiliation: Harvard University</div>
+        </div>
+        <div class="note-tldr">本文挑战了仅仅依靠长上下文窗口来处理海量信息的做法，提出了针对长上下文大语言模型的测试时训练（Test-Time Training, TTT）方法。作者认为，通过在推理阶段利用上下文数据对模型进行瞬时参数更新，可以比单纯的上下文学习（In-Context Learning）更有效地压缩和利用信息。实验显示，TTT在长文档理解和检索任务上取得了显著的性能提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16848" target="_blank">Meta-RL Induces Exploration in Language Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yulun Jiang, Maria Brbic</div>
+            <div class="note-meta-line">Affiliation: EPFL</div>
+        </div>
+        <div class="note-tldr">论文探讨了如何利用元强化学习（Meta-RL）来激发语言智能体的探索能力。传统的语言模型往往倾向于利用已知知识而非探索新策略，导致在复杂环境中陷入局部最优。作者提出的方法通过Meta-RL训练，使智能体学会了主动探索环境和收集信息，从而在需要长期规划和适应新环境的任务中表现出更强的泛化能力和解决问题的效率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.19466" target="_blank">Epistemological Fault Lines Between Human and Artificial Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Walter Quattrociocchi, Matjaž Perc</div>
+            <div class="note-meta-line">Affiliation: Sapienza University of Rome</div>
+        </div>
+        <div class="note-tldr">本文指出，尽管大语言模型（LLM）常被视为人工智能，但其认识论特征与人类认知存在根本差异。作者认为，LLM作为随机模式补全系统，其输出的表面一致性掩盖了深层的结构性错配。文章识别了人机之间在接地（Grounding）、解析、经验、动机等方面的七个“认识论断层线”，并提出了“认识论幻觉”（Epistemia）概念，即语言的似然性取代了真正的认识论评估，导致一种无需判断劳动的“知道感”。研究呼吁在评估和治理中正视这些差异，以避免过度依赖AI的表面合理性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.16649" target="_blank">JustRL: Scaling a 1.5B LLM with a Simple RL Recipe</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bingxiang He, Zhiyuan Liu</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">本文提出了JustRL，一种简单高效的强化学习（RL）方法，旨在提升1.5B参数规模LLM的推理能力。针对当前RL训练流程复杂（如多阶段训练、动态超参）的问题，JustRL仅通过单一阶段训练和固定超参，即在DeepScaleR-1.5B-Preview等模型上取得了SOTA性能（在9个数学基准上平均准确率大幅提升）。研究表明，RL能通过组合现有技能赋予模型真正的新能力，而非仅是重新加权现有策略。定性分析显示RL根本性地改变了模型的推理行为，为通过RL激励模型解决复杂问题提供了新思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.18552" target="_blank">Toward Training Superintelligent Software Agents through Self-Play SWE-RL</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuxiang Wei, Lingming Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">本文介绍了Self-play SWE-RL (SSR)，一种训练超智能软件代理的框架。针对现有软件代理严重依赖人类数据（如GitHub issue）的问题，SSR仅需访问沙盒化源码库，通过自博弈（Self-play）让代理自主注入并修复日益复杂的Bug（由测试补丁形式化描述）。在SWE-bench Verified等基准上，SSR实现了显著的自我提升（+10.4%），并持续优于人类数据基线。结果表明，代理可从真实软件库中自主积累经验，无需人类标注即可迈向超越人类的系统构建与问题解决能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.01939" target="_blank">An Empirical Study of Agent Developer Practices in AI Agent Frameworks</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yanlin Wang, Zibin Zheng</div>
+            <div class="note-meta-line">Affiliation: Sun Yat-sen University</div>
+        </div>
+        <div class="note-tldr">本文对AI代理框架中的开发者实践进行了实证研究。通过挖掘软件仓库和分析开发者讨论，作者调查了主流代理框架（如LangChain、AutoGPT）中的开发模式与挑战。研究发现，开发者在提示工程、工具集成及记忆管理等方面面临显著困难，且现有的开发实践中存在安全性和隐私保护方面的“反模式”（Anti-patterns）。文章总结了当前代理开发的痛点，并为改进框架设计、提升开发者效率及安全性提供了实证依据和具体建议。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.18202" target="_blank">Sophia: A Persistent Agent Framework of Artificial Life</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mingyang Sun, Weinan Zhang</div>
+            <div class="note-meta-line">Affiliation: Westlake University</div>
+        </div>
+        <div class="note-tldr">本文提出了Sophia，一种“持久代理”（Persistent Agent）框架，旨在赋予人工生命体持续的自我进化能力。针对现有代理多为静态、反应式且依赖人工设计的问题，Sophia引入了连续的自我提升循环，包含过程监督的思维搜索、叙事记忆、用户与自我建模以及混合奖励系统。实验表明，Sophia能自主发起并执行多种内在任务，在重复操作中减少了80%的推理步骤，并通过长期交互展现出更强的一致性与适应性，为构建具有长期自主性的人工生命迈出了重要一步。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.14080" target="_blank">SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wentao Guo, Tri Dao</div>
+            <div class="note-meta-line">Affiliation: Princeton University</div>
+        </div>
+        <div class="note-tldr">本文提出了SonicMoE，一种针对混合专家模型（MoE）的加速与显存优化方案。随着MoE模型向高细粒度（Fine-grained）和高稀疏性发展，硬件效率面临挑战。SonicMoE通过设计内存高效的前向/后向算法，最小化后向传播的激活缓存（减少45%显存占用），并利用GPU内核重叠IO与计算。此外，文章提出了“Tile-aware Token Rounding”算法，解决了稀疏MoE中的计算浪费问题。在Hopper GPU上，SonicMoE相比ScatterMoE实现了1.86倍的吞吐量提升，有效支持了大规模细粒度MoE的高效训练。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>

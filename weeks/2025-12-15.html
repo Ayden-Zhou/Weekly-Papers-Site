@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-12-15 ~ 2025-12-21 - Weekly Papers</title>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.archive-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 1.6;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.archive-item:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2025-12-15 ~ 2025-12-21</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.07461" target="_blank">Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tong Wu, Zilong Zheng</div>
+            <div class="note-meta-line">Affiliation: Beijing Institute for General Artificial Intelligence (BIGAI)</div>
+        </div>
+        <div class="note-tldr">本文提出了Native Parallel Reasoner (NPR)，一种无需教师模型的框架，使大型语言模型（LLM）能够通过自蒸馏强化学习自我进化出并行推理能力。NPR通过生成多个推理路径并利用自我评估来优化模型，从而在解决复杂问题时从顺序模拟转变为真正的并行认知，显著提高了推理效率和准确性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.08765" target="_blank">Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruihang Chu, Yujiu Yang</div>
+            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">本文介绍了Wan-Move，这是一个简单且可扩展的框架，用于在视频生成模型中实现运动控制。通过利用潜在轨迹引导（Latent Trajectory Guidance），该方法允许用户通过指定轨迹来精确控制视频中对象的运动，克服了现有方法在控制粒度和可扩展性方面的限制，实现了高质量的运动可控视频生成。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.08478" target="_blank">Visionary: The World Model Carrier Built on WebGPU-Powered Gaussian Splatting Platform</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuning Gong, Zhihang Zhong</div>
+            <div class="note-meta-line">Affiliation: Visionary Laboratory</div>
+        </div>
+        <div class="note-tldr">Visionary是一个基于WebGPU驱动的3D高斯泼溅（Gaussian Splatting）平台，旨在作为世界模型的载体。该平台支持在浏览器中直接进行高效的模型训练和渲染，降低了通过3D环境构建和部署世界模型的门槛，为交互式生成和沉浸式体验提供了强大的基础设施支持。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.09363" target="_blank">StereoWorld: Geometry-Aware Monocular-to-Stereo Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ke Xing, Yunchao Wei</div>
+            <div class="note-meta-line">Affiliation: Beijing Jiaotong University</div>
+        </div>
+        <div class="note-tldr">针对XR设备对高质量立体视频的需求，本文提出了StereoWorld，一种几何感知的单目到立体视频生成框架。该方法解决了单目视频转立体视频过程中常见的深度不一致和伪影问题，通过引入几何约束和视差一致性模块，生成具有精确深度感和视觉舒适度的立体视频内容。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.08269" target="_blank">EgoX: Egocentric Video Generation from a Single Exocentric Video</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Taewoong Kang, Jaegul Choo</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
+        </div>
+        <div class="note-tldr">EgoX是一个新颖的框架，用于从单个外以中心（第三人称）视频生成以自我中心（第一人称）的视频。该方法利用大规模视频扩散模型的预训练知识，通过轻量级的LoRA适配和统一的条件策略，解决了视角转换中的剧烈变化和视野不重叠挑战，成功合成了几何一致且内容保真的第一人称视频。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.08296" target="_blank">Towards a Science of Scaling Agent Systems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yubin Kim, Xin Liu</div>
+            <div class="note-meta-line">Affiliation: University of Washington</div>
+        </div>
+        <div class="note-tldr">本文提出了Agent系统的扩展定律，系统地研究了测试时计算量（test-time compute）、工具使用和基础模型能力对Agent性能的影响。研究发现，通过增加采样数量或引入搜索机制，Agent的性能呈指数级增长，但这种增长受限于基础模型的固有能力。作者还指出了当前Agent扩展面临的边际效益递减问题，并为未来高效扩展Agent系统提供了实证依据和设计建议。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.07783" target="_blank">On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Charlie Zhang, Xiang Yue</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">本文深入探讨了预训练、Mid-Training（中间训练）和强化学习（RL）在构建推理大模型中的相互作用。研究发现，Mid-Training在“唤醒”模型推理能力方面起着关键作用，是后续RL有效性的基础；而RL虽然能进一步提升性能，但对数据质量和策略优化高度敏感。文章通过大量实验揭示了这三个阶段的最佳实践，为训练更强大的推理模型提供了指导。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.08270" target="_blank">Reasoning Models Ace the CFA Exams</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jaisal Patel, Xiao-Yang Liu</div>
+            <div class="note-meta-line">Affiliation: Rensselaer Polytechnic Institute</div>
+        </div>
+        <div class="note-tldr">本文评估了当前顶尖的推理模型（如DeepSeek-V3、OpenAI o1）在特许金融分析师（CFA）考试中的表现。结果显示，这些模型能够以高分通过CFA一级和二级考试，甚至在某些科目上超过了人类考生的平均水平，但在涉及复杂案例分析的三级考试中仍面临挑战。研究表明，推理模型在金融领域的专业知识应用能力已达到很高水平，但仍有提升空间。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.05356" target="_blank">AI & Human Co-Improvement for Safer Co-Superintelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jason Weston, Jakob Foerster</div>
+            <div class="note-meta-line">Affiliation: Meta FAIR</div>
+        </div>
+        <div class="note-tldr">本文探讨了一种实现安全超智能的新路径：AI与人类的协同进化（Co-Improvement）。作者认为，单纯依靠对齐技术难以保证超智能系统的安全性，主张通过机制设计和多智能体博弈，让AI在与人类的交互中不断学习和适应人类价值观，同时提升人类对AI的理解和控制能力。文章提出了具体的框架和算法思路，旨在实现AI能力增长与安全性提升的正和博弈。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://alignment.anthropic.com/2025/selective-gradient-masking/" target="_blank">Beyond Data Filtering: Knowledge Localization for Capability Removal in LLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Igor Shilov, Cem Anil</div>
+            <div class="note-meta-line">Affiliation: Anthropic Fellows Program</div>
+        </div>
+        <div class="note-tldr">本文介绍了选择性梯度掩码（SGTM）技术，旨在从大模型中移除危险知识（如CBRN武器信息）。与传统的数据过滤不同，SGTM在训练过程中通过梯度控制，将特定领域的知识定位到可移除的模型参数中。实验表明，SGTM在移除危险能力的同时，能更好地保留模型的通用能力，且比传统的遗忘学习方法更难被对抗性微调恢复，为降低AI双重用途风险提供了新思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.06266" target="_blank">Nanbeige4-3B Technical Report: Exploring the Frontier of Small Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chen Yang, Zongchao Chen</div>
+            <div class="note-meta-line">Affiliation: Nanbeige</div>
+        </div>
+        <div class="note-tldr">介绍了Nanbeige4-3B，一个30亿参数的高性能小型语言模型。该模型通过23T高质量token预训练，并结合FG-WSD调度策略、双偏好蒸馏（DPD）及多阶段强化学习等技术，在数学、推理、编码及工具使用等任务上展现出卓越性能，超越了同等规模甚至更大的模型，拓展了小模型的性能边界。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.07828" target="_blank">The Adoption and Usage of AI Agents: Early Evidence from Perplexity</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jeremy Yang, Jerry Ma</div>
+            <div class="note-meta-line">Affiliation: Harvard Business School</div>
+        </div>
+        <div class="note-tldr">本文基于Perplexity平台的去识别化数据，对AI Agent的早期采用和使用模式进行了实证分析。研究发现，相较于传统聊天机器人，AI Agent在处理复杂、多步骤任务时表现出更高的用户参与度和留存率。文章揭示了用户从信息检索向更深层任务委托的行为转变，为理解AI Agent的商业和社会影响提供了早期证据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.06721" target="_blank">ProAgent: Harnessing On-Demand Sensory Contexts for Proactive LLM Agent Systems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bufang Yang, Zhenyu Yan</div>
+            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">提出了ProAgent，首个利用海量感知上下文和LLM推理能力的端到端主动代理系统。通过“按需分层感知”机制高效提取环境与用户状态，并结合“上下文感知主动推理器”精准预测用户需求。在AR眼镜平台上的评估表明，ProAgent在主动服务准确率和工具调用表现上显著优于现有基线，大幅提升了用户满意度。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.14692" target="_blank">Native and Compact Structured Latents for 3D Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianfeng Xiang, Jiaolong Yang</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
+        </div>
+        <div class="note-tldr">针对现有3D生成模型在复杂拓扑和细节表现上的局限，提出了一种基于原生3D数据的结构化潜在表示方法。核心是全素体（O-Voxel）稀疏结构，能同时编码几何与外观。结合稀疏压缩VAE和40亿参数的流匹配模型，该方法实现了高质量、高效率的3D资产生成，在几何完整性和纹理质量上均超越了现有最先进模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.14614" target="_blank">WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenqiang Sun, Chunchao Guo</div>
+            <div class="note-meta-line">Affiliation: Tencent</div>
+        </div>
+        <div class="note-tldr">推出了WorldPlay，一种支持实时交互的流式视频扩散世界模型。该模型通过双动作表示、重构上下文记忆（Reconstituted Context Memory）以及上下文强制蒸馏（Context Forcing）等创新技术，有效解决了视频生成中速度与长程几何一致性的权衡问题，实现了720p分辨率下24FPS的实时、一致且可控的世界模拟。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.14691" target="_blank">MMGR: Multi-Modal Generative Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zefan Cai, Haozhe Zhao</div>
+            <div class="note-meta-line">Affiliation: University of Wisconsin - Madison</div>
+        </div>
+        <div class="note-tldr">提出了MMGR评测基准，旨在系统评估多模态生成模型的物理、逻辑、空间（2D/3D）及时间推理能力。涵盖抽象推理、具身导航和物理常识三个领域。评估显示，现有主流视频和图像模型在抽象推理和长程空间规划上表现欠佳，倾向于视觉合理性而非因果正确性。MMGR为构建具备真正推理能力的生成式世界模型提供了统一的诊断工具。</div>
+    </div>
+    <div class="footer">Last updated: 2026-02-09 16:59</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+</body>
+</html>
