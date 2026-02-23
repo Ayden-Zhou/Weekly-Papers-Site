@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025-08-18 ~ 2025-08-24 - Weekly Papers</title>
+    <title>2025-10-19 - Weekly Papers</title>
+    <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
     --bg: #0f1115;
@@ -21,6 +22,23 @@
     --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
     --title-lines: 2;
     --title-line-height: 1.55;
+    --header-border: #ffffff;
+}
+[data-theme="light"] {
+    --bg: #f8f9fa;
+    --panel: #ffffff;
+    --border: #dde1ea;
+    --text: #1a1c23;
+    --text-muted: #596070;
+    --link: #1d61e3;
+    --accent: #111827;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    --card-bg: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,248,252,0.98));
+    --card-bg-hover: linear-gradient(180deg, rgba(232,242,255,0.98), rgba(220,235,255,0.98));
+    --card-border: rgba(0,0,0,0.07);
+    --card-border-hover: rgba(29,97,227,0.30);
+    --card-shadow-hover: 0 0 0 1px rgba(29,97,227,0.12), 0 10px 18px rgba(0,0,0,0.08);
+    --header-border: #1a1c23;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -38,7 +56,7 @@ body {
     gap: 1.2rem;
     margin-bottom: 2rem;
     padding-bottom: 2.3rem;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--header-border);
 }
 h1 {
     font-size: 1.85rem;
@@ -283,67 +301,103 @@ h1 .archive-link:hover {
     color: var(--text);
     font-size: 0.92rem;
 }
+.theme-toggle {
+    position: fixed;
+    top: 1.1rem;
+    right: 1.5rem;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.72rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.theme-toggle:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+[data-theme="light"] .theme-toggle {
+    border-color: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(29, 97, 227, 0.08);
+}
+[data-theme="light"] .action-btn {
+    border-color: rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .action-btn:hover {
+    background: rgba(29, 97, 227, 0.08);
+}
+[data-theme="light"] .archive-count {
+    border-color: rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.04);
+}
 </style>
 </head>
 <body>
+    <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2025-08-18 ~ 2025-08-24</div>
+    <div class="week-header">2025-10-19</div>
+    <div class="source-header">2025-10-13 ~ 2025-10-19</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.08221" target="_blank">Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.18234" target="_blank">DeepSeek-OCR: Contexts Optical Compression</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Zihe Liu, Bo Zheng</div>
-            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+            <div class="note-meta-line">Authors: Haoran Wei, Haoran Wei.</div>
+            <div class="note-meta-line">Affiliation: DeepSeek AI.</div>
         </div>
-        <div class="note-tldr">全面梳理并复现实用的推理型RL技术，解析技巧机理与适用场景，给出选择与配方指南；提出简化的Lite PPO组合，在多数学基准上优于GRPO/DAPO，提供可落地的训练建议。</div>
+        <div class="note-tldr">将长上下文压缩为二维“光学映射”，以轻激活编码器与小型解码器实现高压缩比OCR：<10×压缩达97%精度，20×仍约60%；在OmniDocBench上以显著更少视觉token超越主流系统，并具大规模数据生成能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.09848" target="_blank">PRELUDE: A Benchmark Designed to Require Global Comprehension and Reasoning over Long Contexts</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.18121" target="_blank">Efficient Long-context Language Model Training by Core Attention Disaggregation</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Affiliation: WeChat AI, Tencent</div>
+            <div class="note-meta-line">Authors: Yonghao Zhuang, Eric Xing.</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
         </div>
-        <div class="note-tldr">提出PRELUDE：判断角色前传是否与原著一致，强调跨章节证据聚合与多步推理并规避记忆捷径。实验显示主流模型较人类落后超15%，且推理正确率差距超30%，凸显长文本理解短板。</div>
+        <div class="note-tldr">提出CAD将核心注意力计算拆分并分派到专用设备池，通过“任务化”重排与ping-pong流水并行，降低长上下文训练中的负载不均与显存压力；在512K上下文与大规模GPU上实现最高1.35×端到端加速并消除DP/PP瓶颈。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.09124" target="_blank">OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.15444" target="_blank">A Theoretical Study on Bridging Internal Probability and Self-Consistency for LLM Reasoning</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Weixuan Wang, Saravan Rajmohan</div>
-            <div class="note-meta-line">Affiliation: University of Edinburgh; Microsoft</div>
+            <div class="note-meta-line">Authors: Zhi Zhou, Yu-Feng Li.</div>
+            <div class="note-meta-line">Affiliation: State Key Laboratory of Novel Software Technology, Nanjing University, China.</div>
         </div>
-        <div class="note-tldr">提出OdysseyBench，评测代理在Word/Excel/PDF/邮件/日历等多应用的长程办公流程；以HOMERAGENTS自动生成602个复杂任务，覆盖真实上下文与多步推理。结果显示主流代理明显受挫，有助于更贴近实务的能力评估与改进。</div>
+        <div class="note-tldr">建立测试时扩展的统一理论框架，分解推理误差为估计误差与模型误差；证明自一致仅线性收敛而困于采样预算，perplexity具指数收敛但模型误差大，并提出RPC将二者优点结合，性能与采样成本取得更优权衡。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.08285" target="_blank">The Illusion of Progress: Re-evaluating Hallucination Detection in LLMs</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.18866" target="_blank">LightMem: Lightweight and Efficient Memory-Augmented Generation</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Denis Janiak, Tomasz Kajdanowicz</div>
-            <div class="note-meta-line">Affiliation: Wroclaw University of Science and Technology; University of Technology Sydney; New York University</div>
+            <div class="note-meta-line">Authors: Jizhan Fang, Ningyu Zhang.</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University.</div>
         </div>
-        <div class="note-tldr">系统重评LLM幻觉检测，发现基于ROUGE的评估高召回但精度极低，甚至被答复长度等简单特征“投机”。作者倡导语义对齐、稳健的评估框架，避免夸大检测器效果，提升输出可信度。</div>
+        <div class="note-tldr">受人类记忆模型启发，构建轻量三阶段记忆系统：感知压缩→主题化短期整合→离线长期巩固；在LongMemEval上较强基线提升准确率并将token、API调用与时延分别降至百倍级，兼顾效果与成本。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.10104" target="_blank">DINOv3</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.15103" target="_blank">Continual Learning via Sparse Memory Finetuning</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Oriane Siméoni, Piotr Bojanowski</div>
-            <div class="note-meta-line">Affiliation: Meta AI Research</div>
+            <div class="note-meta-line">Authors: Jessy Lin, Jessy Lin.</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta, University of California, Berkeley.</div>
         </div>
-        <div class="note-tldr">自监督视觉骨干DINOv3通过扩大数据与模型、并以Gram anchoring解决长程训练中稠密特征退化，辅以后处理增强分辨率与文本对齐；无需微调即在多项任务上取得领先，提供通用高质量视觉表征。</div>
+        <div class="note-tldr">基于memory layer提出稀疏记忆微调，仅更新最常用的少量记忆槽以减少干扰；在事实与文档流式学习中，实现与全量微调相当的学习效果，却显著降低遗忘（如NQ仅11%降幅），优于LoRA与全量微调。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.07050" target="_blank">ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2510.20809" target="_blank">Real Deep Research for AI, Robotics and Beyond</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Wenhan Liu, Zhicheng Dou</div>
-            <div class="note-meta-line">Affiliation: Renmin University of China; Baidu</div>
+            <div class="note-meta-line">Authors: Xueyan Zou, Xiaolong Wang.</div>
+            <div class="note-meta-line">Affiliation: University of California, San Diego.</div>
         </div>
-        <div class="note-tldr">面向检索重排，构建推理密集训练数据并采用两阶段SFT+RL后训；基于列表式设定设计多视角排名奖励以强化推理。ReasonRank在BRIGHT榜单达40.6，且延迟低于点式重排器，显著优于现有方法。</div>
+        <div class="note-tldr">提出通用研究情报管线RDR：系统抓取与解析海量论文，识别新兴趋势与跨域机会，并提供可执行的起点；在AI与机器人领域做端到端示范，主文阐述框架，附录给出大规模主题化结果与可复现资源。</div>
     </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.10433" target="_blank">We-Math 2.0: A Versatile MathBook System for Incentivizing Visual Mathematical Reasoning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Runqi Qiao, Honggang Zhang</div>
-            <div class="note-meta-line">Affiliation: WeChat Vision; Tsinghua University</div>
-        </div>
-        <div class="note-tldr">构建覆盖491知识点与1,819原理的MathBook体系，形成Standard/Pro数据并定义三维难度；提出“冷启动微调 + 渐进对齐RL”，并给出MathBookEval。多基准结果表明在多模态数理推理上具较强泛化。 # 2025-08-22 **#### [Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning](**https://arxiv.org/abs/2508.08221**)** - ***Authors****: Zihe Liu, Bo Zheng - ***Affiliation****: Alibaba Group - ***TLDR****: 全面梳理并复现实用的推理型 RL 技术，解析技巧机理与适用场景，给出选择与配方指南；提出简化的 Lite PPO 组合，在多数学基准上优于 GRPO/DAPO，提供可落地的训练建议。 **#### [PRELUDE: A Benchmark Designed to Require Global Comprehension and Reasoning over Long Contexts](**https://arxiv.org/abs/2508.09848**)** - ***Authors****: Mo Yu, Jie Zhou - ***Affiliation****: WeChat AI, Tencent - ***TLDR****: 提出 PRELUDE：判断角色前传是否与原著一致，强调跨章节证据聚合与多步推理并规避记忆捷径。实验显示主流模型较人类落后超 15%，且推理正确率差距超 30%，凸显长文本理解短板。 **#### [OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows](**https://arxiv.org/abs/2508.09124**)** - ***Authors****: Weixuan Wang, Saravan Rajmohan - ***Affiliation****: University of Edinburgh; Microsoft - ***TLDR****: 提出 OdysseyBench，评测代理在 Word/Excel/PDF/邮件/日历等多应用的长程办公流程；以 HOMERAGENTS 自动生成 602 个复杂任务，覆盖真实上下文与多步推理。结果显示主流代理明显受挫，有助于更贴近实务的能力评估与改进。 **#### [The Illusion of Progress: Re-evaluating Hallucination Detection in LLMs](**https://arxiv.org/abs/2508.08285**)** - ***Authors****: Denis Janiak, Tomasz Kajdanowicz - ***Affiliation****: Wroclaw University of Science and Technology; University of Technology Sydney; New York University - ***TLDR****: 系统重评 LLM 幻觉检测，发现基于 ROUGE 的评估高召回但精度极低，甚至被答复长度等简单特征“投机”。作者倡导语义对齐、稳健的评估框架，避免夸大检测器效果，提升输出可信度。 **#### [DINOv3](**https://arxiv.org/abs/2508.10104**)** - ***Authors****: Oriane Siméoni, Piotr Bojanowski - ***Affiliation****: Meta AI Research; - ***TLDR****: 自监督视觉骨干 DINOv3 通过扩大数据与模型、并以 Gram anchoring 解决长程训练中稠密特征退化，辅以后处理增强分辨率与文本对齐；无需微调即在多项任务上取得领先，提供通用高质量视觉表征。 **#### [ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability](**https://arxiv.org/abs/2508.07050**)** - ***Authors****: Wenhan Liu, Zhicheng Dou - ***Affiliation****: Renmin University of China; Baidu; - ***TLDR****: 面向检索重排，构建推理密集训练数据并采用两阶段 SFT+RL 后训；基于列表式设定设计多视角排名奖励以强化推理。ReasonRank 在 BRIGHT 榜单达 40.6，且延迟低于点式重排器，显著优于现有方法。 **#### [We-Math 2.0: A Versatile MathBook System for Incentivizing Visual Mathematical Reasoning](**https://arxiv.org/abs/2508.10433**)** - ***Authors****: Runqi Qiao, Honggang Zhang - ***Affiliation****: WeChat Vision; Tsinghua University - ***TLDR****: 构建覆盖 491 知识点与 1,819 原理的 MathBook 体系，形成 Standard/Pro 数据并定义三维难度；提出“冷启动微调 + 渐进对齐 RL”，并给出 MathBookEval。多基准结果表明在多模态数理推理上具较强泛化。</div>
-    </div>
-    <div class="footer">Last updated: 2026-02-23 20:20</div>
+    <div class="footer">Last updated: 2026-02-23 20:59</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
@@ -366,6 +420,22 @@ async function copyLinks(btn) {
             btn.classList.remove('copied');
         }, 2000);
 }
+</script>
+    <script>
+function toggleTheme() {
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    var btn = document.getElementById('theme-toggle-btn');
+    if (btn) btn.textContent = next === 'light' ? '🌙 Dark' : '☀️ Light';
+}
+(function(){
+    var btn = document.getElementById('theme-toggle-btn');
+    if (!btn) return;
+    var t = document.documentElement.getAttribute('data-theme');
+    btn.textContent = t === 'light' ? '🌙 Dark' : '☀️ Light';
+})();
 </script>
 </body>
 </html>
