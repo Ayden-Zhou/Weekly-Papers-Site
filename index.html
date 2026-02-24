@@ -386,8 +386,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文介绍 GLM-5，目标是将“vibe coding”升级为面向真实软件任务的 agentic engineering。模型在保持长上下文能力的同时通过 DSA 降低训练与推理成本，并引入异步强化学习基础设施与异步 agent RL 算法提升后训练效率和长程交互学习质量，在多项公开基准与端到端工程任务上取得领先表现。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.08354" target="_blank">Does Your Reasoning Model Implicitly Know When to Stop Thinking?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zixuan Huang, Yikun Ban</div>
+            <div class="note-meta-line">Affiliation: Beihang University, Bytedance</div>
+        </div>
+        <div class="note-tldr">论文发现长CoT常含冗余且与正确性弱相关，模型实际上具备“知道何时停止思考”的潜力但被采样范式掩盖。提出SAGE采样挖掘高效推理轨迹，并将其以混合采样融入基于组的RL（SAGE-RL），在多项数学基准上同时提升准确率与效率，显著减少推理token。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.17547" target="_blank">KLong: Training LLM Agent for Extremely Long-horizon Tasks</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yue Liu, Bryan Hooi</div>
+            <div class="note-meta-line">Affiliation: NUS</div>
+        </div>
+        <div class="note-tldr">提出KLong开源长程代理训练方案：先用轨迹拆分SFT冷启动，再用Research-Factory自动收集论文与评测规则生成长轨迹数据，并通过逐阶段延长超时的progressive RL扩展长程能力。实验在PaperBench等代理基准上显著提升，KLong(106B)较Kimi K2 Thinking提升11.28%，并可泛化到SWE-bench Verified与MLE-bench。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-02-23 23:00</div>
+    <div class="footer">Last updated: 2026-02-24 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
