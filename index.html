@@ -402,8 +402,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出KLong开源长程代理训练方案：先用轨迹拆分SFT冷启动，再用Research-Factory自动收集论文与评测规则生成长轨迹数据，并通过逐阶段延长超时的progressive RL扩展长程能力。实验在PaperBench等代理基准上显著提升，KLong(106B)较Kimi K2 Thinking提升11.28%，并可泛化到SWE-bench Verified与MLE-bench。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.20159" target="_blank">A Very Big Video Reasoning Suite</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Maijunxian Wang, Hokin Deng</div>
+            <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页明确给出（需核对 PDF/项目页）</div>
+        </div>
+        <div class="note-tldr">论文提出超大规模视频推理套件 VBVR：包含按系统分类设计的 200 类推理任务与超百万视频片段，并配套可验证的 VBVR-Bench（规则与人工对齐评分）实现可复现诊断。基于该套件的扩展实验显示模型对未见视频推理任务出现早期泛化迹象。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.17985" target="_blank">Learning Without Training</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ryan O'Dowd, Ryan O'Dowd</div>
+            <div class="note-meta-line">Affiliation: Claremont Graduate University</div>
+        </div>
+        <div class="note-tldr">这篇博士论文从数学理论视角组织三项机器学习工作：监督学习/流形学习中的函数逼近方法、部分观测域下的迁移学习提升理论，以及将信号分离思想统一到主动学习分类的新理论与算法，在保持竞争精度的同时显著提升效率。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-02-24 23:00</div>
+    <div class="footer">Last updated: 2026-02-25 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
