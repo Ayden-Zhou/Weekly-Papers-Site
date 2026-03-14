@@ -386,8 +386,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">该技术报告系统总结 Megatron Core 在 MoE 大规模训练中的端到端协同优化：内存侧重计算与卸载、通信侧分发与重叠、计算侧 Grouped GEMM/融合/CUDA Graph，并支持并行折叠、FP8/NVFP4 与长上下文。实测在 GB300/GB200 上达到高吞吐，为万卡级训练提供可复用工程方案。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.10165" target="_blank">OpenClaw-RL: Train Any Agent Simply by Talking</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yinjie Wang, Mengdi Wang</div>
+            <div class="note-meta-line">Affiliation: Gen-Verse</div>
+        </div>
+        <div class="note-tldr">论文提出 OpenClaw-RL，把用户回复、工具输出、终端/GUI 状态变化统一视为 next-state 信号，用同一异步训练环路同时做在线服务、奖励评估和策略更新。方法结合 PRM 标量奖励与 OPD 方向性蒸馏，在个人助手与通用代理场景均显示出持续自提升能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.08660" target="_blank">How Far Can Unsupervised RLVR Scale LLM Training?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bingxiang He, Bowen Zhou</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University, Shanghai AI Lab</div>
+        </div>
+        <div class="note-tldr">该文系统分析无监督 RLVR 的可扩展性，给出统一理论说明内在奖励方法本质上会“锐化初始分布”，当置信度与正确性错配时会出现性能先升后崩。作者提出 Model Collapse Step 作为可训练性指标，并展示基于外在可验证信号的方法可能突破该上限。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-03-13 23:00</div>
+    <div class="footer">Last updated: 2026-03-14 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
