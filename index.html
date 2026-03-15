@@ -402,8 +402,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">该文系统分析无监督 RLVR 的可扩展性，给出统一理论说明内在奖励方法本质上会“锐化初始分布”，当置信度与正确性错配时会出现性能先升后崩。作者提出 Model Collapse Step 作为可训练性指标，并展示基于外在可验证信号的方法可能突破该上限。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.10145" target="_blank">Lost in Backpropagation: The LM Head is a Gradient Bottleneck</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Nathan Godey, Yoav Artzi</div>
+            <div class="note-meta-line">Affiliation: Cornell University</div>
+        </div>
+        <div class="note-tldr">论文指出语言模型输出层在反向传播中存在结构性“梯度瓶颈”：从词表维度到隐藏维度的投影会压缩并扭曲监督信号。作者结合理论分析与实证实验显示，LM head 可抑制 95%-99% 的梯度范数，使训练方向显著偏离最优更新，导致收敛变慢甚至让简单模式难以学习。该结论提示当前 LLM 训练效率受限于输出层设计，需要探索新的 LM head 架构。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-03-14 23:00</div>
+    <div class="footer">Last updated: 2026-03-15 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
