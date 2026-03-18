@@ -370,7 +370,39 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文研究潜在世界模型中的规划表征问题，指出预训练视觉特征常含与规划无关信息且轨迹弯曲，导致优化困难。作者提出 temporal straightening，在联合学习编码器与预测器时加入曲率正则，使潜在轨迹更“平直”，让欧氏距离更接近真实测地距离并改善规划目标条件数。实验表明该方法能显著提升梯度式规划稳定性与目标到达成功率。</div>
     </div>
-    <div class="footer">Last updated: 2026-03-17 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.14473" target="_blank">AI Can Learn Scientific Taste</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jingqi Tong, Xipeng Qiu</div>
+            <div class="note-meta-line">Affiliation: Fudan University, Shanghai Innovation Institute, OpenMOSS Team</div>
+        </div>
+        <div class="note-tldr">论文提出用社区反馈训练 AI 的“科研品味”：先基于 70 万组高低被引论文对训练 Scientific Judge 学习判断研究想法潜力，再把该评审器作为奖励模型训练 Scientific Thinker 生成高潜力课题。结果显示其在多项评测中超过多种强基线模型，并在跨年份、跨领域与评审偏好迁移上保持优势，说明 AI 可学习并内化科研价值判断。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.15594" target="_blank">OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuwen Du, Rui Ye</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">OpenSeeker 面向深度检索智能体的数据瓶颈，提出两项核心方法：可控事实驱动的多跳问答合成，以及基于回溯总结的轨迹去噪，从而以较小规模高质量数据训练出强搜索代理。作者开源了训练数据与模型权重，实验表明仅用约 1.17 万样本和单次 SFT 训练，就在多项检索基准上显著优于已有开源方案，并在中文任务上接近或超过部分闭源系统。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.15583" target="_blank">Grounding World Simulation Models in a Real-World Metropolis</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junyoung Seo, Jin-Hwa Kim</div>
+            <div class="note-meta-line">Affiliation: KAIST AI</div>
+        </div>
+        <div class="note-tldr">论文提出 Seoul World Model，将世界模型从“想象场景”推进到“真实城市”建模：通过检索增强把街景图像作为外部锚点，结合跨时间配对、合成轨迹数据与视角插值，缓解时序错位和稀疏采样问题。另引入 Virtual Lookahead Sink 在长时生成中持续重接地，实验证明其在首尔、釜山与安娜堡等城市上可生成更空间一致、时间连贯且长程稳定的真实城市场景视频。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.15031" target="_blank">Attention Residuals</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kimi Team, Kimi Team</div>
+            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team)</div>
+        </div>
+        <div class="note-tldr">作者指出传统 PreNorm 残差的等权累加会导致层深增加时表征被稀释，提出 Attention Residuals 让每层以注意力方式选择性聚合历史层输出，并进一步给出更高效的 Block AttnRes 以降低训练显存与通信开销。缩放实验和消融显示该机制在不同参数规模上稳定增益；在 Kimi Linear 大模型预训练中还改善了深层梯度与激活分布，并带来下游任务整体提升。</div>
+    </div>
+    <div class="footer">Last updated: 2026-03-18 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
