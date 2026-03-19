@@ -402,8 +402,32 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">作者指出传统 PreNorm 残差的等权累加会导致层深增加时表征被稀释，提出 Attention Residuals 让每层以注意力方式选择性聚合历史层输出，并进一步给出更高效的 Block AttnRes 以降低训练显存与通信开销。缩放实验和消融显示该机制在不同参数规模上稳定增益；在 Kimi Linear 大模型预训练中还改善了深层梯度与激活分布，并带来下游任务整体提升。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.15726" target="_blank">MiroThinker-1.7 & H1: Towards Heavy-Duty Research Agents via Verification</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: MiroMind Team, MiroMind Team</div>
+            <div class="note-meta-line">Affiliation: MiroMind</div>
+        </div>
+        <div class="note-tldr">论文提出面向复杂长链任务的研究智能体 MiroThinker-1.7 与强化版本 H1。前者通过 agentic mid-training 提升规划、上下文推理与工具交互稳定性；后者把局部与全局验证嵌入推理过程，在中间步骤纠偏并审计整条证据链。实验显示其在网页研究、科学推理与金融分析等深度研究基准上取得领先表现，并开源主模型与 mini 版本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.16790" target="_blank">InCoder-32B: Code Foundation Model for Industrial Scenarios</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jian Yang, Wayne Xin Zhao</div>
+            <div class="note-meta-line">Affiliation: Beihang University, IQuest Research</div>
+        </div>
+        <div class="note-tldr">InCoder-32B 是面向工业场景的 32B 代码基础模型，覆盖芯片设计、GPU 内核优化、嵌入式与编译优化、3D 建模等任务。作者采用从通用代码预训练到工业数据退火、上下文扩展中训和执行验证后训的完整流水线，在保持通用编程竞争力的同时，在多项工业基准上建立了强开源基线，强调“工业可用”的代码智能能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.15619" target="_blank">Mixture-of-Depths Attention</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Lianghui Zhu, Xinggang Wang</div>
+            <div class="note-meta-line">Affiliation: School of EIC, Huazhong University of Science and Technology, ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">论文提出 Mixture-of-Depths Attention，通过在注意力中引入跨深度可见关系，让当前查询按需利用不同层的 K/V 表征，而非仅依赖单层上下文。该机制旨在增强信息流动与层间协同，提升模型对长程依赖和复杂语义结构的建模能力。结果表明该方法在效率与性能之间取得更优平衡，可作为解码器架构的通用增强模块。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-03-18 23:00</div>
+    <div class="footer">Last updated: 2026-03-19 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
