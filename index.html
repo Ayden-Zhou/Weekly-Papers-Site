@@ -426,8 +426,32 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出 Mixture-of-Depths Attention，通过在注意力中引入跨深度可见关系，让当前查询按需利用不同层的 K/V 表征，而非仅依赖单层上下文。该机制旨在增强信息流动与层间协同，提升模型对长程依赖和复杂语义结构的建模能力。结果表明该方法在效率与性能之间取得更优平衡，可作为解码器架构的通用增强模块。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.14935" target="_blank">Video-CoE: Reinforcing Video Event Prediction via Chain of Events</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qile Su, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: AMAP, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">论文面向视频事件预测（VEP）中“看得到过去、难预测未来”的问题，先系统评测主流多模态大模型在该任务上的短板，再提出 Chain of Events（CoE）框架，通过构造时序事件链强化模型对视觉证据与事件逻辑的联合建模。实验显示该方法在公开基准上显著优于现有开源与商业模型，刷新 VEP 任务性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.17187" target="_blank">MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Peng Xia, Huaxiu Yao</div>
+            <div class="note-meta-line">Affiliation: UNC-Chapel Hill</div>
+        </div>
+        <div class="note-tldr">MetaClaw 针对真实环境中智能体能力随任务分布漂移而老化的问题，提出“技能快速演化 + 机会式权重优化”的双通路持续学习框架：在线从失败轨迹提炼可复用技能，离线在用户空闲窗口进行 LoRA 强化更新，并通过版本机制避免奖励污染。结果在长期工作流基准上带来稳定增益，任务完成率与鲁棒性显著提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.15569" target="_blank">Mamba-3: Improved Sequence Modeling using State Space Principles</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aakash Lahoti, Albert Gu</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">Mamba-3 从状态空间模型视角改进线性序列建模，提出更具表达力的离散化递推、复数态更新以及 MIMO 结构，在保持推理效率的同时提升状态跟踪与语言建模能力。实验表明其在检索、状态跟踪和下游任务上优于现有线性模型，并在性能-效率帕累托前沿取得更好平衡。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-03-19 23:00</div>
+    <div class="footer">Last updated: 2026-03-20 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
