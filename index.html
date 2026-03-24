@@ -360,8 +360,42 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-03-23 23:00</div>
+    <div class="week-header">2026-03-23 ~ 2026-03-29</div>
+    <div class="source-header">Latest file: 2026-03-23</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.17024" target="_blank">HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shenzhi Wang, Bowen Yu</div>
+            <div class="note-meta-line">Affiliation: Qwen Team, Alibaba Inc., LeapLab, Tsinghua University</div>
+        </div>
+        <div class="note-tldr">论文针对视觉语言模型在长链推理中容易出现感知错误、推理漂移与幻觉叠加的问题，提出可扩展数据合成框架 HopChain。该方法构造实例级多跳依赖问题链，并把最终答案约束为可验证数值，以便用于 RLVR 训练。作者在两种 Qwen3.5 规模模型上验证后发现，加入 HopChain 数据可在 24 个基准中的 20 个获得提升，且在超长 CoT 场景收益最显著，说明多跳数据能稳定增强可泛化视觉推理能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.17051" target="_blank">Astrolabe: Steering Forward-Process Reinforcement Learning for Distilled Autoregressive Video Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Songchun Zhang, Nan Duan</div>
+            <div class="note-meta-line">Affiliation: HKUST</div>
+        </div>
+        <div class="note-tldr">本文聚焦蒸馏自回归视频模型虽高效但与人类视觉偏好不一致的问题，提出 Astrolabe 来“转向”前向过程强化学习，使模型在不重新蒸馏的前提下完成偏好对齐。方法面向流式生成特性改造训练目标与优化路径，重点改善时序一致性与伪影控制。实验显示在短视频、长视频和多提示长视频等多种设定下，Astrolabe 均可在感知质量上优于 Reward-Forcing、Causal Forcing、LongLive、Inf-RoPE 等基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.18992" target="_blank">Foundations of Schrödinger Bridges for Generative Modeling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sophia Tang, Sophia Tang</div>
+            <div class="note-meta-line">Affiliation: Department of Computer and Information Science, University of Pennsylvania</div>
+        </div>
+        <div class="note-tldr">论文系统梳理了薛定谔桥在生成建模中的数学基础，试图以统一视角连接扩散模型、score-based 方法与 flow matching。作者从最优传输、随机控制和路径空间优化出发，构建在边缘分布约束下最小熵偏移的动态桥接框架，并强调其与现代生成算法的直接对应关系。该工作更偏“基础教程+框架化总结”，为后续设计通用或任务特化的生成路径构造与计算方法提供了清晰理论工具箱。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.18743" target="_blank">Memento-Skills: Let Agents Design Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Memento-Team, Memento-Team</div>
+            <div class="note-meta-line">Affiliation: Memento-Team（论文首页未明确给出机构）</div>
+        </div>
+        <div class="note-tldr">Memento-Skills 提出“让智能体设计智能体”的持续学习范式：系统把可复用技能写成结构化 Markdown 记忆，通过 Read-Write Reflective Learning 在任务中动态检索、更新并扩展技能库，而不需改动底层大模型参数。该闭环使通用代理能够基于经验不断构建和改进任务专用代理。论文在 General AI Assistants 与 Humanity’s Last Exam 上报告持续增益，显示外化技能记忆可支撑长期演化与跨任务能力提升。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-03-24 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
