@@ -434,8 +434,40 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 UNITE，将“图像 tokenization”和“潜变量去噪生成”统一到单阶段端到端训练中，通过共享生成编码器在不同条件下完成潜变量推断，形成统一潜空间语言。该方法在图像与分子任务中无需对抗损失或预训练编码器也能达到接近 SOTA 的生成质量，说明联合训练可行且高效。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.25728" target="_blank">PixelSmile: Toward Fine-Grained Facial Expression Editing</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiabin Hua, Yu-Gang Jiang</div>
+            <div class="note-meta-line">Affiliation: 未明确披露（arXiv 页面未给出第一作者机构）</div>
+        </div>
+        <div class="note-tldr">论文针对细粒度表情编辑中的语义耦合问题，构建带连续情感标注的 FFE 数据集与 FFE-Bench，并提出 PixelSmile 扩散框架。方法通过对称联合训练、强度监督与对比学习解耦表情语义，在文本潜变量插值下实现更稳定线性可控编辑；实验显示其在表情可分辨性、编辑精度与身份保持上优于基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.25040" target="_blank">Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yicheng Zou, Lei Bai</div>
+            <div class="note-meta-line">Affiliation: 未明确披露（arXiv 页面未给出第一作者机构）</div>
+        </div>
+        <div class="note-tldr">Intern-S1-Pro 提出首个万亿参数级科学多模态基础模型，目标是统一提升通用能力与科学专项能力。论文报告该模型在图文理解、推理与 agent 能力上增强，同时覆盖化学、材料、生命、地学等 100+ 科学任务；并依托 XTuner 与 LMDeploy 实现万亿级 RL 训练与训练推理精度一致，强调“可专精的通才”定位。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.24517" target="_blank">AVO: Agentic Variation Operators for Autonomous Evolutionary Search</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Terry Chen, Humphrey Shi</div>
+            <div class="note-meta-line">Affiliation: 未明确披露（arXiv 页面未给出第一作者机构）</div>
+        </div>
+        <div class="note-tldr">AVO 将进化搜索中的固定变异/交叉算子替换为自主编码智能体循环，使其可结合谱系、领域知识与执行反馈进行提出、修复、批判与验证。作者在 NVIDIA B200 上对注意力内核进行 7 天自治演化，结果显示相对 cuDNN 最多提升 3.5%、相对 FlashAttention-4 最多提升 10.5%，并可快速迁移到 GQA 继续获得性能增益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.24472" target="_blank">Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jeonghye Kim, Yuqing Yang</div>
+            <div class="note-meta-line">Affiliation: 未明确披露（arXiv 页面未给出第一作者机构）</div>
+        </div>
+        <div class="note-tldr">论文发现自蒸馏虽能缩短推理链，但在数学推理中可能显著降分。核心机制是“认知不确定性表达”被抑制：当教师条件信息过丰富时，学生更快拟合域内答案轨迹，却削弱 OOD 场景下通过表达不确定性进行自校正的能力。作者在多款 7B/8B 模型上观察到最高约 40% 性能下降，提示后训练应优化推理行为而非只强化正确答案轨迹。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-03-27 23:00</div>
+    <div class="footer">Last updated: 2026-03-28 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
