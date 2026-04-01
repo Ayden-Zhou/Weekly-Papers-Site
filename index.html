@@ -386,8 +386,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文将以往埋在控制器代码里的 agent harness 外化为可编辑自然语言工件，提出 NLAH 与配套运行时 IHR，用显式契约、可持久化产物和轻量适配器执行控制逻辑。作者在编程与计算机使用基准做可行性、模块消融和代码到文本迁移实验，验证了该范式的可移植与可研究性。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.27027" target="_blank">TAPS: Task Aware Proposal Distributions for Speculative Sampling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mohamad Zbib, Hasan Abed Al Kader Hammoud</div>
+            <div class="note-meta-line">Affiliation: King Abdullah University of Science and Technology (KAUST), American University of Beirut (AUB)</div>
+        </div>
+        <div class="note-tldr">论文研究 speculative decoding 的提案分布是否需要“任务匹配”。作者在数学推理与通用对话数据上训练轻量 drafter，发现不同训练分布会显著影响接受长度；推理数据更适合数学题，对话数据更适合聊天评测。相比权重平均，基于置信度的路由与 merged-tree 验证能更稳健地融合专用 drafter，并获得更高加速收益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.28052" target="_blank">Meta-Harness: End-to-End Optimization of Model Harnesses</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yoonho Lee, Chelsea Finn</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">论文将 LLM 系统中的 harness（存取与组织上下文的代码）作为可优化对象，提出外循环搜索系统 Meta-Harness。其 agentic proposer 可访问历史候选代码、分数与执行轨迹，从而进行更有效的迭代。实验显示在文本分类、检索增强数学推理和 agentic coding 上，Meta-Harness 同时提升性能并降低上下文开销，证明自动化 harness engineering 可系统超过手工设计基线。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-03-31 23:00</div>
+    <div class="footer">Last updated: 2026-04-01 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
