@@ -434,7 +434,55 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文结合高码率容错码、高效逻辑指令集与电路优化，给出 Shor 算法在密码学相关规模上可由约 1 万个可重构中性原子量子比特实现的资源估计。作者进一步分析了 2.6 万比特下离散对数与 RSA-2048 分解的时间量级，说明中性原子体系在容错量子计算落地上的现实潜力。</div>
     </div>
-    <div class="footer">Last updated: 2026-04-04 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.24414" target="_blank">ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Songyang Liu, Zhongyuan Wang</div>
+            <div class="note-meta-line">Affiliation: 论文页面未明确披露（arXiv）</div>
+        </div>
+        <div class="note-tldr">论文针对 OpenClaw 代理在工具调用、文件访问与命令执行中的高风险攻击面，提出三层实时防护框架 ClawKeeper：指令层的技能策略注入、运行层的插件化威胁检测与配置加固、系统层的解耦 Watcher 监控与干预。作者在多类威胁场景下验证其鲁棒性，展示了从提示到执行全链路的安全治理能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.26164" target="_blank">DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hao Liang, Wentao Zhang</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">该工作提出 DataFlex，将数据选择、领域配比调整与样本重加权三类数据中心训练范式统一到同一框架，并与常规 LLM 训练流程兼容。系统在模块化训练器中统一嵌入表示提取、推理与梯度计算等关键操作，支持大规模训练配置。实验显示动态数据策略在 MMLU、困惑度与效率上均优于静态全量训练或原始实现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.02029" target="_blank">The Latent Space: Foundation, Evolution, Mechanism, Ability, and Outlook</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinlei Yu, Shuicheng Yan</div>
+            <div class="note-meta-line">Affiliation: 论文页面未明确披露（arXiv）</div>
+        </div>
+        <div class="note-tldr">这是一篇系统性综述，主张“潜在空间”正成为语言模型的重要计算底座，相比显式 token 推理可缓解离散化与串行效率瓶颈。论文从 Foundation、Evolution、Mechanism、Ability、Outlook 五个维度梳理研究版图，并按架构、表征、计算与优化组织机制路线，同时总结其在推理、规划、记忆、协作与具身等能力上的作用及未来挑战。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.29957" target="_blank">Think Anywhere in Code Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xue Jiang, Yihong Dong</div>
+            <div class="note-meta-line">Affiliation: 论文页面未明确披露（arXiv）</div>
+        </div>
+        <div class="note-tldr">论文指出代码生成中仅在开头“先思考再作答”难以覆盖实现阶段动态暴露的复杂性，提出可在任意 token 位置按需触发思考的 Think-Anywhere 机制。方法先通过冷启动模仿推理模式，再用结果奖励驱动 RL 学习何时何处触发推理。在 LeetCode、LiveCodeBench、HumanEval、MBPP 上达到更优表现，并展现跨模型泛化与高熵位置自适应推理能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.01178" target="_blank">Screening Is Enough</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ken M. Nakanishi, Ken M. Nakanishi</div>
+            <div class="note-meta-line">Affiliation: 论文页面未明确披露（arXiv）</div>
+        </div>
+        <div class="note-tldr">该文认为 softmax 注意力只能给出相对相关性，无法显式拒绝无关键，因而提出基于“screening”机制的 Multiscreen 架构：对每个 key 进行阈值筛选，仅聚合通过筛选的键，去除全局竞争。实验显示在更少参数下可达到可比验证损失，支持更大学习率训练，并在长上下文检索与推理时延上取得明显优势。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.01193" target="_blank">Embarrassingly Simple Self-Distillation Improves Code Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruixiang Zhang, Yizhe Zhang</div>
+            <div class="note-meta-line">Affiliation: 论文页面未明确披露（arXiv）</div>
+        </div>
+        <div class="note-tldr">论文提出无需教师模型、验证器或强化学习的简单自蒸馏 SSD：先按温度与截断策略采样模型自身解答，再用这些样本做标准监督微调。该方法将 Qwen3-30B-Instruct 在 LiveCodeBench v6 的 pass@1 显著提升，并在不同规模与家族模型上保持增益。作者进一步分析其机制在于缓解解码中的精度与探索冲突，按上下文重塑 token 分布。</div>
+    </div>
+    <div class="footer">Last updated: 2026-04-05 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
