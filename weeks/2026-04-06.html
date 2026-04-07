@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-03-02 - Weekly Papers</title>
+    <title>2026-04-06 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -360,55 +360,15 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2026-03-02</div>
-    <div class="source-header">2026-03-02 ~ 2026-03-08</div>
+    <div class="week-header">2026-04-06</div>
+    <div class="source-header">2026-04-06 ~ 2026-04-12</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.00141" target="_blank">From Scale to Speed: Adaptive Test-Time Scaling for Image Editing</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.02268" target="_blank">SKILL0: In-Context Agentic Reinforcement Learning for Skill Internalization</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiangyan Qu, Gaopeng Gou</div>
-            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences, School of Cyber Security, University of Chinese Academy of Sciences</div>
+            <div class="note-meta-line">Authors: Zhengxi Lu, Yongliang Shen</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Meituan</div>
         </div>
-        <div class="note-tldr">论文针对图像编辑中的测试时扩展效率低与冗余采样问题，提出 ADE-CoT 自适应框架：按编辑难度动态分配采样预算、用区域定位与描述一致性做早期筛选、并在达到意图对齐时深度优先提前停止。在 Step1X-Edit、BAGEL、FLUX.1 Kontext 上实现更优性能-效率折中，并较 Best-of-N 获得超过 2 倍加速。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.02138" target="_blank">OmniLottie: Generating Vector Animations via Parameterized Lottie Tokens</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yiying Yang, Gang Yu</div>
-            <div class="note-meta-line">Affiliation: Fudan University, StepFun</div>
-        </div>
-        <div class="note-tldr">该工作面向 Lottie 向量动画生成，设计参数化 Lottie tokenizer，把原始 JSON 转成形状、运动函数与控制参数序列，并在预训练视觉语言模型上实现多模态自回归生成。配合 200 万规模的 MMLottie-2M 数据集，模型可统一支持 text-to-Lottie、text-image-to-Lottie 与 video-to-Lottie，提升语义对齐和动画质量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.24286" target="_blank">CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Weinan Dai, Hao Zhou</div>
-            <div class="note-meta-line">Affiliation: ByteDance Seed, Institute for AI Industry Research (AIR), Tsinghua University, SIA-Lab of Tsinghua AIR and ByteDance Seed</div>
-        </div>
-        <div class="note-tldr">CUDA Agent 通过大规模 agentic 强化学习提升 CUDA 内核自动优化能力，核心包括可扩展数据合成、带自动验证与性能分析的技能增强开发环境，以及稳定训练的 RL 技术。方法在 KernelBench 三个难度上相对 torch.compile 分别实现 100%、100%、92% 更快率，在最难设置上也显著超过多种强专有模型。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.03283" target="_blank">Utonia: Toward One Encoder for All Point Clouds</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yujia Zhang, Hengshuang Zhao</div>
-            <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
-        </div>
-        <div class="note-tldr">论文提出统一的自监督点云编码器 Utonia，在遥感、自动驾驶 LiDAR、室内重建、CAD 与视频重建点云等多域联合训练同一 Point Transformer。结果显示跨域迁移显著增强，并出现联合训练才有的表示能力；其特征还能提升机器人操作中的 VLA 策略与视觉语言模型的空间推理表现，朝 3D 基础模型迈进一步。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.01097" target="_blank">Understanding LoRA as Knowledge Memory: An Empirical Analysis</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Seungju Back, Sungjin Ahn</div>
-            <div class="note-meta-line">Affiliation: KAIST</div>
-        </div>
-        <div class="note-tldr">这项工作把 LoRA 视作可插拔的参数化知识记忆，而非仅是任务微调工具，并系统评估其“存得下、取得出、可组合、可扩展”的边界。实验覆盖容量、知识内化、多模块扩展与长上下文推理，结论是 LoRA 可作为 RAG/ICL 的互补记忆轴，但在配置不当时会出现明显失效，需要按容量与组合策略进行工程化设计。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.03276" target="_blank">Beyond Language Modeling: An Exploration of Multimodal Pretraining</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shengbang Tong, Luke Zettlemoyer</div>
-            <div class="note-meta-line">Affiliation: FAIR, Meta, New York University</div>
-        </div>
-        <div class="note-tldr">论文通过从零开始的受控实验系统研究原生多模态预训练，采用 Transfusion 框架将语言 next-token 训练与视觉扩散训练统一。作者提出四点关键发现：RAE 视觉表征最均衡；视觉与语言数据联合训练有协同增益；统一训练可自然涌现世界建模能力；MoE 能更高效扩展并形成模态专门化。IsoFLOP 分析还表明视觉比语言更“吃数据”，MoE 有助于缓解该扩展不对称。</div>
+        <div class="note-tldr">论文提出 SKILL0，将推理时检索技能改为训练时内化技能。方法在强化学习中先提供完整技能上下文，再通过动态课程按在策略帮助度逐步撤除技能，最终实现零检索推理。实验在 ALFWorld 与 Search-QA 上分别较标准 RL 提升 9.7% 和 6.6%，同时把每步上下文压到 0.5k token 以内。</div>
     </div>
     <div class="footer">Last updated: 2026-04-07 23:00</div>
     <script>

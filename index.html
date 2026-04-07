@@ -360,8 +360,18 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-04-06 23:00</div>
+    <div class="week-header">2026-04-06 ~ 2026-04-12</div>
+    <div class="source-header">Latest file: 2026-04-06</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.02268" target="_blank">SKILL0: In-Context Agentic Reinforcement Learning for Skill Internalization</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhengxi Lu, Yongliang Shen</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Meituan</div>
+        </div>
+        <div class="note-tldr">论文提出 SKILL0，将推理时检索技能改为训练时内化技能。方法在强化学习中先提供完整技能上下文，再通过动态课程按在策略帮助度逐步撤除技能，最终实现零检索推理。实验在 ALFWorld 与 Search-QA 上分别较标准 RL 提升 9.7% 和 6.6%，同时把每步上下文压到 0.5k token 以内。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-04-07 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
