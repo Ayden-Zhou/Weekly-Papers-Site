@@ -370,8 +370,32 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出 SKILL0，将推理时检索技能改为训练时内化技能。方法在强化学习中先提供完整技能上下文，再通过动态课程按在策略帮助度逐步撤除技能，最终实现零检索推理。实验在 ALFWorld 与 Search-QA 上分别较标准 RL 提升 9.7% 和 6.6%，同时把每步上下文压到 0.5k token 以内。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.04707" target="_blank">OpenWorldLib: A Unified Codebase and Definition of Advanced World Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: DataFlow Team, Wentao Zhang</div>
+            <div class="note-meta-line">Affiliation: OpenDCAI</div>
+        </div>
+        <div class="note-tldr">论文围绕“世界模型”定义不统一、能力边界模糊的问题，提出统一推理框架 OpenWorldLib，并将世界模型界定为以感知为核心、具备交互与长期记忆的模型/系统。作者按能力维度系统拆解关键组件，并在统一代码基座中整合多任务模型，实现跨任务复用与协同推理，为后续世界模型研究提供可复现工程底座。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.04771" target="_blank">MinerU2.5-Pro: Pushing the Limits of Data-Centric Document Parsing at Scale</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bin Wang, Conghui He</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory, The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">论文指出文档解析性能瓶颈更多来自训练数据而非模型结构，在固定 1.2B 架构下通过数据工程把性能推到新 SOTA。核心包括难度与多样性联合采样、跨模型一致性校验和 Judge-and-Refine 标注修正，并配合三阶段训练（预训练、困难样本微调、GRPO 对齐）。在 OmniDocBench v1.6 上达到 95.69，较同架构基线提升 2.71 分。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.03128" target="_blank">Self-Distilled RLVR</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chenxu Yang, Nan Duan</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
+        </div>
+        <div class="note-tldr">论文分析了直接用特权信息做自蒸馏会导致信息泄漏和长期训练不稳定，提出 RLSD，将自蒸馏用于提供 token 级更新幅度信号，同时继续依赖 RLVR 的可验证环境反馈来确定更新方向。该设计把两类训练范式互补结合，在收敛上限与训练稳定性上优于单独使用 RLVR 或 OPSD。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-04-07 23:00</div>
+    <div class="footer">Last updated: 2026-04-08 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
