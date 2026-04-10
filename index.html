@@ -394,8 +394,48 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文分析了直接用特权信息做自蒸馏会导致信息泄漏和长期训练不稳定，提出 RLSD，将自蒸馏用于提供 token 级更新幅度信号，同时继续依赖 RLVR 的可验证环境反馈来确定更新方向。该设计把两类训练范式互补结合，在收敛上限与训练稳定性上优于单独使用 RLVR 或 OPSD。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.05015" target="_blank">Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chaoyou Fu, Ran He</div>
+            <div class="note-meta-line">Affiliation: 未公开（Video-MME Team）</div>
+        </div>
+        <div class="note-tldr">论文提出新一代视频理解基准 Video-MME-v2，构建由视觉信息聚合、时间动态建模到多模态推理的三层能力阶梯，并引入按题组一致性与推理连贯性计分的非线性评测。基于大规模人工标注与多轮质检，结果显示当前最强模型与人类专家仍有显著差距，暴露视频推理中的层级瓶颈。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.06132" target="_blank">Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bowen Ye, Tong Yang</div>
+            <div class="note-meta-line">Affiliation: State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University</div>
+        </div>
+        <div class="note-tldr">Claw-Eval 面向自治代理提出可追踪、可审计的端到端评测框架，覆盖完成度、安全性与鲁棒性三维度。其通过执行轨迹、审计日志和环境快照三路证据进行细粒度打分，并在 300 个人工校验任务上评测 14 个模型，发现仅看最终结果会漏检大量安全与稳健性问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.04917" target="_blank">Vero: An Open RL Recipe for General Visual Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Gabriel Sarch, Zhuang Liu</div>
+            <div class="note-meta-line">Affiliation: Princeton University</div>
+        </div>
+        <div class="note-tldr">Vero 提出一个开源的视觉推理强化学习配方，目标是在统一流程下提升模型在计数、空间理解、动作理解与指令跟随等多类视觉推理任务上的泛化表现。论文通过构建较大规模训练配方与评测集，展示在多项视觉推理基准上的稳定收益，并强调可复现实验设置对社区的重要性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.06169" target="_blank">In-Place Test-Time Training</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guhao Feng, Tianle Cai</div>
+            <div class="note-meta-line">Affiliation: ByteDance Seed, Peking University</div>
+        </div>
+        <div class="note-tldr">该工作提出 In-Place TTT，让大模型在推理时可对“快权重”进行在线更新，以突破“训练后冻结”范式的适应性限制。方法将 MLP 末端投影矩阵作为可更新参数，并用与下一词预测更一致的目标和分块更新机制提升效率。在超长上下文任务上，4B 模型获得明显性能提升并具备更好可扩展性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.04921" target="_blank">TriAttention: Efficient Long Reasoning with Trigonometric KV Compression</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Weian Mao, Yukang Chen</div>
+            <div class="note-meta-line">Affiliation: MIT</div>
+        </div>
+        <div class="note-tldr">TriAttention 针对长推理中的 KV 缓存瓶颈，利用 pre-RoPE 空间中 Q/K 向量的中心化现象与三角级数距离偏好来估计关键 token 重要性，从而实现更稳定的 KV 压缩。实验显示其在保持接近全注意力精度的同时显著提升吞吐并降低显存占用，使长上下文推理更易在单卡消费级 GPU 上部署。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-04-09 23:00</div>
+    <div class="footer">Last updated: 2026-04-10 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
