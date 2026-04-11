@@ -434,8 +434,48 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">TriAttention 针对长推理中的 KV 缓存瓶颈，利用 pre-RoPE 空间中 Q/K 向量的中心化现象与三角级数距离偏好来估计关键 token 重要性，从而实现更稳定的 KV 压缩。实验显示其在保持接近全注意力精度的同时显著提升吞吐并降低显存占用，使长上下文推理更易在单卡消费级 GPU 上部署。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.08377" target="_blank">SkillClaw: Let Skills Evolve Collectively with Agentic Evolver</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ma, Ziyu, Chu, Xiangxiang</div>
+            <div class="note-meta-line">Affiliation: DreamX Team</div>
+        </div>
+        <div class="note-tldr">论文提出 SkillClaw，让多用户代理在真实使用中持续进化技能库。系统汇聚跨用户轨迹，由自动 evolver 识别可复用模式并更新技能，再同步给全部用户，实现经验共享与能力累积，在 WildClawBench 上带来稳定提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.08546" target="_blank">When Numbers Speak: Aligning Textual Numerals and Visual Instances in Text-to-Video Diffusion Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sun, Zhengyang, Bai, Xiang</div>
+            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">该工作提出无需额外训练的 NUMINA 框架，缓解文生视频模型里“文本数字”和“画面实例数量”不一致的问题。方法在保持布局自然与时序连贯的同时提升计数准确率，显著改善多目标计数类提示词的生成质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.06628" target="_blank">Rethinking Generalization in Reasoning SFT: A Conditional Analysis on Optimization, Data, and Model Capability</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ren, Qihan, Liu, Dongrui</div>
+            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory, Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">论文重新审视“推理 SFT 只会记忆不泛化”的结论，指出泛化受训练步数、数据质量和基座能力共同影响。作者观察到跨域性能存在先降后升的训练轨迹，并发现高质量长 CoT 与强模型更容易学到可迁移程序化推理，但安全性可能同步下降。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.08364" target="_blank">MegaStyle: Constructing Diverse and Scalable Style Dataset via Consistent Text-to-Image Style Mapping</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Gao, Junyao, Zhang, Jun</div>
+            <div class="note-meta-line">Affiliation: Tongji University, Tencent</div>
+        </div>
+        <div class="note-tldr">论文提出 MegaStyle 数据构建管线，利用文本到图像模型稳定的风格映射能力，生成同时具备“同风格一致性”和“跨风格多样性”的大规模风格数据。基于 1.4M 样本训练的 MegaStyle-FLUX 在颜色、纹理和笔触等细粒度风格迁移上表现更稳定。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.05018" target="_blank">PaperOrchestra: A Multi-Agent Framework for Automated AI Research Paper Writing</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Song, Yiwen, Yoon, Jinsung</div>
+            <div class="note-meta-line">Affiliation: Google</div>
+        </div>
+        <div class="note-tldr">PaperOrchestra 提出面向科研写作的多智能体框架，可将非结构化研究材料转化为投稿级论文草稿，并自动生成图表与概念图。作者同时构建 PaperWritingBench 评测集，在人工对比中该方法在文献综述和整体稿件质量上显著优于现有自动写作基线。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-04-10 23:00</div>
+    <div class="footer">Last updated: 2026-04-11 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
