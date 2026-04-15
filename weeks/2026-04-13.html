@@ -370,7 +370,15 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出可提示的开放世界 3D 检测体系 WildDet3D，配套构建大规模多场景数据与评测基准，覆盖单目、双目和视频等输入形态。方法通过统一提示接口与模型规模化训练，提升了在真实复杂环境中的泛化与零样本发现能力，为“in-the-wild”3D 感知提供了更可扩展的基线。</div>
     </div>
-    <div class="footer">Last updated: 2026-04-14 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.08570" target="_blank">QuanBench+: A Unified Multi-Framework Benchmark for LLM-Based Quantum Code Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ali Slim, Bernard Ghanem</div>
+            <div class="note-meta-line">Affiliation: American University of Beirut</div>
+        </div>
+        <div class="note-tldr">论文提出 QuanBench+，统一在 Qiskit、PennyLane、Cirq 三个主流量子编程框架上评测大模型量子代码生成能力，覆盖算法实现、门分解与态制备等 42 个对齐任务。评测采用可执行功能测试，报告 Pass@1/Pass@5，并对概率输出引入基于 KL 散度的接受准则；同时加入基于错误反馈的修复评测。结果显示最佳模型在一次生成下分别达到 59.5%、54.8%、42.9%，反馈修复后可提升至 83.3%、76.2%、66.7%，说明多框架量子代码生成虽进步明显，但对框架知识依赖仍然较强。</div>
+    </div>
+    <div class="footer">Last updated: 2026-04-15 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
