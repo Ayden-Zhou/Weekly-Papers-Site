@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-04-13 - Weekly Papers</title>
+    <title>2026-04-27 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -360,55 +360,47 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2026-04-13</div>
-    <div class="source-header">2026-04-13 ~ 2026-04-19</div>
+    <div class="week-header">2026-04-27</div>
+    <div class="source-header">2026-04-27 ~ 2026-05-03</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.08626" target="_blank">WildDet3D: Scaling Promptable 3D Detection in the Wild</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.22709" target="_blank">Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Weikai Huang, Ranjay Krishna</div>
-            <div class="note-meta-line">Affiliation: Allen Institute for AI, University of Washington</div>
+            <div class="note-meta-line">Authors: Keshav Ramji, Ramón Fernandez Astudillo</div>
+            <div class="note-meta-line">Affiliation: IBM Research AI</div>
         </div>
-        <div class="note-tldr">论文提出可提示的开放世界 3D 检测体系 WildDet3D，配套构建大规模多场景数据与评测基准，覆盖单目、双目和视频等输入形态。方法通过统一提示接口与模型规模化训练，提升了在真实复杂环境中的泛化与零样本发现能力，为“in-the-wild”3D 感知提供了更可扩展的基线。</div>
+        <div class="note-tldr">提出 Abstract Chain-of-Thought，用一组保留的离散抽象 token 替代自然语言 CoT，在回答前生成短的潜在推理序列。方法通过从 verbal CoT 的瓶颈化监督训练、自蒸馏和带约束解码的强化学习逐步让抽象 token 可用，在数学推理、指令跟随和多跳推理上保持接近性能，同时最多减少 11.6 倍推理 token，展示了后训练阶段学习“抽象推理语言”的可能性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.08570" target="_blank">QuanBench+: A Unified Multi-Framework Benchmark for LLM-Based Quantum Code Generation</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.24763" target="_blank">Tuna-2: Pixel Embeddings Beat Vision Encoders for Multimodal Understanding and Generation</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ali Slim, Bernard Ghanem</div>
-            <div class="note-meta-line">Affiliation: American University of Beirut</div>
+            <div class="note-meta-line">Authors: Zhiheng Liu, Yuren Cong</div>
+            <div class="note-meta-line">Affiliation: Meta AI, The University of Hong Kong</div>
         </div>
-        <div class="note-tldr">论文提出 QuanBench+，统一在 Qiskit、PennyLane、Cirq 三个主流量子编程框架上评测大模型量子代码生成能力，覆盖算法实现、门分解与态制备等 42 个对齐任务。评测采用可执行功能测试，报告 Pass@1/Pass@5，并对概率输出引入基于 KL 散度的接受准则；同时加入基于错误反馈的修复评测。结果显示最佳模型在一次生成下分别达到 59.5%、54.8%、42.9%，反馈修复后可提升至 83.3%、76.2%、66.7%，说明多框架量子代码生成虽进步明显，但对框架知识依赖仍然较强。</div>
+        <div class="note-tldr">提出 Tuna-2，一种直接从像素 patch embedding 进行多模态理解和生成的统一模型，去掉传统预训练视觉编码器、VAE 或表示编码器。实验显示，虽然编码器版本早期收敛更快，但随规模扩大，Tuna-2 在细粒度视觉感知、多模态 benchmark 和高质量图像生成上达到更强表现，说明端到端像素空间建模可以同时服务生成与感知。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.11784" target="_blank">ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.24827" target="_blank">Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Bojie Li</div>
+            <div class="note-meta-line">Affiliation: Pine AI</div>
         </div>
-        <div class="note-tldr">论文提出 ClawGUI 统一框架，覆盖 GUI Agent 的训练、评测与部署全流程，目标是减少不同数据、环境和执行接口之间的割裂。该框架强调可复现基准、标准化任务定义与端到端工程落地，帮助研究结果更稳定地迁移到真实 GUI 自动化场景。</div>
+        <div class="note-tldr">提出 Incompressible Knowledge Probes，用事实容量估计黑盒大模型参数规模。核心思想是事实记忆需要不可压缩的权重容量，因此可用跨 7 个冷门层级的 1400 个事实问题测量模型知道多少，再用 89 个开源模型校准 accuracy 到参数量的 log-linear 映射。方法在留一验证中取得较低倍数误差，并用于估计主流闭源模型的有效知识容量。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.07429" target="_blank">GameWorld: Towards Standardized and Verifiable Evaluation of Multimodal Game Agents</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.22748" target="_blank">Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Meng Chu, Jiaya Jia</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
         </div>
-        <div class="note-tldr">GameWorld 聚焦多模态游戏智能体评测的标准化与可验证性，尝试提供统一任务协议、评价指标和可复现实验设置。核心贡献是将“能否完成任务”与“过程是否可审计”结合，降低不同方法横向比较时的噪声，推动游戏智能体评测走向更可靠的工程范式。</div>
+        <div class="note-tldr">系统梳理 agentic world model，提出“能力层级 × 约束法则”的二维框架：L1 Predictor、L2 Simulator、L3 Evolver 分别对应一步预测、多步可控模拟和基于新证据自我修正；物理、数字、社会、科学四类法则决定模型约束和失败模式。论文综合 400 多篇工作与 100 多个代表系统，给出评估原则、架构建议和开放问题。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.14148" target="_blank">Seedance 2.0: Advancing Video Generation for World Complexity</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.24764" target="_blank">World-R1: Reinforcing 3D Constraints for Text-to-Video Generation</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Weijie Wang, Bohan Zhuang</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Microsoft Research</div>
         </div>
-        <div class="note-tldr">Seedance 2.0 面向复杂世界场景的视频生成，重点提升多主体、多事件和长时序下的时空一致性。论文强调对复杂物理与语义关系的建模能力，旨在在保持画质与可控性的同时，增强模型对真实世界复杂度的表达与泛化能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.11626" target="_blank">RationalRewards: Reasoning Rewards Scale Visual Generation Both Training and Test Time</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">RationalRewards 探索将推理型奖励同时用于训练阶段与测试阶段，以提升视觉生成质量与可控性。方法通过奖励塑形让模型在生成过程中更符合结构化目标与语义约束，并展示了在不同推理预算下性能可扩展的趋势，为“测试时计算换质量”提供了系统化路径。</div>
+        <div class="note-tldr">提出 World-R1，通过强化学习把文本到视频生成与 3D 约束对齐，而不修改基础模型结构或增加推理时控制模块。方法构建纯文本 world-simulation prompt 数据，利用 Flow-GRPO 和来自 3D foundation model 与视觉语言模型的反馈优化几何一致性，并用周期性解耦训练平衡刚性结构与动态流畅性，在保持视觉质量的同时提升 3D 一致性。</div>
     </div>
     <div class="footer">Last updated: 2026-05-01 23:00</div>
     <script>
