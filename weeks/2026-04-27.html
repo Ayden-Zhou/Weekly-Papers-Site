@@ -402,7 +402,31 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 World-R1，通过强化学习把文本到视频生成与 3D 约束对齐，而不修改基础模型结构或增加推理时控制模块。方法构建纯文本 world-simulation prompt 数据，利用 Flow-GRPO 和来自 3D foundation model 与视觉语言模型的反馈优化几何一致性，并用周期性解耦训练平衡刚性结构与动态流畅性，在保持视觉质量的同时提升 3D 一致性。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-02 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.23468" target="_blank">A Milestone in Formalization: The Sphere Packing Problem in Dimension 8</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sidharth Hariharan</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">论文回顾将 Viazovska 的 8 维球堆积最优性证明形式化到 Lean 的项目：团队把模形式、Cohn-Elkies 最优性条件等数学基础逐步机器验证，并在最后阶段借助 Math, Inc. 的 Gauss autoformalization 模型完成关键证明，讨论了人机协作中的技术路线、已达成的里程碑和仍待 formalize 的目标。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.25917" target="_blank">Recursive Multi-Agent Systems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiyuan Yang, Jiaru Zou</div>
+            <div class="note-meta-line">Affiliation: UIUC</div>
+        </div>
+        <div class="note-tldr">论文把“递归/循环语言模型”的扩展轴从单模型推广到多智能体系统，提出 RecursiveMAS：用 RecursiveLink 在潜空间连接异构 agents，并通过 inner-outer loop 学习进行跨递归轮次的系统级协同优化。在数学、科学、医学、搜索和代码等 9 个基准上，相比现有单/多智能体与递归计算基线平均提升 8.3% 准确率，同时带来 1.2-2.4 倍推理加速和显著 token 节省。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.27351" target="_blank">Heterogeneous Scientific Foundation Model Collaboration</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zihao Li, Jingrui He</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">论文指出语言作为统一接口限制了 LLM agents 在科学任务中的作用，提出 Eywa：给时间序列、表格等领域专用 foundation models 加上语言模型推理接口，使它们能被 agentic 系统调用、协作和编排。Eywa 可作为单 agent 替换件、嵌入多智能体系统，或由 planner 动态调度；实验覆盖物理、生命和社会科学任务，显示其提升 utility、降低语言推理依赖并减少 token/延迟开销。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-03 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
