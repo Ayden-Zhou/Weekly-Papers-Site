@@ -360,74 +360,8 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">2026-04-27 ~ 2026-05-03</div>
-    <div class="source-header">Latest file: 2026-04-27</div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.22709" target="_blank">Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Keshav Ramji, Ramón Fernandez Astudillo</div>
-            <div class="note-meta-line">Affiliation: IBM Research AI</div>
-        </div>
-        <div class="note-tldr">提出 Abstract Chain-of-Thought，用一组保留的离散抽象 token 替代自然语言 CoT，在回答前生成短的潜在推理序列。方法通过从 verbal CoT 的瓶颈化监督训练、自蒸馏和带约束解码的强化学习逐步让抽象 token 可用，在数学推理、指令跟随和多跳推理上保持接近性能，同时最多减少 11.6 倍推理 token，展示了后训练阶段学习“抽象推理语言”的可能性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.24763" target="_blank">Tuna-2: Pixel Embeddings Beat Vision Encoders for Multimodal Understanding and Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhiheng Liu, Yuren Cong</div>
-            <div class="note-meta-line">Affiliation: Meta AI, The University of Hong Kong</div>
-        </div>
-        <div class="note-tldr">提出 Tuna-2，一种直接从像素 patch embedding 进行多模态理解和生成的统一模型，去掉传统预训练视觉编码器、VAE 或表示编码器。实验显示，虽然编码器版本早期收敛更快，但随规模扩大，Tuna-2 在细粒度视觉感知、多模态 benchmark 和高质量图像生成上达到更强表现，说明端到端像素空间建模可以同时服务生成与感知。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.24827" target="_blank">Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Bojie Li</div>
-            <div class="note-meta-line">Affiliation: Pine AI</div>
-        </div>
-        <div class="note-tldr">提出 Incompressible Knowledge Probes，用事实容量估计黑盒大模型参数规模。核心思想是事实记忆需要不可压缩的权重容量，因此可用跨 7 个冷门层级的 1400 个事实问题测量模型知道多少，再用 89 个开源模型校准 accuracy 到参数量的 log-linear 映射。方法在留一验证中取得较低倍数误差，并用于估计主流闭源模型的有效知识容量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.22748" target="_blank">Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Meng Chu, Jiaya Jia</div>
-            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
-        </div>
-        <div class="note-tldr">系统梳理 agentic world model，提出“能力层级 × 约束法则”的二维框架：L1 Predictor、L2 Simulator、L3 Evolver 分别对应一步预测、多步可控模拟和基于新证据自我修正；物理、数字、社会、科学四类法则决定模型约束和失败模式。论文综合 400 多篇工作与 100 多个代表系统，给出评估原则、架构建议和开放问题。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.24764" target="_blank">World-R1: Reinforcing 3D Constraints for Text-to-Video Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Weijie Wang, Bohan Zhuang</div>
-            <div class="note-meta-line">Affiliation: Zhejiang University, Microsoft Research</div>
-        </div>
-        <div class="note-tldr">提出 World-R1，通过强化学习把文本到视频生成与 3D 约束对齐，而不修改基础模型结构或增加推理时控制模块。方法构建纯文本 world-simulation prompt 数据，利用 Flow-GRPO 和来自 3D foundation model 与视觉语言模型的反馈优化几何一致性，并用周期性解耦训练平衡刚性结构与动态流畅性，在保持视觉质量的同时提升 3D 一致性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.23468" target="_blank">A Milestone in Formalization: The Sphere Packing Problem in Dimension 8</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sidharth Hariharan</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
-        </div>
-        <div class="note-tldr">论文回顾将 Viazovska 的 8 维球堆积最优性证明形式化到 Lean 的项目：团队把模形式、Cohn-Elkies 最优性条件等数学基础逐步机器验证，并在最后阶段借助 Math, Inc. 的 Gauss autoformalization 模型完成关键证明，讨论了人机协作中的技术路线、已达成的里程碑和仍待 formalize 的目标。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.25917" target="_blank">Recursive Multi-Agent Systems</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiyuan Yang, Jiaru Zou</div>
-            <div class="note-meta-line">Affiliation: UIUC</div>
-        </div>
-        <div class="note-tldr">论文把“递归/循环语言模型”的扩展轴从单模型推广到多智能体系统，提出 RecursiveMAS：用 RecursiveLink 在潜空间连接异构 agents，并通过 inner-outer loop 学习进行跨递归轮次的系统级协同优化。在数学、科学、医学、搜索和代码等 9 个基准上，相比现有单/多智能体与递归计算基线平均提升 8.3% 准确率，同时带来 1.2-2.4 倍推理加速和显著 token 节省。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.27351" target="_blank">Heterogeneous Scientific Foundation Model Collaboration</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zihao Li, Jingrui He</div>
-            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
-        </div>
-        <div class="note-tldr">论文指出语言作为统一接口限制了 LLM agents 在科学任务中的作用，提出 Eywa：给时间序列、表格等领域专用 foundation models 加上语言模型推理接口，使它们能被 agentic 系统调用、协作和编排。Eywa 可作为单 agent 替换件、嵌入多智能体系统，或由 planner 动态调度；实验覆盖物理、生命和社会科学任务，显示其提升 utility、降低语言推理依赖并减少 token/延迟开销。</div>
-    </div>
-
-    <div class="footer">Last updated: 2026-05-03 23:00</div>
+    <div class="week-header">本周暂无详细笔记</div>
+    <div class="footer">Last updated: 2026-05-04 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
