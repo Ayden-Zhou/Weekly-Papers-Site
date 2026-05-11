@@ -360,42 +360,8 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">2026-05-04 ~ 2026-05-10</div>
-    <div class="source-header">Latest file: 2026-05-04</div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.02881" target="_blank">MolmoAct2: Action Reasoning Models for Real-world Deployment</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Haoquan Fang, Ranjay Krishna</div>
-            <div class="note-meta-line">Affiliation: Allen Institute for AI, University of Washington</div>
-        </div>
-        <div class="note-tldr">提出面向真实部署的开放 VLA 模型 MolmoAct2：包含空间/具身推理骨干 MolmoER、新的多具身机器人数据、OpenFAST 动作 tokenizer、连续动作 expert 与自适应深度推理。实验覆盖仿真与真实机器人，显示其在开放 VLA 和 embodied reasoning 上优于强基线。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2604.27660" target="_blank">From Context to Skills: Can Language Models Learn from Context Skillfully?</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shuzheng Si</div>
-            <div class="note-meta-line">Affiliation: THU, DeepLang AI</div>
-        </div>
-        <div class="note-tldr">针对模型需要从长上下文中学习新规则的问题，提出 Ctx2Skill：通过 Challenger、Reasoner、Judge 的多智能体 self-play 自动发现、精炼并选择自然语言技能，并用 Cross-time Replay 防止过拟合式技能累积。在 CL-bench 多个任务上提升不同 backbone 的上下文学习表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.00809" target="_blank">Let ViT Speak: Generative Language-Image Pre-training</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yan Fang, Zilong Huang, Yunchao Wei</div>
-            <div class="note-meta-line">Affiliation: Beijing Jiaotong University, ByteDance</div>
-        </div>
-        <div class="note-tldr">提出 GenLIP，用语言建模目标让 ViT 直接从视觉 token 预测文本 token，从而更贴合自回归 LLM，不需要对比式 batch 构造或额外文本解码器。模型在 8B 样本上取得强多模态基准表现，并在 OCR、图表理解等细粒度任务上继续受益。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.02641" target="_blank">Mamoda2.5: Enhancing Unified Multimodal Model with DiT-MoE</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yangming Shi, Zhenbang Sun</div>
-            <div class="note-meta-line">Affiliation: ByteDance</div>
-        </div>
-        <div class="note-tldr">提出统一的 AR-Diffusion 多模态框架 Mamoda2.5，把理解、图像生成与视频生成/编辑整合到单一架构中，并用 128 experts、Top-8 routing 的 DiT-MoE 扩展容量、降低训练成本。模型在 VBench 2.0、OpenVE-Bench 等表现强，并通过少步蒸馏与强化学习显著加速视频编辑。</div>
-    </div>
-
-    <div class="footer">Last updated: 2026-05-10 23:00</div>
+    <div class="week-header">本周暂无详细笔记</div>
+    <div class="footer">Last updated: 2026-05-11 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
