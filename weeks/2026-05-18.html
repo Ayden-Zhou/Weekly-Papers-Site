@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-02-09 - Weekly Papers</title>
+    <title>2026-05-18 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -360,111 +360,39 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2026-02-09</div>
-    <div class="source-header">2026-02-09 ~ 2026-02-15</div>
+    <div class="week-header">2026-05-18</div>
+    <div class="source-header">2026-05-18 ~ 2026-05-24</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.09877" target="_blank">The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15298" target="_blank">PhysBrain 1.0 Technical Report</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Chenxu Wang, Philip S. Yu</div>
-            <div class="note-meta-line">Affiliation: Beijing University of Posts and Telecommunications</div>
+            <div class="note-meta-line">Authors: Shijie Lian, Kai Chen</div>
+            <div class="note-meta-line">Affiliation: Zhongguancun Academy, Huazhong University of Science and Technology</div>
         </div>
-        <div class="note-tldr">论文研究自演化多智能体社会中的安全退化问题，提出“自演化三难困境”，证明持续自演化、完全隔离与安全不变性无法同时满足。基于信息论框架与 Moltbook 等实验，作者展示封闭自演化会产生统计盲区并导致安全对齐不可逆衰减。</div>
+        <div class="note-tldr">提出 PhysBrain 1.0：把大规模人类第一视角视频转成结构化物理常识 QA，训练物理感知 VLM，再通过能力保持和语言敏感的 VLA 适配迁移到机器人控制。在 ERQA、PhysBench、SimplerEnv、LIBERO、RoboCasa 等任务上取得强结果，说明人类交互视频能有效补足机器人数据的物理常识覆盖。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.12036" target="_blank">Composition-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.12882" target="_blank">CiteVQA: Benchmarking Evidence Attribution for Trustworthy Document Intelligence</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Xin Xu, Can Yang</div>
-            <div class="note-meta-line">Affiliation: HY, Tencent, The Hong Kong University of Science and Technology</div>
+            <div class="note-meta-line">Authors: Dongsheng Ma, Conghui He</div>
+            <div class="note-meta-line">Affiliation: Peking University, Shanghai Artificial Intelligence Laboratory</div>
         </div>
-        <div class="note-tldr">论文提出 Composition-RL，针对 RLVR 训练中大量通过率为 1 的“简单题”导致有效数据减少的问题，将多个可验证问题自动组合成新的可验证题目用于强化学习。实验覆盖 4B 到 30B 模型，显示推理能力稳定提升，并可结合课程式组合深度进一步增强效果。</div>
+        <div class="note-tldr">提出 CiteVQA，用 711 份跨领域、双语 PDF 构建 1897 个问题，要求模型同时给出答案和元素级 bbox 证据。新指标 SAA 只有在答案与引用区域都正确时才给分，揭示当前 MLLM 常出现“答案正确但证据错误”的 attribution hallucination，暴露文档智能可信性缺口。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.12205" target="_blank">DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image Generation and Editing</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.13527" target="_blank">MMSkills: Towards Multimodal Skills for General Visual Agents</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Dianyi Wang, Jiaqi Wang</div>
-            <div class="note-meta-line">Affiliation: Shanghai Innovation Institute, Fudan University</div>
+            <div class="note-meta-line">Authors: Kangning Zhang, Yong Yu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Xiaohongshu Inc.</div>
         </div>
-        <div class="note-tldr">论文提出 5B 级统一多模态模型 DeepGen 1.0，用于图像生成与编辑，在能力上接近或超过更大模型。核心方法包括分层特征对齐的 SCB（Stacked Channel Bridging）与三阶段数据驱动训练流程，以提升紧凑模型的语义理解和细粒度控制能力。</div>
+        <div class="note-tldr">提出 MMSkills，将可复用技能从纯文本扩展为“文本流程 + 状态卡 + 多视角关键帧”的多模态程序知识。论文给出从公开轨迹自动生成技能包的 pipeline，并通过 branch-loaded agent 在运行时对齐视觉证据，在 GUI 和游戏类视觉代理基准上稳定提升大模型与小模型表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.10604" target="_blank">Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15155" target="_blank">Self-Distilled Agentic Reinforcement Learning</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ailin Huang, Zixuan Wang</div>
-            <div class="note-meta-line">Affiliation: StepFun</div>
+            <div class="note-meta-line">Authors: Zhengxi Lu, Qi Gu, Yongliang Shen</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Meituan</div>
         </div>
-        <div class="note-tldr">论文发布稀疏 MoE 模型 Step 3.5 Flash，以 196B 总参数、11B 激活参数兼顾推理能力与效率。模型结合 3:1 滑窗/全注意力与 MTP-3，并使用可验证信号与偏好反馈的可扩展 RL 框架，在 agent、代码与数学任务上取得接近前沿闭源模型的表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08099" target="_blank">VidVec: Unlocking Video MLLM Embeddings for Video-Text Retrieval</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Issar Tzachor, Rami Ben-Ari</div>
-            <div class="note-meta-line">Affiliation: OriginAI, Israel</div>
-        </div>
-        <div class="note-tldr">论文研究视频 MLLM 表征用于视频文本检索，发现预训练 MLLM 的中间层已包含丰富检索相关信息。作者提出结合中间层嵌入与校准头的无训练零样本检索方案，并进一步通过仅文本的轻量对齐策略提升视频-文本嵌入学习效果。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.05400" target="_blank">OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shaobo Wang, Linfeng Zhang</div>
-            <div class="note-meta-line">Affiliation: EPIC Lab, SJTU, Qwen Team, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">论文提出 OPUS 动态数据选择框架，在预训练每轮迭代中以“优化器诱导的更新空间”定义样本效用，而非静态启发式或原始梯度标准。通过 Ghost+CountSketch 与 Boltzmann 采样实现可扩展计算，在仅约 4.7% 额外开销下显著提升多种语料、优化器与模型规模下的预训练效果。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.09856" target="_blank">Code2World: A GUI World Model via Renderable Code Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuhao Zheng, Kevin Qinghong Lin</div>
-            <div class="note-meta-line">Affiliation: University of Science and Technology of China, AMAP, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">论文提出 Code2World，将 GUI 世界建模转化为可渲染代码生成，以同时获得高视觉保真与结构可控性。作者构建 AndroidCode 数据集，并采用渲染感知强化学习优化生成代码的视觉语义一致性与动作一致性，在下一界面预测和下游导航任务上取得显著提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.09082" target="_blank">UI-Venus-1.5 Technical Report</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Venus Team, Weiqiang Wang</div>
-            <div class="note-meta-line">Affiliation: Ant Group</div>
-        </div>
-        <div class="note-tldr">技术报告介绍统一端到端 GUI Agent UI-Venus-1.5，包含 2B、8B 和 30B-A3B 多个规模版本。相比前代，其通过大规模中期训练、全轨迹在线强化学习和模型融合统一 grounding/web/mobile 能力，在多项 GUI 基准和真实中文移动应用导航中取得更强表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08222" target="_blank">Weak-Driven Learning: How Weak Agents make Strong Agents Stronger</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zehao Chen, Yikun Ban</div>
-            <div class="note-meta-line">Affiliation: Beihang University, China Telecom eSurfing Cloud</div>
-        </div>
-        <div class="note-tldr">论文提出弱驱动学习范式 WMSS（Weak Agents Can Make Strong Agents Stronger），利用模型历史弱检查点中的“可恢复学习缺口”继续提升强模型。方法基于熵动态识别补偿学习目标，在数学推理和代码生成任务上突破后训练饱和瓶颈，且不增加推理成本。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.07274" target="_blank">TermiGen: High-Fidelity Environment and Robust Trajectory Synthesis for Terminal Agents</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Kaijie Zhu, Wenbo Guo</div>
-            <div class="note-meta-line">Affiliation: UC Santa Barbara</div>
-        </div>
-        <div class="note-tldr">论文提出 TermiGen，用于为终端代理合成高保真可执行环境与鲁棒轨迹数据，以缓解环境稀缺和专家轨迹分布失配问题。其通过多智能体迭代生成任务/容器，并用 Generator-Critic 机制注入错误构造纠错型轨迹，使开源模型在 TerminalBench 上达到新的 SOTA。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.07085" target="_blank">QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jun Han, Huacan Wang</div>
-            <div class="note-meta-line">Affiliation: SUFE, AIFin Lab</div>
-        </div>
-        <div class="note-tldr">论文提出 QuantaAlpha，将一次完整 alpha 挖掘视作轨迹，并通过轨迹级变异与交叉实现可控的多轮探索与经验复用。系统还能定位轨迹中的次优步骤进行定向修正，并约束因子语义与代码一致性，在 CSI300 及跨市场迁移实验中取得更优收益与稳健性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08794" target="_blank">MOVA: Towards Scalable and Synchronized Video-Audio Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: SII-OpenMOSS Team, Xipeng Qiu</div>
-            <div class="note-meta-line">Affiliation: SII-OpenMOSS</div>
-        </div>
-        <div class="note-tldr">论文提出开源音视频联合生成模型 MOVA，面向同步语音、环境音和音乐生成，避免传统级联式视频后配音流程的误差累积。模型采用 32B 总参数、18B 激活参数的 MoE 架构，支持图文到音视频生成，并提供推理、LoRA 微调与提示增强能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.07026" target="_blank">Modality Gap-Driven Subspace Alignment Training Paradigm For Multimodal Large Language Models</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiaomin Yu, Shuicheng Yan</div>
-            <div class="note-meta-line">Affiliation: HKUST(GZ), NUS</div>
-        </div>
-        <div class="note-tldr">论文聚焦多模态表示中的 Modality Gap，提出固定参考系下的模态间隙理论，将其分解为稳定偏置与各向异性残差。基于该建模，作者给出训练免的 ReAlign 对齐策略和可扩展训练范式 ReVision，以更高效地改善大规模多模态模型的跨模态对齐。</div>
+        <div class="note-tldr">提出 SDAR，把 on-policy self-distillation 作为受控辅助目标接入多轮 agent RL。方法用教师分支的 token 级信号生成 sigmoid gate，强化正向 endorsement、弱化不可靠的负向拒绝，在 ALFWorld、WebShop、Search-QA 上相对 GRPO 明显提升，并避免朴素 GRPO+OPSD 的训练不稳定。</div>
     </div>
     <div class="footer">Last updated: 2026-05-19 23:00</div>
     <script>

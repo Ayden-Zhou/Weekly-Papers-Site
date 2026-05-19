@@ -360,8 +360,42 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-05-18 23:00</div>
+    <div class="week-header">2026-05-18 ~ 2026-05-24</div>
+    <div class="source-header">Latest file: 2026-05-18</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15298" target="_blank">PhysBrain 1.0 Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shijie Lian, Kai Chen</div>
+            <div class="note-meta-line">Affiliation: Zhongguancun Academy, Huazhong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">提出 PhysBrain 1.0：把大规模人类第一视角视频转成结构化物理常识 QA，训练物理感知 VLM，再通过能力保持和语言敏感的 VLA 适配迁移到机器人控制。在 ERQA、PhysBench、SimplerEnv、LIBERO、RoboCasa 等任务上取得强结果，说明人类交互视频能有效补足机器人数据的物理常识覆盖。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.12882" target="_blank">CiteVQA: Benchmarking Evidence Attribution for Trustworthy Document Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dongsheng Ma, Conghui He</div>
+            <div class="note-meta-line">Affiliation: Peking University, Shanghai Artificial Intelligence Laboratory</div>
+        </div>
+        <div class="note-tldr">提出 CiteVQA，用 711 份跨领域、双语 PDF 构建 1897 个问题，要求模型同时给出答案和元素级 bbox 证据。新指标 SAA 只有在答案与引用区域都正确时才给分，揭示当前 MLLM 常出现“答案正确但证据错误”的 attribution hallucination，暴露文档智能可信性缺口。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.13527" target="_blank">MMSkills: Towards Multimodal Skills for General Visual Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kangning Zhang, Yong Yu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Xiaohongshu Inc.</div>
+        </div>
+        <div class="note-tldr">提出 MMSkills，将可复用技能从纯文本扩展为“文本流程 + 状态卡 + 多视角关键帧”的多模态程序知识。论文给出从公开轨迹自动生成技能包的 pipeline，并通过 branch-loaded agent 在运行时对齐视觉证据，在 GUI 和游戏类视觉代理基准上稳定提升大模型与小模型表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15155" target="_blank">Self-Distilled Agentic Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhengxi Lu, Qi Gu, Yongliang Shen</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Meituan</div>
+        </div>
+        <div class="note-tldr">提出 SDAR，把 on-policy self-distillation 作为受控辅助目标接入多轮 agent RL。方法用教师分支的 token 级信号生成 sigmoid gate，强化正向 endorsement、弱化不可靠的负向拒绝，在 ALFWorld、WebShop、Search-QA 上相对 GRPO 明显提升，并避免朴素 GRPO+OPSD 的训练不稳定。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-05-19 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
