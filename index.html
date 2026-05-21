@@ -394,8 +394,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 SDAR，把 on-policy self-distillation 作为受控辅助目标接入多轮 agent RL。方法用教师分支的 token 级信号生成 sigmoid gate，强化正向 endorsement、弱化不可靠的负向拒绝，在 ALFWorld、WebShop、Search-QA 上相对 GRPO 明显提升，并避免朴素 GRPO+OPSD 的训练不稳定。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.18739" target="_blank">LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yukang Chen, Song Han</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 LongLive-2.0，一套面向长视频生成全流程的 NVFP4 并行基础设施。训练端用序列并行自回归训练和 Balanced SP 降低显存并加速 GEMM；推理端结合 W4A4 NVFP4、量化 KV cache、异步流式 VAE 解码和 SP 推理，训练最高提速 2.15x、推理最高提速 1.84x，并实现 5B 模型 45.7 FPS 长视频生成。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-05-20 23:00</div>
+    <div class="footer">Last updated: 2026-05-21 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
