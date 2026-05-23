@@ -402,8 +402,56 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 LongLive-2.0，一套面向长视频生成全流程的 NVFP4 并行基础设施。训练端用序列并行自回归训练和 Balanced SP 降低显存并加速 GEMM；推理端结合 W4A4 NVFP4、量化 KV cache、异步流式 VAE 解码和 SP 推理，训练最高提速 2.15x、推理最高提速 1.84x，并实现 5B 模型 45.7 FPS 长视频生成。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.19833" target="_blank">Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhifei Xie</div>
+            <div class="note-meta-line">Affiliation: NTU</div>
+        </div>
+        <div class="note-tldr">针对真实环境 ASR 在复杂声学扰动下易漏识别和幻觉的问题，提出 Mega-ASR，通过复合场景数据构造、渐进式声学到语义微调和 WER 门控策略优化训练。其 Voices-in-the-Wild-2M 覆盖 7 类声学现象与 54 种复合场景，在多个恶劣条件基准上显著降低 WER。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.22355" target="_blank">TransitLM: A Large-Scale Dataset and Benchmark for Map-Free Transit Route Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hanyu Guo, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: AMAP, Alibaba Group, Beijing, China</div>
+        </div>
+        <div class="note-tldr">提出 TransitLM，用 1300 万条来自中国四城的公交路线规划记录构建持续预训练语料和基准，覆盖 120,845 个站点与 13,666 条线路。实验表明，基于该数据训练的 LLM 可在无显式地图和路由引擎下生成结构有效路线，并能隐式将 GPS 坐标映射到合适站点。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.21467" target="_blank">DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kaiyi Zhang, Yankai Lin</div>
+            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China, Ant International</div>
+        </div>
+        <div class="note-tldr">研究 RLVR 中序列级奖励如何转化为 token 级概率更新，提出将策略梯度视为 token 梯度向量上的线性判别器。DelTA 通过估计 token 系数强化区分高低奖励响应的稀疏方向、削弱共享高频模式，在数学、代码生成和跨域评测中提升 Qwen3 系列基线表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.22109" target="_blank">Perception or Prejudice: Can MLLMs Go Beyond First Impressions of Personality?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Caixin Kang, Yifei Huang</div>
+            <div class="note-meta-line">Affiliation: The University of Tokyo, Shanda AI Research Tokyo</div>
+        </div>
+        <div class="note-tldr">针对 MLLM 人格识别只看 Big Five 分数、难以判断是否真正理解行为证据的问题，提出 Grounded Personality Reasoning 任务与 MM-OCEAN 数据集，并用分数、推理、证据 grounding 三层评测 27 个模型。结果显示 51% 正确评分缺乏证据支撑，揭示显著的 prejudice gap。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.19376" target="_blank">Generative Recursive Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junyeob Baek, Sungjin Ahn</div>
+            <div class="note-meta-line">Affiliation: KAIST, New York University</div>
+        </div>
+        <div class="note-tldr">提出 GRAM，将递归潜变量推理从确定性单轨迹扩展为概率式多轨迹计算，支持多假设、不同求解策略，以及通过递归深度和并行采样实现推理时扩展。模型用摊销变分推断训练，在结构化推理和多解约束满足任务上优于确定性递归基线，并展示无条件生成能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.18747" target="_blank">Code as Agent Harness</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xuying Ning</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">综述“code as agent harness”视角：代码不只是 LLM 输出对象，也成为智能体推理、行动、环境建模和执行验证的运行底座。论文按接口、机制和多智能体扩展三层梳理规划、记忆、工具调用、反馈控制与协作验证，并指出评测、监督、安全和多模态环境等开放问题。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-05-22 23:00</div>
+    <div class="footer">Last updated: 2026-05-23 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
