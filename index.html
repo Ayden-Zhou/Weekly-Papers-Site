@@ -360,8 +360,42 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-05-25 23:00</div>
+    <div class="week-header">2026-05-25 ~ 2026-05-31</div>
+    <div class="source-header">Latest file: 2026-05-25</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.23904" target="_blank">SkillOpt: Executive Strategy for Self-Evolving Agent Skills</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifan Yang, Xue Yang</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
+        </div>
+        <div class="note-tldr">提出 SkillOpt，把 agent skill 当作冻结模型的外部可训练状态，用优化器模型根据轨迹生成受限 add/delete/replace 文本编辑，并通过 held-out 验证门只接受提升性能的版本。实验覆盖六类基准、七个目标模型和三种执行 harness，显示优化后的技能可显著提升准确率，并能跨模型、跨 harness 迁移，且部署时不增加推理调用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.21573" target="_blank">Lens: Rethinking Training Efficiency for Foundational Text-to-Image Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dong Chen</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
+        </div>
+        <div class="note-tldr">提出 3.8B 参数文生图模型 Lens，在显著较低训练算力下达到或超过更大模型。核心做法是提高每个训练 batch 的信息密度：使用 800M 密集 caption 数据、多分辨率和多宽高比 batch、语义 VAE 与强文本编码器加速收敛；再结合 RL、reasoner prompt search 和蒸馏支持高分辨率、多语言与 4-step 快速生成。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.20708" target="_blank">Rethinking Cross-Layer Information Routing in Diffusion Transformers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chao Xu, Shao-Qun Zhang</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+        </div>
+        <div class="note-tldr">系统分析 DiT 残差流在深度和去噪时间上的信息路由问题，指出幅值膨胀、梯度衰减和层间冗余。论文提出 Diffusion-Adaptive Routing，用可学习、随 timestep 变化的非增量聚合替代传统残差加法，并可与 REPA 等方法叠加；在 ImageNet 256 上提升 SiT-XL/2 的 FID，并以少得多的迭代达到基线质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.22763" target="_blank">Advancing Mathematics Research with AI-Driven Formal Proof Search</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: George Tsoukalas, Pushmeet Kohli, Swarat Chaudhuri</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind</div>
+        </div>
+        <div class="note-tldr">评估 LLM 加 Lean 形式化证明搜索解决开放数学问题的能力。AlphaProof Nexus 让多个子 agent 用 LLM 生成和修改 Lean 证明，并由编译器验证；完整 agent 还加入进化式协调和 AlphaProof 工具。系统自主解决 9/353 个 Erdős 问题、证明 44/492 个 OEIS 猜想，并在多个研究方向辅助发现证明或改进界限，展示形式化验证能把 LLM 推向研究级数学。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-05-26 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
