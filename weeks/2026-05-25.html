@@ -394,7 +394,23 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">评估 LLM 加 Lean 形式化证明搜索解决开放数学问题的能力。AlphaProof Nexus 让多个子 agent 用 LLM 生成和修改 Lean 证明，并由编译器验证；完整 agent 还加入进化式协调和 AlphaProof 工具。系统自主解决 9/353 个 Erdős 问题、证明 44/492 个 OEIS 猜想，并在多个研究方向辅助发现证明或改进界限，展示形式化验证能把 LLM 推向研究级数学。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-26 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.25604" target="_blank">DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guochao Jiang</div>
+            <div class="note-meta-line">Affiliation: Alibaba Cloud Computing</div>
+        </div>
+        <div class="note-tldr">针对多奖励 GRPO 中固定奖励合并易导致优势幅度爆炸、目标隔离和训练不稳的问题，提出 DVAO：按 rollout 组内各目标奖励方差动态加权，强化有效学习信号并抑制噪声。论文证明其能约束优势幅度并形成跨目标正则，在数学推理和工具使用任务上取得更优 Pareto 前沿和稳定性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.23902" target="_blank">PiD: Fast and High-Resolution Latent Decoding with Pixel Diffusion</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifan Lu, Xuanchi Ren</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 PiD，把潜变量解码重写为条件像素扩散，直接从 VAE 或语义 latent 生成 4x/8x 高分辨率图像，合并传统解码和超分阶段。通过 sigma-aware latent adapter 与 DMD2 蒸馏，PiD 可用 4 步完成 2K/4K 解码，在延迟、显存和视觉细节上优于级联超分流程。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-27 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
