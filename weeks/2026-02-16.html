@@ -378,7 +378,15 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出 SQuTR 噪声鲁棒性基准，基于 6 个中英文检索数据集构造 37,317 条 spoken query，并用 200 位说话人合成语音，在分级 SNR 与多类真实环境噪声下建立统一评测协议。对级联式与端到端检索系统的大规模实验显示，噪声增强会显著降低检索性能，鲁棒性仍是关键瓶颈。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-28 17:11</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.13949" target="_blank">Experiential Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Taiwei Shi, Jieyu Zhao</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 Experiential Reinforcement Learning，把“尝试-反思-巩固”的显式经验循环嵌入语言模型强化学习。面对稀疏、延迟的环境反馈，模型先生成初始尝试，再把失败和反馈转化为自然语言经验，最后用于后续行为改进，从而更有效地把过去失败迁移到未来任务迭代中。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-28 17:18</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
