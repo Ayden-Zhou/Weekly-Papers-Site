@@ -450,7 +450,167 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">系统梳理 World Action Models（WAMs），认为下一代具身模型应同时建模未来世界状态和动作，而不是只做反应式 VLA 映射。论文给出 WAM 定义，按级联式和联合式架构组织现有方法，并总结数据生态、评测协议、物理常识与动作合理性等关键挑战。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-28 16:23</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.02396" target="_blank">HeavySkill: Heavy Thinking as the Inner Skill in Agentic Harness</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianing Wang, Xunliang Cai</div>
+            <div class="note-meta-line">Affiliation: Meituan LongCat Team</div>
+        </div>
+        <div class="note-tldr">提出 HeavySkill，把 agentic harness 中复杂编排背后的核心能力归纳为模型内部化的“重思考”技能：先并行探索多条推理轨迹，再汇总形成答案。论文系统比较 HeavySkill 与 Best-of-N 等策略，显示其能在多类复杂任务中更有效利用推理预算，并可通过强化学习继续扩展。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2512.04388" target="_blank">Learning to Orchestrate Agents in Natural Language with the Conductor</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Stefan Nielsen, Yujin Tang</div>
+            <div class="note-meta-line">Affiliation: Sakana AI</div>
+        </div>
+        <div class="note-tldr">提出 Conductor，一种用强化学习训练的自然语言编排模型，自动为多个 LLM 设计通信拓扑和专门提示词。它不直接替代专家模型，而是学习如何调度异构模型协作，在多智能体推理和问题求解中更好利用不同模型的互补能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.25067" target="_blank">Frontier Coding Agents Can Now Implement an AlphaZero Self-Play Machine Learning Pipeline For Connect Four That Performs Comparably to an External Solver</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Joshua Sherwood, Benjamin Kaplan</div>
+            <div class="note-meta-line">Affiliation: University of Chicago</div>
+        </div>
+        <div class="note-tldr">用“让 coding agent 从极少描述实现 AlphaZero 自博弈管线”作为衡量 AI 递归改进早期信号的任务。论文显示前沿 coding agent 已能独立搭建 Connect Four 的训练、评估和搜索流程，性能接近外部 solver，说明端到端复现历史 AI 研究成果正变得可测且更现实。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.03310" target="_blank">Coordination as an Architectural Layer for LLM-Based Multi-Agent Systems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Maksym Nechepurenko, Pavel Shuvalov</div>
+            <div class="note-meta-line">Affiliation: Devnull FZCO</div>
+        </div>
+        <div class="note-tldr">论文认为多智能体 LLM 系统的主要生产失败常来自协调缺陷，而非单个模型能力不足，因此应把 coordination 作为独立架构层。作者通过预测市场式信息控制实验，分析不同协调配置如何导致可预期的失败模式，为声明式编排框架提供更工程化的诊断视角。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.02572" target="_blank">On Training Large Language Models for Long-Horizon Tasks: An Empirical Study of Horizon Length</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sunghwan Kim, Jinyoung Yeo</div>
+            <div class="note-meta-line">Affiliation: Yonsei University, Microsoft Research</div>
+        </div>
+        <div class="note-tldr">系统研究任务 horizon 长度如何影响 LLM agent 训练。作者构造决策规则相同、仅动作序列长度不同的控制任务，发现更长 horizon 会带来探索和信用分配不稳定；通过 horizon reduction 训练可稳定学习，并在推理时泛化到更长任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.28181" target="_blank">Synthetic Computers at Scale for Long-Horizon Productivity Simulation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tao Ge, Jianfeng Gao</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
+        </div>
+        <div class="note-tldr">提出 Synthetic Computers at Scale，用真实感文件夹层级和文档、表格、幻灯片等内容构造用户特定电脑环境，再在其上生成长程生产力任务。该方法为办公类 agent 提供可扩展的环境、目标和轨迹数据，缓解真实用户环境难收集、难共享的问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.27707" target="_blank">Contextual Agentic Memory is a Memo, Not True Memory</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Binyan Xu, Kehuan Zhang</div>
+            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">论文指出当前 vector store、scratchpad 和上下文管理更像“备忘录检索”，并非真正可泛化的记忆。作者从能力、长期学习和安全角度分析这种类别错误：检索只能相似匹配旧案例，难以形成抽象规则，因而会限制 agent 在组合新任务上的泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.03808" target="_blank">Agentic-imodels: Evolving agentic interpretability tools via autoresearch</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chandan Singh, Jianfeng Gao</div>
+            <div class="note-meta-line">Affiliation: Microsoft Research</div>
+        </div>
+        <div class="note-tldr">面向 agentic data science，提出 Agentic-imodels：让自动研究循环进化出更适合 agent 理解和使用的可解释建模工具。系统生成 scikit-learn 兼容回归器，并同时优化预测性能与 LLM 可解释性，探索未来由 agent 主导数据科学时工具本身应如何重新设计。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.00424" target="_blank">Skills as Verifiable Artifacts: A Trust Schema and a Biconditional Correctness Criterion for Human-in-the-Loop Agent Runtimes</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alfredo Metere</div>
+            <div class="note-meta-line">Affiliation: Enclawed, LLC</div>
+        </div>
+        <div class="note-tldr">将 agent skill 视为可验证部署 artifact，而不是默认可信的提示包。论文提出 trust schema 和双条件正确性准则，要求 runtime 验证技能声明的行为、权限和人机协作边界，避免仅凭签名、来源或 registry 就加载可能带来安全风险的技能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.06169" target="_blank">Mean Mode Screaming: Mean--Variance Split Residuals for 1000-Layer Diffusion Transformers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Pengqi Lu</div>
+            <div class="note-meta-line">Affiliation: Beijing, China</div>
+        </div>
+        <div class="note-tldr">研究超深 Diffusion Transformer 在扩展到数百至千层时的隐性崩塌问题，提出 Mean Mode Screaming 机制解释 token 表示被均值模式主导、方差被压制的过程。作者用 mean-variance split residual 重新分离均值和中心化变化，使 1000 层 DiT 训练更稳定。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.08063" target="_blank">Flow-OPD: On-Policy Distillation for Flow Matching Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhen Fang, Wenxuan Huang, Shaosheng Cao, Feng Zhao</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">针对 Flow Matching 文生图模型多目标对齐中的奖励稀疏、梯度干扰和 reward hacking，提出 Flow-OPD。方法借鉴 on-policy distillation，让学生在自身分布上学习并分解不同偏好目标，缓解指标“跷跷板”效应，提升多维度图像质量与对齐稳定性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.09063" target="_blank">Soohak: A Mathematician-Curated Benchmark for Evaluating Research-level Math Capabilities of LLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guijin Son, Youngjae Yu</div>
+            <div class="note-meta-line">Affiliation: OneLineAI, EleutherAI, Seoul National University</div>
+        </div>
+        <div class="note-tldr">提出 SOOHAK，一个由数学家从零撰写的研究级数学基准，包含挑战题和拒答题两部分。它把评测目标从奥赛式逐步推理推进到开放研究问题，并测试模型识别 ill-posed 问题、避免自信胡答的能力；前沿模型仍有明显提升空间。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.10899" target="_blank">RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable Rewards</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Gaotang Li, Tomas Pfister</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">面向深度研究 agent 缺少可验证奖励的问题，提出 RubricEM，把 rubric 从最终评估器提升为策略执行、judge 反馈和经验蒸馏的共享接口。方法用 rubric 分解长程研究行为，并通过 meta-RL 从过去尝试中沉淀可复用经验，以训练更可靠的报告型 agent。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.13724" target="_blank">AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuchao Gu, Han Cai, Mike Zheng Shou</div>
+            <div class="note-meta-line">Affiliation: NVIDIA, Show Lab, National University of Singapore</div>
+        </div>
+        <div class="note-tldr">针对一致性蒸馏视频模型在测试时增加采样步数反而退化的问题，提出 AnyFlow。它用 on-policy flow map distillation 保持概率流轨迹结构，使模型支持任意步数视频生成，在低步数实时生成和多步高质量采样之间更平滑切换。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.13831" target="_blank">Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhaowei Wang, Yi Lin, Yangqiu Song</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology, ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">系统研究 LVLM 长上下文继续预训练配方，将 7B 模型从 32K 扩展到 128K，并分析长文档、视频、多轮工具使用等数据混合如何影响泛化。论文强调合理数据配比和训练阶段设计能让模型在超过训练窗口的长上下文任务上继续保持能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15141" target="_blank">Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distillation for Real-Time Interactive Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Min Zhao, Jun Zhu</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University, ShengShu</div>
+        </div>
+        <div class="note-tldr">面向实时交互视频生成，提出 Causal Forcing++，把自回归扩散蒸馏推进到帧级 1-2 步生成。方法在保持可控、流式 rollout 的同时降低采样延迟，解决现有 chunk-wise 少步蒸馏响应粒度粗、交互延迟仍高的问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.14906" target="_blank">MemLens: Benchmarking Multimodal Long-Term Memory in Large Vision-Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiyu Ren, Simon See</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">提出 MemLens，用于系统比较长上下文 LVLM 与 memory-augmented agent 在多模态长期记忆问题上的表现。基准要求模型跨长时间、多图像和文本证据回答问题，填补现有评测缺少真实多模态记忆需求的空白，并揭示两类记忆方案的互补局限。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15178" target="_blank">SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haoyi Zhu, Enze Xie</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 SANA-WM，一个 2.6B 参数、面向分钟级 720p 视频生成的开源世界模型。架构结合 Gated DeltaNet 与 softmax attention 的混合线性注意力、双分支相机控制和两阶段训练，在保持长时序建模与精确 6-DoF 控制的同时显著提升效率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15195" target="_blank">VGGT-$Ω$</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianyuan Wang, Christian Rupprecht</div>
+            <div class="note-meta-line">Affiliation: Visual Geometry Group, University of Oxford, Meta AI</div>
+        </div>
+        <div class="note-tldr">基于 VGGT 探索前馈三维重建模型的规模化规律，提出 VGGT-$Ω$。论文通过扩大模型和数据，提升重建精度、效率和能力，并展示其几何特征可迁移到 VLA 与语言对齐等下游任务，说明可规模化 3D foundation model 的潜力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15188" target="_blank">FutureSim: Replaying World Events to Evaluate Adaptive Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shashwat Goel, Jonas Geiping</div>
+            <div class="note-meta-line">Affiliation: ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems</div>
+        </div>
+        <div class="note-tldr">提出 FutureSim，用按时间顺序重放真实世界事件的仿真来评估 agent 对新信息的适应能力。Agent 需要在知识截止之后预测事件，并通过逐步交互接收新闻等时间线信息；该设置比静态问答更贴近开放环境中的持续更新、修正和决策。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-28 16:57</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
