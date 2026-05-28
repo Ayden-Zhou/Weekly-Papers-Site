@@ -410,7 +410,151 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文通过从零开始的受控实验系统研究原生多模态预训练，采用 Transfusion 框架将语言 next-token 训练与视觉扩散训练统一。作者提出四点关键发现：RAE 视觉表征最均衡；视觉与语言数据联合训练有协同增益；统一训练可自然涌现世界建模能力；MoE 能更高效扩展并形成模态专门化。IsoFLOP 分析还表明视觉比语言更“吃数据”，MoE 有助于缓解该扩展不对称。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-28 16:57</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.13517" target="_blank">Think Deep, Not Just Long: Measuring LLM Reasoning Effort via Deep-Thinking Tokens</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wei-Lin Chen, Yu Meng</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文指出 CoT 长度并不可靠代表推理质量，过长生成可能只是过度思考。作者提出 deep-thinking tokens，用模型深层预测发生显著修正的位置衡量真实推理努力；该比例在数学和科学基准上与正确率更稳定相关，并支持 Think@n 早期筛掉低潜力样本以降低推理成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.20478" target="_blank">Codified Context: Infrastructure for AI Agents in a Complex Codebase</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aristidis Vasilopoulos</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">面向大型代码库中 agent 缺少持久项目记忆的问题，提出 codified context 基础设施。系统把项目约定、架构知识和常见错误组织成可维护上下文，并在 10.8 万行 C# 分布式系统构建过程中验证，目标是让多 session、多 agent 开发保持一致性、减少重复踩坑。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.16928" target="_blank">Discovering Multiagent Learning Algorithms with Large Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zun Li, Marc Lanctot</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">使用 LLM 驱动的 AlphaEvolve 在多智能体强化学习算法空间中自动搜索，替代过去依赖人工迭代改进基线的流程。论文在不完全信息博弈和多智能体学习范式中发现新的算法变体，展示 evolutionary coding agent 可用于探索 MARL 设计空间并产生竞争性方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.11988" target="_blank">Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Thibaud Gloaguen, Martin Vechev</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">系统评估 AGENTS.md 等仓库级上下文文件是否真的提升 coding agent 表现。论文从真实任务完成率和 agent 行为两个角度测试人工或自动生成的上下文，指出这类文件虽被广泛推荐，但收益依赖内容质量、任务类型和 agent 对上下文的实际使用方式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.16173" target="_blank">Learning Personalized Agents from Human Feedback</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kaiqu Liang, Saghar Hosseini</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 Personalized Agents from Human Feedback，让 agent 通过持续人类反馈学习个体用户随时间变化的偏好。相比依赖静态交互历史或外部 profile，PAHF 支持冷启动与偏好漂移，在交互中更新个性化策略，使 agent 更贴近具体用户的长期需求。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.15902" target="_blank">Doc-to-LoRA: Learning to Instantly Internalize Contexts</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Rujikorn Charakorn, Robert Tjarko Lange</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">针对长上下文推理成本高和逐 prompt 蒸馏太慢的问题，提出 Doc-to-LoRA。方法训练轻量 hypernetwork，把输入文档即时转成 LoRA 参数，让模型把上下文信息快速内化到可插拔参数中，从而在保留上下文知识的同时减少长序列注意力开销。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.17100" target="_blank">AgentConductor: Topology Evolution for Multi-Agent Competition-Level Code Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Siyu Wang, Xinping Guan</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 AgentConductor，用拓扑演化优化多 agent 竞赛级代码生成。它根据任务难度调整通信图密度，并在迭代中进化协作结构，避免固定 workflow 无法适配不同问题。实验表明，动态拓扑能更好利用多 agent 协作推理，提升复杂代码题解质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.20502" target="_blank">ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongbin Zhong, Suman Nath</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">ActionEngine 将 GUI agent 从逐步截图-推理-点击的反应式执行转为带状态机记忆的程序化规划。系统复用已访问页面和操作模式，减少每一步都调用 VLM 的成本与延迟，并在复杂 GUI 任务中提升效率和准确率，适合重复流程较多的界面自动化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.16154" target="_blank">Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Nithin Sivakumaran, Elias Stengel-Eskin</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文关注 CoT 解释的忠实性与任务性能之间的冲突，提出 REMUL 多监听者软执行框架。多个 listener 对推理链进行解释和反馈，通过多方强化学习提升推理过程对真实计算的反映程度，同时尽量避免单纯追求可解释性导致性能下降。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.20426" target="_blank">Learning to Rewrite Tool Descriptions for Reliable LLM-Agent Tool Use</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruocheng Guo, Kamalika Das</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文指出工具使用 agent 的瓶颈常在工具描述质量，而不只是模型或提示。作者学习自动重写面向人类开发者的模糊 tool descriptions，使其更适合 LLM 解析、选择和调用；在候选工具变多时，该方法能提升工具选择可靠性并减少接口歧义。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.04379" target="_blank">Helios: Real Real-Time Long Video Generation Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shenghai Yuan, Li Yuan</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">Helios 是 14B 长视频生成模型，目标是在单张 H100 上达到约 19.5 FPS 的实时生成并支持分钟级视频。论文强调在不依赖常见抗漂移启发式和标准加速技巧的情况下保持长时序稳定，兼顾实时速度、长视频一致性和接近强基线的画质。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.02604" target="_blank">Heterogeneous Agent Collaborative Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhixia Zhang, Yikun Ban</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 HACRL，把异构 agent 的验证 rollout 在训练阶段共享，以提高多 agent on-policy 优化效率，同时保持推理时各 agent 独立执行。相比传统 LLM 多智能体 RL，HACRL 关注不同能力 agent 之间的协作训练，使各自从他人的成功经验中受益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2602.23866" target="_blank">SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ibragim Badertdinov, Alexander Golubev</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">SWE-rebench V2 面向软件工程 agent 的强化学习训练瓶颈，构建大规模、语言无关的 SWE 任务集合，强调可复现执行环境和可靠测试套件。它扩展现有 benchmark 在规模、语言生态和任务多样性上的不足，为训练而非仅评测 coding agent 提供数据基础。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.03241" target="_blank">UniG2U-Bench: Do Unified Models Advance Multimodal Understanding?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zimo Wen, Yifei Shen</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">UniG2U-Bench 系统评估统一多模态模型的生成能力是否真正促进理解能力。基准将 generation-to-understanding 分成 7 类机制和 30 个子任务，覆盖隐式或显式视觉生成辅助理解的场景，用于辨析统一模型在哪些任务上因生成能力获得理解收益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.03790" target="_blank">T2S-Bench & Structure-of-Thought: Benchmarking and Prompting Comprehensive Text-to-Structure Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qinsi Wang, Yiran Chen</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 T2S-Bench 评测文本到结构推理能力，并提出 Structure-of-Thought 提示，让模型先构造关键点、关系和结构化中间表示，再回答复杂阅读任务。实验显示显式结构化思考能在多类文本处理任务中稳定提升表现，尤其适合需要组织信息的长文本理解。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.03756" target="_blank">MOOSE-Star: Unlocking Tractable Training for Scientific Discovery by Breaking the Complexity Barrier</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zonglin Yang, Lidong Bing</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">MOOSE-Star 针对科学发现中直接建模假设生成过程的组合复杂度问题。论文指出从海量知识中检索并组合灵感会导致不可承受的复杂度，并提出打破该复杂度屏障的训练思路，使模型能更可行地学习从背景知识生成科学假设。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.03251" target="_blank">Speculative Speculative Decoding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tanishq Kumar, Avner May</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">在标准 speculative decoding 中，草稿生成和目标模型验证仍有顺序依赖。论文提出 speculative speculative decoding，进一步并行化 speculation 与 verification 流程，以减少自回归解码瓶颈。该方法从解码算法层面提高推理吞吐，补充现有 draft model 加速路线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2603.03818" target="_blank">Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Huihan Liu, Yuke Zhu</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文研究预训练 VLA 模型在持续学习中的灾难性遗忘问题，发现与从零训练的小型行为克隆策略不同，大规模预训练 VLA 对新技能增量学习出乎意料地抗遗忘。该发现提示预训练表征可能为机器人策略持续学习提供更稳定基础。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-28 17:05</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
