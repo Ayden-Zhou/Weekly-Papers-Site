@@ -410,7 +410,55 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">RationalRewards 探索将推理型奖励同时用于训练阶段与测试阶段，以提升视觉生成质量与可控性。方法通过奖励塑形让模型在生成过程中更符合结构化目标与语义约束，并展示了在不同推理预算下性能可扩展的趋势，为“测试时计算换质量”提供了系统化路径。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-27 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.11297" target="_blank">The Past Is Not Past: Memory-Enhanced Dynamic Reward Shaping</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yang Liu</div>
+            <div class="note-meta-line">Affiliation: Fudan University, Shanghai Innovation Institute</div>
+        </div>
+        <div class="note-tldr">提出 MEDS，将历史 rollout 中反复出现的错误模式写入记忆，并用密度聚类识别高频失败簇，对重复错误施加更强动态惩罚。相比只提升当前策略熵的方法，MEDS 能鼓励更广探索、减少错误坍缩，在多个数据集和基础模型上同时提升 pass@1 与 pass@128，并提高采样行为多样性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.14268" target="_blank">HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Team HY-World</div>
+            <div class="note-meta-line">Affiliation: Tencent Hunyuan</div>
+        </div>
+        <div class="note-tldr">HY-World 2.0 面向文本、单图、多视图和视频输入统一生成或重建 3D 世界。系统结合 HY-Pano 2.0、WorldNav、WorldStereo 2.0、WorldMirror 2.0 与 WorldLens 渲染平台，实现可导航 3DGS 场景生成、轨迹规划和交互探索，在多个开放源 3D 世界建模基准上达到领先效果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.13016" target="_blank">Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yaxuan Li, Chaojun Xiao, Zhiyuan Liu, Ning Ding</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University, ShanghaiTech University</div>
+        </div>
+        <div class="note-tldr">系统分析 LLM on-policy distillation 的成功与失败条件，指出学生和教师需具备兼容的思维模式，且强教师必须提供学生未见过的新能力。论文从 token 级机制发现有效 OPD 会在学生访问状态上逐步对齐高概率 token，并提出 off-policy cold start 与教师对齐 prompt 选择来挽救失败蒸馏。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.12627" target="_blank">KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Linhao Yu, Hua Wu</div>
+            <div class="note-meta-line">Affiliation: Tianjin University</div>
+        </div>
+        <div class="note-tldr">KnowRL 针对 RLVR 在困难样本上奖励稀疏的问题，将提示设计改写为“最小充分知识”选择。方法把指导信息拆成原子知识点，用受约束子集搜索选择紧凑且相互一致的知识组合，并考虑多知识点交互依赖。1.5B 模型在八个推理基准上显著超过强 RL 与 hinting 基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.07413" target="_blank">FORGE:Fine-grained Multimodal Evaluation for Manufacturing Scenarios</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiangru Jian, Hao Xu, Xikun Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Waterloo</div>
+        </div>
+        <div class="note-tldr">FORGE 构建面向制造场景的细粒度多模态评测，结合真实 2D 图像、3D 点云和型号级语义标注，覆盖工件验证、结构表面检测和装配验证。对 18 个 MLLM 的评测显示主要瓶颈不是视觉定位，而是制造领域知识；进一步 SFT 小模型可显著提升保留场景准确率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.10098" target="_blank">Attention Sink in Transformers: A Survey on Utilization, Interpretation, and Mitigation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zunhai Su, Ngai Wong</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University, Meituan LongCat Team</div>
+        </div>
+        <div class="note-tldr">综述 Transformer 中 attention sink 现象，即注意力过度集中到少数无信息 token，对训练、推理、解释性和幻觉都有影响。论文从基础利用、机制解释和缓解策略三条线整理相关工作，覆盖 sink token 保留、注意力重分配、可学习前缀、softmax 限制、预训练干预等方向，并给出应用与未来问题。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-28 16:23</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

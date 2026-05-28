@@ -394,7 +394,167 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出统一的 AR-Diffusion 多模态框架 Mamoda2.5，把理解、图像生成与视频生成/编辑整合到单一架构中，并用 128 experts、Top-8 routing 的 DiT-MoE 扩展容量、降低训练成本。模型在 VBench 2.0、OpenVE-Bench 等表现强，并通过少步蒸馏与强化学习显著加速视频编辑。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-27 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.25850" target="_blank">Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiahang Lin, Zhenhua Han, Tao Gui</div>
+            <div class="note-meta-line">Affiliation: Fudan University</div>
+        </div>
+        <div class="note-tldr">提出 Agentic Harness Engineering，用组件、经验与决策三类可观测性把 coding-agent harness 的修改变成可追踪、可回滚、可验证的闭环。系统能自动分析轨迹、提出 harness 编辑并预测效果，在 Terminal-Bench 与 SWE-bench 上超过人工设计 harness 和自进化基线，同时减少 token 使用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.21590" target="_blank">AgenticQwen: Training Small Agentic Language Models with Dual Data Flywheels for Industrial-Scale Tool Use</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuanjie Lyu, Jun Huang</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+        </div>
+        <div class="note-tldr">面向工业场景中低成本、低延迟的工具调用代理，提出 AgenticQwen 小模型系列。方法结合 reasoning RL 与 agentic RL，并用双数据飞轮自动生成更难的推理与工具使用任务，使小模型在多步规划、真实工具调用和复杂业务任务上获得更强泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.22446" target="_blank">From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhengxu Yu, Jun Wang</div>
+            <div class="note-meta-line">Affiliation: HUAWEI Noah's Ark Lab</div>
+        </div>
+        <div class="note-tldr">提出 OneManCompany，把技能、工具和运行配置封装成可移植的 Talent，并通过 Talent Market 与 Explore-Execute-Review 树搜索动态组建、执行和复盘多智能体组织。论文强调从“单个 agent 会什么”提升到“组织如何招聘、治理和进化”，以支持异构 agent 的长期协作。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.24026" target="_blank">From Skill Text to Skill Structure: The Scheduling-Structural-Logical Representation for Agent Skills</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qiliang Liang, Yang Liu</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">针对 SKILL.md 等自然语言技能难以被机器可靠解析和调度的问题，提出 Scheduling-Structural-Logical 表示，把技能拆成调度、结构和逻辑三层信息。该表示帮助 agent 更准确地选择、组合和执行技能，减少纯文本技能在约束、控制流和工具调用上的歧义。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.24881" target="_blank">Latent Agents: A Post-Training Procedure for Internalized Multi-Agent Debate</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: John Seon Keun Yi, Dokyun Lee</div>
+            <div class="note-meta-line">Affiliation: Boston University</div>
+        </div>
+        <div class="note-tldr">论文将多智能体辩论的推理收益蒸馏进单个模型，避免推理时生成长篇辩论转录带来的高计算成本。方法先学习辩论结构，再通过动态奖励进行 internalization，使模型在单次回答中隐式模拟多方观点交锋，在保持效率的同时提升复杂推理表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.26622" target="_blank">OCR-Memory: Optical Context Retrieval for Long-Horizon Agent Memory</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jinze Li, Yang Zhang, Edith Cheuk-Han Ngai</div>
+            <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">提出 OCR-Memory，把长程 agent 轨迹以视觉化页面而非纯文本摘要保存，再通过光学检索恢复上下文。该方法利用视觉表示的高密度与 OCR 可读性，在有限 token 预算下保留更多细节，缓解长任务中记忆压缩、信息丢失和历史回溯成本之间的冲突。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.26649" target="_blank">When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dongxin Guo, Siu Ming Yiu</div>
+            <div class="note-meta-line">Affiliation: The University of Hong Kong, Brain Investing Limited</div>
+        </div>
+        <div class="note-tldr">论文指出传统 RAG 在推理前一次性注入上下文，不适合长链 reasoning model。ReaLM-Retrieve 用逐步不确定性检测器判断何时检索，并在推理过程中按需插入证据，解决知识缺口暴露较晚、错误路径难纠正的问题，从而提升复杂问答和多步推理可靠性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.20987" target="_blank">Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiyang Wu, Dinesh Manocha</div>
+            <div class="note-meta-line">Affiliation: University of Maryland</div>
+        </div>
+        <div class="note-tldr">提出 COS-PLAY，让决策 agent 与 skill-bank agent 在长程交互任务中共同进化：前者检索技能指导行动，后者从未标注轨迹中发现、精炼和更新可复用技能。实验覆盖多个游戏环境，显示技能库持续学习能显著提升长任务奖励与多步决策稳定性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.03849" target="_blank">Stream-R1: Reliability-Perplexity Aware Reward Distillation for Streaming Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bin Wu, Mengqi Huang</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">针对流式视频扩散蒸馏中“所有 rollout、帧和像素等权学习”的问题，提出 Stream-R1。它用视频奖励同时建模样本级可靠性和时空区域困惑度，对蒸馏损失自适应重加权，使学生模型更关注可信输出和仍需改进的区域，从而提升加速后的视频质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.04461" target="_blank">Stream-T1: Test-Time Scaling for Streaming Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yijing Tu, Zhendong Mao</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">将 test-time scaling 引入流式视频生成，提出 Stream-T1。方法包含基于历史高质量噪声的 Stream-Scaled Noise Propagation、兼顾局部美学和长期一致性的 Reward Pruning，以及由反馈驱动的 Memory Sinking，以较低候选探索成本提升时间连续性和生成质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.03269" target="_blank">RLDX-1 Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dongyoung Kim, Jinwoo Shin</div>
+            <div class="note-meta-line">Affiliation: RLWRLD, KAIST</div>
+        </div>
+        <div class="note-tldr">报告 RLDX-1，一个面向灵巧操作的通用机器人策略。系统在 VLA 基础上加入动作感知、长期记忆和多流动作建模，使用 Multi-Stream Action Transformer 统一处理视觉、语言与复杂控制信号，目标是在真实机器人任务中获得更强的泛化与操作能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.05185" target="_blank">OpenSearch-VL: An Open Recipe for Frontier Multimodal Search Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shuang Chen, Tianyu Pang</div>
+            <div class="note-meta-line">Affiliation: Tencent Hunyuan, University of California, Los Angeles</div>
+        </div>
+        <div class="note-tldr">提供可复现的多模态深度搜索 agent 训练方案，包括基于 Wikipedia 路径采样和视觉锚定的数据构造、SearchVL-SFT/RL 数据集、整合文本搜索、图像搜索、OCR、裁剪和增强的工具环境，以及 fatal-aware GRPO。模型在复杂多模态搜索任务上显著提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.00658" target="_blank">UniVidX: A Unified Multimodal Framework for Versatile Video Generation via Diffusion Priors</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Houyuan Chen, Anyi Rao</div>
+            <div class="note-meta-line">Affiliation: MMLab@HKUST</div>
+        </div>
+        <div class="note-tldr">提出 UniVidX，用视频扩散模型先验统一处理多种视频生成和多模态图形任务，避免为每种输入输出映射单独训练模型。框架通过共享跨模态结构、动态引导和条件注意力机制建模不同模态关系，在多种视频生成、编辑和转换任务上实现通用能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.03042" target="_blank">ARIS: Autonomous Research via Adversarial Multi-Agent Collaboration</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruofeng Yang, Shuai Li</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">介绍开源自动研究 harness ARIS，通过 adversarial multi-agent collaboration 支持长程研究任务。系统围绕信息存储、检索、证据审查和对抗式验证设计，重点缓解自动研究中“看似成功但证据不足”的失败模式，为 autonomous research 提供可审计的执行框架。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2604.27393" target="_blank">MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junbo Cui, Yuan Yao</div>
+            <div class="note-meta-line">Affiliation: MiniCPM-o Team, OpenBMB</div>
+        </div>
+        <div class="note-tldr">MiniCPM-o 4.5 面向实时全双工全模态交互，突破传统多模态模型“先感知再回答”的交替流程。模型强调流式感知、边生成边接收新输入、主动响应和低延迟语音视觉交互，使 MLLM 更接近人类实时对话与环境协作方式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.05242" target="_blank">Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhuofeng Li, Dongfu Jiang, Yu Zhang</div>
+            <div class="note-meta-line">Affiliation: Texas A&M University</div>
+        </div>
+        <div class="note-tldr">论文批评固定 top-k 相似度检索压缩了 agentic search 所需的精细操作，提出 Direct Corpus Interaction：agent 直接用 grep、文件读取、shell 和轻量脚本操作原始语料。该方式无需离线索引，能处理精确约束、稀疏线索组合和逐步假设修正，在检索与端到端搜索任务上表现强劲。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.06130" target="_blank">Skill1: Unified Evolution of Skill-Augmented Agents via Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yaorui Shi, Qi Gu, An Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China, Meituan</div>
+        </div>
+        <div class="note-tldr">提出 Skill1，用统一强化学习框架共同优化 skill selection、skill utilization 和 skill distillation。相比分别训练技能选择或技能生成，Skill1 让持久技能库随经验闭环演化，减少目标冲突，使 agent 能更稳定地复用已有策略并从新任务中沉淀新技能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.02087" target="_blank">Model Spec Midtraining: Improving How Alignment Training Generalizes</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chloe Li, Samuel Marks, Jon Kutasov</div>
+            <div class="note-meta-line">Affiliation: Anthropic Fellows Program</div>
+        </div>
+        <div class="note-tldr">提出 Model Spec Midtraining：在预训练之后、alignment fine-tuning 之前，用合成文档训练模型理解 Model Spec 或 Constitution。该阶段能改变后续示范数据的泛化方向，减少浅层对齐，在 agentic misalignment、安全偏好和规则价值解释等实验中显著提升对齐泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.06548" target="_blank">Continuous Latent Diffusion Language Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongcan Guo, Yan Zeng</div>
+            <div class="note-meta-line">Affiliation: ByteDance Seed, The University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">提出 Cola DLM，将文本生成建模为连续潜空间中的层级扩散过程。系统先用 Text VAE 学习文本到 latent 的稳定映射，再用 block-causal DiT 建模全局语义先验，最后条件解码成文本，从而摆脱严格自回归顺序，在非自回归语言建模和可扩展语义规划上取得强结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.06651" target="_blank">AI Co-Mathematician: Accelerating Mathematicians with Agentic AI</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Daniel Zheng, Pushmeet Kohli</div>
+            <div class="note-meta-line">Affiliation: Google</div>
+        </div>
+        <div class="note-tldr">介绍 AI co-mathematician，一个面向数学家的 agentic AI 工作台，覆盖构想、文献检索、计算探索、定理证明和理论构建。系统以异步、状态化协作方式管理不确定性、细化用户意图、记录失败假设并产出数学原生 artifact，旨在加速开放式数学研究流程。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-28 16:23</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

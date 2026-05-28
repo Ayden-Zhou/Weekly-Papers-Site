@@ -410,8 +410,32 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 PiD，把潜变量解码重写为条件像素扩散，直接从 VAE 或语义 latent 生成 4x/8x 高分辨率图像，合并传统解码和超分阶段。通过 sigma-aware latent adapter 与 DMD2 蒸馏，PiD 可用 4 步完成 2K/4K 解码，在延迟、显存和视觉细节上优于级联超分流程。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.27365" target="_blank">LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shihao Wang, Zhiding Yu</div>
+            <div class="note-meta-line">Affiliation: The Hong Kong Polytechnic University, NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 LocateAnything，用 Parallel Box Decoding 将框和点等几何单元一次性并行解码，缓解逐 token 坐标生成带来的几何不一致和推理瓶颈。论文还构建超过 1.38 亿样本的 LocateAnything-Data，在多类 grounding 与 detection 基准上同时提升高 IoU 定位质量和解码吞吐。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.26099" target="_blank">Language Models Need Sleep</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sangyun Lee, Giulia Fanti</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">探索类似“睡眠”的离线巩固机制：模型周期性把近期上下文通过多轮离线 recurrence 写入 SSM fast weights，再清空 KV cache。这样把额外计算移到 sleep 阶段，保持在线预测延迟，并在细胞自动机、多跳检索和数学推理任务上随 sleep 时长增加获得更强深层推理能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.26494" target="_blank">The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: MiniMax, Ziyue Ge</div>
+            <div class="note-meta-line">Affiliation: MiniMax</div>
+        </div>
+        <div class="note-tldr">介绍 MiniMax-M2 系列 MoE 语言模型，旗舰 M2 总参数 229.9B、每 token 激活 9.8B，面向 agentic coding 与复杂办公/搜索任务优化。核心包括可验证轨迹数据管线、agent-native RL 系统 Forge，以及 M2.7 的自调试与脚手架修改能力，使较小激活量在多项真实 agent 基准上接近前沿闭源模型。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-05-27 23:00</div>
+    <div class="footer">Last updated: 2026-05-28 16:23</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
