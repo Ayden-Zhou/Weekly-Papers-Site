@@ -434,7 +434,15 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">介绍 MiniMax-M2 系列 MoE 语言模型，旗舰 M2 总参数 229.9B、每 token 激活 9.8B，面向 agentic coding 与复杂办公/搜索任务优化。核心包括可验证轨迹数据管线、agent-native RL 系统 Forge，以及 M2.7 的自调试与脚手架修改能力，使较小激活量在多项真实 agent 基准上接近前沿闭源模型。</div>
     </div>
-    <div class="footer">Last updated: 2026-05-28 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.28816" target="_blank">Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Fangfu Liu, Xuanchi Ren</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出面向交互式仿真的多智能体生成世界模型 Gamma-World，解决单智能体视频世界模型难以扩展到多玩家、多机器人等共享环境的问题。方法用 Simplex Rotary Agent Encoding 保持智能体身份的可控性与置换对称性，并用 Sparse Hub Attention 将跨智能体注意力从二次复杂度降为线性；再通过因果学生模型和 KV cache 实现 24 FPS 实时 rollout。实验显示其在视频质量、动作可控性和跨智能体一致性上优于 slot-based 与 dense-attention 基线，并能从两玩家泛化到四玩家。</div>
+    </div>
+    <div class="footer">Last updated: 2026-05-29 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
