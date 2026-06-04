@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025-10-19 - Weekly Papers</title>
+    <title>2026-06-01 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -360,55 +360,23 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2025-10-19</div>
-    <div class="source-header">2025-10-13 ~ 2025-10-19</div>
+    <div class="week-header">2026-06-01</div>
+    <div class="source-header">2026-06-01 ~ 2026-06-07</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.18234" target="_blank">DeepSeek-OCR: Contexts Optical Compression</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.30611" target="_blank">Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Haoran Wei, Haoran Wei.</div>
-            <div class="note-meta-line">Affiliation: DeepSeek AI.</div>
+            <div class="note-meta-line">Authors: Haozhe Zhao</div>
+            <div class="note-meta-line">Affiliation: University of Illinois at Urbana-Champaign</div>
         </div>
-        <div class="note-tldr">将长上下文压缩为二维“光学映射”，以轻激活编码器与小型解码器实现高压缩比OCR：<10×压缩达97%精度，20×仍约60%；在OmniDocBench上以显著更少视觉token超越主流系统，并具大规模数据生成能力。</div>
+        <div class="note-tldr">面向科学图生成系统图型和输入条件单一、栅格输出难以局部编辑的问题，提出 Crafter 多智能体 harness 与 CraftEditor。方法以共享结构化规格作为记忆，结合多计划探索、批评-修正闭环和可编辑 SVG 转换，并构建 CraftBench 评测跨图型与输入条件；实验显示其在 PaperBanana-Bench 和 CraftBench 上优于独立生成器与 agentic 基线。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.18121" target="_blank">Efficient Long-context Language Model Training by Core Attention Disaggregation</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.31604" target="_blank">Representation Forcing for Bottleneck-Free Unified Multimodal Models</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Yonghao Zhuang, Eric Xing.</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
+            <div class="note-meta-line">Authors: Yuqing Wang, Xihui Liu</div>
+            <div class="note-meta-line">Affiliation: University of Hong Kong, ByteDance Seed</div>
         </div>
-        <div class="note-tldr">提出CAD将核心注意力计算拆分并分派到专用设备池，通过“任务化”重排与ping-pong流水并行，降低长上下文训练中的负载不均与显存压力；在512K上下文与大规模GPU上实现最高1.35×端到端加速并消除DP/PP瓶颈。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.15444" target="_blank">A Theoretical Study on Bridging Internal Probability and Self-Consistency for LLM Reasoning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhi Zhou, Yu-Feng Li.</div>
-            <div class="note-meta-line">Affiliation: State Key Laboratory of Novel Software Technology, Nanjing University, China.</div>
-        </div>
-        <div class="note-tldr">建立测试时扩展的统一理论框架，分解推理误差为估计误差与模型误差；证明自一致仅线性收敛而困于采样预算，perplexity具指数收敛但模型误差大，并提出RPC将二者优点结合，性能与采样成本取得更优权衡。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.18866" target="_blank">LightMem: Lightweight and Efficient Memory-Augmented Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jizhan Fang, Ningyu Zhang.</div>
-            <div class="note-meta-line">Affiliation: Zhejiang University.</div>
-        </div>
-        <div class="note-tldr">受人类记忆模型启发，构建轻量三阶段记忆系统：感知压缩→主题化短期整合→离线长期巩固；在LongMemEval上较强基线提升准确率并将token、API调用与时延分别降至百倍级，兼顾效果与成本。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.15103" target="_blank">Continual Learning via Sparse Memory Finetuning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jessy Lin, Jessy Lin.</div>
-            <div class="note-meta-line">Affiliation: FAIR at Meta, University of California, Berkeley.</div>
-        </div>
-        <div class="note-tldr">基于memory layer提出稀疏记忆微调，仅更新最常用的少量记忆槽以减少干扰；在事实与文档流式学习中，实现与全量微调相当的学习效果，却显著降低遗忘（如NQ仅11%降幅），优于LoRA与全量微调。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.20809" target="_blank">Real Deep Research for AI, Robotics and Beyond</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xueyan Zou, Xiaolong Wang.</div>
-            <div class="note-meta-line">Affiliation: University of California, San Diego.</div>
-        </div>
-        <div class="note-tldr">提出通用研究情报管线RDR：系统抓取与解析海量论文，识别新兴趋势与跨域机会，并提供可执行的起点；在AI与机器人领域做端到端示范，主文阐述框架，附录给出大规模主题化结果与可复现资源。</div>
+        <div class="note-tldr">针对统一多模态模型生成图像仍依赖冻结 VAE、形成结构瓶颈的问题，提出 Representation Forcing。方法让解码器先自回归预测来自理解编码器的视觉表示 token，再将这些表示留在上下文中指导像素空间扩散，从而无需外部生成潜空间。实验表明，RF 让像素空间模型在生成上匹配 VAE 基线，并在理解任务上通常更优。</div>
     </div>
     <div class="footer">Last updated: 2026-06-04 23:00</div>
     <script>

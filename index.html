@@ -360,8 +360,26 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-06-03 23:00</div>
+    <div class="week-header">2026-06-01 ~ 2026-06-07</div>
+    <div class="source-header">Latest file: 2026-06-01</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.30611" target="_blank">Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haozhe Zhao</div>
+            <div class="note-meta-line">Affiliation: University of Illinois at Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">面向科学图生成系统图型和输入条件单一、栅格输出难以局部编辑的问题，提出 Crafter 多智能体 harness 与 CraftEditor。方法以共享结构化规格作为记忆，结合多计划探索、批评-修正闭环和可编辑 SVG 转换，并构建 CraftBench 评测跨图型与输入条件；实验显示其在 PaperBanana-Bench 和 CraftBench 上优于独立生成器与 agentic 基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.31604" target="_blank">Representation Forcing for Bottleneck-Free Unified Multimodal Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuqing Wang, Xihui Liu</div>
+            <div class="note-meta-line">Affiliation: University of Hong Kong, ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">针对统一多模态模型生成图像仍依赖冻结 VAE、形成结构瓶颈的问题，提出 Representation Forcing。方法让解码器先自回归预测来自理解编码器的视觉表示 token，再将这些表示留在上下文中指导像素空间扩散，从而无需外部生成潜空间。实验表明，RF 让像素空间模型在生成上匹配 VAE 基线，并在理解任务上通常更优。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-06-04 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
