@@ -378,7 +378,31 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对统一多模态模型生成图像仍依赖冻结 VAE、形成结构瓶颈的问题，提出 Representation Forcing。方法让解码器先自回归预测来自理解编码器的视觉表示 token，再将这些表示留在上下文中指导像素空间扩散，从而无需外部生成潜空间。实验表明，RF 让像素空间模型在生成上匹配 VAE 基线，并在理解任务上通常更优。</div>
     </div>
-    <div class="footer">Last updated: 2026-06-04 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.05121" target="_blank">Audio Interaction Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhifei Xie, Chunyan Miao</div>
+            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">提出 Audio Interaction Model，把离线音频理解与实时流式交互统一为“感知-决策-响应”循环，并用 SoundFlow 覆盖数据构造、训练和异步低延迟推理。模型保留常规音频任务能力，同时支持实时语音指令跟随、主动响应和全语音对话。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.02800" target="_blank">Cosmos 3: Omnimodal World Models for Physical AI</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aditi, Artur Zolkowski</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 Cosmos 3，一组面向 Physical AI 的全模态世界模型，在统一 Mixture-of-Transformers 架构中处理和生成语言、图像、视频、音频与动作序列。它把 VLM、视频生成、世界模拟和动作建模并入同一框架，并在多类理解与生成任务上达到强结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.01249" target="_blank">Trust Region On-Policy Distillation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xingrun Xing, Yehui Tang</div>
+            <div class="note-meta-line">Affiliation: Samsung Research</div>
+        </div>
+        <div class="note-tldr">针对 on-policy distillation 中教师与学生分布差异带来的不稳定监督，提出 TrOPD：只在可靠 trust region 内执行反向 KL 监督，对离群区域采用裁剪、mask 或前向 KL，并加入教师前缀引导。在数学、代码和通用任务上优于 OPD、EOPD 与 REOPOLD。</div>
+    </div>
+    <div class="footer">Last updated: 2026-06-05 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
