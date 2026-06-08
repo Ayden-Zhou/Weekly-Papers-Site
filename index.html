@@ -360,66 +360,8 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">2026-06-01 ~ 2026-06-07</div>
-    <div class="source-header">Latest file: 2026-06-01</div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.30611" target="_blank">Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Haozhe Zhao</div>
-            <div class="note-meta-line">Affiliation: University of Illinois at Urbana-Champaign</div>
-        </div>
-        <div class="note-tldr">面向科学图生成系统图型和输入条件单一、栅格输出难以局部编辑的问题，提出 Crafter 多智能体 harness 与 CraftEditor。方法以共享结构化规格作为记忆，结合多计划探索、批评-修正闭环和可编辑 SVG 转换，并构建 CraftBench 评测跨图型与输入条件；实验显示其在 PaperBanana-Bench 和 CraftBench 上优于独立生成器与 agentic 基线。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.31604" target="_blank">Representation Forcing for Bottleneck-Free Unified Multimodal Models</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuqing Wang, Xihui Liu</div>
-            <div class="note-meta-line">Affiliation: University of Hong Kong, ByteDance Seed</div>
-        </div>
-        <div class="note-tldr">针对统一多模态模型生成图像仍依赖冻结 VAE、形成结构瓶颈的问题，提出 Representation Forcing。方法让解码器先自回归预测来自理解编码器的视觉表示 token，再将这些表示留在上下文中指导像素空间扩散，从而无需外部生成潜空间。实验表明，RF 让像素空间模型在生成上匹配 VAE 基线，并在理解任务上通常更优。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.05121" target="_blank">Audio Interaction Model</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhifei Xie, Chunyan Miao</div>
-            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
-        </div>
-        <div class="note-tldr">提出 Audio Interaction Model，把离线音频理解与实时流式交互统一为“感知-决策-响应”循环，并用 SoundFlow 覆盖数据构造、训练和异步低延迟推理。模型保留常规音频任务能力，同时支持实时语音指令跟随、主动响应和全语音对话。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.02800" target="_blank">Cosmos 3: Omnimodal World Models for Physical AI</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Aditi, Artur Zolkowski</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 Cosmos 3，一组面向 Physical AI 的全模态世界模型，在统一 Mixture-of-Transformers 架构中处理和生成语言、图像、视频、音频与动作序列。它把 VLM、视频生成、世界模拟和动作建模并入同一框架，并在多类理解与生成任务上达到强结果。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.01249" target="_blank">Trust Region On-Policy Distillation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xingrun Xing, Yehui Tang</div>
-            <div class="note-meta-line">Affiliation: Samsung Research</div>
-        </div>
-        <div class="note-tldr">针对 on-policy distillation 中教师与学生分布差异带来的不稳定监督，提出 TrOPD：只在可靠 trust region 内执行反向 KL 监督，对离群区域采用裁剪、mask 或前向 KL，并加入教师前缀引导。在数学、代码和通用任务上优于 OPD、EOPD 与 REOPOLD。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.03746" target="_blank">Qwen-Image-Flash: Beyond Objective Design</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianhe Wu</div>
-            <div class="note-meta-line">Affiliation: Alibaba</div>
-        </div>
-        <div class="note-tldr">针对少步视觉生成蒸馏过度聚焦目标函数的问题，系统分析 Qwen-Image-2.0 蒸馏中的数据组成、教师引导和任务混合三类训练 recipe 因素，并据此构建 Qwen-Image-Flash，使文本生成图像与指令式图像编辑在 4 NFEs 下仍保持较强质量与稳定性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.05405" target="_blank">Agents' Last Exam</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yiyou Sun, Dawn Song</div>
-            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
-        </div>
-        <div class="note-tldr">提出 Agents' Last Exam，用真实、长程、经济价值高且可验证的工作流评测 AI agents。基准由 250+ 行业专家参与，覆盖 13 个产业簇、55 个子领域和 1K+ 任务；当前主流配置在最难层平均 full pass rate 仅 2.6%，显示专业部署能力仍远未饱和。</div>
-    </div>
-
-    <div class="footer">Last updated: 2026-06-07 23:00</div>
+    <div class="week-header">本周暂无详细笔记</div>
+    <div class="footer">Last updated: 2026-06-08 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
