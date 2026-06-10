@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-03-16 - Weekly Papers</title>
+    <title>2026-06-08 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -360,103 +360,23 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2026-03-16</div>
-    <div class="source-header">2026-03-16 ~ 2026-03-22</div>
+    <div class="week-header">2026-06-08</div>
+    <div class="source-header">2026-06-08 ~ 2026-06-14</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.12231" target="_blank">Temporal Straightening for Latent Planning</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.07297" target="_blank">SWE-Explore: Benchmarking How Coding Agents Explore Repositories</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ying Wang, Mengye Ren</div>
-            <div class="note-meta-line">Affiliation: New York University</div>
+            <div class="note-meta-line">Authors: Shaoqiu Zhang, Xiaodong Gu</div>
+            <div class="note-meta-line">Affiliation: 1, Shanghai Jiao Tong University 2 Xinjiang University, 3, University of Illinois at Urbana-Champaign 4 Independent Researcher, 5, The Chinese University of Hong Kong, § https://github.com/Qiushao-E/SWE-Explore-Bench</div>
         </div>
-        <div class="note-tldr">论文研究潜在世界模型中的规划表征问题，指出预训练视觉特征常含与规划无关信息且轨迹弯曲，导致优化困难。作者提出 temporal straightening，在联合学习编码器与预测器时加入曲率正则，使潜在轨迹更“平直”，让欧氏距离更接近真实测地距离并改善规划目标条件数。实验表明该方法能显著提升梯度式规划稳定性与目标到达成功率。</div>
+        <div class="note-tldr">提出 SWE-Explore，用于单独评估 coding agent 在仓库探索阶段的能力。基准要求在固定行数预算内返回与 issue 相关的代码区域排序列表，覆盖 203 个开源仓库、10 种语言和 848 个 issue，并用成功修复轨迹提炼行级真值。实验表明覆盖率、排序和上下文效率与后续修复表现强相关，现代 agentic explorer 明显优于传统检索，但行级覆盖和高效排序仍是主要瓶颈。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.14473" target="_blank">AI Can Learn Scientific Taste</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.07082" target="_blank">On the Geometry of On-Policy Distillation</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Jingqi Tong, Xipeng Qiu</div>
-            <div class="note-meta-line">Affiliation: Fudan University, Shanghai Innovation Institute, OpenMOSS Team</div>
+            <div class="note-meta-line">Authors: Zhennan Shen, Yi R. Fung</div>
+            <div class="note-meta-line">Affiliation: 1 HKUST, 5, 2 UT Austin, USTC, 6, 3 Zhejiang University, BUPT, 7, Nankai University</div>
         </div>
-        <div class="note-tldr">论文提出用社区反馈训练 AI 的“科研品味”：先基于 70 万组高低被引论文对训练 Scientific Judge 学习判断研究想法潜力，再把该评审器作为奖励模型训练 Scientific Thinker 生成高潜力课题。结果显示其在多项评测中超过多种强基线模型，并在跨年份、跨领域与评审偏好迁移上保持优势，说明 AI 可学习并内化科研价值判断。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.15594" target="_blank">OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuwen Du, Rui Ye</div>
-            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
-        </div>
-        <div class="note-tldr">OpenSeeker 面向深度检索智能体的数据瓶颈，提出两项核心方法：可控事实驱动的多跳问答合成，以及基于回溯总结的轨迹去噪，从而以较小规模高质量数据训练出强搜索代理。作者开源了训练数据与模型权重，实验表明仅用约 1.17 万样本和单次 SFT 训练，就在多项检索基准上显著优于已有开源方案，并在中文任务上接近或超过部分闭源系统。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.15583" target="_blank">Grounding World Simulation Models in a Real-World Metropolis</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Junyoung Seo, Jin-Hwa Kim</div>
-            <div class="note-meta-line">Affiliation: KAIST AI</div>
-        </div>
-        <div class="note-tldr">论文提出 Seoul World Model，将世界模型从“想象场景”推进到“真实城市”建模：通过检索增强把街景图像作为外部锚点，结合跨时间配对、合成轨迹数据与视角插值，缓解时序错位和稀疏采样问题。另引入 Virtual Lookahead Sink 在长时生成中持续重接地，实验证明其在首尔、釜山与安娜堡等城市上可生成更空间一致、时间连贯且长程稳定的真实城市场景视频。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.15031" target="_blank">Attention Residuals</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Kimi Team, Kimi Team</div>
-            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team)</div>
-        </div>
-        <div class="note-tldr">作者指出传统 PreNorm 残差的等权累加会导致层深增加时表征被稀释，提出 Attention Residuals 让每层以注意力方式选择性聚合历史层输出，并进一步给出更高效的 Block AttnRes 以降低训练显存与通信开销。缩放实验和消融显示该机制在不同参数规模上稳定增益；在 Kimi Linear 大模型预训练中还改善了深层梯度与激活分布，并带来下游任务整体提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.15726" target="_blank">MiroThinker-1.7 & H1: Towards Heavy-Duty Research Agents via Verification</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: MiroMind Team, MiroMind Team</div>
-            <div class="note-meta-line">Affiliation: MiroMind</div>
-        </div>
-        <div class="note-tldr">论文提出面向复杂长链任务的研究智能体 MiroThinker-1.7 与强化版本 H1。前者通过 agentic mid-training 提升规划、上下文推理与工具交互稳定性；后者把局部与全局验证嵌入推理过程，在中间步骤纠偏并审计整条证据链。实验显示其在网页研究、科学推理与金融分析等深度研究基准上取得领先表现，并开源主模型与 mini 版本。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.16790" target="_blank">InCoder-32B: Code Foundation Model for Industrial Scenarios</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jian Yang, Wayne Xin Zhao</div>
-            <div class="note-meta-line">Affiliation: Beihang University, IQuest Research</div>
-        </div>
-        <div class="note-tldr">InCoder-32B 是面向工业场景的 32B 代码基础模型，覆盖芯片设计、GPU 内核优化、嵌入式与编译优化、3D 建模等任务。作者采用从通用代码预训练到工业数据退火、上下文扩展中训和执行验证后训的完整流水线，在保持通用编程竞争力的同时，在多项工业基准上建立了强开源基线，强调“工业可用”的代码智能能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.15619" target="_blank">Mixture-of-Depths Attention</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Lianghui Zhu, Xinggang Wang</div>
-            <div class="note-meta-line">Affiliation: School of EIC, Huazhong University of Science and Technology, ByteDance Seed</div>
-        </div>
-        <div class="note-tldr">论文提出 Mixture-of-Depths Attention，通过在注意力中引入跨深度可见关系，让当前查询按需利用不同层的 K/V 表征，而非仅依赖单层上下文。该机制旨在增强信息流动与层间协同，提升模型对长程依赖和复杂语义结构的建模能力。结果表明该方法在效率与性能之间取得更优平衡，可作为解码器架构的通用增强模块。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.14935" target="_blank">Video-CoE: Reinforcing Video Event Prediction via Chain of Events</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Qile Su, Xiangxiang Chu</div>
-            <div class="note-meta-line">Affiliation: AMAP, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">论文面向视频事件预测（VEP）中“看得到过去、难预测未来”的问题，先系统评测主流多模态大模型在该任务上的短板，再提出 Chain of Events（CoE）框架，通过构造时序事件链强化模型对视觉证据与事件逻辑的联合建模。实验显示该方法在公开基准上显著优于现有开源与商业模型，刷新 VEP 任务性能。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.17187" target="_blank">MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Peng Xia, Huaxiu Yao</div>
-            <div class="note-meta-line">Affiliation: UNC-Chapel Hill</div>
-        </div>
-        <div class="note-tldr">MetaClaw 针对真实环境中智能体能力随任务分布漂移而老化的问题，提出“技能快速演化 + 机会式权重优化”的双通路持续学习框架：在线从失败轨迹提炼可复用技能，离线在用户空闲窗口进行 LoRA 强化更新，并通过版本机制避免奖励污染。结果在长期工作流基准上带来稳定增益，任务完成率与鲁棒性显著提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.15569" target="_blank">Mamba-3: Improved Sequence Modeling using State Space Principles</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Aakash Lahoti, Albert Gu</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
-        </div>
-        <div class="note-tldr">Mamba-3 从状态空间模型视角改进线性序列建模，提出更具表达力的离散化递推、复数态更新以及 MIMO 结构，在保持推理效率的同时提升状态跟踪与语言建模能力。实验表明其在检索、状态跟踪和下游任务上优于现有线性模型，并在性能-效率帕累托前沿取得更好平衡。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.14482" target="_blank">V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Lorenzo Mur-Labadia, Adrien Bardes</div>
-            <div class="note-meta-line">Affiliation: FAIR at Meta, Universidad de Zaragoza</div>
-        </div>
-        <div class="note-tldr">论文提出 V-JEPA 2.1，通过让可见与遮挡 token 同时参与的密集预测损失、跨层深度自监督、图像与视频统一 tokenizer 以及模型与数据规模扩展，显著提升视频自监督表示的时空一致性与语义结构。在 Ego4D、EPIC-KITCHENS、机器人抓取、导航和深度估计等任务上达到或刷新 SOTA，显示其在世界建模与密集视觉理解上的泛化能力。</div>
+        <div class="note-tldr">研究 on-policy distillation 在大语言模型推理训练中的参数更新几何。作者用多种参数空间诊断比较 OPD、SFT 与 RLVR，发现 OPD 更新更少权重、避开主方向，并快速锁定到低维子空间；限制训练在早期形成的更新子空间内仍能保持 OPD 性能，却会显著损害 SFT。结果说明 OPD 不是 SFT 与 RLVR 的简单中间形态，而有自身独特的更新几何。</div>
     </div>
     <div class="footer">Last updated: 2026-06-10 23:00</div>
     <script>

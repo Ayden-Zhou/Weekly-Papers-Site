@@ -360,8 +360,26 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-06-09 23:00</div>
+    <div class="week-header">2026-06-08 ~ 2026-06-14</div>
+    <div class="source-header">Latest file: 2026-06-08</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.07297" target="_blank">SWE-Explore: Benchmarking How Coding Agents Explore Repositories</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shaoqiu Zhang, Xiaodong Gu</div>
+            <div class="note-meta-line">Affiliation: 1, Shanghai Jiao Tong University 2 Xinjiang University, 3, University of Illinois at Urbana-Champaign 4 Independent Researcher, 5, The Chinese University of Hong Kong, § https://github.com/Qiushao-E/SWE-Explore-Bench</div>
+        </div>
+        <div class="note-tldr">提出 SWE-Explore，用于单独评估 coding agent 在仓库探索阶段的能力。基准要求在固定行数预算内返回与 issue 相关的代码区域排序列表，覆盖 203 个开源仓库、10 种语言和 848 个 issue，并用成功修复轨迹提炼行级真值。实验表明覆盖率、排序和上下文效率与后续修复表现强相关，现代 agentic explorer 明显优于传统检索，但行级覆盖和高效排序仍是主要瓶颈。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.07082" target="_blank">On the Geometry of On-Policy Distillation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhennan Shen, Yi R. Fung</div>
+            <div class="note-meta-line">Affiliation: 1 HKUST, 5, 2 UT Austin, USTC, 6, 3 Zhejiang University, BUPT, 7, Nankai University</div>
+        </div>
+        <div class="note-tldr">研究 on-policy distillation 在大语言模型推理训练中的参数更新几何。作者用多种参数空间诊断比较 OPD、SFT 与 RLVR，发现 OPD 更新更少权重、避开主方向，并快速锁定到低维子空间；限制训练在早期形成的更新子空间内仍能保持 OPD 性能，却会显著损害 SFT。结果说明 OPD 不是 SFT 与 RLVR 的简单中间形态，而有自身独特的更新几何。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-06-10 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
