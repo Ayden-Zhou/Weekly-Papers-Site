@@ -378,7 +378,39 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">研究 on-policy distillation 在大语言模型推理训练中的参数更新几何。作者用多种参数空间诊断比较 OPD、SFT 与 RLVR，发现 OPD 更新更少权重、避开主方向，并快速锁定到低维子空间；限制训练在早期形成的更新子空间内仍能保持 OPD 性能，却会显著损害 SFT。结果说明 OPD 不是 SFT 与 RLVR 的简单中间形态，而有自身独特的更新几何。</div>
     </div>
-    <div class="footer">Last updated: 2026-06-10 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.10651" target="_blank">Kwai Keye-VL-2.0 Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kwai Keye Team, Ruilin Zhang</div>
+            <div class="note-meta-line">Affiliation: Kuaishou Group</div>
+        </div>
+        <div class="note-tldr">提出开源 MoE 多模态模型 Keye-VL-2.0-30B-A3B，面向小时级长视频和代理任务。核心是将 DSA 适配到 GQA 多模态架构，实现 256K 上下文，并用多教师 on-policy 蒸馏与 Context/Video-RL 缓解多任务对齐遗忘，在长视频理解、时序定位和代理能力上取得同规模强性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.09967" target="_blank">ABot-Earth 0.5: Generative 3D Earth Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ming Qian, Hang Zhang</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab</div>
+        </div>
+        <div class="note-tldr">提出 ABot-Earth 0.5，用原生 3D Gaussian Splatting 表示从卫星影像生成连续大规模 3D 地球场景。系统可在每平方公里 10 分钟内合成可交互场景，并结合多级 LOD 支持 Web 地图渲染，为数字孪生、UAV 导航和具身智能仿真降低重建成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.09828" target="_blank">Latent Spatial Memory for Video World Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Weijie Wang, Bohan Zhuang</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University</div>
+        </div>
+        <div class="note-tldr">提出 Mirage 的 latent spatial memory，将场景信息直接缓存在扩散模型 latent 空间，而不是 RGB 点云。方法通过深度引导反投影构建 3D latent cache，并用 latent warping 查询新视角，避免重复渲染和 VAE 编码，端到端生成最高快 10.57 倍、显存占用降低 55 倍。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.09079" target="_blank">FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yan Wang, Dong Yu</div>
+            <div class="note-meta-line">Affiliation: Independent Researchers</div>
+        </div>
+        <div class="note-tldr">提出 Lookahead Sparse Attention，用神经 Memory Indexer 预测后续解码真正需要的历史 KV chunks，只把关键块保留在 GPU。索引器可作为独立双编码器训练，无需加载大模型骨干；在 LongBench-v2、LongMemEval 和 RULER 上将平均物理 KV cache 压到 13.5%，精度基本保持并略有提升。</div>
+    </div>
+    <div class="footer">Last updated: 2026-06-11 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
