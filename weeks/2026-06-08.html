@@ -410,7 +410,15 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Lookahead Sparse Attention，用神经 Memory Indexer 预测后续解码真正需要的历史 KV chunks，只把关键块保留在 GPU。索引器可作为独立双编码器训练，无需加载大模型骨干；在 LongBench-v2、LongMemEval 和 RULER 上将平均物理 KV cache 压到 13.5%，精度基本保持并略有提升。</div>
     </div>
-    <div class="footer">Last updated: 2026-06-11 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.09498" target="_blank">Self-Harness: Harnesses That Improve Themselves</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hangfan Zhang, Shuyue Hu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
+        </div>
+        <div class="note-tldr">提出 Self-Harness，让 LLM agent 在无需人工或更强外部 agent 的情况下改进自身运行 harness。方法从失败执行轨迹中挖掘模型特定弱点，生成小而针对性的 harness 修改，并用回归测试筛选。Terminal-Bench-2.0 上三类模型均获得稳定提升，说明 harness 可由 agent 自身迭代适配。</div>
+    </div>
+    <div class="footer">Last updated: 2026-06-12 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
