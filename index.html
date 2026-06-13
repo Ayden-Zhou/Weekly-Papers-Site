@@ -418,8 +418,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Self-Harness，让 LLM agent 在无需人工或更强外部 agent 的情况下改进自身运行 harness。方法从失败执行轨迹中挖掘模型特定弱点，生成小而针对性的 harness 修改，并用回归测试筛选。Terminal-Bench-2.0 上三类模型均获得稳定提升，说明 harness 可由 agent 自身迭代适配。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.13681" target="_blank">EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jundong Xu, Zhiyuan Hu</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出 EvoArena，用连续版本更新刻画终端、软件和社交偏好等动态环境，评估代理能否识别变化并避免沿用过期行为；同时提出 git-like 的 EvoMem 记忆补丁历史，记录更新前后、理由与证据。实验显示现有代理在动态任务中表现脆弱，EvoMem 在 EvoArena、GAIA、LoCoMo 与链式任务上带来稳定提升。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-12 23:00</div>
+    <div class="footer">Last updated: 2026-06-13 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
