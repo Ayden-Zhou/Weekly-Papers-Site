@@ -426,8 +426,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 EvoArena，用连续版本更新刻画终端、软件和社交偏好等动态环境，评估代理能否识别变化并避免沿用过期行为；同时提出 git-like 的 EvoMem 记忆补丁历史，记录更新前后、理由与证据。实验显示现有代理在动态任务中表现脆弱，EvoMem 在 EvoArena、GAIA、LoCoMo 与链式任务上带来稳定提升。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.13392" target="_blank">MiniMax Sparse Attention</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xunhao Lai, Pengyu Zhao</div>
+            <div class="note-meta-line">Affiliation: MiniMax, Peking University</div>
+        </div>
+        <div class="note-tldr">提出 MiniMax Sparse Attention，一种面向超长上下文的分块稀疏注意力。方法用轻量 Index Branch 为每个 GQA 组选择 top-k KV 块，主分支只做精确块稀疏注意力，并配套 GPU kernel。在 109B 多模态模型上基本保持 GQA 效果，同时在 1M 上下文显著降低注意力计算并加速推理。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.12683" target="_blank">From AGI to ASI</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tim Genewein, Shane Legg</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind</div>
+        </div>
+        <div class="note-tldr">讨论人类级 AGI 之后通向 ASI 的可能技术路径，并用 Universal AI 提供形式化参照。报告梳理扩展 AGI、范式转换、递归改进和大规模多智能体集体四条路径，分析各自可能遭遇的计算、算法、数据、社会与协调瓶颈，强调 ASI 进展高度不确定且需要跨学科研究准备。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-13 23:00</div>
+    <div class="footer">Last updated: 2026-06-14 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
