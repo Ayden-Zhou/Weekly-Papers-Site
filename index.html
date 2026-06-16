@@ -360,8 +360,18 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-06-15 23:00</div>
+    <div class="week-header">2026-06-15 ~ 2026-06-21</div>
+    <div class="source-header">Latest file: 2026-06-15</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.13432" target="_blank">OmniDirector: General Multi-Shot Camera Cloning without Cross-Paired Data</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiwen Liu, Yan Zhou</div>
+            <div class="note-meta-line">Affiliation: Kling Team, Kuaishou Technology</div>
+        </div>
+        <div class="note-tldr">论文提出 OmniDirector，用视频中的相机运动作为直观控制信号，使用 camera grid 表示多镜头轨迹，并在百万级 camera grid-video 数据上训练统一框架。方法结合分层提示扩展 agent 协调角色、动作与镜头，在复杂 camera motion cloning 中展现更好的可控性与生成质量。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-06-16 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
