@@ -370,8 +370,40 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出 OmniDirector，用视频中的相机运动作为直观控制信号，使用 camera grid 表示多镜头轨迹，并在百万级 camera grid-video 数据上训练统一框架。方法结合分层提示扩展 agent 协调角色、动作与镜头，在复杂 camera motion cloning 中展现更好的可控性与生成质量。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.17030" target="_blank">Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jie Zhang, Chenfei Wu</div>
+            <div class="note-meta-line">Affiliation: Qwen Team</div>
+        </div>
+        <div class="note-tldr">提出 Qwen-RobotWorld，用自然语言作为统一动作接口，把机器人操作、自动驾驶、室内导航和人到机器人迁移统一为条件视频世界建模。方法结合双流 MMDiT、Qwen2.5-VL 动作编码、8.6M 视频文本语料和渐进课程训练，在多个 embodied world model 基准上取得领先或强竞争结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.14777" target="_blank">JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dingyu Yao, Jiaqi Wang</div>
+            <div class="note-meta-line">Affiliation: JD.com</div>
+        </div>
+        <div class="note-tldr">提出开源 8B 视觉优先交互模型 JoyAI-VL-Interaction，使模型能持续观看视频流并自主决定沉默、回应或委托后台模型。系统支持可插拔 ASR/TTS、记忆与后台大模型，在六类实时场景中相较 Doubao 与 Gemini 视频助手获得更高人工偏好。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.11176" target="_blank">Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kevin Qinghong Lin, James Zou</div>
+            <div class="note-meta-line">Affiliation: University of Oxford</div>
+        </div>
+        <div class="note-tldr">提出 Data2Story，把数据新闻流程组织成多智能体虚拟 newsroom，覆盖找角度、统计分析、编辑、设计、编程和审计。核心贡献是让每个数字、角度和素材可追溯到数据、代码或外部引用，并生成地图、音频等多模态故事；评测显示其透明度和可审计性突出。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.17046" target="_blank">Geometric Action Model for Robot Policy Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jisang Han, Sunghwan Hong</div>
+            <div class="note-meta-line">Affiliation: KAIST AI</div>
+        </div>
+        <div class="note-tldr">提出 Geometric Action Model，将预训练几何基础模型改造成语言条件机器人操作策略。模型在中间层插入因果未来预测器，联合预测未来几何 latent 与动作，再经剩余几何骨干解码，在仿真和真实机器人任务中比现有 VLA/WAM 基线更准确、鲁棒、快速且轻量。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-16 23:00</div>
+    <div class="footer">Last updated: 2026-06-17 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
