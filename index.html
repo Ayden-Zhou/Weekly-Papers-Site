@@ -402,8 +402,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Geometric Action Model，将预训练几何基础模型改造成语言条件机器人操作策略。模型在中间层插入因果未来预测器，联合预测未来几何 latent 与动作，再经剩余几何骨干解码，在仿真和真实机器人任务中比现有 VLA/WAM 基线更准确、鲁棒、快速且轻量。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.15956" target="_blank">You Don't Need Strong Assumptions: Visual Representation Learning via Temporal Differences</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ninad Daithankar, Heng Ji</div>
+            <div class="note-meta-line">Affiliation: UIUC, New York University</div>
+        </div>
+        <div class="note-tldr">提出 TDV，从视频中用“过去导致未来”的弱因果假设替代增强、mask、crop 等强归纳偏置。方法联合训练图像编码器与运动编码器，使当前帧表示加上运动编码能预测下一帧表示；实验显示数据规模增大时偏置强度应降低，TDV 在 dense spatial tasks 上可匹配现有 SOTA recipe。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.18023" target="_blank">LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jian Yang, Bryan Dai</div>
+            <div class="note-meta-line">Affiliation: Beihang University, IQuest Research, Langboat, Renmin University of China</div>
+        </div>
+        <div class="note-tldr">研究 Parallel Loop Transformer 的 loop count 选择，并训练 7B LoopCoder-v2 系列。结果显示双循环模型在代码生成、推理、agentic software engineering 和工具使用上普遍优于非循环基线，SWE-bench Verified 从 43.0 提升到 64.4；三轮以上反而退化，揭示 refinement gain 与 CLP mismatch cost 的非单调权衡。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-17 23:00</div>
+    <div class="footer">Last updated: 2026-06-18 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
