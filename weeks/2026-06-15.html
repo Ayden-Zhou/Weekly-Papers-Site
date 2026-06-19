@@ -418,7 +418,15 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">研究 Parallel Loop Transformer 的 loop count 选择，并训练 7B LoopCoder-v2 系列。结果显示双循环模型在代码生成、推理、agentic software engineering 和工具使用上普遍优于非循环基线，SWE-bench Verified 从 43.0 提升到 64.4；三轮以上反而退化，揭示 refinement gain 与 CLP mismatch cost 的非单调权衡。</div>
     </div>
-    <div class="footer">Last updated: 2026-06-18 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.16140" target="_blank">VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sen Xu, Junlin Zhang</div>
+            <div class="note-meta-line">Affiliation: Sina Weibo Inc.</div>
+        </div>
+        <div class="note-tldr">技术报告提出 3B 稠密模型 VibeThinker-3B，探索小模型承载可验证推理的上限。它沿 Spectrum-to-Signal 后训练路线，结合课程式 SFT、多领域 RL 与离线自蒸馏，在 AIME26 达 94.3（测试时扩展 97.1）、LiveCodeBench v6 Pass@1 80.2，并在未见 LeetCode 竞赛保持 96.1% 通过率，同时 IFEval 93.4，说明强推理可压缩进紧凑模型核心。</div>
+    </div>
+    <div class="footer">Last updated: 2026-06-19 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
