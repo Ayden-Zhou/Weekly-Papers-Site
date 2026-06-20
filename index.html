@@ -426,8 +426,24 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">技术报告提出 3B 稠密模型 VibeThinker-3B，探索小模型承载可验证推理的上限。它沿 Spectrum-to-Signal 后训练路线，结合课程式 SFT、多领域 RL 与离线自蒸馏，在 AIME26 达 94.3（测试时扩展 97.1）、LiveCodeBench v6 Pass@1 80.2，并在未见 LeetCode 竞赛保持 96.1% 通过率，同时 IFEval 93.4，说明强推理可压缩进紧凑模型核心。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.18208" target="_blank">Looped World Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongyuan Adam Lu, Wai Lam</div>
+            <div class="note-meta-line">Affiliation: FaceMind Research Asia</div>
+        </div>
+        <div class="note-tldr">提出 LoopWM，将参数共享的循环 Transformer block 用于 latent dynamics，并用谱约束残差动态保证长 rollout 稳定。模型可按转移复杂度自适应增加循环次数，在保持或提升预测精度的同时显著减少参数，提出相对模型规模与数据量正交的 iterative latent depth scaling 轴。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.18246" target="_blank">Variable-Width Transformers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhaofeng Wu, Yoon Kim</div>
+            <div class="note-meta-line">Affiliation: MIT</div>
+        </div>
+        <div class="note-tldr">研究 Transformer 宽度是否应逐层均匀分配，提出 x 形 > <former：早晚层更宽、中间层更窄，并用无参数 residual resizing 连接不同宽度。200M-2B dense 与 3B MoE 实验显示其相对等参 uniform baseline 降低 loss，并节省约 22% FLOPs、15% KV cache/IO。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-19 23:00</div>
+    <div class="footer">Last updated: 2026-06-20 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
