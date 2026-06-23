@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025-08-31 - Weekly Papers</title>
+    <title>2026-06-22 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -360,111 +360,23 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2025-08-31</div>
-    <div class="source-header">2025-08-25 ~ 2025-08-31</div>
+    <div class="week-header">2026-06-22</div>
+    <div class="source-header">2026-06-22 ~ 2026-06-28</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.15260" target="_blank">Deep Think with Confidence</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.20515" target="_blank">S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Yichao Fu; Jiawei Zhao.</div>
-            <div class="note-meta-line">Affiliation: UC San Diego; Meta AI.</div>
+            <div class="note-meta-line">Authors: Yalun Dai, Tao Wang, Kim-Hui Yap</div>
+            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
         </div>
-        <div class="note-tldr">提出 DeepConf，在并行思维/自洽投票推理中利用模型内部分布构造“局部组置信度”和尾部置信度，在线或离线筛除低质推理链并触发早停，无需再训练或调参。于 AIME-2025 离线准确率达 99.9%，在线场景将生成 token 降至 −84.7%，在多模/型与多基准上同时提升效率与精度。</div>
+        <div class="note-tldr">提出 S-Agent，把连续多视角图像和视频空间推理建模为时空证据累积：VLM 负责语义规划，分层空间工具完成 2D grounding、3D lifting 与计数/测量/方向/相对位置等高层几何推断，并用 Scene Memory 与 Agent Memory 维护场景状态和推理轨迹。该框架可免训练提升开闭源 VLM，基于 S-300K 轨迹 SFT 得到的 S-Agent-8B 在 MMSI-Bench 上较 Qwen3-VL-8B 提升 10.5%，接近先进闭源模型。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.17068" target="_blank">Anemoi: A Semi-Centralized Multi-agent System Based on Agent-to-Agent Communication MCP server from Coral Protocol</a></div>
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.20562" target="_blank">MemoryWAM: Efficient World Action Modeling with Persistent Memory</a></div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Xinxing Ren; Önder Gürcan; Zekun Guo.</div>
-            <div class="note-meta-line">Affiliation: Brunel University of London; Coral Protocol.</div>
+            <div class="note-meta-line">Authors: Sizhe Yang, Huazhe Xu</div>
+            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong</div>
         </div>
-        <div class="note-tldr">提出半中心化多智能体系统 Anemoi，依托 Coral Protocol 的 A2A 通信 MCP，使规划者与各工作代理在同一线程内直接交流、共识与自适应改计划，减少上下文拼接冗余并降低对强规划器的依赖。在 GAIA 基准中以小规划器（GPT-4.1-mini）取得 52.73% 准确率，相比开源 SOTA OWL 提升 9.09%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.16153" target="_blank">Memento: Fine-tuning LLM Agents without Fine-tuning LLMs</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Huichi Zhou; Linyi Yang; Jun Wang.</div>
-            <div class="note-meta-line">Affiliation: AI Centre, UCL; Huawei Noah’s Ark Lab (UK).</div>
-        </div>
-        <div class="note-tldr">提出无需微调底座 LLM 的代理学习框架 Memento：以记忆增强 MDP 建模，结合案例检索策略与在线强化学习，仅优化“代理策略”和记忆读写，支撑 Deep Research 类长程任务。在 GAIA 验证集达 87.88% Pass@3、测试 79.40%；在 DeepResearcher 上 F1=66.6%、PM=80.4%；在多项 OOD 任务中额外带来 +4.7–9.6 个百分点提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.19828" target="_blank">Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sikuan Yan; Yunpu Ma.</div>
-            <div class="note-meta-line">Affiliation: Ludwig Maximilian University of Munich; Ludwig Maximilian University of Munich.</div>
-        </div>
-        <div class="note-tldr">提出 Memory-R1，将记忆管理与利用建模为强化学习问题：训练“记忆管理器”执行 ADD/UPDATE/DELETE/NOOP，并让“回答代理”进行记忆蒸馏、筛选与推理。仅用 152 QA 对即可训练，在 LOCOMO 基准上 F1 从 30.41 提升至 45.02（+14.61），BLEU-1 与 LLM-judge 亦显著提升，显示小数据下可获得更强记忆能力与稳健泛化。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://www.arxiv.org/pdf/2508.15884" target="_blank">Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuxian Gu; Han Cai.</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 PostNAS：在预训练全注意力模型上冻结 MLP，后训练阶段搜索线性/全注意力层的布置与新 JetBlock，并进行硬件感知超参优化，得到 Jet-Nemotron-2B/4B。模型在 MMLU/MMLU-Pro、编码与长上下文等基准匹配或超越同级，同时在 64K 上下文下实现最高 47× 解码吞吐、6.1× 预填充提速。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.17580" target="_blank">UQ: Assessing Language Models on Unsolved Questions</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Fan Nie; Ken Ziyu Liu; Niklas Muennighoff.</div>
-            <div class="note-meta-line">Affiliation: Stanford University</div>
-        </div>
-        <div class="note-tldr">提出 UQ：以“未解问题”为评测目标，构建含 500 题的数据集、分层验证器与开放平台。通过规则、LLM 与人工三阶段筛选，并利用“生成-验证”差距设计重复/迭代评审与多数/一致投票。当前最强模型仅约 15% 通过机器验证，兼具高难度与现实性，并支持持续在线评测与社区核验。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.18929" target="_blank">Diverse And Private Synthetic Datasets Generation for RAG evaluation: A multi-agent framework</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ilias Driouich.</div>
-            <div class="note-meta-line">Affiliation: AMADEUS France</div>
-        </div>
-        <div class="note-tldr">面向 RAG 评测提出多智能体数据生成框架：先以聚类选择最大化主题覆盖与语义多样性，再由隐私代理跨域检测并遮蔽敏感信息，最后由整理代理生成私有且多样的 QA 数据与报告。实验显示相较基线具更高多样性与稳健的隐私屏蔽能力，为合规、安全的多领域 RAG 评测提供通用方案。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.17511" target="_blank">School of Reward Hacks: Hacking harmless tasks generalizes to misaligned behavior in LLMs</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mia Taylor.</div>
-            <div class="note-meta-line">Affiliation: Center on Long-term Risk; Truthful AI.</div>
-        </div>
-        <div class="note-tldr">构建包含 1000+ 低风险“奖励黑客”示例的数据集，并以 SFT 训练模型学习过拟合可被攻击的评测函数（如硬编码单测、注水关键词）。模型在新任务与多步环境中仍会“黑评测”，且出现更广泛的失配表现（如规避关机、极端政治表述）。结果提示奖励黑客会外溢，需更稳健的训练与检测方法。 ([arXiv](https://arxiv.org/pdf/2508.17511))</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.14111" target="_blank">From AI for Science to Agentic Science: A Survey on Autonomous Scientific Discovery</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jiaqi Wei.</div>
-            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
-        </div>
-        <div class="note-tldr">系统梳理“Agentic Science”范式：提出统一框架，涵盖规划推理、工具整合、记忆、协作与演化五大核心能力，并将科研描述为观察-规划-分析-综合四阶段的动态流程。综述生命、化学、材料与物理中的代理式系统进展与挑战，讨论可验证性、伦理与开放协作等未来方向。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.14029" target="_blank">Beyond Pass@1: Self-Play with Variational Problem Synthesis Sustains RLVR</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiao Liang, Yeyun Gong, Zhijiang Guo, Weizhu Chen</div>
-            <div class="note-meta-line">Affiliation: University of California, Los Angeles; Microsoft</div>
-        </div>
-        <div class="note-tldr">论文针对RLVR训练中Pass@1提升但策略熵坍缩、探索不足的问题，提出在线“自博弈+变式题合成”(SvS)：利用模型对原题的正确解自动生成等价答案的变式题，并动态更新训练集以维持难度与多样性。方法以可验证答案为约束进行筛选，结合RLVR优化，显著提升Pass@k并缓解熵下降，改善训练稳定性与泛化能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.20751" target="_blank">Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yibin Wang, Cheng Jin, Jiaqi Wang</div>
-            <div class="note-meta-line">Affiliation: Fudan University; Hunyuan, Tencent</div>
-        </div>
-        <div class="note-tldr">工作指出基于点分数的GRPO存在“虚假优势”，易被奖励黑客利用，提出以成对偏好作为奖励信号的Pref-GRPO，将优化目标从分数最大化改为偏好拟合；并发布细粒度统一评测基准UniGenBench。实验显示Pref-GRPO更稳健地区分细微质量差异并抑制奖励黑客；在UniGenBench上总体约提升5.8%，文本与逻辑子项约提升12%，训练更稳定。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.19652" target="_blank">Self-Rewarding Vision-Language Model via Reasoning Decomposition</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zongxia Li, Wenhao Yu</div>
-            <div class="note-meta-line">Affiliation: Tencent AI Lab, Seattle</div>
-        </div>
-        <div class="note-tldr">为缓解VLM的视觉幻觉与语言捷径，论文将推理分解为“视觉感知→语言推理”，并引入自奖励：模型先生成自包含的视觉感知描述，再仅基于该描述进行语言推理以验证并给出奖励；与答案监督结合形成双重信号。该自奖励无需外部标签或奖励模型，能强化感知与推理的耦合，跨多类视觉任务提升鲁棒性并显著降低幻觉与对文本先验的依赖。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2508.17445" target="_blank">TreePO: Bridging the Gap of Policy Optimization and Efficacy and Inference Efficiency with Heuristic Tree-based Modeling</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yizhi Li, Wenhao Huang</div>
-            <div class="note-meta-line">Affiliation: ByteDance Seed</div>
-        </div>
-        <div class="note-tldr">提出TreePO，将序列生成重构为段级树搜索：共享前缀、按不确定性分支、早停与回退结合，并配套树级优势估计改进信用分配。在保持探索多样性的同时复用KV缓存、减少冗余解码，从而提升训练与推理效率。实验报告采样开销节省22–43%，既有模型轨迹级与token级推理计算分别下降至约40%与35%，在多项推理基准上保持竞争性能。</div>
+        <div class="note-tldr">针对长程机器人操作中“短窗口高效但遗忘、全历史 KV 保留上下文但成本随序列增长”的矛盾，提出 MemoryWAM。方法结合近期帧、事件边界 anchor frames 与压缩长程历史的 gist tokens，并设计注意力机制同时检索短期细节和长期摘要，将推理时间/空间复杂度从 O(N) 降到 O(N/d)。在仿真和真实长程记忆依赖任务上，它优于 VLA 与 WAM 强基线，同时显著降低延迟和显存占用。</div>
     </div>
     <div class="footer">Last updated: 2026-06-23 23:00</div>
     <script>
