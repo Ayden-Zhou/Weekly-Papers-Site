@@ -378,7 +378,23 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对长程机器人操作中“短窗口高效但遗忘、全历史 KV 保留上下文但成本随序列增长”的矛盾，提出 MemoryWAM。方法结合近期帧、事件边界 anchor frames 与压缩长程历史的 gist tokens，并设计注意力机制同时检索短期细节和长期摘要，将推理时间/空间复杂度从 O(N) 降到 O(N/d)。在仿真和真实长程记忆依赖任务上，它优于 VLA 与 WAM 强基线，同时显著降低延迟和显存占用。</div>
     </div>
-    <div class="footer">Last updated: 2026-06-24 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.23050" target="_blank">Unlimited OCR Works</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Youyang Yin, Lei Jia</div>
+            <div class="note-meta-line">Affiliation: Baidu Inc.</div>
+        </div>
+        <div class="note-tldr">提出 Unlimited OCR，针对端到端 OCR 在长输出下 KV cache 持续增长、生成变慢的问题，在 DeepSeek OCR 基线解码器中用 Reference Sliding Window Attention 替代全注意力，使视觉参考 token 全程可见、输出 token 只关注最近窗口，从而保持常量 KV cache。结合高压缩编码器，可在 32K 长度内单次前向转写数十页文档，并将 R-SWA 扩展为通用长程解析机制。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.24597" target="_blank">Qwen-AgentWorld: Language World Models for General Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuxin Zuo, Ning Ding</div>
+            <div class="note-meta-line">Affiliation: Qwen Team</div>
+        </div>
+        <div class="note-tldr">提出 Qwen-AgentWorld-35B-A3B 与 397B-A17B，把语言世界模型用于通用智能体环境模拟与训练。方法利用 1000 万+真实环境交互轨迹，经 CPT、SFT、RL 三阶段学习状态转移和下一状态推理，并构建 AgentWorldBench 评估模拟质量。实验显示模型优于前沿基线，还能作为可控环境模拟器扩大 agentic RL，或作为智能体基础模型预热提升下游任务。</div>
+    </div>
+    <div class="footer">Last updated: 2026-06-25 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
