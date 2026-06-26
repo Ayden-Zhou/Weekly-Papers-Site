@@ -394,8 +394,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Qwen-AgentWorld-35B-A3B 与 397B-A17B，把语言世界模型用于通用智能体环境模拟与训练。方法利用 1000 万+真实环境交互轨迹，经 CPT、SFT、RL 三阶段学习状态转移和下一状态推理，并构建 AgentWorldBench 评估模拟质量。实验显示模型优于前沿基线，还能作为可控环境模拟器扩大 agentic RL，或作为智能体基础模型预热提升下游任务。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.24775" target="_blank">Are We Ready For An Agent-Native Memory System?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wei Zhou, Xuanhe Zhou</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">从数据管理视角系统研究 LLM agent memory，将其拆解为表示与存储、抽取、检索与路由、维护四个核心模块，并在 5 类工作负载、11 个数据集上评测 12 个代表性系统和 2 个基线。结果显示没有单一架构在所有场景占优，性能取决于记忆结构与工作负载瓶颈的匹配；局部维护通常比全局重组更具成本效率。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-25 23:00</div>
+    <div class="footer">Last updated: 2026-06-26 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
