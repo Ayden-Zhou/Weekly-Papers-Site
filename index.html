@@ -402,8 +402,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">从数据管理视角系统研究 LLM agent memory，将其拆解为表示与存储、抽取、检索与路由、维护四个核心模块，并在 5 类工作负载、11 个数据集上评测 12 个代表性系统和 2 个基线。结果显示没有单一架构在所有场景占优，性能取决于记忆结构与工作负载瓶颈的匹配；局部维护通常比全局重组更具成本效率。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.25996" target="_blank">Autodata: An agentic data scientist to create high quality synthetic data</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ilia Kulikov, Jason Weston</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
+        </div>
+        <div class="note-tldr">提出 Autodata，将 AI agent 建模为“数据科学家”，循环生成、评估并改进训练/评测数据；其实例 Agentic Self-Instruct 通过 challenger、强弱 solver 与 judge 的反馈制造更有区分度的样本。实验覆盖计算机科学研究、法律推理和科学/数学推理，显示相比传统 Self-Instruct/CoT 数据能带来更好的训练收益，进一步对数据科学家 agent 做 meta-optimization 还能继续提升数据质量。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-06-26 23:00</div>
+    <div class="footer">Last updated: 2026-06-27 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
