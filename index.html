@@ -360,58 +360,8 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">2026-06-22 ~ 2026-06-28</div>
-    <div class="source-header">Latest file: 2026-06-22</div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.20515" target="_blank">S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yalun Dai, Tao Wang, Kim-Hui Yap</div>
-            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
-        </div>
-        <div class="note-tldr">提出 S-Agent，把连续多视角图像和视频空间推理建模为时空证据累积：VLM 负责语义规划，分层空间工具完成 2D grounding、3D lifting 与计数/测量/方向/相对位置等高层几何推断，并用 Scene Memory 与 Agent Memory 维护场景状态和推理轨迹。该框架可免训练提升开闭源 VLM，基于 S-300K 轨迹 SFT 得到的 S-Agent-8B 在 MMSI-Bench 上较 Qwen3-VL-8B 提升 10.5%，接近先进闭源模型。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.20562" target="_blank">MemoryWAM: Efficient World Action Modeling with Persistent Memory</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sizhe Yang, Huazhe Xu</div>
-            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong</div>
-        </div>
-        <div class="note-tldr">针对长程机器人操作中“短窗口高效但遗忘、全历史 KV 保留上下文但成本随序列增长”的矛盾，提出 MemoryWAM。方法结合近期帧、事件边界 anchor frames 与压缩长程历史的 gist tokens，并设计注意力机制同时检索短期细节和长期摘要，将推理时间/空间复杂度从 O(N) 降到 O(N/d)。在仿真和真实长程记忆依赖任务上，它优于 VLA 与 WAM 强基线，同时显著降低延迟和显存占用。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.23050" target="_blank">Unlimited OCR Works</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Youyang Yin, Lei Jia</div>
-            <div class="note-meta-line">Affiliation: Baidu Inc.</div>
-        </div>
-        <div class="note-tldr">提出 Unlimited OCR，针对端到端 OCR 在长输出下 KV cache 持续增长、生成变慢的问题，在 DeepSeek OCR 基线解码器中用 Reference Sliding Window Attention 替代全注意力，使视觉参考 token 全程可见、输出 token 只关注最近窗口，从而保持常量 KV cache。结合高压缩编码器，可在 32K 长度内单次前向转写数十页文档，并将 R-SWA 扩展为通用长程解析机制。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.24597" target="_blank">Qwen-AgentWorld: Language World Models for General Agents</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuxin Zuo, Ning Ding</div>
-            <div class="note-meta-line">Affiliation: Qwen Team</div>
-        </div>
-        <div class="note-tldr">提出 Qwen-AgentWorld-35B-A3B 与 397B-A17B，把语言世界模型用于通用智能体环境模拟与训练。方法利用 1000 万+真实环境交互轨迹，经 CPT、SFT、RL 三阶段学习状态转移和下一状态推理，并构建 AgentWorldBench 评估模拟质量。实验显示模型优于前沿基线，还能作为可控环境模拟器扩大 agentic RL，或作为智能体基础模型预热提升下游任务。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.24775" target="_blank">Are We Ready For An Agent-Native Memory System?</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wei Zhou, Xuanhe Zhou</div>
-            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
-        </div>
-        <div class="note-tldr">从数据管理视角系统研究 LLM agent memory，将其拆解为表示与存储、抽取、检索与路由、维护四个核心模块，并在 5 类工作负载、11 个数据集上评测 12 个代表性系统和 2 个基线。结果显示没有单一架构在所有场景占优，性能取决于记忆结构与工作负载瓶颈的匹配；局部维护通常比全局重组更具成本效率。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.25996" target="_blank">Autodata: An agentic data scientist to create high quality synthetic data</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ilia Kulikov, Jason Weston</div>
-            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
-        </div>
-        <div class="note-tldr">提出 Autodata，将 AI agent 建模为“数据科学家”，循环生成、评估并改进训练/评测数据；其实例 Agentic Self-Instruct 通过 challenger、强弱 solver 与 judge 的反馈制造更有区分度的样本。实验覆盖计算机科学研究、法律推理和科学/数学推理，显示相比传统 Self-Instruct/CoT 数据能带来更好的训练收益，进一步对数据科学家 agent 做 meta-optimization 还能继续提升数据质量。</div>
-    </div>
-
-    <div class="footer">Last updated: 2026-06-28 23:00</div>
+    <div class="week-header">本周暂无详细笔记</div>
+    <div class="footer">Last updated: 2026-06-29 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
