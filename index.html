@@ -360,8 +360,18 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-06-29 23:00</div>
+    <div class="week-header">2026-06-29 ~ 2026-07-05</div>
+    <div class="source-header">Latest file: 2026-06-29</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.27608" target="_blank">Qwen-Image-2.0-RL Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yixian Xu, Chenfei Wu</div>
+            <div class="note-meta-line">Affiliation: Qwen Team</div>
+        </div>
+        <div class="note-tldr">提出面向 Qwen-Image-2.0 的 RLHF 后训练管线：先用带 CoT 的 VLM 点式打分构建文本生图/图像编辑复合奖励，再用 GRPO、混合 CFG、prompt 过滤和类别权重校准训练任务专用策略，最后以 on-policy distillation 合并教师。模型在 Qwen-Image-Bench 达 57.84（+2.61），T2I/编辑 arena Elo 分别提升 78/93，改善美学、指令遵循与编辑准确性。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-06-30 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
