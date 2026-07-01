@@ -370,7 +370,31 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出面向 Qwen-Image-2.0 的 RLHF 后训练管线：先用带 CoT 的 VLM 点式打分构建文本生图/图像编辑复合奖励，再用 GRPO、混合 CFG、prompt 过滤和类别权重校准训练任务专用策略，最后以 on-policy distillation 合并教师。模型在 Qwen-Image-Bench 达 57.84（+2.61），T2I/编辑 arena Elo 分别提升 78/93，改善美学、指令遵循与编辑准确性。</div>
     </div>
-    <div class="footer">Last updated: 2026-06-30 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.28733" target="_blank">Agentic Abstention: Do Agents Know When to Stop Instead of Act?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Han Luo, Lucy Lu Wang</div>
+            <div class="note-meta-line">Affiliation: University of Leeds, Southwest Jiaotong University, University of Washington</div>
+        </div>
+        <div class="note-tldr">提出 Agentic Abstention，把代理在多轮工具交互中判断何时停止、弃答或继续探索建模为序列决策问题。论文构建覆盖 WebShop、Terminal-Bench 与问答的 2.8 万任务基准，发现强模型也常延迟弃答；CONVOLVE 将完整轨迹蒸馏为停止规则，在 WebShop 上显著提升及时弃答率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.30534" target="_blank">Orca: The World is in Your Mind</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yihao Wang, Pengwei Wang</div>
+            <div class="note-meta-line">Affiliation: Beijing Academy of Artificial Intelligence</div>
+        </div>
+        <div class="note-tldr">提出通用世界基础模型 Orca，以 Next-State-Prediction 统一建模文本、视频和动作中的状态转移。模型通过无意识视频转移学习与有意识事件/VQA 学习获得世界潜空间，并用文本生成、图像预测和具身动作三个 readout 验证；结果显示更强世界潜表示能带来更强下游能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.30616" target="_blank">Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Lei Bai, Yuhao Zhou</div>
+            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
+        </div>
+        <div class="note-tldr">提出 35B MoE 代理 Agents-A1，主张通过扩展长程交互轨迹和异构代理能力而非单纯扩大参数获得 1T 级性能。方法构建平均 45K token 的知识-动作轨迹，采用全域 SFT、领域教师训练和多教师按域 on-policy 蒸馏，在多项长程代理/科学推理基准上达到或接近 1T 模型表现。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-01 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
