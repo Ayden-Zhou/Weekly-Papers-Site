@@ -394,8 +394,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 35B MoE 代理 Agents-A1，主张通过扩展长程交互轨迹和异构代理能力而非单纯扩大参数获得 1T 级性能。方法构建平均 45K token 的知识-动作轨迹，采用全域 SFT、领域教师训练和多教师按域 on-policy 蒸馏，在多项长程代理/科学推理基准上达到或接近 1T 模型表现。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.28436" target="_blank">Dockerless: Environment-Free Program Verifier for Coding Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenhao Zeng, Xiaodong Gu, Shilin He</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">提出 Dockerless，一种无需 Docker/测试环境的代理式代码补丁验证器，通过生成验证问题并派发子代理探索仓库证据来判断候选补丁正确性。它在验证器基准上较最强开源基线提升 14.3 AUC 点，并可同时作为 SFT 轨迹过滤器与 RL 奖励，使完全免环境后训练在 SWE-bench 多基准上接近传统基于环境的流程。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-02 23:00</div>
+    <div class="footer">Last updated: 2026-07-03 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
