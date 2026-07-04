@@ -402,8 +402,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Dockerless，一种无需 Docker/测试环境的代理式代码补丁验证器，通过生成验证问题并派发子代理探索仓库证据来判断候选补丁正确性。它在验证器基准上较最强开源基线提升 14.3 AUC 点，并可同时作为 SFT 轨迹过滤器与 RL 奖励，使完全免环境后训练在 SWE-bench 多基准上接近传统基于环境的流程。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.32026" target="_blank">AdaJEPA: An Adaptive Latent World Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ying Wang, Mengye Ren</div>
+            <div class="note-meta-line">Affiliation: New York University, AMI Labs</div>
+        </div>
+        <div class="note-tldr">提出 AdaJEPA，让基于 JEPA 的潜空间世界模型在 MPC 闭环中测试时自适应：先规划并执行动作，再用真实观测到的下一状态转移作为自监督信号更新模型后重规划。该方法无需额外专家示范，只需少量梯度步即可持续校准模型，在目标到达任务和分布偏移场景中显著提升规划成功率。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-03 23:00</div>
+    <div class="footer">Last updated: 2026-07-04 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
