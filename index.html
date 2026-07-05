@@ -410,8 +410,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 AdaJEPA，让基于 JEPA 的潜空间世界模型在 MPC 闭环中测试时自适应：先规划并执行动作，再用真实观测到的下一状态转移作为自监督信号更新模型后重规划。该方法无需额外专家示范，只需少量梯度步即可持续校准模型，在目标到达任务和分布偏移场景中显著提升规划成功率。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.01232" target="_blank">Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zijian Zhang, Mingyi Hong</div>
+            <div class="note-meta-line">Affiliation: University of Minnesota</div>
+        </div>
+        <div class="note-tldr">研究RL后训练收益在Transformer层间的分布，系统比较只训练单层与全参数训练。作者提出layer contribution度量，发现单个中间层往往可恢复甚至超过全参数RL的大部分增益，并且这一层级模式在Qwen3/Qwen2.5、GRPO/GiGPO/Dr. GRPO及数学、代码、智能体任务中保持稳定。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-04 23:00</div>
+    <div class="footer">Last updated: 2026-07-05 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
