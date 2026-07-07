@@ -360,8 +360,26 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-07-06 23:00</div>
+    <div class="week-header">2026-07-06 ~ 2026-07-12</div>
+    <div class="source-header">Latest file: 2026-07-06</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.29526" target="_blank">The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jing Liang, Bo Zheng</div>
+            <div class="note-meta-line">Affiliation: 1 Tianjin University, 2 Alibaba</div>
+        </div>
+        <div class="note-tldr">指出 LLM 强化学习中训练引擎与推理引擎概率不一致会造成目标错配：训练策略变好并不保证部署时的推理策略变好。论文提出 MIPI 作为以推理策略单调改进为核心的目标，并用 MIPU 两步框架先生成候选更新、再用推理侧 gap proxy 选择接受或回滚，在高 mismatch 设置下提升推理任务平均表现与训练稳定性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.02512" target="_blank">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wentao Zhang, Yuntian Deng</div>
+            <div class="note-meta-line">Affiliation: University of Waterloo</div>
+        </div>
+        <div class="note-tldr">提出 fuzzy-function programming，将自然语言函数规格编译成可本地执行的小型神经“程序”。PAW 使用 4B 编译器基于 1000 万样例 FuzzyBench 生成参数高效适配器，由冻结的 0.6B Qwen3 interpreter 执行；效果接近直接提示 Qwen3-32B，却显著降低内存、成本并支持离线复用。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-07-07 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
