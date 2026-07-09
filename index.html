@@ -386,8 +386,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 RoboDojo，一个同时覆盖仿真与真实世界的通用机器人操作评测基准：仿真侧包含 42 个任务，衡量泛化、记忆、精度、长程执行和开放词汇指令跟随；真实侧包含 18 个任务与标准化远程评测系统。作者还提供 XPolicyLab，使 30 个策略可统一接入评测并形成公开 leaderboard。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.05247" target="_blank">Vision Pretraining for Dense Spatial Perception</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zelin Fu, Nan Xue</div>
+            <div class="note-meta-line">Affiliation: Robbyant, Ant Group</div>
+        </div>
+        <div class="note-tldr">提出 LingBot-Vision，以边界为中心的 masked boundary modeling 进行自监督预训练：由教师在线发现边界 token 并强制学生重建，结合离散化边界场稳定训练。该方法让语义与几何表征协同，在深度、分割和视频目标传播等稠密感知任务上优于或匹配更大视觉基础模型，并推动 LingBot-Depth 2.0 在 14 个深度补全基准取得领先表现。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-08 23:00</div>
+    <div class="footer">Last updated: 2026-07-09 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
