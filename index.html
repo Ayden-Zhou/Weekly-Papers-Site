@@ -394,8 +394,16 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 LingBot-Vision，以边界为中心的 masked boundary modeling 进行自监督预训练：由教师在线发现边界 token 并强制学生重建，结合离散化边界场稳定训练。该方法让语义与几何表征协同，在深度、分割和视频目标传播等稠密感知任务上优于或匹配更大视觉基础模型，并推动 LingBot-Depth 2.0 在 14 个深度补全基准取得领先表现。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.05391" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jacky Kwok, Azalia Mirhoseini</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">将“验证”视为提升智能体任务表现的新扩展轴，提出无需训练的 LLM-as-a-Verifier：用评分 token logits 的期望生成连续细粒度分数，并通过更高评分粒度、重复评估与标准分解降低方差和复杂度。在 Terminal-Bench V2、SWE-Bench Verified、RoboRewardBench、MedAgentBench 上取得 SOTA，还可为 RL 提供密集反馈。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-09 23:00</div>
+    <div class="footer">Last updated: 2026-07-10 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
