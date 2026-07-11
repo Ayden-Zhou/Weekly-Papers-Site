@@ -402,7 +402,23 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">将“验证”视为提升智能体任务表现的新扩展轴，提出无需训练的 LLM-as-a-Verifier：用评分 token logits 的期望生成连续细粒度分数，并通过更高评分粒度、重复评估与标准分解降低方差和复杂度。在 Terminal-Bench V2、SWE-Bench Verified、RoboRewardBench、MedAgentBench 上取得 SOTA，还可为 RL 提供密集反馈。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-10 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.03118" target="_blank">Vidu S1: A Real-Time Interactive Video Generation Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jintao Zhang, Jun Zhu</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University, Shengshu Technology</div>
+        </div>
+        <div class="note-tldr">提出 Vidu S1，一个支持语音实时控制数字角色的视频生成模型，用户可在生成过程中随时用语音改变内容。系统结合 TurboDiffusion 与 TurboServe，在消费级 GPU 上实现最高 42 FPS 的 540p 长时生成，并避免模糊、漂移和视觉失真；实验显示其在实时性和质量指标上均表现领先。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.05147" target="_blank">DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xin Cheng, Wenfeng Liang</div>
+            <div class="note-meta-line">Affiliation: 1 Peking University, 2 DeepSeek-AI</div>
+        </div>
+        <div class="note-tldr">提出 DSpark，用半自回归 draft 架构提升并行草稿 token 的依赖建模，并用基于置信度的调度动态决定每个请求的验证长度，减少高拒绝风险 token 占用批处理容量。离线评测中它提高接受长度；在 DeepSeek-V4 线上服务中，相比 MTP-1 基线可在匹配吞吐下将单用户生成速度提升 60%-85%。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-11 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
