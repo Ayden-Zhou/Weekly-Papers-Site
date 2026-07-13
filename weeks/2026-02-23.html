@@ -466,7 +466,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">该工作针对多轮代理式推理中 KV Cache 读取受存储带宽限制的问题，提出 DualPath 双路径加载机制：除传统“存储到 prefill”外，新增“存储到 decode 再经 RDMA 转发到 prefill”的路径，并结合全局调度实现负载均衡。实验证明在生产负载下可显著提升离线与在线吞吐，同时满足时延约束。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-12 23:00</div>
+    <div class="footer">Last updated: 2026-07-13 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

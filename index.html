@@ -360,66 +360,8 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">2026-07-06 ~ 2026-07-12</div>
-    <div class="source-header">Latest file: 2026-07-06</div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2606.29526" target="_blank">The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jing Liang, Bo Zheng</div>
-            <div class="note-meta-line">Affiliation: 1 Tianjin University, 2 Alibaba</div>
-        </div>
-        <div class="note-tldr">指出 LLM 强化学习中训练引擎与推理引擎概率不一致会造成目标错配：训练策略变好并不保证部署时的推理策略变好。论文提出 MIPI 作为以推理策略单调改进为核心的目标，并用 MIPU 两步框架先生成候选更新、再用推理侧 gap proxy 选择接受或回滚，在高 mismatch 设置下提升推理任务平均表现与训练稳定性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2607.02512" target="_blank">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wentao Zhang, Yuntian Deng</div>
-            <div class="note-meta-line">Affiliation: University of Waterloo</div>
-        </div>
-        <div class="note-tldr">提出 fuzzy-function programming，将自然语言函数规格编译成可本地执行的小型神经“程序”。PAW 使用 4B 编译器基于 1000 万样例 FuzzyBench 生成参数高效适配器，由冻结的 0.6B Qwen3 interpreter 执行；效果接近直接提示 Qwen3-32B，却显著降低内存、成本并支持离线复用。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2607.04434" target="_blank">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianxing Chen, Masayoshi Tomizuka</div>
-            <div class="note-meta-line">Affiliation: MMLab@HKU</div>
-        </div>
-        <div class="note-tldr">提出 RoboDojo，一个同时覆盖仿真与真实世界的通用机器人操作评测基准：仿真侧包含 42 个任务，衡量泛化、记忆、精度、长程执行和开放词汇指令跟随；真实侧包含 18 个任务与标准化远程评测系统。作者还提供 XPolicyLab，使 30 个策略可统一接入评测并形成公开 leaderboard。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2607.05247" target="_blank">Vision Pretraining for Dense Spatial Perception</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zelin Fu, Nan Xue</div>
-            <div class="note-meta-line">Affiliation: Robbyant, Ant Group</div>
-        </div>
-        <div class="note-tldr">提出 LingBot-Vision，以边界为中心的 masked boundary modeling 进行自监督预训练：由教师在线发现边界 token 并强制学生重建，结合离散化边界场稳定训练。该方法让语义与几何表征协同，在深度、分割和视频目标传播等稠密感知任务上优于或匹配更大视觉基础模型，并推动 LingBot-Depth 2.0 在 14 个深度补全基准取得领先表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2607.05391" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jacky Kwok, Azalia Mirhoseini</div>
-            <div class="note-meta-line">Affiliation: Stanford University</div>
-        </div>
-        <div class="note-tldr">将“验证”视为提升智能体任务表现的新扩展轴，提出无需训练的 LLM-as-a-Verifier：用评分 token logits 的期望生成连续细粒度分数，并通过更高评分粒度、重复评估与标准分解降低方差和复杂度。在 Terminal-Bench V2、SWE-Bench Verified、RoboRewardBench、MedAgentBench 上取得 SOTA，还可为 RL 提供密集反馈。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2607.03118" target="_blank">Vidu S1: A Real-Time Interactive Video Generation Model</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jintao Zhang, Jun Zhu</div>
-            <div class="note-meta-line">Affiliation: Tsinghua University, Shengshu Technology</div>
-        </div>
-        <div class="note-tldr">提出 Vidu S1，一个支持语音实时控制数字角色的视频生成模型，用户可在生成过程中随时用语音改变内容。系统结合 TurboDiffusion 与 TurboServe，在消费级 GPU 上实现最高 42 FPS 的 540p 长时生成，并避免模糊、漂移和视觉失真；实验显示其在实时性和质量指标上均表现领先。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2607.05147" target="_blank">DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</a></div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xin Cheng, Wenfeng Liang</div>
-            <div class="note-meta-line">Affiliation: 1 Peking University, 2 DeepSeek-AI</div>
-        </div>
-        <div class="note-tldr">提出 DSpark，用半自回归 draft 架构提升并行草稿 token 的依赖建模，并用基于置信度的调度动态决定每个请求的验证长度，减少高拒绝风险 token 占用批处理容量。离线评测中它提高接受长度；在 DeepSeek-V4 线上服务中，相比 MTP-1 基线可在匹配吞吐下将单用户生成速度提升 60%-85%。</div>
-    </div>
-
-    <div class="footer">Last updated: 2026-07-12 23:00</div>
+    <div class="week-header">本周暂无详细笔记</div>
+    <div class="footer">Last updated: 2026-07-13 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
