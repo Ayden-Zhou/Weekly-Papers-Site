@@ -360,8 +360,26 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-07-13 23:00</div>
+    <div class="week-header">2026-07-13 ~ 2026-07-19</div>
+    <div class="source-header">Latest file: 2026-07-13</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.08716" target="_blank">Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifan Wu, Zhuokai Zhao</div>
+            <div class="note-meta-line">Affiliation: Meta AI</div>
+        </div>
+        <div class="note-tldr">提出 proactive memory agent 来缓解长程代理中的“行为状态衰减”：独立记忆代理持续维护结构化记忆，并只在可能影响下一步决策时注入基于记忆的简短提醒。该方法无需改动执行代理，在 Terminal-Bench 2.0 和 τ²-Bench 上分别带来显著 pass@1 提升；消融显示选择性干预优于被动暴露完整记忆、总是注入和通用检索，并初步验证可用 SFT/GRPO 训练开源记忆策略。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.09024" target="_blank">Video Generation Models are General-Purpose Vision Learners</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Letian Wang, Cristian Sminchisescu</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind, University of Toronto</div>
+        </div>
+        <div class="note-tldr">提出 GenCeption，将预训练文本到视频扩散模型改造为单步前馈的通用视觉感知模型，用文本指令驱动深度、法线、相机位姿、指代表达分割和 3D 关键点等多任务预测。实验显示视频生成预训练可提供时空先验、视觉语言对齐和可扩展性，在多项任务上达到或接近专用模型表现，并以 7 到 500 倍更少训练数据展现数据效率和从合成人类视频泛化到真实及域外类别的涌现能力。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-07-14 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
