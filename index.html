@@ -378,8 +378,40 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 GenCeption，将预训练文本到视频扩散模型改造为单步前馈的通用视觉感知模型，用文本指令驱动深度、法线、相机位姿、指代表达分割和 3D 关键点等多任务预测。实验显示视频生成预训练可提供时空先验、视觉语言对齐和可扩展性，在多项任务上达到或接近专用模型表现，并以 7 到 500 倍更少训练数据展现数据效率和从合成人类视频泛化到真实及域外类别的涌现能力。</div>
     </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.05394" target="_blank">Weak-to-Strong Generalization via Direct On-Policy Distillation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shiyuan Feng, Hao Zhou</div>
+            <div class="note-meta-line">Affiliation: SIA-Lab of Tsinghua AIR and ByteDance Seed, Institute for AI Industry Research (AIR), Tsinghua University, Department of Computer Science and Technology, Tsinghua University, Peking University</div>
+        </div>
+        <div class="note-tldr">提出 Direct On-Policy Distillation，将弱模型 RL 前后策略的 log-ratio 视作隐式奖励，在强模型自己的 on-policy 状态上迁移 RL 诱导的策略变化。相比直接蒸馏弱教师，它保留弱模型通过 RL 学到的监督信号，同时避免在强模型上重复昂贵的稀疏奖励 RL。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.10383" target="_blank">ABot-N1: Toward a General Visual Language Navigation Foundation Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruiyan Gong, Mu Xu</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出面向视觉语言导航的 ABot-N1，用 slow-fast 架构把高层推理与低层控制解耦：慢速 VLM 产生 CoT 和像素目标，快速动作专家据此输出连续路点。模型统一 point-goal、object-goal、POI-goal、指令跟随和人员跟随任务，并在城市级 POI 到达率、复杂室内外导航成功率等指标上取得显著提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.11643" target="_blank">Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinghang Li, Jason Li</div>
+            <div class="note-meta-line">Affiliation: Xiaomi Robotics</div>
+        </div>
+        <div class="note-tldr">提出 38B 多模态自回归模型 Xiaomi-Robotics-U0，把具身生成视作世界基础生成模型的延伸，统一优化文生图、图像编辑、具身场景生成、具身迁移和视频生成。模型强调多视角几何一致性、机器人形态约束和可控编辑，并能生成用于下游策略学习的鲁棒具身数据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.11673" target="_blank">ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mingchao Sun, Hongyu Pan</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出 ABot-3DWorld 0，将文本、图像或视频输入转成可探索的高保真 3D 世界。核心是 Spatial Generative Primitive，将全景图与空间点云作为统一中间表示，再通过 3D 一致的全景视频生成和 3DGS 重建得到可漫游场景，可服务低门槛 3D 内容生成和地图原生空间探索。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-14 23:00</div>
+    <div class="footer">Last updated: 2026-07-15 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
