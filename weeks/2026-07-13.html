@@ -418,7 +418,31 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 FlowWAM，将光流作为与视频生成器天然对齐的统一动作表示，用双流扩散框架同时支持动作预测和未来视频生成。光流可从无动作标签视频中自动提取，便于利用大规模视频预训练；在 RoboTwin 操作任务上成功率达到 92.94%/92.14%，在 WorldArena 上取得最佳 EWMScore 63.71，并显著提升轨迹准确率。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-16 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.13285" target="_blank">Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruhan Wang, Leoweiliang</div>
+            <div class="note-meta-line">Affiliation: Tencent HY LLM Frontier, Indiana University</div>
+        </div>
+        <div class="note-tldr">聚焦复杂 AI agent harness 演化中的行为定位难题，提出 Harness Handbook：用静态分析和 LLM 结构化把代码按系统行为组织，并配合行为引导的逐步披露流程，帮助 coding agent 更准确找到修改点、提升编辑计划质量并减少规划 token。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.13125" target="_blank">Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guoxuan Chen, Chenyang Lei</div>
+            <div class="note-meta-line">Affiliation: Artificial Intelligence Laboratory (Leibniz), Huawei Technologies, Hong Kong, The University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">发布开源统一多模态理解与生成模型族 Boogu-Image-0.1，覆盖 Base、Turbo、Edit 等版本。论文强调在有限算力下，通过理解能力、数据质量、训练流程和推理期 agentic scaling 的组合优化，使模型在文生图、快速推理、指令编辑和中英文文字渲染上接近或超过主流开源方案。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.12395" target="_blank">Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinyu Tang, Wayne Xin Zhao, Zhiqiang Zhang</div>
+            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China</div>
+        </div>
+        <div class="note-tldr">探索无人工标注、可验证奖励的 zero RL 在 1T 参数模型上的扩展规律。论文提出稳定高效训练管线，缓解可读性差、冗余 token 和推理深度不足等问题，并观察到发现到锐化的训练阶段、样本效率提升及自验证、结构化表达、并行推理等涌现行为。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-17 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
