@@ -442,7 +442,23 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">探索无人工标注、可验证奖励的 zero RL 在 1T 参数模型上的扩展规律。论文提出稳定高效训练管线，缓解可读性差、冗余 token 和推理深度不足等问题，并观察到发现到锐化的训练阶段、样本效率提升及自验证、结构化表达、并行推理等涌现行为。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-17 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.14777" target="_blank">SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jinyang Wu, Jianhua Tao</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">提出 SEED，把已完成的 on-policy 轨迹分析成可复用的 hindsight skills，并通过普通上下文与技能增强上下文的动作概率差构造 token 级蒸馏信号，与 outcome RL 联合训练。该方法让策略执行和轨迹分析同步自演化，在文本、视觉和网页代理任务上提升性能、样本效率与泛化能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.14935" target="_blank">VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinhao Li, Limin Wang</div>
+            <div class="note-meta-line">Affiliation: Nanjing University</div>
+        </div>
+        <div class="note-tldr">发布完全开源的视频多模态大模型 VideoChat3，用 I3D-ViT 和自适应帧分辨率降低长视频与流式理解的视觉 token 成本，并构建覆盖通用、长视频和在线场景的三类训练数据。4B 模型在多项视频理解基准上超过同等或更大开源模型，同时开放权重、代码、训练策略和数据。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-18 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
