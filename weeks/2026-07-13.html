@@ -458,7 +458,15 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">发布完全开源的视频多模态大模型 VideoChat3，用 I3D-ViT 和自适应帧分辨率降低长视频与流式理解的视觉 token 成本，并构建覆盖通用、长视频和在线场景的三类训练数据。4B 模型在多项视频理解基准上超过同等或更大开源模型，同时开放权重、代码、训练策略和数据。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-18 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.15038" target="_blank">Video = World + Event Stream</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Lianghua Huang</div>
+            <div class="note-meta-line">Affiliation: Wan Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出 Wan-Streamer v0.3，将视频建模为持久“世界”与随时间变化的“事件流”，把大规模真实视频预训练转化为预测世界如何实时变化和响应的任务。模型在全双工音视频交互中把流式多模态输入映射为语音和开放词表行为指令，并在 640×368、25 FPS 下实现约 200ms 模型侧延迟和约 550ms 总延迟。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-19 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
