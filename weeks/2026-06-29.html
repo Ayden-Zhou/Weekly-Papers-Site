@@ -418,7 +418,103 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">研究RL后训练收益在Transformer层间的分布，系统比较只训练单层与全参数训练。作者提出layer contribution度量，发现单个中间层往往可恢复甚至超过全参数RL的大部分增益，并且这一层级模式在Qwen3/Qwen2.5、GRPO/GiGPO/Dr. GRPO及数学、代码、智能体任务中保持稳定。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-19 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.21228" target="_blank">Sakana Fugu Technical Report</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yujin Tang, Tarin Clanuwat</div>
+            <div class="note-meta-line">Affiliation: Sakana AI</div>
+        </div>
+        <div class="note-tldr">训练语言模型根据查询动态设计多代理 scaffold，组合不同前沿模型的专长。Fugu 平衡性能与时延，Fugu-Ultra 优先困难任务质量；通过大规模微调、演化算法和强化学习，在 SWE-Bench Pro、Terminal Bench、GPQA 等多项任务达到公开模型领先。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.23991" target="_blank">Critique of Agent Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Eric Xing, Jinyu Hou</div>
+            <div class="note-meta-line">Affiliation: Mohamed bin Zayed University of Artificial Intelligence, Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">从目标、身份、决策、自我调节和学习五维区分外部 scaffold 驱动的 agentic 系统与能力内生的 agentive 系统，并提出 Goal-Identity-Configurator 架构，结合层次目标、身份演化、世界模型模拟、自律与自导学习，同时讨论审计、控制和安全。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.22902" target="_blank">Agent-as-a-Router: Agentic Model Routing for Coding Tasks</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Pengfei Zhou, Yang You</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">把静态模型路由改为 Context-Action-Feedback 循环，ACRouter 由编排器、验证器和记忆组成，持续积累执行经验弥补信息不足。约一万任务、八个模型的 CodeRouterBench 上，其分布内累积遗憾最低，并能泛化到分布外代理编程。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.19135" target="_blank">A Technical Taxonomy of LLM Agent Communication Protocols</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Linus Sander, Alois Knoll</div>
+            <div class="note-meta-line">Affiliation: Technical University of Munich</div>
+        </div>
+        <div class="note-tldr">对九个活跃开源代理协议迭代归纳出对端、载荷、交互状态、发现机制和 schema 灵活性五维分类。结果显示会话持久和混合载荷普遍，运行时 schema 协商开始出现但去中心化发现罕见；长期更可能形成联邦分层协议栈而非单一标准。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.19370" target="_blank">Human-like autonomy emerges from self-play and a pinch of human data</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Daphne Cornelisse, Eugene Vinitsky</div>
+            <div class="note-meta-line">Affiliation: NYU Tandon School of Engineering</div>
+        </div>
+        <div class="note-tldr">用极少人类驾驶示范作为自博弈强化学习的正则项，避免纯自博弈形成高效却不兼容人类的驾驶习惯。仅 30 分钟示范、比可比模仿学习少 2500 倍，即可学会与留出人类轨迹协调，并在单张消费级 GPU 上 15 小时完成训练。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.18837" target="_blank">Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hehai Lin, Chengwei Qin</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology, University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">将多代理编排经验从参数更新中解耦为可演化 Meta-Skill，通过多轨迹 rollout 与选择性反思提炼跨任务策略原则。四个复杂基准、四类 LLM 上同时改善性能和成本，且演化技能能迁移到未见任务与不同模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.19544" target="_blank">Reliability without Validity: A Systematic, Large-Scale Evaluation of LLM-as-a-Judge Models Across Agreement, Consistency, and Bias</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Justin D. Norman, D. Alex Hughes</div>
+            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
+        </div>
+        <div class="note-tldr">对九家提供商的 21 个裁判模型进行约 54.1 万次判断，发现精确一致率比 Cohen's kappa 普遍虚高 33-41 点，跨基准排名最多变 14 位，且高复测一致性可与严重位置偏差并存，据此提出最低可行验证协议。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.24530" target="_blank">NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuru Wang, Kaiyan Zhang</div>
+            <div class="note-meta-line">Affiliation: FrontisAI, Tsinghua University</div>
+        </div>
+        <div class="note-tldr">从 Nature 系列论文构建跨学科 90 任务，并用 NatureGym 自动生成标准容器环境。禁用网页搜索时，最强代理仅在 17.8% 任务上显著超过 SOTA；成功多来自把科学问题转成熟悉监督学习，而失败主要是方法选择和算力不足。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.26740" target="_blank">LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinyu Wang, Yue Ma</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">以三阶段蒸馏把双向基础编辑模型逐步迁移为单向因果流式编辑器，保持背景和非编辑区域的长程稳定；AR 掩码缓存复用跨帧区域计算。新建流式编辑基准上质量领先，同时推理达 12.66 FPS，适合交互和 AR。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.30626" target="_blank">DOPD: Dual On-policy Distillation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinlei Yu, Shuicheng Yan</div>
+            <div class="note-meta-line">Affiliation: MMLab, The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">针对特权信息造成的“特权幻觉”，DOPD 根据优势差和相对概率，在特权教师与特权学生策略间逐 token 动态路由不同强度与目标的监督，区分可迁移能力差距和不可复制信息差距。LLM/VLM 实验均稳定超过普通 OPD。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.19297" target="_blank">Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Nikita Kachaev, Vlad Shakhuro</div>
+            <div class="note-meta-line">Affiliation: CogAI Lab, FusionBrain Lab</div>
+        </div>
+        <div class="note-tldr">Act2Answer 将知识问答改为桌面物体放置动作，降低控制能力对 VLA 知识评测的混淆，并用逐层意图探针定位答案信号。七个 VLA 与九个 VLM 显示 VLA 保留简单概念，但丰富语义损失更大；VQA 联训有助保留知识。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.31315" target="_blank">BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hao Zhang, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+        </div>
+        <div class="note-tldr">发现扩散式投机解码的最佳块大小随样本变化且集中在训练块附近，于是仅在预填后用轻量策略一次预测实例最优块长。方法即插即用、开销极小，在 Qwen3-4B、温度 1 下接受长度 5.92、加速 4.20 倍。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-20 19:15</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

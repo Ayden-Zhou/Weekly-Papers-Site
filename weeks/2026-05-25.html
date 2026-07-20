@@ -466,7 +466,151 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Qwen-VLA，将 Qwen 的视觉语言建模扩展到连续动作和轨迹生成，用统一 VLA 模型覆盖操作、导航与轨迹预测。方法结合 DiT 动作解码器、大规模混合预训练和 embodiment-aware prompt，在多类机器人与环境中实现跨任务泛化，并在 LIBERO、RoboTwin、R2R/RxR 及真实 ALOHA 等基准上取得强表现。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-19 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf" target="_blank">Planar Point Sets with Many Unit Distances</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: OpenAI</div>
+            <div class="note-meta-line">Affiliation: OpenAI</div>
+        </div>
+        <div class="note-tldr">给出平面单位距离问题的新下界，证明存在固定正数 δ，使无穷多个 n 上可构造含至少 n^(1+δ) 对单位距离的 n 点集，从而否定经典 Erdős 猜想。证明结合无限非分歧数域塔、Golod-Shafarevich 理论与高维格投影。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15156" target="_blank">MeMo: Memory as a Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ryan Wei Heng Quek, Armando Solar-Lezama</div>
+            <div class="note-meta-line">Affiliation: Institute of Data Science, National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出将新知识编码进独立“记忆模型”的 MeMo，无需改动 LLM 参数或访问权重、logits，即可接入开闭源模型。它能建模跨文档关系、抗检索噪声并避免灾难性遗忘，在 BrowseComp-Plus、NarrativeQA 和 MuSiQue 上表现强劲。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.15871" target="_blank">Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alberto Pepe, Yoram Bachrach</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
+        </div>
+        <div class="note-tldr">用 AIRA-Compose 与 AIRA-Design 让多代理自主发现基础模型架构和长程注意力机制。搜索得到的 1B AIRAformer/AIRAhybrid 超越 Llama 3.2，并获得更优扩展前沿；代理设计在 Long Range Arena 与 Autoresearch 上接近或超过人工最佳。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.14163" target="_blank">Agentic Systems as Boosting Weak Reasoning Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Varun Sunkaraneni, Tomer Galanti</div>
+            <div class="note-meta-line">Affiliation: Mitchell Institute, Texas A&M University</div>
+        </div>
+        <div class="note-tldr">将带验证器的多代理委员会视为弱推理模型的测试时 boosting，区分候选覆盖、局部可识别性、进展与多样性。SWE-bench Verified 上，同一 GPT-5.4 nano 从单次 67.0% 提升到 8 候选编排的 76.4%，逼近 79.0% oracle 上限。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.17292" target="_blank">MetaCogAgent: A Metacognitive Multi-Agent LLM Framework with Self-Aware Task Delegation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chenyu Wang, Yang Shu</div>
+            <div class="note-meta-line">Affiliation: Zhengzhou University</div>
+        </div>
+        <div class="note-tldr">为每个代理加入元认知自评单元，融合口头不确定性与历史能力画像，在执行前判断任务匹配度，并将低置信任务自适应委派。MetaCog-Eval 上准确率 82.4%，较最佳路由基线高 8.7%，同时减少 API 调用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.20173" target="_blank">A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Vasundra Srinivasan</div>
+            <div class="note-meta-line">Affiliation: Stanford Medicine</div>
+        </div>
+        <div class="note-tldr">将提议器、验证器、提交步骤和拒绝信号构成的“随机-确定边界”定义为生产代理运行时核心契约，并整理六类协调、状态与控制模式。论文给出五步选型方法、故障诊断流程及“重放分歧”风险，并提供 90 天续约代理实现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://www.intology.ai/blog/nanogpt-bench" target="_blank">NanoGPT-Bench</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Intology AI</div>
+            <div class="note-meta-line">Affiliation: Intology</div>
+        </div>
+        <div class="note-tldr">发布基于 NanoGPT 训练速度竞赛的长程 AI 研发基准，以自动验证器和 512 H100 GPU 小时预算评测 Claude Code、Codex 与 Autoresearch。最佳代理仅恢复五个月人类进展的 9.3%，且过度依赖超参调节而较少提出算法创新。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://www.primeintellect.ai/blog/general-agent" target="_blank">General Agent: A Self-Evolving, Synthetic Agent Environment</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mika Senghaas</div>
+            <div class="note-meta-line">Affiliation: Prime Intellect</div>
+        </div>
+        <div class="note-tldr">开源可自我演化任务语料的合成代理环境 General Agent，覆盖 1040 个领域、4504 个任务和 8000 多个工具。任务以可验证环境实现，可用于大规模评测、训练与合成数据生成，目标是持续扩展通用代理能力边界。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.12290" target="_blank">Targeted Neuron Modulation via Contrastive Pair Search</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sam Herring, Karan Malhotra</div>
+            <div class="note-meta-line">Affiliation: Nous Research</div>
+        </div>
+        <div class="note-tldr">提出对比神经元归因 CNA，仅用前向计算找出最能区分有害与良性提示的 0.1% MLP 神经元。消融该稀疏回路可将越狱基准拒答率降低 50% 以上且保持流畅，说明对齐微调把既有判别结构转化为可定向控制的拒答门。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.25874" target="_blank">WBench: A Comprehensive Multi-turn Benchmark for Interactive Video World Model Evaluation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kaining Ying, Henghui Ding</div>
+            <div class="note-meta-line">Affiliation: Meituan Longcat Team</div>
+        </div>
+        <div class="note-tldr">提出多轮交互视频世界模型基准 WBench，含 289 个案例、1058 个交互回合，从画质、设定遵循、交互遵循、一致性与物理合理性五维评测。22 项自动指标经人工校准，对 20 个模型的测试显示尚无模型全面领先。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.24830" target="_blank">Macaron-A2UI: A Model for Generative UI in Personal Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Fancy Kong, Pony Ma</div>
+            <div class="note-meta-line">Affiliation: Macaron AI</div>
+        </div>
+        <div class="note-tldr">面向个人代理的生成式界面模型，可随对话同时生成自然语言与轻量可执行 UI，用于收集信息、细化偏好和确认多目标。模型经大规模语料、LoRA 监督微调及强化学习训练，在无显式 schema 时 A2UI-Bench 得分 75.6，超过前沿基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.23218" target="_blank">Foundation Protocol: A Coordination Layer for Agentic Society</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bang Liu, Chenglin Wu</div>
+            <div class="note-meta-line">Affiliation: FoundationAgents</div>
+        </div>
+        <div class="note-tldr">提出面向人类、代理、工具、资源和组织的图优先协调层 Foundation Protocol，支持多方组织、事件协作、计量结算，并把策略、来源和审计设为一等能力。协议旨在兼容既有标准，让自治代理可组合且保持问责与治理。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.23271" target="_blank">EvalVerse: Pipeline-Aware and Expert-Calibrated Benchmarking for Professional Cinematic Video Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Songlin Yang, Anyi Rao</div>
+            <div class="note-meta-line">Affiliation: The Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">将专业电影制作流程转化为视频生成评测分类体系，通过大规模专家标注和校准微调，让 VLM 显式推理画面是否“正确”以及电影质感是否“优秀”。EvalVerse 覆盖多镜头与视听整合，可为奖励模型和评测代理提供细粒度信号。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.28774" target="_blank">Agent Explorative Policy Optimization for Multimodal Agentic Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Minki Kang, Byung-Kwan Lee</div>
+            <div class="note-meta-line">Affiliation: NVIDIA, KAIST</div>
+        </div>
+        <div class="note-tldr">针对代理推理中“思考默认、工具调用高方差”的 Thinking-Acting Gap，AXPO 对全错工具子组固定思考前缀并重采样工具调用与后续。九个多模态基准上较 GRPO 平均提升 Pass@1/4 各 1.8 点，8B 模型的 Pass@4 超过 32B 基座。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.28293" target="_blank">ProRL: Effective Reinforcement Learning for Proactive Recommendation via Rectified Policy Gradient Estimation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongru Hou, Deqing Yang</div>
+            <div class="note-meta-line">Affiliation: School of Data Science, Fudan University</div>
+        </div>
+        <div class="note-tldr">纠正主动推荐路径强化学习的长度偏差和高方差：逐步奖励中心化消除无意义延长路径的梯度，位置特定优势估计为各步设置基线。三套真实数据上，ProRL 更准确地优化推荐引导路径并显著超过现有主动推荐方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.28820" target="_blank">From Pixels to Words -- Towards Native One-Vision Models at Scale</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haiwen Diao, Ziwei Liu</div>
+            <div class="note-meta-line">Affiliation: S-Lab, Nanyang Technological University, SenseTime Research</div>
+        </div>
+        <div class="note-tldr">提出无需外部视觉编码器、适配器或后融合的原生多模态基础模型 NEO-ov，在单一骨干内端到端学习跨帧及像素-词对应。模型显著缩小与模块化 VLM 的差距，并在细粒度视觉感知、多图、视频和空间理解上展现竞争力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.29250" target="_blank">OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jinheon Baek, Sung Ju Hwang</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
+        </div>
+        <div class="note-tldr">不把文本、关系表、RDF 知识图谱和属性图强行压入同一表示，而由 OmniRetrieval 判断适用数据源并生成 SQL、SPARQL、Cypher 等原生查询。覆盖 13 个数据集、309 个知识库的实验显示其超过单源检索基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2605.27734" target="_blank">Learn from your own latents and not from tokens: A sample-complexity theory</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Daniel J. Korchinski, Matthieu Wyart</div>
+            <div class="note-meta-line">Affiliation: Institute of Physics, EPFL</div>
+        </div>
+        <div class="note-tldr">在可解析的概率上下文无关文法上证明，监督或 token 级自监督恢复深度 L 的潜在树需指数样本，而预测自身潜表示仅需与 L 无关的样本量（忽略对数项）。聚类、端到端网络及 data2vec 分析均验证该结论，并指出显式层叠可能冗余。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-20 19:15</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

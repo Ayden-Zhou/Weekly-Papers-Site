@@ -466,7 +466,119 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Wan-Streamer v0.3，将视频建模为持久“世界”与随时间变化的“事件流”，把大规模真实视频预训练转化为预测世界如何实时变化和响应的任务。模型在全双工音视频交互中把流式多模态输入映射为语音和开放词表行为指令，并在 640×368、25 FPS 下实现约 200ms 模型侧延迟和约 550ms 总延迟。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-19 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.30306" target="_blank">Always-OnAgents:A Survey of Persistent Memory, State, and Governance in LLMAgents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianyu Ding, Ling Zhang</div>
+            <div class="note-meta-line">Affiliation: Independent Research</div>
+        </div>
+        <div class="note-tldr">将常驻代理定义为持久状态系统，用权限、范围、可变性、溯源、可恢复性和可操作性六个维度分析 435 篇工作。综述发现研究偏重状态写入与检索、忽视治理和恢复，并提出按状态变更与恢复义务评分的 AOEP-v0 评估协议。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.02303" target="_blank">A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wanyun Cui</div>
+            <div class="note-meta-line">Affiliation: Shanghai University of Finance and Economics</div>
+        </div>
+        <div class="note-tldr">提出 HOLA，为线性注意力的压缩递归状态补充有界精确 KV 缓存，并按写入状态的预测残差选择保留内容。340M 模型将 WikiText 困惑度降低 16.1%，优于同规模全注意力模型，并在远超训练长度的 32K 针检索中更稳健。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.04371" target="_blank">Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Akhiad Bercovich, Ran El-Yaniv</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">通过迭代 Puzzle 压缩、知识蒸馏、强化学习、量化和多 token 预测，将 Nemotron-3-Super 压缩为 75B 总参数、9B 激活参数的混合 MoE。单节点交互服务吞吐约翻倍，单 H100 的百万 token 并发从 1 提至 8，同时保留较强下游能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.06906" target="_blank">The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Muayad Sayed Ali, Waseem AlShikh</div>
+            <div class="note-meta-line">Affiliation: Writer, Inc.</div>
+        </div>
+        <div class="note-tldr">在 22 项固定任务和 6 个模型上仅替换代理编排层，Writer Agent Harness 将每任务 token、耗时和成本分别降低 38%、44% 和 41%，总体质量持平。结果表明上下文缓存、压缩、卸载与失败治理等 harness 设计对成本的影响可超过模型选择。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.02509" target="_blank">ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yanjun Zhao, Jingrui He</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">提出无需训练的 ReContext，利用模型内部相关性信号递归构建查询相关证据池，并在保留完整原上下文的同时于最终生成前重放证据。它在 128K 上下文的八个数据集和三种开源模型中持续改善证据利用，平均排名均为最佳。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.05775" target="_blank">Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wael Albayaydh, Ivan Flechais</div>
+            <div class="note-meta-line">Affiliation: University of Oxford</div>
+        </div>
+        <div class="note-tldr">综合 27 篇评测与审计论文、19 个基准，归纳工具调用、规划约束、长程退化、多代理协作、安全和测量有效性六类代理失败。分析指出失败会随任务长度非线性叠加，单项能力和额外脚手架都不能稳定转化为端到端可靠性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.01538" target="_blank">Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Siddharth Gollapudi, Sewon Min</div>
+            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
+        </div>
+        <div class="note-tldr">系统研究百万 token 语料中的上下文内检索，发现规模扩展时无关文档会稀释 softmax 注意力。0.6B 的 BlockSearch 配合长度感知 softmax 与文档级稀疏注意力后，在 MS MARCO 和 NQ 上追平稠密检索，并在异质相似性任务 LIMIT 上取得约 3 倍分数。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.01181" target="_blank">Right in the Right Way: LM Training with Verifiable Rewards and Human Demonstrations</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mehul Damani, Jacob Andreas</div>
+            <div class="note-meta-line">Affiliation: Massachusetts Institute of Technology</div>
+        </div>
+        <div class="note-tldr">用与生成器同步训练的判别器，从人类示范中学习难以形式化的风格和结构奖励，再与可验证奖励联合优化。该方法在修复代码时保持正确率并减少编辑距离，在故事生成中提升胜率与多样性，还几乎消除简单奖励作弊行为。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.02134" target="_blank">Coding-agents can replicate scientific machine learning papers</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Atharva Hans, Ilias Bilionis</div>
+            <div class="note-meta-line">Affiliation: Purdue University</div>
+        </div>
+        <div class="note-tldr">将科学机器学习论文复现做成编码代理技能，要求把每项主张记录为目标，重建方法、运行实验，并用带溯源的证据和验证门槛决定完成。四篇论文的 12 次独立运行均通过门槛，158 个目标全部获得报告证据覆盖。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.10350" target="_blank">ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiayi Tian, Mu Xu</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab</div>
+        </div>
+        <div class="note-tldr">提出位于低层控制器之上的机器人 Agent OS，统一场景规划、隔离技能执行、多阶段验证、边云协作和终身多模态图记忆，并发布含 200 多任务的 EmbodiedWorldBench。系统提升长程任务成功率，多项记忆基准得分也经失败驱动自演化进一步改善。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.12463" target="_blank">Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yubo Wang, Wenhu Chen</div>
+            <div class="note-meta-line">Affiliation: University of Waterloo</div>
+        </div>
+        <div class="note-tldr">把代理的动作、观察、后续推理类比为函数调用，利用程序依赖图选择函数做 FIM 中期训练。2.6B token 训练使 Qwen 编码模型在 SWE-Bench Verified 提升 2.8 至 3.2 个百分点，并缓解代理后训练对通用编码和非编码工具能力的侵蚀。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.05382" target="_blank">Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haozhe Wang, Cong Wei</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">构建覆盖长尾与时效知识的 SearchGen-20K、评测集和百万级离线搜索语料，揭示前沿开放图像生成器仅得 21 至 28 分。论文发现朴素搜索会引入噪声，并用先教学再搜索的联合训练识别模型动态知识边界，实现单调性能提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.11886" target="_blank">Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Runhui Huang, Hengshuang Zhao</div>
+            <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">提出免训练奖励 SpectraReward，用多模态模型从生成图像恢复原提示词的平均条件对数似然直接评价图文一致性。跨两种扩散模型、三种 RL 算法和九个奖励模型的实验均提升生成质量；策略自身理解分支作为奖励的闭环版本可超过更大的外部模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2607.14952" target="_blank">LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Changhai Zhou, Cheng Jin</div>
+            <div class="note-meta-line">Affiliation: MindLab</div>
+        </div>
+        <div class="note-tldr">提出面向百万 token 强化学习后训练的执行栈 LongStraw，将共享提示前向与短响应分支重放拆开，以额外时间换取固定显存下更小训练图。8 张 H20 可处理 2.1M 位置的 Qwen 分组训练，压力测试达 4.46M；当前验证的是执行容量，训练正确性仍待补全。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-20 19:15</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -442,7 +442,111 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">研究 Transformer 宽度是否应逐层均匀分配，提出 x 形 > <former：早晚层更宽、中间层更窄，并用无参数 residual resizing 连接不同宽度。200M-2B dense 与 3B MoE 实验显示其相对等参 uniform baseline 降低 loss，并节省约 22% FLOPs、15% KV cache/IO。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-19 23:00</div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.07489" target="_blank">How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jeremy Yang, Jerry Ma</div>
+            <div class="note-meta-line">Affiliation: Harvard University</div>
+        </div>
+        <div class="note-tldr">基于 Perplexity Search 与 Computer 的生产数据，用近似相同查询作自然实验：Computer 每会话自主工作 26 分钟，将匹配任务耗时从 269 分钟降至 36 分钟，估算时间与成本分别降低 87% 和 94%，不满意率也低 55%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.07513" target="_blank">Agentopia: Long-Term Life Simulation and Learning in Agent Societies</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xintao Wang, Yunzhe Tao</div>
+            <div class="note-meta-line">Affiliation: Fudan University</div>
+        </div>
+        <div class="note-tldr">在 Agentopia 中让 100 个代理自主生活 10 个模拟年，持续成长、建立关系并追求需求目标；以类似人类福祉的生活奖励做拒绝采样训练。系统涌现丰富社会行为，训练后的模型在角色扮演基准上提升 15.6%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.04223" target="_blank">Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Michal Wawer, Jaroslaw A. Chudziak</div>
+            <div class="note-meta-line">Affiliation: Warsaw University of Technology</div>
+        </div>
+        <div class="note-tldr">指出价值敏感任务中的分歧可能是规范不确定性而非错误，不能只追求投票共识。框架按推理相似度和结论一致性划分四类符号分歧状态，并用可撤销规则路由内容审核，为 LLM 审议与符号策略推理搭桥。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.09076" target="_blank">Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xin Jin, Steven C. H. Hoi</div>
+            <div class="note-meta-line">Affiliation: Z-Image Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">Z-Reward 用 27B 教师推理主观视觉 rubric 的分数分布，再以 RISD 把推理条件分布蒸馏进 9B 学生，推理时无需显式思维链。教师/学生人类偏好准确率达 89.6%/88.6%，作为可微奖励使文生图较 SFT 净提升 41.3%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.17551" target="_blank">Reversal Q-Learning</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aditya Oberai, Sergey Levine</div>
+            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
+        </div>
+        <div class="note-tldr">在扩展 MDP 中把流模型的每次细化视作动作，通过反转流生成虚拟在线轨迹以适配离线数据，并降低长时域偏差和方差。RQL 无需反向传播穿过完整生成过程，能直接训练表达力强的流策略，在 50 个机器人任务上取得最佳平均离线 RL 表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.14502" target="_blank">From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yongheng Zhang, Philip S. Yu</div>
+            <div class="note-meta-line">Affiliation: Tencent Youtu Lab</div>
+        </div>
+        <div class="note-tldr">将 LLM 演进概括为“聊天机器人到数字同事”：认知核心从快速生成转向测试时推理，执行层从临时工具调用转向具备持久 Workspace、技能、验证与治理的 OpenClaw 式系统；数据也转向状态-动作-观察轨迹和可审计沙箱评测。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.12384" target="_blank">APPO: Agentic Procedural Policy Optimization</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xucong Wang, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">不再只在工具边界分支，而用结合 token 不确定性与后续似然增益的 Branching Score 定位细粒度关键决策点，并以过程级优势分配信用。13 个基准上 APPO 较强代理 RL 基线稳定提升近 4 分，同时保持工具效率与可解释性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.06036" target="_blank">Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shuo Ji, Yibo Li</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">MRAgent 以 Cue-Tag-Content 图表示关联记忆，把推理嵌入访问过程，根据已获证据迭代扩展和剪枝路径，而非固定 top-k 后再推理。在 LoCoMo 与 LongMemEval 上较强基线最高提升 23%，并显著降低 token 与运行时间。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.16993" target="_blank">DreamX-World 1.0: A General-Purpose Interactive World Model</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: DreamX Team, Jiashu Zhu</div>
+            <div class="note-meta-line">Affiliation: DreamX Team</div>
+        </div>
+        <div class="note-tldr">通用文本/图像到视频交互世界模型支持相机导航、区域重访和可提示事件。E-PRoPE、因果强制、长滚动训练及几何记忆降低自回归漂移；混合精度和流水并行使其在 8 张 RTX 5090 上达 16 FPS，综合分超过对比模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.14066" target="_blank">FastContext: Training Efficient Repository Explorer for Coding Agents</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shaoqiu Zhang, Shengyu Fu</div>
+            <div class="note-meta-line">Affiliation: Microsoft Research</div>
+        </div>
+        <div class="note-tldr">将代码仓库探索从主解题代理分离为 4B-30B 专用子代理，按需并行搜索并只返回文件路径和行范围。接入 Mini-SWE-Agent 后，在 SWE-bench Multilingual/Pro 与 SWE-QA 上解决率最高提升 5.5%，主代理 token 消耗最多降低 60%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.15079" target="_blank">Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ling Team, Inclusion AI</div>
+            <div class="note-meta-line">Affiliation: Inclusion AI</div>
+        </div>
+        <div class="note-tldr">Ling-2.6 面向低延迟，Ring-2.6 面向深推理与代理流程；通过 Lightning Attention+MLA、输出 token 效率优化和异步环境 RL 框架 KPop，从 Ling-2.0 迁移升级至万亿参数。全系列检查点开放，兼顾长上下文训练、服务和工具能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.18195" target="_blank">Learning from the Self-future: On-policy Self-distillation for dLLMs</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifu Luo, Shiwei Liu</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">首次为扩散语言模型设计在线自蒸馏 d-OPSD，用自生成答案作后缀条件，让学生学习“自我未来经验”，并把监督从 token 级改为去噪步骤级。四个推理基准上持续超过 RLVR 与 SFT，只需 RLVR 约 10% 的优化步数。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-title"><a href="https://arxiv.org/abs/2606.19195" target="_blank">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</a></div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kangsheng Duan, Xinggang Wang</div>
+            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">以 Local-lambda Mix Interaction 在固定大小线性矩阵中压缩局部空间与全局语义，再用潜空间自适应多粒度蒸馏释放小模型容量。0.22B Moebius 以不足 FLUX.1-Fill 2% 的参数达到或超过其修复质量，端到端推理加速超过 15 倍。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-20 19:15</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
