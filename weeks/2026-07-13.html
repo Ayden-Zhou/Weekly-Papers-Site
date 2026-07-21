@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,25 +396,25 @@ h1 .archive-link:hover {
     <div class="source-header">2026-07-13 ~ 2026-07-19</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.08716" target="_blank">Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="14 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>14</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.13285" target="_blank">Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="206 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>206</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Yifan Wu, Zhuokai Zhao</div>
-            <div class="note-meta-line">Affiliation: Meta AI</div>
+            <div class="note-meta-line">Authors: Ruhan Wang, Leoweiliang</div>
+            <div class="note-meta-line">Affiliation: Tencent HY LLM Frontier, Indiana University</div>
         </div>
-        <div class="note-tldr">提出 proactive memory agent 来缓解长程代理中的“行为状态衰减”：独立记忆代理持续维护结构化记忆，并只在可能影响下一步决策时注入基于记忆的简短提醒。该方法无需改动执行代理，在 Terminal-Bench 2.0 和 τ²-Bench 上分别带来显著 pass@1 提升；消融显示选择性干预优于被动暴露完整记忆、总是注入和通用检索，并初步验证可用 SFT/GRPO 训练开源记忆策略。</div>
+        <div class="note-tldr">聚焦复杂 AI agent harness 演化中的行为定位难题，提出 Harness Handbook：用静态分析和 LLM 结构化把代码按系统行为组织，并配合行为引导的逐步披露流程，帮助 coding agent 更准确找到修改点、提升编辑计划质量并减少规划 token。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.09024" target="_blank">Video Generation Models are General-Purpose Vision Learners</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="81 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>81</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.14952" target="_blank">LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="183 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>183</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Letian Wang, Cristian Sminchisescu</div>
-            <div class="note-meta-line">Affiliation: Google DeepMind, University of Toronto</div>
+            <div class="note-meta-line">Authors: Changhai Zhou, Cheng Jin</div>
+            <div class="note-meta-line">Affiliation: MindLab</div>
         </div>
-        <div class="note-tldr">提出 GenCeption，将预训练文本到视频扩散模型改造为单步前馈的通用视觉感知模型，用文本指令驱动深度、法线、相机位姿、指代表达分割和 3D 关键点等多任务预测。实验显示视频生成预训练可提供时空先验、视觉语言对齐和可扩展性，在多项任务上达到或接近专用模型表现，并以 7 到 500 倍更少训练数据展现数据效率和从合成人类视频泛化到真实及域外类别的涌现能力。</div>
+        <div class="note-tldr">提出面向百万 token 强化学习后训练的执行栈 LongStraw，将共享提示前向与短响应分支重放拆开，以额外时间换取固定显存下更小训练图。8 张 H20 可处理 2.1M 位置的 Qwen 分组训练，压力测试达 4.46M；当前验证的是执行容量，训练正确性仍待补全。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -423,59 +429,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.10383" target="_blank">ABot-N1: Toward a General Visual Language Navigation Foundation Model</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="102 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>102</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ruiyan Gong, Mu Xu</div>
-            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">提出面向视觉语言导航的 ABot-N1，用 slow-fast 架构把高层推理与低层控制解耦：慢速 VLM 产生 CoT 和像素目标，快速动作专家据此输出连续路点。模型统一 point-goal、object-goal、POI-goal、指令跟随和人员跟随任务，并在城市级 POI 到达率、复杂室内外导航成功率等指标上取得显著提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.11643" target="_blank">Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="43 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>43</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xinghang Li, Jason Li</div>
-            <div class="note-meta-line">Affiliation: Xiaomi Robotics</div>
-        </div>
-        <div class="note-tldr">提出 38B 多模态自回归模型 Xiaomi-Robotics-U0，把具身生成视作世界基础生成模型的延伸，统一优化文生图、图像编辑、具身场景生成、具身迁移和视频生成。模型强调多视角几何一致性、机器人形态约束和可控编辑，并能生成用于下游策略学习的鲁棒具身数据。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.11673" target="_blank">ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mingchao Sun, Hongyu Pan</div>
-            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">提出 ABot-3DWorld 0，将文本、图像或视频输入转成可探索的高保真 3D 世界。核心是 Spatial Generative Primitive，将全景图与空间点云作为统一中间表示，再通过 3D 一致的全景视频生成和 3DGS 重建得到可漫游场景，可服务低门槛 3D 内容生成和地图原生空间探索。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.13017" target="_blank">FlowWAM: Optical Flow as a Unified Action Representation for World Action Models</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yixiang Chen, Liang Wang</div>
-            <div class="note-meta-line">Affiliation: 1, New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences, 2, School of Artificial Intelligence, University of Chinese Academy of Sciences, 3, FiveAges 4 MBZUAI 5 Alibaba Group</div>
-        </div>
-        <div class="note-tldr">提出 FlowWAM，将光流作为与视频生成器天然对齐的统一动作表示，用双流扩散框架同时支持动作预测和未来视频生成。光流可从无动作标签视频中自动提取，便于利用大规模视频预训练；在 RoboTwin 操作任务上成功率达到 92.94%/92.14%，在 WorldArena 上取得最佳 EWMScore 63.71，并显著提升轨迹准确率。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.13285" target="_blank">Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="206 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>206</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ruhan Wang, Leoweiliang</div>
-            <div class="note-meta-line">Affiliation: Tencent HY LLM Frontier, Indiana University</div>
-        </div>
-        <div class="note-tldr">聚焦复杂 AI agent harness 演化中的行为定位难题，提出 Harness Handbook：用静态分析和 LLM 结构化把代码按系统行为组织，并配合行为引导的逐步披露流程，帮助 coding agent 更准确找到修改点、提升编辑计划质量并减少规划 token。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.13125" target="_blank">Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="132 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>132</span></span>
         </div>
@@ -484,151 +437,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Artificial Intelligence Laboratory (Leibniz), Huawei Technologies, Hong Kong, The University of Hong Kong</div>
         </div>
         <div class="note-tldr">发布开源统一多模态理解与生成模型族 Boogu-Image-0.1，覆盖 Base、Turbo、Edit 等版本。论文强调在有限算力下，通过理解能力、数据质量、训练流程和推理期 agentic scaling 的组合优化，使模型在文生图、快速推理、指令编辑和中英文文字渲染上接近或超过主流开源方案。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.12395" target="_blank">Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="97 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>97</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xinyu Tang, Wayne Xin Zhao, Zhiqiang Zhang</div>
-            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China</div>
-        </div>
-        <div class="note-tldr">探索无人工标注、可验证奖励的 zero RL 在 1T 参数模型上的扩展规律。论文提出稳定高效训练管线，缓解可读性差、冗余 token 和推理深度不足等问题，并观察到发现到锐化的训练阶段、样本效率提升及自验证、结构化表达、并行推理等涌现行为。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.14777" target="_blank">SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jinyang Wu, Jianhua Tao</div>
-            <div class="note-meta-line">Affiliation: Tsinghua University</div>
-        </div>
-        <div class="note-tldr">提出 SEED，把已完成的 on-policy 轨迹分析成可复用的 hindsight skills，并通过普通上下文与技能增强上下文的动作概率差构造 token 级蒸馏信号，与 outcome RL 联合训练。该方法让策略执行和轨迹分析同步自演化，在文本、视觉和网页代理任务上提升性能、样本效率与泛化能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.14935" target="_blank">VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="157 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>157</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xinhao Li, Limin Wang</div>
-            <div class="note-meta-line">Affiliation: Nanjing University</div>
-        </div>
-        <div class="note-tldr">发布完全开源的视频多模态大模型 VideoChat3，用 I3D-ViT 和自适应帧分辨率降低长视频与流式理解的视觉 token 成本，并构建覆盖通用、长视频和在线场景的三类训练数据。4B 模型在多项视频理解基准上超过同等或更大开源模型，同时开放权重、代码、训练策略和数据。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.15038" target="_blank">Video = World + Event Stream</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="21 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>21</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Lianghua Huang</div>
-            <div class="note-meta-line">Affiliation: Wan Team, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">提出 Wan-Streamer v0.3，将视频建模为持久“世界”与随时间变化的“事件流”，把大规模真实视频预训练转化为预测世界如何实时变化和响应的任务。模型在全双工音视频交互中把流式多模态输入映射为语音和开放词表行为指令，并在 640×368、25 FPS 下实现约 200ms 模型侧延迟和约 550ms 总延迟。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.30306" target="_blank">Always-OnAgents:A Survey of Persistent Memory, State, and Governance in LLMAgents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianyu Ding, Ling Zhang</div>
-            <div class="note-meta-line">Affiliation: Independent Research</div>
-        </div>
-        <div class="note-tldr">将常驻代理定义为持久状态系统，用权限、范围、可变性、溯源、可恢复性和可操作性六个维度分析 435 篇工作。综述发现研究偏重状态写入与检索、忽视治理和恢复，并提出按状态变更与恢复义务评分的 AOEP-v0 评估协议。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.02303" target="_blank">A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wanyun Cui</div>
-            <div class="note-meta-line">Affiliation: Shanghai University of Finance and Economics</div>
-        </div>
-        <div class="note-tldr">提出 HOLA，为线性注意力的压缩递归状态补充有界精确 KV 缓存，并按写入状态的预测残差选择保留内容。340M 模型将 WikiText 困惑度降低 16.1%，优于同规模全注意力模型，并在远超训练长度的 32K 针检索中更稳健。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.04371" target="_blank">Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Akhiad Bercovich, Ran El-Yaniv</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">通过迭代 Puzzle 压缩、知识蒸馏、强化学习、量化和多 token 预测，将 Nemotron-3-Super 压缩为 75B 总参数、9B 激活参数的混合 MoE。单节点交互服务吞吐约翻倍，单 H100 的百万 token 并发从 1 提至 8，同时保留较强下游能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.06906" target="_blank">The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Muayad Sayed Ali, Waseem AlShikh</div>
-            <div class="note-meta-line">Affiliation: Writer, Inc.</div>
-        </div>
-        <div class="note-tldr">在 22 项固定任务和 6 个模型上仅替换代理编排层，Writer Agent Harness 将每任务 token、耗时和成本分别降低 38%、44% 和 41%，总体质量持平。结果表明上下文缓存、压缩、卸载与失败治理等 harness 设计对成本的影响可超过模型选择。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.02509" target="_blank">ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yanjun Zhao, Jingrui He</div>
-            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
-        </div>
-        <div class="note-tldr">提出无需训练的 ReContext，利用模型内部相关性信号递归构建查询相关证据池，并在保留完整原上下文的同时于最终生成前重放证据。它在 128K 上下文的八个数据集和三种开源模型中持续改善证据利用，平均排名均为最佳。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.05775" target="_blank">Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wael Albayaydh, Ivan Flechais</div>
-            <div class="note-meta-line">Affiliation: University of Oxford</div>
-        </div>
-        <div class="note-tldr">综合 27 篇评测与审计论文、19 个基准，归纳工具调用、规划约束、长程退化、多代理协作、安全和测量有效性六类代理失败。分析指出失败会随任务长度非线性叠加，单项能力和额外脚手架都不能稳定转化为端到端可靠性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.01538" target="_blank">Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Siddharth Gollapudi, Sewon Min</div>
-            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
-        </div>
-        <div class="note-tldr">系统研究百万 token 语料中的上下文内检索，发现规模扩展时无关文档会稀释 softmax 注意力。0.6B 的 BlockSearch 配合长度感知 softmax 与文档级稀疏注意力后，在 MS MARCO 和 NQ 上追平稠密检索，并在异质相似性任务 LIMIT 上取得约 3 倍分数。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.01181" target="_blank">Right in the Right Way: LM Training with Verifiable Rewards and Human Demonstrations</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mehul Damani, Jacob Andreas</div>
-            <div class="note-meta-line">Affiliation: Massachusetts Institute of Technology</div>
-        </div>
-        <div class="note-tldr">用与生成器同步训练的判别器，从人类示范中学习难以形式化的风格和结构奖励，再与可验证奖励联合优化。该方法在修复代码时保持正确率并减少编辑距离，在故事生成中提升胜率与多样性，还几乎消除简单奖励作弊行为。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.02134" target="_blank">Coding-agents can replicate scientific machine learning papers</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Atharva Hans, Ilias Bilionis</div>
-            <div class="note-meta-line">Affiliation: Purdue University</div>
-        </div>
-        <div class="note-tldr">将科学机器学习论文复现做成编码代理技能，要求把每项主张记录为目标，重建方法、运行实验，并用带溯源的证据和验证门槛决定完成。四篇论文的 12 次独立运行均通过门槛，158 个目标全部获得报告证据覆盖。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.10350" target="_blank">ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jiayi Tian, Mu Xu</div>
-            <div class="note-meta-line">Affiliation: AMAP CV Lab</div>
-        </div>
-        <div class="note-tldr">提出位于低层控制器之上的机器人 Agent OS，统一场景规划、隔离技能执行、多阶段验证、边云协作和终身多模态图记忆，并发布含 200 多任务的 EmbodiedWorldBench。系统提升长程任务成功率，多项记忆基准得分也经失败驱动自演化进一步改善。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -643,6 +451,28 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.10383" target="_blank">ABot-N1: Toward a General Visual Language Navigation Foundation Model</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="102 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>102</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruiyan Gong, Mu Xu</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出面向视觉语言导航的 ABot-N1，用 slow-fast 架构把高层推理与低层控制解耦：慢速 VLM 产生 CoT 和像素目标，快速动作专家据此输出连续路点。模型统一 point-goal、object-goal、POI-goal、指令跟随和人员跟随任务，并在城市级 POI 到达率、复杂室内外导航成功率等指标上取得显著提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.12395" target="_blank">Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="97 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>97</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinyu Tang, Wayne Xin Zhao, Zhiqiang Zhang</div>
+            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China</div>
+        </div>
+        <div class="note-tldr">探索无人工标注、可验证奖励的 zero RL 在 1T 参数模型上的扩展规律。论文提出稳定高效训练管线，缓解可读性差、冗余 token 和推理深度不足等问题，并观察到发现到锐化的训练阶段、样本效率提升及自验证、结构化表达、并行推理等涌现行为。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.05382" target="_blank">Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="86 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>86</span></span>
         </div>
@@ -651,6 +481,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
         </div>
         <div class="note-tldr">构建覆盖长尾与时效知识的 SearchGen-20K、评测集和百万级离线搜索语料，揭示前沿开放图像生成器仅得 21 至 28 分。论文发现朴素搜索会引入噪声，并用先教学再搜索的联合训练识别模型动态知识边界，实现单调性能提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.10350" target="_blank">ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiayi Tian, Mu Xu</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab</div>
+        </div>
+        <div class="note-tldr">提出位于低层控制器之上的机器人 Agent OS，统一场景规划、隔离技能执行、多阶段验证、边云协作和终身多模态图记忆，并发布含 200 多任务的 EmbodiedWorldBench。系统提升长程任务成功率，多项记忆基准得分也经失败驱动自演化进一步改善。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -665,16 +506,192 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.14952" target="_blank">LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="183 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>183</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.08716" target="_blank">Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Changhai Zhou, Cheng Jin</div>
-            <div class="note-meta-line">Affiliation: MindLab</div>
+            <div class="note-meta-line">Authors: Yifan Wu, Zhuokai Zhao</div>
+            <div class="note-meta-line">Affiliation: Meta AI</div>
         </div>
-        <div class="note-tldr">提出面向百万 token 强化学习后训练的执行栈 LongStraw，将共享提示前向与短响应分支重放拆开，以额外时间换取固定显存下更小训练图。8 张 H20 可处理 2.1M 位置的 Qwen 分组训练，压力测试达 4.46M；当前验证的是执行容量，训练正确性仍待补全。</div>
+        <div class="note-tldr">提出 proactive memory agent 来缓解长程代理中的“行为状态衰减”：独立记忆代理持续维护结构化记忆，并只在可能影响下一步决策时注入基于记忆的简短提醒。该方法无需改动执行代理，在 Terminal-Bench 2.0 和 τ²-Bench 上分别带来显著 pass@1 提升；消融显示选择性干预优于被动暴露完整记忆、总是注入和通用检索，并初步验证可用 SFT/GRPO 训练开源记忆策略。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.09024" target="_blank">Video Generation Models are General-Purpose Vision Learners</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Letian Wang, Cristian Sminchisescu</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind, University of Toronto</div>
+        </div>
+        <div class="note-tldr">提出 GenCeption，将预训练文本到视频扩散模型改造为单步前馈的通用视觉感知模型，用文本指令驱动深度、法线、相机位姿、指代表达分割和 3D 关键点等多任务预测。实验显示视频生成预训练可提供时空先验、视觉语言对齐和可扩展性，在多项任务上达到或接近专用模型表现，并以 7 到 500 倍更少训练数据展现数据效率和从合成人类视频泛化到真实及域外类别的涌现能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.11643" target="_blank">Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinghang Li, Jason Li</div>
+            <div class="note-meta-line">Affiliation: Xiaomi Robotics</div>
+        </div>
+        <div class="note-tldr">提出 38B 多模态自回归模型 Xiaomi-Robotics-U0，把具身生成视作世界基础生成模型的延伸，统一优化文生图、图像编辑、具身场景生成、具身迁移和视频生成。模型强调多视角几何一致性、机器人形态约束和可控编辑，并能生成用于下游策略学习的鲁棒具身数据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.11673" target="_blank">ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mingchao Sun, Hongyu Pan</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出 ABot-3DWorld 0，将文本、图像或视频输入转成可探索的高保真 3D 世界。核心是 Spatial Generative Primitive，将全景图与空间点云作为统一中间表示，再通过 3D 一致的全景视频生成和 3DGS 重建得到可漫游场景，可服务低门槛 3D 内容生成和地图原生空间探索。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.13017" target="_blank">FlowWAM: Optical Flow as a Unified Action Representation for World Action Models</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yixiang Chen, Liang Wang</div>
+            <div class="note-meta-line">Affiliation: 1, New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences, 2, School of Artificial Intelligence, University of Chinese Academy of Sciences, 3, FiveAges 4 MBZUAI 5 Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出 FlowWAM，将光流作为与视频生成器天然对齐的统一动作表示，用双流扩散框架同时支持动作预测和未来视频生成。光流可从无动作标签视频中自动提取，便于利用大规模视频预训练；在 RoboTwin 操作任务上成功率达到 92.94%/92.14%，在 WorldArena 上取得最佳 EWMScore 63.71，并显著提升轨迹准确率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.14777" target="_blank">SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jinyang Wu, Jianhua Tao</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">提出 SEED，把已完成的 on-policy 轨迹分析成可复用的 hindsight skills，并通过普通上下文与技能增强上下文的动作概率差构造 token 级蒸馏信号，与 outcome RL 联合训练。该方法让策略执行和轨迹分析同步自演化，在文本、视觉和网页代理任务上提升性能、样本效率与泛化能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.14935" target="_blank">VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinhao Li, Limin Wang</div>
+            <div class="note-meta-line">Affiliation: Nanjing University</div>
+        </div>
+        <div class="note-tldr">发布完全开源的视频多模态大模型 VideoChat3，用 I3D-ViT 和自适应帧分辨率降低长视频与流式理解的视觉 token 成本，并构建覆盖通用、长视频和在线场景的三类训练数据。4B 模型在多项视频理解基准上超过同等或更大开源模型，同时开放权重、代码、训练策略和数据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.15038" target="_blank">Video = World + Event Stream</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Lianghua Huang</div>
+            <div class="note-meta-line">Affiliation: Wan Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出 Wan-Streamer v0.3，将视频建模为持久“世界”与随时间变化的“事件流”，把大规模真实视频预训练转化为预测世界如何实时变化和响应的任务。模型在全双工音视频交互中把流式多模态输入映射为语音和开放词表行为指令，并在 640×368、25 FPS 下实现约 200ms 模型侧延迟和约 550ms 总延迟。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.30306" target="_blank">Always-OnAgents:A Survey of Persistent Memory, State, and Governance in LLMAgents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianyu Ding, Ling Zhang</div>
+            <div class="note-meta-line">Affiliation: Independent Research</div>
+        </div>
+        <div class="note-tldr">将常驻代理定义为持久状态系统，用权限、范围、可变性、溯源、可恢复性和可操作性六个维度分析 435 篇工作。综述发现研究偏重状态写入与检索、忽视治理和恢复，并提出按状态变更与恢复义务评分的 AOEP-v0 评估协议。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.02303" target="_blank">A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wanyun Cui</div>
+            <div class="note-meta-line">Affiliation: Shanghai University of Finance and Economics</div>
+        </div>
+        <div class="note-tldr">提出 HOLA，为线性注意力的压缩递归状态补充有界精确 KV 缓存，并按写入状态的预测残差选择保留内容。340M 模型将 WikiText 困惑度降低 16.1%，优于同规模全注意力模型，并在远超训练长度的 32K 针检索中更稳健。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.04371" target="_blank">Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Akhiad Bercovich, Ran El-Yaniv</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">通过迭代 Puzzle 压缩、知识蒸馏、强化学习、量化和多 token 预测，将 Nemotron-3-Super 压缩为 75B 总参数、9B 激活参数的混合 MoE。单节点交互服务吞吐约翻倍，单 H100 的百万 token 并发从 1 提至 8，同时保留较强下游能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.06906" target="_blank">The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Muayad Sayed Ali, Waseem AlShikh</div>
+            <div class="note-meta-line">Affiliation: Writer, Inc.</div>
+        </div>
+        <div class="note-tldr">在 22 项固定任务和 6 个模型上仅替换代理编排层，Writer Agent Harness 将每任务 token、耗时和成本分别降低 38%、44% 和 41%，总体质量持平。结果表明上下文缓存、压缩、卸载与失败治理等 harness 设计对成本的影响可超过模型选择。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.02509" target="_blank">ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yanjun Zhao, Jingrui He</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">提出无需训练的 ReContext，利用模型内部相关性信号递归构建查询相关证据池，并在保留完整原上下文的同时于最终生成前重放证据。它在 128K 上下文的八个数据集和三种开源模型中持续改善证据利用，平均排名均为最佳。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.05775" target="_blank">Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wael Albayaydh, Ivan Flechais</div>
+            <div class="note-meta-line">Affiliation: University of Oxford</div>
+        </div>
+        <div class="note-tldr">综合 27 篇评测与审计论文、19 个基准，归纳工具调用、规划约束、长程退化、多代理协作、安全和测量有效性六类代理失败。分析指出失败会随任务长度非线性叠加，单项能力和额外脚手架都不能稳定转化为端到端可靠性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.01538" target="_blank">Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Siddharth Gollapudi, Sewon Min</div>
+            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
+        </div>
+        <div class="note-tldr">系统研究百万 token 语料中的上下文内检索，发现规模扩展时无关文档会稀释 softmax 注意力。0.6B 的 BlockSearch 配合长度感知 softmax 与文档级稀疏注意力后，在 MS MARCO 和 NQ 上追平稠密检索，并在异质相似性任务 LIMIT 上取得约 3 倍分数。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.01181" target="_blank">Right in the Right Way: LM Training with Verifiable Rewards and Human Demonstrations</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mehul Damani, Jacob Andreas</div>
+            <div class="note-meta-line">Affiliation: Massachusetts Institute of Technology</div>
+        </div>
+        <div class="note-tldr">用与生成器同步训练的判别器，从人类示范中学习难以形式化的风格和结构奖励，再与可验证奖励联合优化。该方法在修复代码时保持正确率并减少编辑距离，在故事生成中提升胜率与多样性，还几乎消除简单奖励作弊行为。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.02134" target="_blank">Coding-agents can replicate scientific machine learning papers</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Atharva Hans, Ilias Bilionis</div>
+            <div class="note-meta-line">Affiliation: Purdue University</div>
+        </div>
+        <div class="note-tldr">将科学机器学习论文复现做成编码代理技能，要求把每项主张记录为目标，重建方法、运行实验，并用带溯源的证据和验证门槛决定完成。四篇论文的 12 次独立运行均通过门槛，158 个目标全部获得报告证据覆盖。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

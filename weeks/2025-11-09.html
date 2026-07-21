@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -598,7 +604,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">展示进化式编程智能体AlphaEvolve：结合LLM生成与自动评估，迭代提出—测试—改进算法构造；在分析、组合与数论等67题上复现或改进已知结果，并与Deep Think/AlphaProof协同实现自动探索与证明。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -401,177 +407,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.31604" target="_blank">Representation Forcing for Bottleneck-Free Unified Multimodal Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="63 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>63</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuqing Wang, Xihui Liu</div>
-            <div class="note-meta-line">Affiliation: University of Hong Kong, ByteDance Seed</div>
-        </div>
-        <div class="note-tldr">针对统一多模态模型生成图像仍依赖冻结 VAE、形成结构瓶颈的问题，提出 Representation Forcing。方法让解码器先自回归预测来自理解编码器的视觉表示 token，再将这些表示留在上下文中指导像素空间扩散，从而无需外部生成潜空间。实验表明，RF 让像素空间模型在生成上匹配 VAE 基线，并在理解任务上通常更优。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.05121" target="_blank">Audio Interaction Model</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhifei Xie, Chunyan Miao</div>
-            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
-        </div>
-        <div class="note-tldr">提出 Audio Interaction Model，把离线音频理解与实时流式交互统一为“感知-决策-响应”循环，并用 SoundFlow 覆盖数据构造、训练和异步低延迟推理。模型保留常规音频任务能力，同时支持实时语音指令跟随、主动响应和全语音对话。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.02800" target="_blank">Cosmos 3: Omnimodal World Models for Physical AI</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="140 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>140</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Aditi, Artur Zolkowski</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 Cosmos 3，一组面向 Physical AI 的全模态世界模型，在统一 Mixture-of-Transformers 架构中处理和生成语言、图像、视频、音频与动作序列。它把 VLM、视频生成、世界模拟和动作建模并入同一框架，并在多类理解与生成任务上达到强结果。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.01249" target="_blank">Trust Region On-Policy Distillation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="48 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>48</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xingrun Xing, Yehui Tang</div>
-            <div class="note-meta-line">Affiliation: Samsung Research</div>
-        </div>
-        <div class="note-tldr">针对 on-policy distillation 中教师与学生分布差异带来的不稳定监督，提出 TrOPD：只在可靠 trust region 内执行反向 KL 监督，对离群区域采用裁剪、mask 或前向 KL，并加入教师前缀引导。在数学、代码和通用任务上优于 OPD、EOPD 与 REOPOLD。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.03746" target="_blank">Qwen-Image-Flash: Beyond Objective Design</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="37 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>37</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianhe Wu</div>
-            <div class="note-meta-line">Affiliation: Alibaba</div>
-        </div>
-        <div class="note-tldr">针对少步视觉生成蒸馏过度聚焦目标函数的问题，系统分析 Qwen-Image-2.0 蒸馏中的数据组成、教师引导和任务混合三类训练 recipe 因素，并据此构建 Qwen-Image-Flash，使文本生成图像与指令式图像编辑在 4 NFEs 下仍保持较强质量与稳定性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.05405" target="_blank">Agents&#x27; Last Exam</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="384 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>384</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yiyou Sun, Dawn Song</div>
-            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
-        </div>
-        <div class="note-tldr">提出 Agents&#x27; Last Exam，用真实、长程、经济价值高且可验证的工作流评测 AI agents。基准由 250+ 行业专家参与，覆盖 13 个产业簇、55 个子领域和 1K+ 任务；当前主流配置在最难层平均 full pass rate 仅 2.6%，显示专业部署能力仍远未饱和。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.22502" target="_blank">Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Simon Dennis, Hao Guo</div>
-            <div class="note-meta-line">Affiliation: The University of Melbourne</div>
-        </div>
-        <div class="note-tldr">将外部编排的代理流程编译进小模型权重，形成“地下代理”，避免每轮注入指令、占用上下文和暴露私有流程。论文在旅行预订、Zoom 支持和保险理赔流程中验证该方案可接近前沿模型质量，同时把推理成本降低约两个数量级。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.28655" target="_blank">AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="12 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>12</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shanghua Gao, Marinka Zitnik</div>
-            <div class="note-meta-line">Affiliation: Harvard University</div>
-        </div>
-        <div class="note-tldr">构建去中心化科研代理团队，让代理围绕假设自组织、预先互评实验并共享成功和失败。其在 BioML-Bench 平均百分位达 74.4%，GPT 优化快于 Autoresearch 1.9 倍，并在 ProteinGym 上发现超过现有方法的通用蛋白适应度方案。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.22166" target="_blank">Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianshi Xu, Meng Li</div>
-            <div class="note-meta-line">Affiliation: Peking University</div>
-        </div>
-        <div class="note-tldr">提出 Life-Harness，从训练轨迹中把重复交互失败转化为环境契约、程序技能、动作实现和轨迹调节干预，在不改模型权重的情况下适配确定性环境。七个环境、18 个模型上改善 116/126 个设置，平均相对提升 88.5%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.23071" target="_blank">The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Binqi Shen, Yuting Xin</div>
-            <div class="note-meta-line">Affiliation: Northwestern University</div>
-        </div>
-        <div class="note-tldr">将检索、记忆压缩和全上下文策略纳入统一的部署优化框架，同时建模任务表现、token 成本及预处理复用。HotpotQA 显示不同负载存在明确策略切换边界；部署感知选择可在相近性能下降低约 25% token 用量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.22681" target="_blank">Forecasting Scientific Progress with Artificial Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="45 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>45</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sean Wu, Philip Torr, James Zou, Junchi Yu</div>
-            <div class="note-meta-line">Affiliation: University of Oxford</div>
-        </div>
-        <div class="note-tldr">提出含 4760 个科学事件的时间约束基准 CUSP，从可行性、机制推理、方案生成和时间预测评测科研进展预测。前沿模型虽能识别合理方向，却难判断突破是否及何时发生，且呈现领域差异、过度自信与显著偏置。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.26302" target="_blank">Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="32 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>32</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jianing Zhu, Zhangyang Wang</div>
-            <div class="note-meta-line">Affiliation: The University of Texas at Austin</div>
-        </div>
-        <div class="note-tldr">提出纵向可靠性基准 AgingBench，将代理老化分为压缩、干扰、修订和维护四类，并用时间依赖图与反事实探针定位记忆写入、检索或利用故障。约 400 次、最长 200 会话实验表明部署可靠性需按生命周期诊断与定向修复。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.21516" target="_blank">Harnesses for Inference-Time Alignment over Execution Trajectories</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Boyuan Wang, Fang Kong</div>
-            <div class="note-meta-line">Affiliation: Southern University of Science and Technology</div>
-        </div>
-        <div class="note-tldr">从轨迹对齐角度把 harness 分为任务分解与引导执行，分析工作流粒度、重试预算和动作重加权如何决定性能上限，并揭示过度分解、过度剪枝和幻觉执行。实验发现只规定初始步骤的部分 harness 可能优于完整流程。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.22391" target="_blank">Epicure: Navigating the Emergent Geometry of Food Ingredient Embeddings</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jakub Radzikowski, Josef Chen</div>
-            <div class="note-meta-line">Affiliation: KAIKAKU.AI</div>
-        </div>
-        <div class="note-tldr">从 11 个来源、7 种语言的 414 万份食谱归一化出 1790 种食材，并构建共现图与 FlavorDB 化学图。三种 Metapath2Vec 嵌入通过不同随机游走分别强调食谱语境、化学关系或两者混合，用于探索食材空间的几何结构。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.31264" target="_blank">COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="124 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>124</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianyi Zhou, Xia Hu</div>
-            <div class="note-meta-line">Affiliation: Beijing Academy of Artificial Intelligence, Shanghai Artificial Intelligence Laboratory</div>
-        </div>
-        <div class="note-tldr">将专家异构轨迹自动蒸馏为可检查、可修正、可版本化的代理技能包，分别编码能力实践与受约束的交互风格。系统支持自然语言纠错、回滚、跨宿主安装和受控分发，把人物知识从隐式提示转为可维护工件。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.29307" target="_blank">GrepSeek: Training Search Agents for Direct Corpus Interaction</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="117 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>117</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Alireza Salemi, Hamed Zamani</div>
-            <div class="note-meta-line">Affiliation: University of Massachusetts Amherst</div>
-        </div>
-        <div class="note-tldr">让搜索代理直接用 shell 命令在语料库中查找、过滤和组合证据。先由 Tutor 与 Planner 生成可验证冷启动轨迹，再用 GRPO 训练；分片并行执行保持字节级等价且加速最多 7.6 倍，在七个开放域问答基准上取得最佳综合 F1/EM。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2606.02437" target="_blank">On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="239 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>239</span></span>
         </div>
@@ -594,14 +429,36 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.28556" target="_blank">A Matter of TASTE: Improving Coverage and Difficulty of Agent Benchmarks</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="75 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>75</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.31264" target="_blank">COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="124 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>124</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Tomer Keren, Roi Reichart</div>
-            <div class="note-meta-line">Affiliation: Faculty of Data and Decision Science, Technion</div>
+            <div class="note-meta-line">Authors: Tianyi Zhou, Xia Hu</div>
+            <div class="note-meta-line">Affiliation: Beijing Academy of Artificial Intelligence, Shanghai Artificial Intelligence Laboratory</div>
         </div>
-        <div class="note-tldr">反转传统任务构造流程，先用自适应对比 n-gram 从工具序列空间采样、聚类，再实例化并迭代提高难度。生成的 τc-Bench 使接近饱和 τ2-Bench 的模型显著掉分，并把需执行的独特工具组合数量提升一倍以上。</div>
+        <div class="note-tldr">将专家异构轨迹自动蒸馏为可检查、可修正、可版本化的代理技能包，分别编码能力实践与受约束的交互风格。系统支持自然语言纠错、回滚、跨宿主安装和受控分发，把人物知识从隐式提示转为可维护工件。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.05121" target="_blank">Audio Interaction Model</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhifei Xie, Chunyan Miao</div>
+            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">提出 Audio Interaction Model，把离线音频理解与实时流式交互统一为“感知-决策-响应”循环，并用 SoundFlow 覆盖数据构造、训练和异步低延迟推理。模型保留常规音频任务能力，同时支持实时语音指令跟随、主动响应和全语音对话。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.29307" target="_blank">GrepSeek: Training Search Agents for Direct Corpus Interaction</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="117 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>117</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alireza Salemi, Hamed Zamani</div>
+            <div class="note-meta-line">Affiliation: University of Massachusetts Amherst</div>
+        </div>
+        <div class="note-tldr">让搜索代理直接用 shell 命令在语料库中查找、过滤和组合证据。先由 Tutor 与 Planner 生成可验证冷启动轨迹，再用 GRPO 训练；分片并行执行保持字节级等价且加速最多 7.6 倍，在七个开放域问答基准上取得最佳综合 F1/EM。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -627,8 +484,162 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.28556" target="_blank">A Matter of TASTE: Improving Coverage and Difficulty of Agent Benchmarks</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="75 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>75</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tomer Keren, Roi Reichart</div>
+            <div class="note-meta-line">Affiliation: Faculty of Data and Decision Science, Technion</div>
+        </div>
+        <div class="note-tldr">反转传统任务构造流程，先用自适应对比 n-gram 从工具序列空间采样、聚类，再实例化并迭代提高难度。生成的 τc-Bench 使接近饱和 τ2-Bench 的模型显著掉分，并把需执行的独特工具组合数量提升一倍以上。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.31604" target="_blank">Representation Forcing for Bottleneck-Free Unified Multimodal Models</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuqing Wang, Xihui Liu</div>
+            <div class="note-meta-line">Affiliation: University of Hong Kong, ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">针对统一多模态模型生成图像仍依赖冻结 VAE、形成结构瓶颈的问题，提出 Representation Forcing。方法让解码器先自回归预测来自理解编码器的视觉表示 token，再将这些表示留在上下文中指导像素空间扩散，从而无需外部生成潜空间。实验表明，RF 让像素空间模型在生成上匹配 VAE 基线，并在理解任务上通常更优。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.02800" target="_blank">Cosmos 3: Omnimodal World Models for Physical AI</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aditi, Artur Zolkowski</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 Cosmos 3，一组面向 Physical AI 的全模态世界模型，在统一 Mixture-of-Transformers 架构中处理和生成语言、图像、视频、音频与动作序列。它把 VLM、视频生成、世界模拟和动作建模并入同一框架，并在多类理解与生成任务上达到强结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.01249" target="_blank">Trust Region On-Policy Distillation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xingrun Xing, Yehui Tang</div>
+            <div class="note-meta-line">Affiliation: Samsung Research</div>
+        </div>
+        <div class="note-tldr">针对 on-policy distillation 中教师与学生分布差异带来的不稳定监督，提出 TrOPD：只在可靠 trust region 内执行反向 KL 监督，对离群区域采用裁剪、mask 或前向 KL，并加入教师前缀引导。在数学、代码和通用任务上优于 OPD、EOPD 与 REOPOLD。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.03746" target="_blank">Qwen-Image-Flash: Beyond Objective Design</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianhe Wu</div>
+            <div class="note-meta-line">Affiliation: Alibaba</div>
+        </div>
+        <div class="note-tldr">针对少步视觉生成蒸馏过度聚焦目标函数的问题，系统分析 Qwen-Image-2.0 蒸馏中的数据组成、教师引导和任务混合三类训练 recipe 因素，并据此构建 Qwen-Image-Flash，使文本生成图像与指令式图像编辑在 4 NFEs 下仍保持较强质量与稳定性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.05405" target="_blank">Agents&#x27; Last Exam</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yiyou Sun, Dawn Song</div>
+            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
+        </div>
+        <div class="note-tldr">提出 Agents&#x27; Last Exam，用真实、长程、经济价值高且可验证的工作流评测 AI agents。基准由 250+ 行业专家参与，覆盖 13 个产业簇、55 个子领域和 1K+ 任务；当前主流配置在最难层平均 full pass rate 仅 2.6%，显示专业部署能力仍远未饱和。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22502" target="_blank">Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Simon Dennis, Hao Guo</div>
+            <div class="note-meta-line">Affiliation: The University of Melbourne</div>
+        </div>
+        <div class="note-tldr">将外部编排的代理流程编译进小模型权重，形成“地下代理”，避免每轮注入指令、占用上下文和暴露私有流程。论文在旅行预订、Zoom 支持和保险理赔流程中验证该方案可接近前沿模型质量，同时把推理成本降低约两个数量级。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.28655" target="_blank">AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shanghua Gao, Marinka Zitnik</div>
+            <div class="note-meta-line">Affiliation: Harvard University</div>
+        </div>
+        <div class="note-tldr">构建去中心化科研代理团队，让代理围绕假设自组织、预先互评实验并共享成功和失败。其在 BioML-Bench 平均百分位达 74.4%，GPT 优化快于 Autoresearch 1.9 倍，并在 ProteinGym 上发现超过现有方法的通用蛋白适应度方案。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22166" target="_blank">Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianshi Xu, Meng Li</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">提出 Life-Harness，从训练轨迹中把重复交互失败转化为环境契约、程序技能、动作实现和轨迹调节干预，在不改模型权重的情况下适配确定性环境。七个环境、18 个模型上改善 116/126 个设置，平均相对提升 88.5%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.23071" target="_blank">The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Binqi Shen, Yuting Xin</div>
+            <div class="note-meta-line">Affiliation: Northwestern University</div>
+        </div>
+        <div class="note-tldr">将检索、记忆压缩和全上下文策略纳入统一的部署优化框架，同时建模任务表现、token 成本及预处理复用。HotpotQA 显示不同负载存在明确策略切换边界；部署感知选择可在相近性能下降低约 25% token 用量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22681" target="_blank">Forecasting Scientific Progress with Artificial Intelligence</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sean Wu, Philip Torr, James Zou, Junchi Yu</div>
+            <div class="note-meta-line">Affiliation: University of Oxford</div>
+        </div>
+        <div class="note-tldr">提出含 4760 个科学事件的时间约束基准 CUSP，从可行性、机制推理、方案生成和时间预测评测科研进展预测。前沿模型虽能识别合理方向，却难判断突破是否及何时发生，且呈现领域差异、过度自信与显著偏置。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.26302" target="_blank">Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianing Zhu, Zhangyang Wang</div>
+            <div class="note-meta-line">Affiliation: The University of Texas at Austin</div>
+        </div>
+        <div class="note-tldr">提出纵向可靠性基准 AgingBench，将代理老化分为压缩、干扰、修订和维护四类，并用时间依赖图与反事实探针定位记忆写入、检索或利用故障。约 400 次、最长 200 会话实验表明部署可靠性需按生命周期诊断与定向修复。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.21516" target="_blank">Harnesses for Inference-Time Alignment over Execution Trajectories</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Boyuan Wang, Fang Kong</div>
+            <div class="note-meta-line">Affiliation: Southern University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">从轨迹对齐角度把 harness 分为任务分解与引导执行，分析工作流粒度、重试预算和动作重加权如何决定性能上限，并揭示过度分解、过度剪枝和幻觉执行。实验发现只规定初始步骤的部分 harness 可能优于完整流程。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22391" target="_blank">Epicure: Navigating the Emergent Geometry of Food Ingredient Embeddings</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jakub Radzikowski, Josef Chen</div>
+            <div class="note-meta-line">Affiliation: KAIKAKU.AI</div>
+        </div>
+        <div class="note-tldr">从 11 个来源、7 种语言的 414 万份食谱归一化出 1790 种食材，并构建共现图与 FlavorDB 化学图。三种 Metapath2Vec 嵌入通过不同随机游走分别强调食谱语境、化学关系或两者混合，用于探索食材空间的几何结构。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2606.06021" target="_blank">OPRD: On-Policy Representation Distillation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="8 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>8</span></span>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shenzhi Yang, Haobo Wang</div>
@@ -636,7 +647,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">将在线蒸馏从输出分布提升到中间表示层，在同一学生轨迹上提供确定、逐层的稠密监督，避开 LM 头瓶颈。OPRD 在数学基准上弥合师生差距，训练快 1.44 倍、显存最多少 54%；Bridge 还能跨架构与 tokenizer 迁移。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

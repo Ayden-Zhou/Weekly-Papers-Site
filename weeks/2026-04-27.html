@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,37 +396,6 @@ h1 .archive-link:hover {
     <div class="source-header">2026-04-27 ~ 2026-05-03</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.22709" target="_blank">Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Keshav Ramji, Ramón Fernandez Astudillo</div>
-            <div class="note-meta-line">Affiliation: IBM Research AI</div>
-        </div>
-        <div class="note-tldr">提出 Abstract Chain-of-Thought，用一组保留的离散抽象 token 替代自然语言 CoT，在回答前生成短的潜在推理序列。方法通过从 verbal CoT 的瓶颈化监督训练、自蒸馏和带约束解码的强化学习逐步让抽象 token 可用，在数学推理、指令跟随和多跳推理上保持接近性能，同时最多减少 11.6 倍推理 token，展示了后训练阶段学习“抽象推理语言”的可能性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.24763" target="_blank">Tuna-2: Pixel Embeddings Beat Vision Encoders for Multimodal Understanding and Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="71 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>71</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhiheng Liu, Yuren Cong</div>
-            <div class="note-meta-line">Affiliation: Meta AI, The University of Hong Kong</div>
-        </div>
-        <div class="note-tldr">提出 Tuna-2，一种直接从像素 patch embedding 进行多模态理解和生成的统一模型，去掉传统预训练视觉编码器、VAE 或表示编码器。实验显示，虽然编码器版本早期收敛更快，但随规模扩大，Tuna-2 在细粒度视觉感知、多模态 benchmark 和高质量图像生成上达到更强表现，说明端到端像素空间建模可以同时服务生成与感知。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.24827" target="_blank">Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Bojie Li</div>
-            <div class="note-meta-line">Affiliation: Pine AI</div>
-        </div>
-        <div class="note-tldr">提出 Incompressible Knowledge Probes，用事实容量估计黑盒大模型参数规模。核心思想是事实记忆需要不可压缩的权重容量，因此可用跨 7 个冷门层级的 1400 个事实问题测量模型知道多少，再用 89 个开源模型校准 accuracy 到参数量的 log-linear 映射。方法在留一验证中取得较低倍数误差，并用于估计主流闭源模型的有效知识容量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.22748" target="_blank">Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="232 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>232</span></span>
         </div>
@@ -429,38 +404,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
         </div>
         <div class="note-tldr">系统梳理 agentic world model，提出“能力层级 × 约束法则”的二维框架：L1 Predictor、L2 Simulator、L3 Evolver 分别对应一步预测、多步可控模拟和基于新证据自我修正；物理、数字、社会、科学四类法则决定模型约束和失败模式。论文综合 400 多篇工作与 100 多个代表系统，给出评估原则、架构建议和开放问题。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.24764" target="_blank">World-R1: Reinforcing 3D Constraints for Text-to-Video Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="119 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>119</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Weijie Wang, Bohan Zhuang</div>
-            <div class="note-meta-line">Affiliation: Zhejiang University, Microsoft Research</div>
-        </div>
-        <div class="note-tldr">提出 World-R1，通过强化学习把文本到视频生成与 3D 约束对齐，而不修改基础模型结构或增加推理时控制模块。方法构建纯文本 world-simulation prompt 数据，利用 Flow-GRPO 和来自 3D foundation model 与视觉语言模型的反馈优化几何一致性，并用周期性解耦训练平衡刚性结构与动态流畅性，在保持视觉质量的同时提升 3D 一致性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.23468" target="_blank">A Milestone in Formalization: The Sphere Packing Problem in Dimension 8</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sidharth Hariharan</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
-        </div>
-        <div class="note-tldr">论文回顾将 Viazovska 的 8 维球堆积最优性证明形式化到 Lean 的项目：团队把模形式、Cohn-Elkies 最优性条件等数学基础逐步机器验证，并在最后阶段借助 Math, Inc. 的 Gauss autoformalization 模型完成关键证明，讨论了人机协作中的技术路线、已达成的里程碑和仍待 formalize 的目标。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.25917" target="_blank">Recursive Multi-Agent Systems</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="288 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>288</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiyuan Yang, Jiaru Zou</div>
-            <div class="note-meta-line">Affiliation: UIUC</div>
-        </div>
-        <div class="note-tldr">论文把“递归/循环语言模型”的扩展轴从单模型推广到多智能体系统，提出 RecursiveMAS：用 RecursiveLink 在潜空间连接异构 agents，并通过 inner-outer loop 学习进行跨递归轮次的系统级协同优化。在数学、科学、医学、搜索和代码等 9 个基准上，相比现有单/多智能体与递归计算基线平均提升 8.3% 准确率，同时带来 1.2-2.4 倍推理加速和显著 token 节省。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -475,127 +418,14 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf" target="_blank">DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence</a></div>
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.24764" target="_blank">World-R1: Reinforcing 3D Constraints for Text-to-Video Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="119 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>119</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: DeepSeek-AI</div>
-            <div class="note-meta-line">Affiliation: DeepSeek-AI</div>
+            <div class="note-meta-line">Authors: Weijie Wang, Bohan Zhuang</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Microsoft Research</div>
         </div>
-        <div class="note-tldr">DeepSeek-V4 系列包含 Pro 与 Flash 两个 MoE 模型，分别为 1.6T/49B activated 和 284B/13B activated，并支持 100 万 token 上下文。报告核心升级包括 CSA+HCA 混合注意力、mHC 连接与 Muon 优化器；通过专家培养再 on-policy distillation 合并能力，在长上下文、代码、推理和 agentic 任务上显著提升开源模型上限。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.15034" target="_blank">Autogenesis: A Self-Evolving Agent Protocol</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wentao Zhang, Mengdi Wang</div>
-            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
-        </div>
-        <div class="note-tldr">提出 Autogenesis Protocol，将 prompt、agent、tool、environment 和 memory 建模为有状态、生命周期和版本接口的协议资源，并定义可审计、可回滚的自进化闭环。基于该协议的 AGS 能在执行中动态检索、实例化和改进资源，在多个长程规划与工具使用基准上优于强基线。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.14191" target="_blank">Attention to Mamba: A Recipe for Cross-Architecture Distillation</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Abhinav Moudgil, Federico Danieli</div>
-            <div class="note-meta-line">Affiliation: Apple, MILA Research Institute</div>
-        </div>
-        <div class="note-tldr">论文研究如何把已训练 Transformer 蒸馏到纯 Mamba/SSM 架构。方法先把 Transformer 蒸馏到线性化 attention，再将其迁移到初始化良好的 Mamba 模型，从而避免直接跨架构蒸馏性能坍塌。1B 规模实验中，蒸馏 Mamba 接近 Pythia-1B teacher 困惑度并保持下游性能。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.15771" target="_blank">Skill-RAG: Failure-State-Aware Retrieval Augmentation via Hidden-State Probing and Skill Routing</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Kai Wei, Fan Yang</div>
-            <div class="note-meta-line">Affiliation: University of Michigan</div>
-        </div>
-        <div class="note-tldr">Skill-RAG 将 RAG 失败视为可诊断状态，而不是简单重试。框架用 hidden-state prober 判断检索/生成失败，再由 skill router 选择 query rewriting、question decomposition、evidence focusing 或退出技能来修复 query-evidence mismatch。在开放问答和复杂推理任务上，尤其提升多轮检索后仍失败的 hard cases。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.18131" target="_blank">Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="12 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>12</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Qifan Zhang, Yan Wang</div>
-            <div class="note-meta-line">Affiliation: Tencent, The Hong Kong University of Science and Technology (Guangzhou)</div>
-        </div>
-        <div class="note-tldr">训练 agent 具备推理前自发探索未知环境并总结 world knowledge 的能力。训练阶段用“自生成世界知识能提升下游任务成功率多少”作为结果奖励，推理阶段则无需外部奖励或人工规则。该 native self-evolution 在 WebVoyager 和 WebWalker 上提升约 20%，甚至让 14B Qwen3 借助自生成知识超过无辅助 Gemini-2.5-Flash。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.15082" target="_blank">Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Cunxi Yu, Haoxing Ren</div>
-            <div class="note-meta-line">Affiliation: NVIDIA Research, University of Maryland</div>
-        </div>
-        <div class="note-tldr">论文让 LLM 多智能体直接进化经典逻辑综合工具 ABC 的完整代码库，而不是只调参或外挂启发式。系统在保持单二进制命令接口的前提下，循环修改子模块、编译、验证正确性并在多套 EDA benchmark 上评估 QoR，逐步发现超越人工启发式的新综合策略。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.20158" target="_blank">Stateless Decision Memory for Enterprise AI Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Vasundra Srinivasan</div>
-            <div class="note-meta-line">Affiliation: Stanford School of Engineering</div>
-        </div>
-        <div class="note-tldr">论文解释企业受监管场景为何偏好可回放的 RAG 而非复杂 stateful memory：部署真正承重的是确定性 replay、可审计 rationale、多租户隔离和水平扩展 statelessness。提出 DPM，把记忆表示为 append-only event log 加决策时一次任务投影，在预算受限时比摘要式记忆更准且快 7-15 倍。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.18509" target="_blank">MASS-RAG: Multi-Agent Synthesis Retrieval-Augmented Generation</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xingchen Xiao, Jincheng Xie</div>
-            <div class="note-meta-line">Affiliation: Beijing Institute of Technology</div>
-        </div>
-        <div class="note-tldr">MASS-RAG 用多智能体分工处理噪声、不完整或异构检索上下文：不同 agent 分别负责证据摘要、证据抽取和推理，再由 synthesis 阶段合成最终答案。该设计暴露多个中间证据视角，使模型能比较互补信息，在四个 RAG benchmark 上稳定优于强基线，尤其适合证据分散场景。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.18005" target="_blank">Diversity Collapse in Multi-Agent LLM Systems: Structural Coupling and Collective Failure in Open-Ended Idea Generation</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Nuo Chen, Bingsheng He</div>
-            <div class="note-meta-line">Affiliation: National University of Singapore</div>
-        </div>
-        <div class="note-tldr">论文系统研究多智能体开放式创意生成中的 diversity collapse。结果显示，更强且更对齐的模型可能带来边际多样性下降，权威驱动互动会压低语义多样性，密集通信拓扑和更大群体也会加速早熟收敛。问题主要来自交互结构的 structural coupling，而非单个模型能力不足。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.28190" target="_blank">Representation Fréchet Loss for Visual Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="32 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>32</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jiawei Yang, Yue Wang</div>
-            <div class="note-meta-line">Affiliation: USC</div>
-        </div>
-        <div class="note-tldr">论文重新把 Fréchet Distance 作为视觉生成训练目标，通过把 FD 估计的总体样本规模与梯度 batch size 解耦，提出可优化的 FD-loss。该损失能在不同表征空间后训练生成器、把多步生成器改造成强 one-step 生成器，并揭示 Inception FID 可能误排视觉质量，进而提出多表征 FDr^k 指标。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.27083" target="_blank">Co-Evolving Policy Distillation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Naibin Gu, Peng Fu</div>
-            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, UCAS</div>
-        </div>
-        <div class="note-tldr">CoPD 统一分析 RLVR 和 OPD 在多专家能力整合中的损失来源：混合 RLVR 有能力间发散成本，先训专家再 OPD 又会因行为模式差距过大吸收不全。方法让各领域专家并行 RLVR，并在训练过程中互为 teacher 做双向 OPD，使行为模式共同演化，在文本、图像和视频推理整合上优于混合 RLVR 与 MOPD。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.24819" target="_blank">Programming with Data: Test-Driven Data Engineering for Self-Improving LLMs from Raw Corpora</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="91 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>91</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Chenkai Pan, Cheng Tan</div>
-            <div class="note-meta-line">Affiliation: Zhejiang University</div>
-        </div>
-        <div class="note-tldr">提出 Programming with Data，把训练数据视作“源码”、模型训练视作编译、benchmark 视作单元测试、失败驱动的数据修复视作调试。通过从原始语料抽取结构化知识，同时生成训练数据和评测，模型失败可定位到概念缺口或推理链断点，并用 targeted patches 修复，在 16 个学科中稳定提升不同模型。</div>
+        <div class="note-tldr">提出 World-R1，通过强化学习把文本到视频生成与 3D 约束对齐，而不修改基础模型结构或增加推理时控制模块。方法构建纯文本 world-simulation prompt 数据，利用 Flow-GRPO 和来自 3D foundation model 与视觉语言模型的反馈优化几何一致性，并用周期性解耦训练平衡刚性结构与动态流畅性，在保持视觉质量的同时提升 3D 一致性。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -619,7 +449,194 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">综述视觉生成从静态外观合成迈向智能视觉生成的范式转变，提出 Atomic、Conditional、In-Context、Agentic、World-Modeling 五级能力 taxonomy。论文讨论 flow matching、统一理解生成模型、后训练、奖励建模、数据策划和采样加速等驱动因素，并指出现有评测过度关注感知质量，忽略结构、时间和因果失败。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.24819" target="_blank">Programming with Data: Test-Driven Data Engineering for Self-Improving LLMs from Raw Corpora</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="91 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>91</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chenkai Pan, Cheng Tan</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University</div>
+        </div>
+        <div class="note-tldr">提出 Programming with Data，把训练数据视作“源码”、模型训练视作编译、benchmark 视作单元测试、失败驱动的数据修复视作调试。通过从原始语料抽取结构化知识，同时生成训练数据和评测，模型失败可定位到概念缺口或推理链断点，并用 targeted patches 修复，在 16 个学科中稳定提升不同模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.22709" target="_blank">Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Keshav Ramji, Ramón Fernandez Astudillo</div>
+            <div class="note-meta-line">Affiliation: IBM Research AI</div>
+        </div>
+        <div class="note-tldr">提出 Abstract Chain-of-Thought，用一组保留的离散抽象 token 替代自然语言 CoT，在回答前生成短的潜在推理序列。方法通过从 verbal CoT 的瓶颈化监督训练、自蒸馏和带约束解码的强化学习逐步让抽象 token 可用，在数学推理、指令跟随和多跳推理上保持接近性能，同时最多减少 11.6 倍推理 token，展示了后训练阶段学习“抽象推理语言”的可能性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.24763" target="_blank">Tuna-2: Pixel Embeddings Beat Vision Encoders for Multimodal Understanding and Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhiheng Liu, Yuren Cong</div>
+            <div class="note-meta-line">Affiliation: Meta AI, The University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">提出 Tuna-2，一种直接从像素 patch embedding 进行多模态理解和生成的统一模型，去掉传统预训练视觉编码器、VAE 或表示编码器。实验显示，虽然编码器版本早期收敛更快，但随规模扩大，Tuna-2 在细粒度视觉感知、多模态 benchmark 和高质量图像生成上达到更强表现，说明端到端像素空间建模可以同时服务生成与感知。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.24827" target="_blank">Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bojie Li</div>
+            <div class="note-meta-line">Affiliation: Pine AI</div>
+        </div>
+        <div class="note-tldr">提出 Incompressible Knowledge Probes，用事实容量估计黑盒大模型参数规模。核心思想是事实记忆需要不可压缩的权重容量，因此可用跨 7 个冷门层级的 1400 个事实问题测量模型知道多少，再用 89 个开源模型校准 accuracy 到参数量的 log-linear 映射。方法在留一验证中取得较低倍数误差，并用于估计主流闭源模型的有效知识容量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.23468" target="_blank">A Milestone in Formalization: The Sphere Packing Problem in Dimension 8</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sidharth Hariharan</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">论文回顾将 Viazovska 的 8 维球堆积最优性证明形式化到 Lean 的项目：团队把模形式、Cohn-Elkies 最优性条件等数学基础逐步机器验证，并在最后阶段借助 Math, Inc. 的 Gauss autoformalization 模型完成关键证明，讨论了人机协作中的技术路线、已达成的里程碑和仍待 formalize 的目标。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.25917" target="_blank">Recursive Multi-Agent Systems</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiyuan Yang, Jiaru Zou</div>
+            <div class="note-meta-line">Affiliation: UIUC</div>
+        </div>
+        <div class="note-tldr">论文把“递归/循环语言模型”的扩展轴从单模型推广到多智能体系统，提出 RecursiveMAS：用 RecursiveLink 在潜空间连接异构 agents，并通过 inner-outer loop 学习进行跨递归轮次的系统级协同优化。在数学、科学、医学、搜索和代码等 9 个基准上，相比现有单/多智能体与递归计算基线平均提升 8.3% 准确率，同时带来 1.2-2.4 倍推理加速和显著 token 节省。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf" target="_blank">DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: DeepSeek-AI</div>
+            <div class="note-meta-line">Affiliation: DeepSeek-AI</div>
+        </div>
+        <div class="note-tldr">DeepSeek-V4 系列包含 Pro 与 Flash 两个 MoE 模型，分别为 1.6T/49B activated 和 284B/13B activated，并支持 100 万 token 上下文。报告核心升级包括 CSA+HCA 混合注意力、mHC 连接与 Muon 优化器；通过专家培养再 on-policy distillation 合并能力，在长上下文、代码、推理和 agentic 任务上显著提升开源模型上限。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.15034" target="_blank">Autogenesis: A Self-Evolving Agent Protocol</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wentao Zhang, Mengdi Wang</div>
+            <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">提出 Autogenesis Protocol，将 prompt、agent、tool、environment 和 memory 建模为有状态、生命周期和版本接口的协议资源，并定义可审计、可回滚的自进化闭环。基于该协议的 AGS 能在执行中动态检索、实例化和改进资源，在多个长程规划与工具使用基准上优于强基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.14191" target="_blank">Attention to Mamba: A Recipe for Cross-Architecture Distillation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Abhinav Moudgil, Federico Danieli</div>
+            <div class="note-meta-line">Affiliation: Apple, MILA Research Institute</div>
+        </div>
+        <div class="note-tldr">论文研究如何把已训练 Transformer 蒸馏到纯 Mamba/SSM 架构。方法先把 Transformer 蒸馏到线性化 attention，再将其迁移到初始化良好的 Mamba 模型，从而避免直接跨架构蒸馏性能坍塌。1B 规模实验中，蒸馏 Mamba 接近 Pythia-1B teacher 困惑度并保持下游性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.15771" target="_blank">Skill-RAG: Failure-State-Aware Retrieval Augmentation via Hidden-State Probing and Skill Routing</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kai Wei, Fan Yang</div>
+            <div class="note-meta-line">Affiliation: University of Michigan</div>
+        </div>
+        <div class="note-tldr">Skill-RAG 将 RAG 失败视为可诊断状态，而不是简单重试。框架用 hidden-state prober 判断检索/生成失败，再由 skill router 选择 query rewriting、question decomposition、evidence focusing 或退出技能来修复 query-evidence mismatch。在开放问答和复杂推理任务上，尤其提升多轮检索后仍失败的 hard cases。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.18131" target="_blank">Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qifan Zhang, Yan Wang</div>
+            <div class="note-meta-line">Affiliation: Tencent, The Hong Kong University of Science and Technology (Guangzhou)</div>
+        </div>
+        <div class="note-tldr">训练 agent 具备推理前自发探索未知环境并总结 world knowledge 的能力。训练阶段用“自生成世界知识能提升下游任务成功率多少”作为结果奖励，推理阶段则无需外部奖励或人工规则。该 native self-evolution 在 WebVoyager 和 WebWalker 上提升约 20%，甚至让 14B Qwen3 借助自生成知识超过无辅助 Gemini-2.5-Flash。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.15082" target="_blank">Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Cunxi Yu, Haoxing Ren</div>
+            <div class="note-meta-line">Affiliation: NVIDIA Research, University of Maryland</div>
+        </div>
+        <div class="note-tldr">论文让 LLM 多智能体直接进化经典逻辑综合工具 ABC 的完整代码库，而不是只调参或外挂启发式。系统在保持单二进制命令接口的前提下，循环修改子模块、编译、验证正确性并在多套 EDA benchmark 上评估 QoR，逐步发现超越人工启发式的新综合策略。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.20158" target="_blank">Stateless Decision Memory for Enterprise AI Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Vasundra Srinivasan</div>
+            <div class="note-meta-line">Affiliation: Stanford School of Engineering</div>
+        </div>
+        <div class="note-tldr">论文解释企业受监管场景为何偏好可回放的 RAG 而非复杂 stateful memory：部署真正承重的是确定性 replay、可审计 rationale、多租户隔离和水平扩展 statelessness。提出 DPM，把记忆表示为 append-only event log 加决策时一次任务投影，在预算受限时比摘要式记忆更准且快 7-15 倍。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.18509" target="_blank">MASS-RAG: Multi-Agent Synthesis Retrieval-Augmented Generation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xingchen Xiao, Jincheng Xie</div>
+            <div class="note-meta-line">Affiliation: Beijing Institute of Technology</div>
+        </div>
+        <div class="note-tldr">MASS-RAG 用多智能体分工处理噪声、不完整或异构检索上下文：不同 agent 分别负责证据摘要、证据抽取和推理，再由 synthesis 阶段合成最终答案。该设计暴露多个中间证据视角，使模型能比较互补信息，在四个 RAG benchmark 上稳定优于强基线，尤其适合证据分散场景。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.18005" target="_blank">Diversity Collapse in Multi-Agent LLM Systems: Structural Coupling and Collective Failure in Open-Ended Idea Generation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Nuo Chen, Bingsheng He</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">论文系统研究多智能体开放式创意生成中的 diversity collapse。结果显示，更强且更对齐的模型可能带来边际多样性下降，权威驱动互动会压低语义多样性，密集通信拓扑和更大群体也会加速早熟收敛。问题主要来自交互结构的 structural coupling，而非单个模型能力不足。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.28190" target="_blank">Representation Fréchet Loss for Visual Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiawei Yang, Yue Wang</div>
+            <div class="note-meta-line">Affiliation: USC</div>
+        </div>
+        <div class="note-tldr">论文重新把 Fréchet Distance 作为视觉生成训练目标，通过把 FD 估计的总体样本规模与梯度 batch size 解耦，提出可优化的 FD-loss。该损失能在不同表征空间后训练生成器、把多步生成器改造成强 one-step 生成器，并揭示 Inception FID 可能误排视觉质量，进而提出多表征 FDr^k 指标。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.27083" target="_blank">Co-Evolving Policy Distillation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Naibin Gu, Peng Fu</div>
+            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, UCAS</div>
+        </div>
+        <div class="note-tldr">CoPD 统一分析 RLVR 和 OPD 在多专家能力整合中的损失来源：混合 RLVR 有能力间发散成本，先训专家再 OPD 又会因行为模式差距过大吸收不全。方法让各领域专家并行 RLVR，并在训练过程中互为 teacher 做双向 OPD，使行为模式共同演化，在文本、图像和视频推理整合上优于混合 RLVR 与 MOPD。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

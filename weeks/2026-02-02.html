@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">2026-02-02 ~ 2026-02-08</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.00919" target="_blank">Green-VLA: Staged Vision-Language-Action Model for Generalist Robots</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="322 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>322</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: I. Apanasevich, Manipulation Team</div>
+            <div class="note-meta-line">Affiliation: Sber Robotics Center</div>
+        </div>
+        <div class="note-tldr">提出面向通用机器人操控的分阶段 VLA 训练框架 Green-VLA，既支持在 Green 人形机器人上的真实部署，也强调跨不同机器人形态的泛化。训练按五阶段课程推进：L0 基础 VLM、L1 多模态 grounding、R0 多形态预训练、R1 形态特定适配、R2 强化学习策略对齐，以逐步获得可迁移且可落地的操控能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2602.04705" target="_blank">ERNIE 5.0 Technical Report</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="269 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>269</span></span>
         </div>
@@ -401,6 +418,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.22060" target="_blank">Vision-DeepResearch: Incentivizing DeepResearch Capability in Multimodal Large Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenxuan Huang, Yu Zeng</div>
+            <div class="note-meta-line">Affiliation: East China Normal University</div>
+        </div>
+        <div class="note-tldr">针对现有模型在视觉深度搜索中的局限，本文提出了Vision-DeepResearch范式，支持多轮、多实体及多尺度的视觉与文本搜索。通过冷启动监督与强化学习将搜索能力内化，该模型在六个事实性问答基准上显著超越了包括GPT-5在内的现有系统，能够处理强噪声环境下的复杂信息聚合任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2602.03152" target="_blank">FASA: Efficient and Effective Temporal Action Segmentation</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="154 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>154</span></span>
         </div>
@@ -409,6 +437,28 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: AMAP, Alibaba Group</div>
         </div>
         <div class="note-tldr">面向时间动作分割（TAS），本文提出 FASA，在保证分割质量的同时强调计算与效率友好。核心目标是减少长序列建模带来的冗余开销，使方法在长视频场景更可扩展，并在多个 TAS 基准上获得更好的精度-效率权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.02185" target="_blank">Vision-DeepResearch Benchmark: Rethinking Visual and Textual Search for Multimodal Large Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="118 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>118</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yu Zeng, Wenxuan Huang</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">本文指出现有视觉搜索基准存在“非视觉中心”和“检索设定理想化”的缺陷，并提出了包含2000个实例的VDR-Bench。该基准通过严格的人工验证，强制要求模型进行真实的视觉证据检索与多跳推理。此外，作者还提出了一种多轮裁剪搜索策略，有效提升了模型在现实场景下的视觉检索性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.22975" target="_blank">Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="113 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>113</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ximing Lu, David Acuna</div>
+            <div class="note-meta-line">Affiliation: University of Washington</div>
+        </div>
+        <div class="note-tldr">针对强化学习（RL）中可验证数据稀缺的瓶颈，本文提出了“Golden Goose”方法，通过将教科书等不可验证文本转化为多项选择题，合成了无限的RLVR任务。生成的GooseReason数据集包含70万个任务，有效帮助模型突破了性能饱和，在数学和编程等15个基准上取得了显著提升。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -445,143 +495,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.00919" target="_blank">Green-VLA: Staged Vision-Language-Action Model for Generalist Robots</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="322 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>322</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: I. Apanasevich, Manipulation Team</div>
-            <div class="note-meta-line">Affiliation: Sber Robotics Center</div>
-        </div>
-        <div class="note-tldr">提出面向通用机器人操控的分阶段 VLA 训练框架 Green-VLA，既支持在 Green 人形机器人上的真实部署，也强调跨不同机器人形态的泛化。训练按五阶段课程推进：L0 基础 VLM、L1 多模态 grounding、R0 多形态预训练、R1 形态特定适配、R2 强化学习策略对齐，以逐步获得可迁移且可落地的操控能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.20802" target="_blank">Reinforcement Learning via Self-Distillation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="51 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>51</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jonas Hübotter, Jonas Hübotter.</div>
-            <div class="note-meta-line">Affiliation: ETH Zurich.</div>
-        </div>
-        <div class="note-tldr">提出SDPO：把环境给出的“富文本反馈”（如运行错误、评测意见）当作自提示，让同一模型在“看过反馈后”充当自教师，并把其逐token分布蒸馏回策略，从而把稀疏0/1奖励变成密集信用分配信号。方法在LiveCodeBench等RLVR场景提升样本效率与最终准确率，并可用于测试时自蒸馏加速难题解的发现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.23265" target="_blank">PaperBanana: Automating Academic Illustration for AI Scientists</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="229 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>229</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Dawei Zhu, Jinsung Yoon.</div>
-            <div class="note-meta-line">Affiliation: Peking University, Google Cloud AI Research.</div>
-        </div>
-        <div class="note-tldr">提出PaperBanana：用多智能体流程自动生成“可发表级”论文插图（方法图/统计图）。系统组织检索参考、规划内容与风格、渲染并自我批判迭代，结合VLM与图像生成模型提升一致性与美观度；同时发布PaperBananaBench（292个NeurIPS 2025方法图案例）用于评测，在忠实性、可读性等维度优于基线，并展示可拓展到高质量统计图生成。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.02276" target="_blank">Kimi K2.5: Visual Agentic Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="275 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>275</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tongtong Bai, Yulun Du.</div>
-            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team).</div>
-        </div>
-        <div class="note-tldr">发布开源多模态代理模型Kimi K2.5，强调文本-视觉联合优化：包含联合预训练、zero-vision SFT与联合RL，使两模态互相增益；并提出Agent Swarm并行编排框架，可把复杂任务动态拆分为异构子任务并并发执行以降延迟。作者报告其在编码、视觉、推理与代理任务上达到SOTA，并开放后训练权重以便研究与应用。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.04770" target="_blank">Generative Modeling via Drifting</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mingyang Deng, Mingyang Deng.</div>
-            <div class="note-meta-line">Affiliation: MIT.</div>
-        </div>
-        <div class="note-tldr">提出“Drifting Models”生成范式：不再像扩散/流模型那样在推理阶段多步迭代，而是在训练中让生成分布随优化过程“漂移”逼近数据分布，从而自然支持一步采样。核心是定义漂移场V，使当两分布匹配时达到平衡（V趋零），并用mini-batch估计V构造漂移目标来回归训练。实验在ImageNet 256×256实现1步生成的强性能（报告FID 1.54/1.61）。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.05192" target="_blank">First Proof</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mohammed Abouzaid, Mohammed Abouzaid.</div>
-            <div class="note-meta-line">Affiliation: Stanford University.</div>
-        </div>
-        <div class="note-tldr">提出用于评估AI“研究级数学证明”能力的开放题集：作者们从各自真实研究过程中抽取10个此前未公开的问题，短期内将已知答案加密以防数据泄漏，鼓励社区用现有系统尝试并分享完整交互记录。该设定旨在把“检索/记忆”与“真正推理证明”区分开，为更贴近真实数学研究工作流的基准奠基。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.16238" target="_blank">VibeTensor: System Software for Deep Learning, Fully Generated by AI Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Bing Xu, Bing Xu</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">这篇论文发布了一个由LLM编码代理在高层人类指导下“端到端生成”的深度学习系统软件栈VibeTensor：提供Python与Node.js前端，底层是C++20/CUDA运行时，包含张量/存储、算子分发、反向自动微分与CUDA内存分配/图等组件。作者重点讨论生成与验证流程（构建、测试、差分检查等护栏）、仓库规模与基准评测，并总结系统级“vibe-coded”软件的常见失效模式与经验。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.21343" target="_blank">Self-Improving Pretraining: using post-trained models to pretrain better models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="20 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>20</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ellen Xiaoqing Tan, Olga Golovneva</div>
-            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
-        </div>
-        <div class="note-tldr">提出“自我改进预训练”：把预训练从纯next-token预测改成“给定prefix生成suffix”的序列学习任务，并引入一个强的post-trained模型同时扮演suffix重写者与评审（judge）。训练时对原suffix、重写suffix与当前策略rollout进行比较，用RL奖励更高质量/更安全/更事实的候选，从而在预训练阶段就纠偏。实验报告在事实性与安全性上分别获得36.2%与18.5%的相对提升，并在整体生成质量对比中取得最高86.3%的胜率提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.20048" target="_blank">Insight Agents: An LLM-Based Multi-Agent System for Data Insights</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jincheng Bai, Jincheng Bai</div>
-            <div class="note-meta-line">Affiliation: Amazon</div>
-        </div>
-        <div class="note-tldr">面向电商卖家数据洞察，论文提出Insight Agents（IA）多智能体对话系统，采用plan-and-execute范式与分层结构：一个manager负责路由与调度，两个worker分别做数据呈现与洞察生成。manager结合轻量OOD检测与分类路由以兼顾准确率与时延；worker侧用API规划拆解问题，并动态注入领域知识提升解释质量。系统已在美国Amazon卖家场景上线，人工评测准确率约90%，P90时延低于15秒。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.12886" target="_blank">Communication Methods in Multi-Agent Reinforcement Learning</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Christoph Wittner, Christoph Wittner</div>
-            <div class="note-meta-line">Affiliation: Telecooperation Institute, Johannes Kepler University Linz, Austria</div>
-        </div>
-        <div class="note-tldr">这是一篇关于多智能体强化学习（MARL）通信机制的综述与比较研究。作者梳理并深入分析了29篇相关工作，将方法按显式/隐式、注意力、图结构、层级/角色等类别归纳，讨论它们在部分可观测、非平稳性与动作空间爆炸等问题上的优势与代价。结论强调不存在“通用最优”的通信框架，选择应强依赖任务结构与环境约束，并指出需要更标准化的基准与更贴近真实条件的鲁棒性评测。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.14351" target="_blank">If You Want Coherence, Orchestrate a Team of Rivals: Multi-Agent Models of Organizational Intelligence</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Gopal Vijayaraghavan, Gopal Vijayaraghavan</div>
-            <div class="note-meta-line">Affiliation: Isotopes AI, USA</div>
-        </div>
-        <div class="note-tldr">论文主张用“团队对立协作”（team of rivals）的组织结构提升AI代理系统可靠性：把规划、执行、批判、专家等角色拆分为边界清晰的独立代理，并设置互相制衡的激励以主动捕错。系统通过远程代码执行器将数据变换/工具调用与推理上下文隔离，避免原始工具输出污染上下文，从架构上强化“思考-动手”分离。作者在实际用例中报告能在用户暴露前拦截超过90%的内部错误，并讨论为正确性付出的成本与时延权衡。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.22060" target="_blank">Vision-DeepResearch: Incentivizing DeepResearch Capability in Multimodal Large Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wenxuan Huang, Yu Zeng</div>
-            <div class="note-meta-line">Affiliation: East China Normal University</div>
-        </div>
-        <div class="note-tldr">针对现有模型在视觉深度搜索中的局限，本文提出了Vision-DeepResearch范式，支持多轮、多实体及多尺度的视觉与文本搜索。通过冷启动监督与强化学习将搜索能力内化，该模型在六个事实性问答基准上显著超越了包括GPT-5在内的现有系统，能够处理强噪声环境下的复杂信息聚合任务。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.02185" target="_blank">Vision-DeepResearch Benchmark: Rethinking Visual and Textual Search for Multimodal Large Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="118 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>118</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yu Zeng, Wenxuan Huang</div>
-            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
-        </div>
-        <div class="note-tldr">本文指出现有视觉搜索基准存在“非视觉中心”和“检索设定理想化”的缺陷，并提出了包含2000个实例的VDR-Bench。该基准通过严格的人工验证，强制要求模型进行真实的视觉证据检索与多跳推理。此外，作者还提出了一种多轮裁剪搜索策略，有效提升了模型在现实场景下的视觉检索性能。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2602.02084" target="_blank">Closing the Loop: Universal Repository Representation with RPG-Encoder</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
         </div>
@@ -593,19 +506,118 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.22975" target="_blank">Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="113 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>113</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.20802" target="_blank">Reinforcement Learning via Self-Distillation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ximing Lu, David Acuna</div>
-            <div class="note-meta-line">Affiliation: University of Washington</div>
+            <div class="note-meta-line">Authors: Jonas Hübotter, Jonas Hübotter.</div>
+            <div class="note-meta-line">Affiliation: ETH Zurich.</div>
         </div>
-        <div class="note-tldr">针对强化学习（RL）中可验证数据稀缺的瓶颈，本文提出了“Golden Goose”方法，通过将教科书等不可验证文本转化为多项选择题，合成了无限的RLVR任务。生成的GooseReason数据集包含70万个任务，有效帮助模型突破了性能饱和，在数学和编程等15个基准上取得了显著提升。</div>
+        <div class="note-tldr">提出SDPO：把环境给出的“富文本反馈”（如运行错误、评测意见）当作自提示，让同一模型在“看过反馈后”充当自教师，并把其逐token分布蒸馏回策略，从而把稀疏0/1奖励变成密集信用分配信号。方法在LiveCodeBench等RLVR场景提升样本效率与最终准确率，并可用于测试时自蒸馏加速难题解的发现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.23265" target="_blank">PaperBanana: Automating Academic Illustration for AI Scientists</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dawei Zhu, Jinsung Yoon.</div>
+            <div class="note-meta-line">Affiliation: Peking University, Google Cloud AI Research.</div>
+        </div>
+        <div class="note-tldr">提出PaperBanana：用多智能体流程自动生成“可发表级”论文插图（方法图/统计图）。系统组织检索参考、规划内容与风格、渲染并自我批判迭代，结合VLM与图像生成模型提升一致性与美观度；同时发布PaperBananaBench（292个NeurIPS 2025方法图案例）用于评测，在忠实性、可读性等维度优于基线，并展示可拓展到高质量统计图生成。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2602.02276" target="_blank">Kimi K2.5: Visual Agentic Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="275 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>275</span></span>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tongtong Bai, Yulun Du.</div>
+            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team).</div>
+        </div>
+        <div class="note-tldr">发布开源多模态代理模型Kimi K2.5，强调文本-视觉联合优化：包含联合预训练、zero-vision SFT与联合RL，使两模态互相增益；并提出Agent Swarm并行编排框架，可把复杂任务动态拆分为异构子任务并并发执行以降延迟。作者报告其在编码、视觉、推理与代理任务上达到SOTA，并开放后训练权重以便研究与应用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.04770" target="_blank">Generative Modeling via Drifting</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mingyang Deng, Mingyang Deng.</div>
+            <div class="note-meta-line">Affiliation: MIT.</div>
+        </div>
+        <div class="note-tldr">提出“Drifting Models”生成范式：不再像扩散/流模型那样在推理阶段多步迭代，而是在训练中让生成分布随优化过程“漂移”逼近数据分布，从而自然支持一步采样。核心是定义漂移场V，使当两分布匹配时达到平衡（V趋零），并用mini-batch估计V构造漂移目标来回归训练。实验在ImageNet 256×256实现1步生成的强性能（报告FID 1.54/1.61）。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.05192" target="_blank">First Proof</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mohammed Abouzaid, Mohammed Abouzaid.</div>
+            <div class="note-meta-line">Affiliation: Stanford University.</div>
+        </div>
+        <div class="note-tldr">提出用于评估AI“研究级数学证明”能力的开放题集：作者们从各自真实研究过程中抽取10个此前未公开的问题，短期内将已知答案加密以防数据泄漏，鼓励社区用现有系统尝试并分享完整交互记录。该设定旨在把“检索/记忆”与“真正推理证明”区分开，为更贴近真实数学研究工作流的基准奠基。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.16238" target="_blank">VibeTensor: System Software for Deep Learning, Fully Generated by AI Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bing Xu, Bing Xu</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">这篇论文发布了一个由LLM编码代理在高层人类指导下“端到端生成”的深度学习系统软件栈VibeTensor：提供Python与Node.js前端，底层是C++20/CUDA运行时，包含张量/存储、算子分发、反向自动微分与CUDA内存分配/图等组件。作者重点讨论生成与验证流程（构建、测试、差分检查等护栏）、仓库规模与基准评测，并总结系统级“vibe-coded”软件的常见失效模式与经验。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.21343" target="_blank">Self-Improving Pretraining: using post-trained models to pretrain better models</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ellen Xiaoqing Tan, Olga Golovneva</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
+        </div>
+        <div class="note-tldr">提出“自我改进预训练”：把预训练从纯next-token预测改成“给定prefix生成suffix”的序列学习任务，并引入一个强的post-trained模型同时扮演suffix重写者与评审（judge）。训练时对原suffix、重写suffix与当前策略rollout进行比较，用RL奖励更高质量/更安全/更事实的候选，从而在预训练阶段就纠偏。实验报告在事实性与安全性上分别获得36.2%与18.5%的相对提升，并在整体生成质量对比中取得最高86.3%的胜率提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.20048" target="_blank">Insight Agents: An LLM-Based Multi-Agent System for Data Insights</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jincheng Bai, Jincheng Bai</div>
+            <div class="note-meta-line">Affiliation: Amazon</div>
+        </div>
+        <div class="note-tldr">面向电商卖家数据洞察，论文提出Insight Agents（IA）多智能体对话系统，采用plan-and-execute范式与分层结构：一个manager负责路由与调度，两个worker分别做数据呈现与洞察生成。manager结合轻量OOD检测与分类路由以兼顾准确率与时延；worker侧用API规划拆解问题，并动态注入领域知识提升解释质量。系统已在美国Amazon卖家场景上线，人工评测准确率约90%，P90时延低于15秒。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.12886" target="_blank">Communication Methods in Multi-Agent Reinforcement Learning</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Christoph Wittner, Christoph Wittner</div>
+            <div class="note-meta-line">Affiliation: Telecooperation Institute, Johannes Kepler University Linz, Austria</div>
+        </div>
+        <div class="note-tldr">这是一篇关于多智能体强化学习（MARL）通信机制的综述与比较研究。作者梳理并深入分析了29篇相关工作，将方法按显式/隐式、注意力、图结构、层级/角色等类别归纳，讨论它们在部分可观测、非平稳性与动作空间爆炸等问题上的优势与代价。结论强调不存在“通用最优”的通信框架，选择应强依赖任务结构与环境约束，并指出需要更标准化的基准与更贴近真实条件的鲁棒性评测。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.14351" target="_blank">If You Want Coherence, Orchestrate a Team of Rivals: Multi-Agent Models of Organizational Intelligence</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Gopal Vijayaraghavan, Gopal Vijayaraghavan</div>
+            <div class="note-meta-line">Affiliation: Isotopes AI, USA</div>
+        </div>
+        <div class="note-tldr">论文主张用“团队对立协作”（team of rivals）的组织结构提升AI代理系统可靠性：把规划、执行、批判、专家等角色拆分为边界清晰的独立代理，并设置互相制衡的激励以主动捕错。系统通过远程代码执行器将数据变换/工具调用与推理上下文隔离，避免原始工具输出污染上下文，从架构上强化“思考-动手”分离。作者在实际用例中报告能在用户暴露前拦截超过90%的内部错误，并讨论为正确性付出的成本与时延权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.02276" target="_blank">Kimi K2.5: Visual Agentic Intelligence</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kimi Team, Tongtong Bai</div>
@@ -616,7 +628,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2601.21571" target="_blank">Shaping capabilities with token-level data filtering</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="29 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>29</span></span>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Neil Rathi, Alec Radford</div>
@@ -627,7 +639,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2601.20245" target="_blank">How AI Impacts Skill Formation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="10 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>10</span></span>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Judy Hanwen Shen, Alex Tamkin</div>
@@ -635,7 +647,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">通过随机对照试验，本文揭示了AI辅助工具对新手程序员技能形成的双刃剑效应。虽然AI显著提升了短期生产力，但过度依赖AI（如完全委托）会导致概念理解、代码阅读和调试能力的下降（测试得分降低17%）。作者建议采用保持认知参与的“增强”而非“自动化”模式，以兼顾效率与技能习得。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

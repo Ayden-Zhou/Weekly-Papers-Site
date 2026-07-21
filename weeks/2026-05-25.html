@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,104 +396,6 @@ h1 .archive-link:hover {
     <div class="source-header">2026-05-25 ~ 2026-05-31</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.23904" target="_blank">SkillOpt: Executive Strategy for Self-Evolving Agent Skills</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="259 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>259</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yifan Yang, Xue Yang</div>
-            <div class="note-meta-line">Affiliation: Microsoft</div>
-        </div>
-        <div class="note-tldr">提出 SkillOpt，把 agent skill 当作冻结模型的外部可训练状态，用优化器模型根据轨迹生成受限 add/delete/replace 文本编辑，并通过 held-out 验证门只接受提升性能的版本。实验覆盖六类基准、七个目标模型和三种执行 harness，显示优化后的技能可显著提升准确率，并能跨模型、跨 harness 迁移，且部署时不增加推理调用。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.21573" target="_blank">Lens: Rethinking Training Efficiency for Foundational Text-to-Image Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="111 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>111</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Dong Chen</div>
-            <div class="note-meta-line">Affiliation: Microsoft</div>
-        </div>
-        <div class="note-tldr">提出 3.8B 参数文生图模型 Lens，在显著较低训练算力下达到或超过更大模型。核心做法是提高每个训练 batch 的信息密度：使用 800M 密集 caption 数据、多分辨率和多宽高比 batch、语义 VAE 与强文本编码器加速收敛；再结合 RL、reasoner prompt search 和蒸馏支持高分辨率、多语言与 4-step 快速生成。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.20708" target="_blank">Rethinking Cross-Layer Information Routing in Diffusion Transformers</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="112 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>112</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Chao Xu, Shao-Qun Zhang</div>
-            <div class="note-meta-line">Affiliation: Alibaba Group</div>
-        </div>
-        <div class="note-tldr">系统分析 DiT 残差流在深度和去噪时间上的信息路由问题，指出幅值膨胀、梯度衰减和层间冗余。论文提出 Diffusion-Adaptive Routing，用可学习、随 timestep 变化的非增量聚合替代传统残差加法，并可与 REPA 等方法叠加；在 ImageNet 256 上提升 SiT-XL/2 的 FID，并以少得多的迭代达到基线质量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.22763" target="_blank">Advancing Mathematics Research with AI-Driven Formal Proof Search</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: George Tsoukalas, Pushmeet Kohli, Swarat Chaudhuri</div>
-            <div class="note-meta-line">Affiliation: Google DeepMind</div>
-        </div>
-        <div class="note-tldr">评估 LLM 加 Lean 形式化证明搜索解决开放数学问题的能力。AlphaProof Nexus 让多个子 agent 用 LLM 生成和修改 Lean 证明，并由编译器验证；完整 agent 还加入进化式协调和 AlphaProof 工具。系统自主解决 9/353 个 Erdős 问题、证明 44/492 个 OEIS 猜想，并在多个研究方向辅助发现证明或改进界限，展示形式化验证能把 LLM 推向研究级数学。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.25604" target="_blank">DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="139 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>139</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Guochao Jiang</div>
-            <div class="note-meta-line">Affiliation: Alibaba Cloud Computing</div>
-        </div>
-        <div class="note-tldr">针对多奖励 GRPO 中固定奖励合并易导致优势幅度爆炸、目标隔离和训练不稳的问题，提出 DVAO：按 rollout 组内各目标奖励方差动态加权，强化有效学习信号并抑制噪声。论文证明其能约束优势幅度并形成跨目标正则，在数学推理和工具使用任务上取得更优 Pareto 前沿和稳定性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.23902" target="_blank">PiD: Fast and High-Resolution Latent Decoding with Pixel Diffusion</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="46 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>46</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yifan Lu, Xuanchi Ren</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 PiD，把潜变量解码重写为条件像素扩散，直接从 VAE 或语义 latent 生成 4x/8x 高分辨率图像，合并传统解码和超分阶段。通过 sigma-aware latent adapter 与 DMD2 蒸馏，PiD 可用 4 步完成 2K/4K 解码，在延迟、显存和视觉细节上优于级联超分流程。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.27365" target="_blank">LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="146 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>146</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shihao Wang, Zhiding Yu</div>
-            <div class="note-meta-line">Affiliation: The Hong Kong Polytechnic University, NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 LocateAnything，用 Parallel Box Decoding 将框和点等几何单元一次性并行解码，缓解逐 token 坐标生成带来的几何不一致和推理瓶颈。论文还构建超过 1.38 亿样本的 LocateAnything-Data，在多类 grounding 与 detection 基准上同时提升高 IoU 定位质量和解码吞吐。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.26099" target="_blank">Language Models Need Sleep</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="13 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>13</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sangyun Lee, Giulia Fanti</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
-        </div>
-        <div class="note-tldr">探索类似“睡眠”的离线巩固机制：模型周期性把近期上下文通过多轮离线 recurrence 写入 SSM fast weights，再清空 KV cache。这样把额外计算移到 sleep 阶段，保持在线预测延迟，并在细胞自动机、多跳检索和数学推理任务上随 sleep 时长增加获得更强深层推理能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.26494" target="_blank">The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="41 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>41</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: MiniMax, Ziyue Ge</div>
-            <div class="note-meta-line">Affiliation: MiniMax</div>
-        </div>
-        <div class="note-tldr">介绍 MiniMax-M2 系列 MoE 语言模型，旗舰 M2 总参数 229.9B、每 token 激活 9.8B，面向 agentic coding 与复杂办公/搜索任务优化。核心包括可验证轨迹数据管线、agent-native RL 系统 Forge，以及 M2.7 的自调试与脚手架修改能力，使较小激活量在多项真实 agent 基准上接近前沿闭源模型。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2605.28816" target="_blank">Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="433 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>433</span></span>
         </div>
@@ -496,6 +404,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Unknown</div>
         </div>
         <div class="note-tldr">提出面向交互式仿真的多智能体生成世界模型 Gamma-World，解决单智能体视频世界模型难以扩展到多玩家、多机器人等共享环境的问题。方法用 Simplex Rotary Agent Encoding 保持智能体身份的可控性与置换对称性，并用 Sparse Hub Attention 将跨智能体注意力从二次复杂度降为线性；再通过因果学生模型和 KV cache 实现 24 FPS 实时 rollout。实验显示其在视频质量、动作可控性和跨智能体一致性上优于 slot-based 与 dense-attention 基线，并能从两玩家泛化到四玩家。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.23904" target="_blank">SkillOpt: Executive Strategy for Self-Evolving Agent Skills</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="259 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>259</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifan Yang, Xue Yang</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
+        </div>
+        <div class="note-tldr">提出 SkillOpt，把 agent skill 当作冻结模型的外部可训练状态，用优化器模型根据轨迹生成受限 add/delete/replace 文本编辑，并通过 held-out 验证门只接受提升性能的版本。实验覆盖六类基准、七个目标模型和三种执行 harness，显示优化后的技能可显著提升准确率，并能跨模型、跨 harness 迁移，且部署时不增加推理调用。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -510,116 +429,47 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.26379" target="_blank">When Does LeJEPA Learn a World Model?</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: David Klindt, Randall Balestriero</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">从理论上说明 LeJEPA 何时能学到 world model：在潜变量满足平稳加性噪声转移时，alignment 加高斯正则可线性恢复真实潜变量；论文证明高斯分布是该保证成立的唯一情形，并给出近似可辨识性、最优潜空间规划结果和从低维到机器人控制的实验验证。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.30280" target="_blank">Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments</a></div>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.27365" target="_blank">LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="146 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>146</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Qiuyue Wang, Xionghui Chen</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Shihao Wang, Zhiding Yu</div>
+            <div class="note-meta-line">Affiliation: The Hong Kong Polytechnic University, NVIDIA</div>
         </div>
-        <div class="note-tldr">提出 Qwen-VLA，将 Qwen 的视觉语言建模扩展到连续动作和轨迹生成，用统一 VLA 模型覆盖操作、导航与轨迹预测。方法结合 DiT 动作解码器、大规模混合预训练和 embodiment-aware prompt，在多类机器人与环境中实现跨任务泛化，并在 LIBERO、RoboTwin、R2R/RxR 及真实 ALOHA 等基准上取得强表现。</div>
+        <div class="note-tldr">提出 LocateAnything，用 Parallel Box Decoding 将框和点等几何单元一次性并行解码，缓解逐 token 坐标生成带来的几何不一致和推理瓶颈。论文还构建超过 1.38 亿样本的 LocateAnything-Data，在多类 grounding 与 detection 基准上同时提升高 IoU 定位质量和解码吞吐。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf" target="_blank">Planar Point Sets with Many Unit Distances</a></div>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.25604" target="_blank">DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="139 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>139</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: OpenAI</div>
-            <div class="note-meta-line">Affiliation: OpenAI</div>
+            <div class="note-meta-line">Authors: Guochao Jiang</div>
+            <div class="note-meta-line">Affiliation: Alibaba Cloud Computing</div>
         </div>
-        <div class="note-tldr">给出平面单位距离问题的新下界，证明存在固定正数 δ，使无穷多个 n 上可构造含至少 n^(1+δ) 对单位距离的 n 点集，从而否定经典 Erdős 猜想。证明结合无限非分歧数域塔、Golod-Shafarevich 理论与高维格投影。</div>
+        <div class="note-tldr">针对多奖励 GRPO 中固定奖励合并易导致优势幅度爆炸、目标隔离和训练不稳的问题，提出 DVAO：按 rollout 组内各目标奖励方差动态加权，强化有效学习信号并抑制噪声。论文证明其能约束优势幅度并形成跨目标正则，在数学推理和工具使用任务上取得更优 Pareto 前沿和稳定性。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.15156" target="_blank">MeMo: Memory as a Model</a></div>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.20708" target="_blank">Rethinking Cross-Layer Information Routing in Diffusion Transformers</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="112 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>112</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ryan Wei Heng Quek, Armando Solar-Lezama</div>
-            <div class="note-meta-line">Affiliation: Institute of Data Science, National University of Singapore</div>
+            <div class="note-meta-line">Authors: Chao Xu, Shao-Qun Zhang</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
         </div>
-        <div class="note-tldr">提出将新知识编码进独立“记忆模型”的 MeMo，无需改动 LLM 参数或访问权重、logits，即可接入开闭源模型。它能建模跨文档关系、抗检索噪声并避免灾难性遗忘，在 BrowseComp-Plus、NarrativeQA 和 MuSiQue 上表现强劲。</div>
+        <div class="note-tldr">系统分析 DiT 残差流在深度和去噪时间上的信息路由问题，指出幅值膨胀、梯度衰减和层间冗余。论文提出 Diffusion-Adaptive Routing，用可学习、随 timestep 变化的非增量聚合替代传统残差加法，并可与 REPA 等方法叠加；在 ImageNet 256 上提升 SiT-XL/2 的 FID，并以少得多的迭代达到基线质量。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.15871" target="_blank">Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="17 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>17</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.21573" target="_blank">Lens: Rethinking Training Efficiency for Foundational Text-to-Image Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="111 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>111</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Alberto Pepe, Yoram Bachrach</div>
-            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
+            <div class="note-meta-line">Authors: Dong Chen</div>
+            <div class="note-meta-line">Affiliation: Microsoft</div>
         </div>
-        <div class="note-tldr">用 AIRA-Compose 与 AIRA-Design 让多代理自主发现基础模型架构和长程注意力机制。搜索得到的 1B AIRAformer/AIRAhybrid 超越 Llama 3.2，并获得更优扩展前沿；代理设计在 Long Range Arena 与 Autoresearch 上接近或超过人工最佳。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.14163" target="_blank">Agentic Systems as Boosting Weak Reasoning Models</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Varun Sunkaraneni, Tomer Galanti</div>
-            <div class="note-meta-line">Affiliation: Mitchell Institute, Texas A&amp;M University</div>
-        </div>
-        <div class="note-tldr">将带验证器的多代理委员会视为弱推理模型的测试时 boosting，区分候选覆盖、局部可识别性、进展与多样性。SWE-bench Verified 上，同一 GPT-5.4 nano 从单次 67.0% 提升到 8 候选编排的 76.4%，逼近 79.0% oracle 上限。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.17292" target="_blank">MetaCogAgent: A Metacognitive Multi-Agent LLM Framework with Self-Aware Task Delegation</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Chenyu Wang, Yang Shu</div>
-            <div class="note-meta-line">Affiliation: Zhengzhou University</div>
-        </div>
-        <div class="note-tldr">为每个代理加入元认知自评单元，融合口头不确定性与历史能力画像，在执行前判断任务匹配度，并将低置信任务自适应委派。MetaCog-Eval 上准确率 82.4%，较最佳路由基线高 8.7%，同时减少 API 调用。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.20173" target="_blank">A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Vasundra Srinivasan</div>
-            <div class="note-meta-line">Affiliation: Stanford Medicine</div>
-        </div>
-        <div class="note-tldr">将提议器、验证器、提交步骤和拒绝信号构成的“随机-确定边界”定义为生产代理运行时核心契约，并整理六类协调、状态与控制模式。论文给出五步选型方法、故障诊断流程及“重放分歧”风险，并提供 90 天续约代理实现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://www.intology.ai/blog/nanogpt-bench" target="_blank">NanoGPT-Bench</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Intology AI</div>
-            <div class="note-meta-line">Affiliation: Intology</div>
-        </div>
-        <div class="note-tldr">发布基于 NanoGPT 训练速度竞赛的长程 AI 研发基准，以自动验证器和 512 H100 GPU 小时预算评测 Claude Code、Codex 与 Autoresearch。最佳代理仅恢复五个月人类进展的 9.3%，且过度依赖超参调节而较少提出算法创新。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://www.primeintellect.ai/blog/general-agent" target="_blank">General Agent: A Self-Evolving, Synthetic Agent Environment</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mika Senghaas</div>
-            <div class="note-meta-line">Affiliation: Prime Intellect</div>
-        </div>
-        <div class="note-tldr">开源可自我演化任务语料的合成代理环境 General Agent，覆盖 1040 个领域、4504 个任务和 8000 多个工具。任务以可验证环境实现，可用于大规模评测、训练与合成数据生成，目标是持续扩展通用代理能力边界。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.12290" target="_blank">Targeted Neuron Modulation via Contrastive Pair Search</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="17 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>17</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sam Herring, Karan Malhotra</div>
-            <div class="note-meta-line">Affiliation: Nous Research</div>
-        </div>
-        <div class="note-tldr">提出对比神经元归因 CNA，仅用前向计算找出最能区分有害与良性提示的 0.1% MLP 神经元。消融该稀疏回路可将越狱基准拒答率降低 50% 以上且保持流畅，说明对齐微调把既有判别结构转化为可定向控制的拒答门。</div>
+        <div class="note-tldr">提出 3.8B 参数文生图模型 Lens，在显著较低训练算力下达到或超过更大模型。核心做法是提高每个训练 batch 的信息密度：使用 800M 密集 caption 数据、多分辨率和多宽高比 batch、语义 VAE 与强文本编码器加速收敛；再结合 RL、reasoner prompt search 和蒸馏支持高分辨率、多语言与 4-step 快速生成。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -631,6 +481,28 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Meituan Longcat Team</div>
         </div>
         <div class="note-tldr">提出多轮交互视频世界模型基准 WBench，含 289 个案例、1058 个交互回合，从画质、设定遵循、交互遵循、一致性与物理合理性五维评测。22 项自动指标经人工校准，对 20 个模型的测试显示尚无模型全面领先。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.28774" target="_blank">Agent Explorative Policy Optimization for Multimodal Agentic Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Minki Kang, Byung-Kwan Lee</div>
+            <div class="note-meta-line">Affiliation: NVIDIA, KAIST</div>
+        </div>
+        <div class="note-tldr">针对代理推理中“思考默认、工具调用高方差”的 Thinking-Acting Gap，AXPO 对全错工具子组固定思考前缀并重采样工具调用与后续。九个多模态基准上较 GRPO 平均提升 Pass@1/4 各 1.8 点，8B 模型的 Pass@4 超过 32B 基座。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.28293" target="_blank">ProRL: Effective Reinforcement Learning for Proactive Recommendation via Rectified Policy Gradient Estimation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongru Hou, Deqing Yang</div>
+            <div class="note-meta-line">Affiliation: School of Data Science, Fudan University</div>
+        </div>
+        <div class="note-tldr">纠正主动推荐路径强化学习的长度偏差和高方差：逐步奖励中心化消除无意义延长路径的梯度，位置特定优势估计为各步设置基线。三套真实数据上，ProRL 更准确地优化推荐引导路径并显著超过现有主动推荐方法。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -667,25 +539,14 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.28774" target="_blank">Agent Explorative Policy Optimization for Multimodal Agentic Reasoning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.29250" target="_blank">OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="81 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>81</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Minki Kang, Byung-Kwan Lee</div>
-            <div class="note-meta-line">Affiliation: NVIDIA, KAIST</div>
+            <div class="note-meta-line">Authors: Jinheon Baek, Sung Ju Hwang</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
         </div>
-        <div class="note-tldr">针对代理推理中“思考默认、工具调用高方差”的 Thinking-Acting Gap，AXPO 对全错工具子组固定思考前缀并重采样工具调用与后续。九个多模态基准上较 GRPO 平均提升 Pass@1/4 各 1.8 点，8B 模型的 Pass@4 超过 32B 基座。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.28293" target="_blank">ProRL: Effective Reinforcement Learning for Proactive Recommendation via Rectified Policy Gradient Estimation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Hongru Hou, Deqing Yang</div>
-            <div class="note-meta-line">Affiliation: School of Data Science, Fudan University</div>
-        </div>
-        <div class="note-tldr">纠正主动推荐路径强化学习的长度偏差和高方差：逐步奖励中心化消除无意义延长路径的梯度，位置特定优势估计为各步设置基线。三套真实数据上，ProRL 更准确地优化推荐引导路径并显著超过现有主动推荐方法。</div>
+        <div class="note-tldr">不把文本、关系表、RDF 知识图谱和属性图强行压入同一表示，而由 OmniRetrieval 判断适用数据源并生成 SQL、SPARQL、Cypher 等原生查询。覆盖 13 个数据集、309 个知识库的实验显示其超过单源检索基线。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -700,18 +561,173 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2605.29250" target="_blank">OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="81 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>81</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22763" target="_blank">Advancing Mathematics Research with AI-Driven Formal Proof Search</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Jinheon Baek, Sung Ju Hwang</div>
-            <div class="note-meta-line">Affiliation: KAIST</div>
+            <div class="note-meta-line">Authors: George Tsoukalas, Pushmeet Kohli, Swarat Chaudhuri</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind</div>
         </div>
-        <div class="note-tldr">不把文本、关系表、RDF 知识图谱和属性图强行压入同一表示，而由 OmniRetrieval 判断适用数据源并生成 SQL、SPARQL、Cypher 等原生查询。覆盖 13 个数据集、309 个知识库的实验显示其超过单源检索基线。</div>
+        <div class="note-tldr">评估 LLM 加 Lean 形式化证明搜索解决开放数学问题的能力。AlphaProof Nexus 让多个子 agent 用 LLM 生成和修改 Lean 证明，并由编译器验证；完整 agent 还加入进化式协调和 AlphaProof 工具。系统自主解决 9/353 个 Erdős 问题、证明 44/492 个 OEIS 猜想，并在多个研究方向辅助发现证明或改进界限，展示形式化验证能把 LLM 推向研究级数学。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.23902" target="_blank">PiD: Fast and High-Resolution Latent Decoding with Pixel Diffusion</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifan Lu, Xuanchi Ren</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 PiD，把潜变量解码重写为条件像素扩散，直接从 VAE 或语义 latent 生成 4x/8x 高分辨率图像，合并传统解码和超分阶段。通过 sigma-aware latent adapter 与 DMD2 蒸馏，PiD 可用 4 步完成 2K/4K 解码，在延迟、显存和视觉细节上优于级联超分流程。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.26099" target="_blank">Language Models Need Sleep</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sangyun Lee, Giulia Fanti</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
+        </div>
+        <div class="note-tldr">探索类似“睡眠”的离线巩固机制：模型周期性把近期上下文通过多轮离线 recurrence 写入 SSM fast weights，再清空 KV cache。这样把额外计算移到 sleep 阶段，保持在线预测延迟，并在细胞自动机、多跳检索和数学推理任务上随 sleep 时长增加获得更强深层推理能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.26494" target="_blank">The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: MiniMax, Ziyue Ge</div>
+            <div class="note-meta-line">Affiliation: MiniMax</div>
+        </div>
+        <div class="note-tldr">介绍 MiniMax-M2 系列 MoE 语言模型，旗舰 M2 总参数 229.9B、每 token 激活 9.8B，面向 agentic coding 与复杂办公/搜索任务优化。核心包括可验证轨迹数据管线、agent-native RL 系统 Forge，以及 M2.7 的自调试与脚手架修改能力，使较小激活量在多项真实 agent 基准上接近前沿闭源模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.26379" target="_blank">When Does LeJEPA Learn a World Model?</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: David Klindt, Randall Balestriero</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">从理论上说明 LeJEPA 何时能学到 world model：在潜变量满足平稳加性噪声转移时，alignment 加高斯正则可线性恢复真实潜变量；论文证明高斯分布是该保证成立的唯一情形，并给出近似可辨识性、最优潜空间规划结果和从低维到机器人控制的实验验证。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.30280" target="_blank">Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qiuyue Wang, Xionghui Chen</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 Qwen-VLA，将 Qwen 的视觉语言建模扩展到连续动作和轨迹生成，用统一 VLA 模型覆盖操作、导航与轨迹预测。方法结合 DiT 动作解码器、大规模混合预训练和 embodiment-aware prompt，在多类机器人与环境中实现跨任务泛化，并在 LIBERO、RoboTwin、R2R/RxR 及真实 ALOHA 等基准上取得强表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf" target="_blank">Planar Point Sets with Many Unit Distances</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: OpenAI</div>
+            <div class="note-meta-line">Affiliation: OpenAI</div>
+        </div>
+        <div class="note-tldr">给出平面单位距离问题的新下界，证明存在固定正数 δ，使无穷多个 n 上可构造含至少 n^(1+δ) 对单位距离的 n 点集，从而否定经典 Erdős 猜想。证明结合无限非分歧数域塔、Golod-Shafarevich 理论与高维格投影。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.15156" target="_blank">MeMo: Memory as a Model</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ryan Wei Heng Quek, Armando Solar-Lezama</div>
+            <div class="note-meta-line">Affiliation: Institute of Data Science, National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出将新知识编码进独立“记忆模型”的 MeMo，无需改动 LLM 参数或访问权重、logits，即可接入开闭源模型。它能建模跨文档关系、抗检索噪声并避免灾难性遗忘，在 BrowseComp-Plus、NarrativeQA 和 MuSiQue 上表现强劲。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.15871" target="_blank">Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alberto Pepe, Yoram Bachrach</div>
+            <div class="note-meta-line">Affiliation: FAIR at Meta</div>
+        </div>
+        <div class="note-tldr">用 AIRA-Compose 与 AIRA-Design 让多代理自主发现基础模型架构和长程注意力机制。搜索得到的 1B AIRAformer/AIRAhybrid 超越 Llama 3.2，并获得更优扩展前沿；代理设计在 Long Range Arena 与 Autoresearch 上接近或超过人工最佳。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.14163" target="_blank">Agentic Systems as Boosting Weak Reasoning Models</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Varun Sunkaraneni, Tomer Galanti</div>
+            <div class="note-meta-line">Affiliation: Mitchell Institute, Texas A&amp;M University</div>
+        </div>
+        <div class="note-tldr">将带验证器的多代理委员会视为弱推理模型的测试时 boosting，区分候选覆盖、局部可识别性、进展与多样性。SWE-bench Verified 上，同一 GPT-5.4 nano 从单次 67.0% 提升到 8 候选编排的 76.4%，逼近 79.0% oracle 上限。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.17292" target="_blank">MetaCogAgent: A Metacognitive Multi-Agent LLM Framework with Self-Aware Task Delegation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chenyu Wang, Yang Shu</div>
+            <div class="note-meta-line">Affiliation: Zhengzhou University</div>
+        </div>
+        <div class="note-tldr">为每个代理加入元认知自评单元，融合口头不确定性与历史能力画像，在执行前判断任务匹配度，并将低置信任务自适应委派。MetaCog-Eval 上准确率 82.4%，较最佳路由基线高 8.7%，同时减少 API 调用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.20173" target="_blank">A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Vasundra Srinivasan</div>
+            <div class="note-meta-line">Affiliation: Stanford Medicine</div>
+        </div>
+        <div class="note-tldr">将提议器、验证器、提交步骤和拒绝信号构成的“随机-确定边界”定义为生产代理运行时核心契约，并整理六类协调、状态与控制模式。论文给出五步选型方法、故障诊断流程及“重放分歧”风险，并提供 90 天续约代理实现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.intology.ai/blog/nanogpt-bench" target="_blank">NanoGPT-Bench</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Intology AI</div>
+            <div class="note-meta-line">Affiliation: Intology</div>
+        </div>
+        <div class="note-tldr">发布基于 NanoGPT 训练速度竞赛的长程 AI 研发基准，以自动验证器和 512 H100 GPU 小时预算评测 Claude Code、Codex 与 Autoresearch。最佳代理仅恢复五个月人类进展的 9.3%，且过度依赖超参调节而较少提出算法创新。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.primeintellect.ai/blog/general-agent" target="_blank">General Agent: A Self-Evolving, Synthetic Agent Environment</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mika Senghaas</div>
+            <div class="note-meta-line">Affiliation: Prime Intellect</div>
+        </div>
+        <div class="note-tldr">开源可自我演化任务语料的合成代理环境 General Agent，覆盖 1040 个领域、4504 个任务和 8000 多个工具。任务以可验证环境实现，可用于大规模评测、训练与合成数据生成，目标是持续扩展通用代理能力边界。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.12290" target="_blank">Targeted Neuron Modulation via Contrastive Pair Search</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sam Herring, Karan Malhotra</div>
+            <div class="note-meta-line">Affiliation: Nous Research</div>
+        </div>
+        <div class="note-tldr">提出对比神经元归因 CNA，仅用前向计算找出最能区分有害与良性提示的 0.1% MLP 神经元。消融该稀疏回路可将越狱基准拒答率降低 50% 以上且保持流畅，说明对齐微调把既有判别结构转化为可定向控制的拒答门。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2605.27734" target="_blank">Learn from your own latents and not from tokens: A sample-complexity theory</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Daniel J. Korchinski, Matthieu Wyart</div>
@@ -719,7 +735,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">在可解析的概率上下文无关文法上证明，监督或 token 级自监督恢复深度 L 的潜在树需指数样本，而预测自身潜表示仅需与 L 无关的样本量（忽略对数项）。聚类、端到端网络及 data2vec 分析均验证该结论，并指出显式层叠可能冗余。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

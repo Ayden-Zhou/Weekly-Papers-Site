@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,24 +396,25 @@ h1 .archive-link:hover {
     <div class="source-header">2026-01-19 ~ 2026-01-25</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.10639" target="_blank">STEM: Scaling Transformers with Embedding Modules</a></div>
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.12538" target="_blank">Agentic Reasoning for Large Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="207 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>207</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ranajoy Sadhukhan, Beidi Chen.</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
+            <div class="note-meta-line">Authors: Tianxin Wei, Jingrui He.</div>
+            <div class="note-meta-line">Affiliation: 未在摘要页标注（需查看论文正文）。</div>
         </div>
-        <div class="note-tldr">STEM提出一种“静态、按token索引”的细粒度稀疏化：将门控FFN的上投影替换为层内嵌入查表，门控与下投影保持稠密。该设计不需要运行时路由，支持CPU offload与异步预取，降低通信/访存开销并提升训练稳定性。在350M与1B规模上，相比稠密基线在知识与推理类基准取得增益，同时token索引的嵌入更便于可解释地做知识注入/编辑，并在长上下文下体现“测试时容量随序列长度增长”的效果。</div>
+        <div class="note-tldr">一篇关于“Agentic Reasoning”的系统综述：把大模型从被动生成器扩展为能规划、调用工具、交互学习的智能体，按基础能力→自我演化→多智能体协作三层梳理方法谱系，并区分 in-context 编排与后训练（SFT/RL）两类路线；总结应用与基准，指出长期交互、世界模型、可扩展训练与治理等关键挑战。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.10592" target="_blank">Action100M: A Large-scale Video Action Dataset</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="33 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>33</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.08521" target="_blank">Your Group-Relative Advantage Is Biased</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="158 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>158</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Delong Chen, Théo Moutakanni.</div>
-            <div class="note-meta-line">Affiliation: Meta FAIR, HKUST.</div>
+            <div class="note-meta-line">Authors: Fengkai Yang, Yikun Ban.</div>
+            <div class="note-meta-line">Affiliation: Beihang University, Peking University, Meituan.</div>
         </div>
-        <div class="note-tldr">Action100M发布了面向开放词汇动作理解的超大规模数据集：从约120万公开视频自动构建，覆盖约14.6年总时长，产生亿级时间片段的动作监督与丰富字幕。其流水线利用V-JEPA 2嵌入做层级时间切分，生成Tree-of-Captions多层级描述，并用推理模型GPT-OSS-120B在多轮Self-Refine中聚合证据，输出结构化标注（动作/角色/简详描述等）。基于该数据预训练VL-JEPA呈现稳定的数据规模收益与强零样本动作识别表现，为视频理解与世界建模提供新的数据底座。</div>
+        <div class="note-tldr">针对基于组内相对优势的 RLVR/组对比训练，指出常用“组相对优势”估计存在系统性偏差，会影响学习信号与稳定性。论文分析偏差来源并给出修正/替代的估计或归一化策略，使训练更可靠、可控，并在推理类后训练设置中带来更稳健的收益。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -433,6 +440,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.12993" target="_blank">Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="77 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>77</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hao Luo, Zongqing Lu.</div>
+            <div class="note-meta-line">Affiliation: 未在摘要页标注（需查看论文正文）。</div>
+        </div>
+        <div class="note-tldr">提出 Being-H0.5 基础 VLA 模型，目标是在不同形态机器人之间实现强跨本体泛化。核心思路是“以人类交互轨迹为母语”的人本训练范式：通过大规模人类演示/机器人操作/视觉文本数据统一预训练，配合统一状态-动作建模与可移植的数据采集系统，实现跨平台零样本迁移与更稳健的长时程操控。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2601.14724" target="_blank">HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="75 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>75</span></span>
         </div>
@@ -455,28 +473,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.12538" target="_blank">Agentic Reasoning for Large Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="207 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>207</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianxin Wei, Jingrui He.</div>
-            <div class="note-meta-line">Affiliation: 未在摘要页标注（需查看论文正文）。</div>
-        </div>
-        <div class="note-tldr">一篇关于“Agentic Reasoning”的系统综述：把大模型从被动生成器扩展为能规划、调用工具、交互学习的智能体，按基础能力→自我演化→多智能体协作三层梳理方法谱系，并区分 in-context 编排与后训练（SFT/RL）两类路线；总结应用与基准，指出长期交互、世界模型、可扩展训练与治理等关键挑战。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.12993" target="_blank">Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="77 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>77</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Hao Luo, Zongqing Lu.</div>
-            <div class="note-meta-line">Affiliation: 未在摘要页标注（需查看论文正文）。</div>
-        </div>
-        <div class="note-tldr">提出 Being-H0.5 基础 VLA 模型，目标是在不同形态机器人之间实现强跨本体泛化。核心思路是“以人类交互轨迹为母语”的人本训练范式：通过大规模人类演示/机器人操作/视觉文本数据统一预训练，配合统一状态-动作建模与可移植的数据采集系统，实现跨平台零样本迁移与更稳健的长时程操控。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2601.11077" target="_blank">ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="67 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>67</span></span>
         </div>
@@ -488,16 +484,26 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.08521" target="_blank">Your Group-Relative Advantage Is Biased</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="158 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>158</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.10592" target="_blank">Action100M: A Large-scale Video Action Dataset</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="33 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>33</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Fengkai Yang, Yikun Ban.</div>
-            <div class="note-meta-line">Affiliation: Beihang University, Peking University, Meituan.</div>
+            <div class="note-meta-line">Authors: Delong Chen, Théo Moutakanni.</div>
+            <div class="note-meta-line">Affiliation: Meta FAIR, HKUST.</div>
         </div>
-        <div class="note-tldr">针对基于组内相对优势的 RLVR/组对比训练，指出常用“组相对优势”估计存在系统性偏差，会影响学习信号与稳定性。论文分析偏差来源并给出修正/替代的估计或归一化策略，使训练更可靠、可控，并在推理类后训练设置中带来更稳健的收益。</div>
+        <div class="note-tldr">Action100M发布了面向开放词汇动作理解的超大规模数据集：从约120万公开视频自动构建，覆盖约14.6年总时长，产生亿级时间片段的动作监督与丰富字幕。其流水线利用V-JEPA 2嵌入做层级时间切分，生成Tree-of-Captions多层级描述，并用推理模型GPT-OSS-120B在多轮Self-Refine中聚合证据，输出结构化标注（动作/角色/简详描述等）。基于该数据预训练VL-JEPA呈现稳定的数据规模收益与强零样本动作识别表现，为视频理解与世界建模提供新的数据底座。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.10639" target="_blank">STEM: Scaling Transformers with Embedding Modules</a></div>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ranajoy Sadhukhan, Beidi Chen.</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
+        </div>
+        <div class="note-tldr">STEM提出一种“静态、按token索引”的细粒度稀疏化：将门控FFN的上投影替换为层内嵌入查表，门控与下投影保持稠密。该设计不需要运行时路由，支持CPU offload与异步预取，降低通信/访存开销并提升训练稳定性。在350M与1B规模上，相比稠密基线在知识与推理类基准取得增益，同时token索引的嵌入更便于可解释地做知识注入/编辑，并在长上下文下体现“测试时容量随序列长度增长”的效果。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

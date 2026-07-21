@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,171 +396,14 @@ h1 .archive-link:hover {
     <div class="source-header">2026-03-02 ~ 2026-03-08</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.00141" target="_blank">From Scale to Speed: Adaptive Test-Time Scaling for Image Editing</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="138 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>138</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.02604" target="_blank">Heterogeneous Agent Collaborative Reinforcement Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="199 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>199</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiangyan Qu, Gaopeng Gou</div>
-            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences, School of Cyber Security, University of Chinese Academy of Sciences</div>
-        </div>
-        <div class="note-tldr">论文针对图像编辑中的测试时扩展效率低与冗余采样问题，提出 ADE-CoT 自适应框架：按编辑难度动态分配采样预算、用区域定位与描述一致性做早期筛选、并在达到意图对齐时深度优先提前停止。在 Step1X-Edit、BAGEL、FLUX.1 Kontext 上实现更优性能-效率折中，并较 Best-of-N 获得超过 2 倍加速。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.02138" target="_blank">OmniLottie: Generating Vector Animations via Parameterized Lottie Tokens</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="151 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>151</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yiying Yang, Gang Yu</div>
-            <div class="note-meta-line">Affiliation: Fudan University, StepFun</div>
-        </div>
-        <div class="note-tldr">该工作面向 Lottie 向量动画生成，设计参数化 Lottie tokenizer，把原始 JSON 转成形状、运动函数与控制参数序列，并在预训练视觉语言模型上实现多模态自回归生成。配合 200 万规模的 MMLottie-2M 数据集，模型可统一支持 text-to-Lottie、text-image-to-Lottie 与 video-to-Lottie，提升语义对齐和动画质量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.24286" target="_blank">CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="100 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>100</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Weinan Dai, Hao Zhou</div>
-            <div class="note-meta-line">Affiliation: ByteDance Seed, Institute for AI Industry Research (AIR), Tsinghua University, SIA-Lab of Tsinghua AIR and ByteDance Seed</div>
-        </div>
-        <div class="note-tldr">CUDA Agent 通过大规模 agentic 强化学习提升 CUDA 内核自动优化能力，核心包括可扩展数据合成、带自动验证与性能分析的技能增强开发环境，以及稳定训练的 RL 技术。方法在 KernelBench 三个难度上相对 torch.compile 分别实现 100%、100%、92% 更快率，在最难设置上也显著超过多种强专有模型。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.03283" target="_blank">Utonia: Toward One Encoder for All Point Clouds</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="187 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>187</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yujia Zhang, Hengshuang Zhao</div>
-            <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
-        </div>
-        <div class="note-tldr">论文提出统一的自监督点云编码器 Utonia，在遥感、自动驾驶 LiDAR、室内重建、CAD 与视频重建点云等多域联合训练同一 Point Transformer。结果显示跨域迁移显著增强，并出现联合训练才有的表示能力；其特征还能提升机器人操作中的 VLA 策略与视觉语言模型的空间推理表现，朝 3D 基础模型迈进一步。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.01097" target="_blank">Understanding LoRA as Knowledge Memory: An Empirical Analysis</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Seungju Back, Sungjin Ahn</div>
-            <div class="note-meta-line">Affiliation: KAIST</div>
-        </div>
-        <div class="note-tldr">这项工作把 LoRA 视作可插拔的参数化知识记忆，而非仅是任务微调工具，并系统评估其“存得下、取得出、可组合、可扩展”的边界。实验覆盖容量、知识内化、多模块扩展与长上下文推理，结论是 LoRA 可作为 RAG/ICL 的互补记忆轴，但在配置不当时会出现明显失效，需要按容量与组合策略进行工程化设计。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.03276" target="_blank">Beyond Language Modeling: An Exploration of Multimodal Pretraining</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="107 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>107</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shengbang Tong, Luke Zettlemoyer</div>
-            <div class="note-meta-line">Affiliation: FAIR, Meta, New York University</div>
-        </div>
-        <div class="note-tldr">论文通过从零开始的受控实验系统研究原生多模态预训练，采用 Transfusion 框架将语言 next-token 训练与视觉扩散训练统一。作者提出四点关键发现：RAE 视觉表征最均衡；视觉与语言数据联合训练有协同增益；统一训练可自然涌现世界建模能力；MoE 能更高效扩展并形成模态专门化。IsoFLOP 分析还表明视觉比语言更“吃数据”，MoE 有助于缓解该扩展不对称。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.13517" target="_blank">Think Deep, Not Just Long: Measuring LLM Reasoning Effort via Deep-Thinking Tokens</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wei-Lin Chen, Yu Meng</div>
+            <div class="note-meta-line">Authors: Zhixia Zhang, Yikun Ban</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
         </div>
-        <div class="note-tldr">论文指出 CoT 长度并不可靠代表推理质量，过长生成可能只是过度思考。作者提出 deep-thinking tokens，用模型深层预测发生显著修正的位置衡量真实推理努力；该比例在数学和科学基准上与正确率更稳定相关，并支持 Think@n 早期筛掉低潜力样本以降低推理成本。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.20478" target="_blank">Codified Context: Infrastructure for AI Agents in a Complex Codebase</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Aristidis Vasilopoulos</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">面向大型代码库中 agent 缺少持久项目记忆的问题，提出 codified context 基础设施。系统把项目约定、架构知识和常见错误组织成可维护上下文，并在 10.8 万行 C# 分布式系统构建过程中验证，目标是让多 session、多 agent 开发保持一致性、减少重复踩坑。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.16928" target="_blank">Discovering Multiagent Learning Algorithms with Large Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="17 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>17</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zun Li, Marc Lanctot</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">使用 LLM 驱动的 AlphaEvolve 在多智能体强化学习算法空间中自动搜索，替代过去依赖人工迭代改进基线的流程。论文在不完全信息博弈和多智能体学习范式中发现新的算法变体，展示 evolutionary coding agent 可用于探索 MARL 设计空间并产生竞争性方法。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.11988" target="_blank">Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Thibaud Gloaguen, Martin Vechev</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">系统评估 AGENTS.md 等仓库级上下文文件是否真的提升 coding agent 表现。论文从真实任务完成率和 agent 行为两个角度测试人工或自动生成的上下文，指出这类文件虽被广泛推荐，但收益依赖内容质量、任务类型和 agent 对上下文的实际使用方式。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.16173" target="_blank">Learning Personalized Agents from Human Feedback</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="10 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>10</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Kaiqu Liang, Saghar Hosseini</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">提出 Personalized Agents from Human Feedback，让 agent 通过持续人类反馈学习个体用户随时间变化的偏好。相比依赖静态交互历史或外部 profile，PAHF 支持冷启动与偏好漂移，在交互中更新个性化策略，使 agent 更贴近具体用户的长期需求。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.15902" target="_blank">Doc-to-LoRA: Learning to Instantly Internalize Contexts</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Rujikorn Charakorn, Robert Tjarko Lange</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">针对长上下文推理成本高和逐 prompt 蒸馏太慢的问题，提出 Doc-to-LoRA。方法训练轻量 hypernetwork，把输入文档即时转成 LoRA 参数，让模型把上下文信息快速内化到可插拔参数中，从而在保留上下文知识的同时减少长序列注意力开销。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.17100" target="_blank">AgentConductor: Topology Evolution for Multi-Agent Competition-Level Code Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="4 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>4</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Siyu Wang, Xinping Guan</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">提出 AgentConductor，用拓扑演化优化多 agent 竞赛级代码生成。它根据任务难度调整通信图密度，并在迭代中进化协作结构，避免固定 workflow 无法适配不同问题。实验表明，动态拓扑能更好利用多 agent 协作推理，提升复杂代码题解质量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.20502" target="_blank">ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Hongbin Zhong, Suman Nath</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">ActionEngine 将 GUI agent 从逐步截图-推理-点击的反应式执行转为带状态机记忆的程序化规划。系统复用已访问页面和操作模式，减少每一步都调用 VLM 的成本与延迟，并在复杂 GUI 任务中提升效率和准确率，适合重复流程较多的界面自动化。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.16154" target="_blank">Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Nithin Sivakumaran, Elias Stengel-Eskin</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">论文关注 CoT 解释的忠实性与任务性能之间的冲突，提出 REMUL 多监听者软执行框架。多个 listener 对推理链进行解释和反馈，通过多方强化学习提升推理过程对真实计算的反映程度，同时尽量避免单纯追求可解释性导致性能下降。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.20426" target="_blank">Learning to Rewrite Tool Descriptions for Reliable LLM-Agent Tool Use</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ruocheng Guo, Kamalika Das</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">论文指出工具使用 agent 的瓶颈常在工具描述质量，而不只是模型或提示。作者学习自动重写面向人类开发者的模糊 tool descriptions，使其更适合 LLM 解析、选择和调用；在候选工具变多时，该方法能提升工具选择可靠性并减少接口歧义。</div>
+        <div class="note-tldr">提出 HACRL，把异构 agent 的验证 rollout 在训练阶段共享，以提高多 agent on-policy 优化效率，同时保持推理时各 agent 独立执行。相比传统 LLM 多智能体 RL，HACRL 关注不同能力 agent 之间的协作训练，使各自从他人的成功经验中受益。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -569,36 +418,36 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.02604" target="_blank">Heterogeneous Agent Collaborative Reinforcement Learning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="199 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>199</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.03283" target="_blank">Utonia: Toward One Encoder for All Point Clouds</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="187 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>187</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhixia Zhang, Yikun Ban</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Yujia Zhang, Hengshuang Zhao</div>
+            <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
         </div>
-        <div class="note-tldr">提出 HACRL，把异构 agent 的验证 rollout 在训练阶段共享，以提高多 agent on-policy 优化效率，同时保持推理时各 agent 独立执行。相比传统 LLM 多智能体 RL，HACRL 关注不同能力 agent 之间的协作训练，使各自从他人的成功经验中受益。</div>
+        <div class="note-tldr">论文提出统一的自监督点云编码器 Utonia，在遥感、自动驾驶 LiDAR、室内重建、CAD 与视频重建点云等多域联合训练同一 Point Transformer。结果显示跨域迁移显著增强，并出现联合训练才有的表示能力；其特征还能提升机器人操作中的 VLA 策略与视觉语言模型的空间推理表现，朝 3D 基础模型迈进一步。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2602.23866" target="_blank">SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="92 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>92</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.02138" target="_blank">OmniLottie: Generating Vector Animations via Parameterized Lottie Tokens</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="151 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>151</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ibragim Badertdinov, Alexander Golubev</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Yiying Yang, Gang Yu</div>
+            <div class="note-meta-line">Affiliation: Fudan University, StepFun</div>
         </div>
-        <div class="note-tldr">SWE-rebench V2 面向软件工程 agent 的强化学习训练瓶颈，构建大规模、语言无关的 SWE 任务集合，强调可复现执行环境和可靠测试套件。它扩展现有 benchmark 在规模、语言生态和任务多样性上的不足，为训练而非仅评测 coding agent 提供数据基础。</div>
+        <div class="note-tldr">该工作面向 Lottie 向量动画生成，设计参数化 Lottie tokenizer，把原始 JSON 转成形状、运动函数与控制参数序列，并在预训练视觉语言模型上实现多模态自回归生成。配合 200 万规模的 MMLottie-2M 数据集，模型可统一支持 text-to-Lottie、text-image-to-Lottie 与 video-to-Lottie，提升语义对齐和动画质量。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.03241" target="_blank">UniG2U-Bench: Do Unified Models Advance Multimodal Understanding?</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.00141" target="_blank">From Scale to Speed: Adaptive Test-Time Scaling for Image Editing</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="138 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>138</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Zimo Wen, Yifei Shen</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
+            <div class="note-meta-line">Authors: Xiangyan Qu, Gaopeng Gou</div>
+            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences, School of Cyber Security, University of Chinese Academy of Sciences</div>
         </div>
-        <div class="note-tldr">UniG2U-Bench 系统评估统一多模态模型的生成能力是否真正促进理解能力。基准将 generation-to-understanding 分成 7 类机制和 30 个子任务，覆盖隐式或显式视觉生成辅助理解的场景，用于辨析统一模型在哪些任务上因生成能力获得理解收益。</div>
+        <div class="note-tldr">论文针对图像编辑中的测试时扩展效率低与冗余采样问题，提出 ADE-CoT 自适应框架：按编辑难度动态分配采样预算、用区域定位与描述一致性做早期筛选、并在达到意图对齐时深度优先提前停止。在 Step1X-Edit、BAGEL、FLUX.1 Kontext 上实现更优性能-效率折中，并较 Best-of-N 获得超过 2 倍加速。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -613,6 +462,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.23866" target="_blank">SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="92 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>92</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ibragim Badertdinov, Alexander Golubev</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">SWE-rebench V2 面向软件工程 agent 的强化学习训练瓶颈，构建大规模、语言无关的 SWE 任务集合，强调可复现执行环境和可靠测试套件。它扩展现有 benchmark 在规模、语言生态和任务多样性上的不足，为训练而非仅评测 coding agent 提供数据基础。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.03756" target="_blank">MOOSE-Star: Unlocking Tractable Training for Scientific Discovery by Breaking the Complexity Barrier</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="90 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>90</span></span>
         </div>
@@ -624,7 +484,162 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.03241" target="_blank">UniG2U-Bench: Do Unified Models Advance Multimodal Understanding?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zimo Wen, Yifei Shen</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">UniG2U-Bench 系统评估统一多模态模型的生成能力是否真正促进理解能力。基准将 generation-to-understanding 分成 7 类机制和 30 个子任务，覆盖隐式或显式视觉生成辅助理解的场景，用于辨析统一模型在哪些任务上因生成能力获得理解收益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.24286" target="_blank">CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Weinan Dai, Hao Zhou</div>
+            <div class="note-meta-line">Affiliation: ByteDance Seed, Institute for AI Industry Research (AIR), Tsinghua University, SIA-Lab of Tsinghua AIR and ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">CUDA Agent 通过大规模 agentic 强化学习提升 CUDA 内核自动优化能力，核心包括可扩展数据合成、带自动验证与性能分析的技能增强开发环境，以及稳定训练的 RL 技术。方法在 KernelBench 三个难度上相对 torch.compile 分别实现 100%、100%、92% 更快率，在最难设置上也显著超过多种强专有模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.01097" target="_blank">Understanding LoRA as Knowledge Memory: An Empirical Analysis</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Seungju Back, Sungjin Ahn</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
+        </div>
+        <div class="note-tldr">这项工作把 LoRA 视作可插拔的参数化知识记忆，而非仅是任务微调工具，并系统评估其“存得下、取得出、可组合、可扩展”的边界。实验覆盖容量、知识内化、多模块扩展与长上下文推理，结论是 LoRA 可作为 RAG/ICL 的互补记忆轴，但在配置不当时会出现明显失效，需要按容量与组合策略进行工程化设计。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.03276" target="_blank">Beyond Language Modeling: An Exploration of Multimodal Pretraining</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shengbang Tong, Luke Zettlemoyer</div>
+            <div class="note-meta-line">Affiliation: FAIR, Meta, New York University</div>
+        </div>
+        <div class="note-tldr">论文通过从零开始的受控实验系统研究原生多模态预训练，采用 Transfusion 框架将语言 next-token 训练与视觉扩散训练统一。作者提出四点关键发现：RAE 视觉表征最均衡；视觉与语言数据联合训练有协同增益；统一训练可自然涌现世界建模能力；MoE 能更高效扩展并形成模态专门化。IsoFLOP 分析还表明视觉比语言更“吃数据”，MoE 有助于缓解该扩展不对称。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.13517" target="_blank">Think Deep, Not Just Long: Measuring LLM Reasoning Effort via Deep-Thinking Tokens</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wei-Lin Chen, Yu Meng</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文指出 CoT 长度并不可靠代表推理质量，过长生成可能只是过度思考。作者提出 deep-thinking tokens，用模型深层预测发生显著修正的位置衡量真实推理努力；该比例在数学和科学基准上与正确率更稳定相关，并支持 Think@n 早期筛掉低潜力样本以降低推理成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.20478" target="_blank">Codified Context: Infrastructure for AI Agents in a Complex Codebase</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aristidis Vasilopoulos</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">面向大型代码库中 agent 缺少持久项目记忆的问题，提出 codified context 基础设施。系统把项目约定、架构知识和常见错误组织成可维护上下文，并在 10.8 万行 C# 分布式系统构建过程中验证，目标是让多 session、多 agent 开发保持一致性、减少重复踩坑。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.16928" target="_blank">Discovering Multiagent Learning Algorithms with Large Language Models</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zun Li, Marc Lanctot</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">使用 LLM 驱动的 AlphaEvolve 在多智能体强化学习算法空间中自动搜索，替代过去依赖人工迭代改进基线的流程。论文在不完全信息博弈和多智能体学习范式中发现新的算法变体，展示 evolutionary coding agent 可用于探索 MARL 设计空间并产生竞争性方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.11988" target="_blank">Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Thibaud Gloaguen, Martin Vechev</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">系统评估 AGENTS.md 等仓库级上下文文件是否真的提升 coding agent 表现。论文从真实任务完成率和 agent 行为两个角度测试人工或自动生成的上下文，指出这类文件虽被广泛推荐，但收益依赖内容质量、任务类型和 agent 对上下文的实际使用方式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.16173" target="_blank">Learning Personalized Agents from Human Feedback</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kaiqu Liang, Saghar Hosseini</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 Personalized Agents from Human Feedback，让 agent 通过持续人类反馈学习个体用户随时间变化的偏好。相比依赖静态交互历史或外部 profile，PAHF 支持冷启动与偏好漂移，在交互中更新个性化策略，使 agent 更贴近具体用户的长期需求。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.15902" target="_blank">Doc-to-LoRA: Learning to Instantly Internalize Contexts</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Rujikorn Charakorn, Robert Tjarko Lange</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">针对长上下文推理成本高和逐 prompt 蒸馏太慢的问题，提出 Doc-to-LoRA。方法训练轻量 hypernetwork，把输入文档即时转成 LoRA 参数，让模型把上下文信息快速内化到可插拔参数中，从而在保留上下文知识的同时减少长序列注意力开销。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.17100" target="_blank">AgentConductor: Topology Evolution for Multi-Agent Competition-Level Code Generation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Siyu Wang, Xinping Guan</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">提出 AgentConductor，用拓扑演化优化多 agent 竞赛级代码生成。它根据任务难度调整通信图密度，并在迭代中进化协作结构，避免固定 workflow 无法适配不同问题。实验表明，动态拓扑能更好利用多 agent 协作推理，提升复杂代码题解质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.20502" target="_blank">ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongbin Zhong, Suman Nath</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">ActionEngine 将 GUI agent 从逐步截图-推理-点击的反应式执行转为带状态机记忆的程序化规划。系统复用已访问页面和操作模式，减少每一步都调用 VLM 的成本与延迟，并在复杂 GUI 任务中提升效率和准确率，适合重复流程较多的界面自动化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.16154" target="_blank">Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Nithin Sivakumaran, Elias Stengel-Eskin</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文关注 CoT 解释的忠实性与任务性能之间的冲突，提出 REMUL 多监听者软执行框架。多个 listener 对推理链进行解释和反馈，通过多方强化学习提升推理过程对真实计算的反映程度，同时尽量避免单纯追求可解释性导致性能下降。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.20426" target="_blank">Learning to Rewrite Tool Descriptions for Reliable LLM-Agent Tool Use</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ruocheng Guo, Kamalika Das</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文指出工具使用 agent 的瓶颈常在工具描述质量，而不只是模型或提示。作者学习自动重写面向人类开发者的模糊 tool descriptions，使其更适合 LLM 解析、选择和调用；在候选工具变多时，该方法能提升工具选择可靠性并减少接口歧义。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.03251" target="_blank">Speculative Speculative Decoding</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Tanishq Kumar, Avner May</div>
@@ -635,6 +650,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.03818" target="_blank">Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Huihan Liu, Yuke Zhu</div>
@@ -642,7 +658,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文研究预训练 VLA 模型在持续学习中的灾难性遗忘问题，发现与从零训练的小型行为克隆策略不同，大规模预训练 VLA 对新技能增量学习出乎意料地抗遗忘。该发现提示预训练表征可能为机器人策略持续学习提供更稳定基础。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">2025-12-29 ~ 2026-01-04</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.20491" target="_blank">Step-DeepResearch Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="89 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>89</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chen Hu, Yibo Zhu</div>
+            <div class="note-meta-line">Affiliation: StepFun</div>
+        </div>
+        <div class="note-tldr">本报告介绍了 Step-DeepResearch，这是一个针对复杂开放式问题设计的迭代研究型智能体系统。该系统模拟人类的研究过程，能够自主进行在线搜索、信息分析和多步推理。核心技术包括用于探索用户潜在搜索意图的 Expectation-Maximization (EM) 模型，以及用于在每一步选择最佳行动路径的蒙特卡洛树搜索 (MCTS) 算法。在 FreshBench 等基准测试上的评估显示，Step-DeepResearch 能够通过持续获取新信息来回答高难度问题，性能显著超越现有模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://openai.com/index/frontierscience/" target="_blank">Evaluating AI&#x27;s ability to perform scientific research tasks</a></div>
         </div>
         <div class="note-meta">
@@ -431,7 +448,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.10685" target="_blank">Sharp Monocular View Synthesis in Less Than a Second</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="30 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>30</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Lars Mescheder, Vladlen Koltun.</div>
@@ -462,7 +478,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.20619" target="_blank">SemanticGen: Video Generation in Semantic Space</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="95 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>95</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jianhong Bai, Kun Gai</div>
@@ -472,19 +487,7 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2512.20491" target="_blank">Step-DeepResearch Technical Report</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="89 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>89</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Chen Hu, Yibo Zhu</div>
-            <div class="note-meta-line">Affiliation: StepFun</div>
-        </div>
-        <div class="note-tldr">本报告介绍了 Step-DeepResearch，这是一个针对复杂开放式问题设计的迭代研究型智能体系统。该系统模拟人类的研究过程，能够自主进行在线搜索、信息分析和多步推理。核心技术包括用于探索用户潜在搜索意图的 Expectation-Maximization (EM) 模型，以及用于在每一步选择最佳行动路径的蒙特卡洛树搜索 (MCTS) 算法。在 FreshBench 等基准测试上的评估显示，Step-DeepResearch 能够通过持续获取新信息来回答高难度问题，性能显著超越现有模型。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.20856" target="_blank">NVIDIA Nemotron 3: Efficient and Open Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="44 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>44</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Aaron Blakeman, Zijie Yan</div>
@@ -525,7 +528,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.19693" target="_blank">The Prism Hypothesis: Harmonizing Semantic and Pixel Representations via Unified Autoencoding</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Weichen Fan, Ziwei Liu</div>
@@ -536,7 +538,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.18746" target="_blank">MemEvolve: Meta-Evolution of Agent Memory Systems</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="31 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>31</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guibin Zhang, Shuicheng Yan</div>
@@ -547,7 +548,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.16969" target="_blank">Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="122 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>122</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Wanghan Xu, Lei Bai</div>
@@ -558,7 +558,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.16793" target="_blank">PhysBrain: Human Egocentric Data as a Bridge from Vision Language Models to Physical Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="76 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>76</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xiaopeng Lin, Kai Chen</div>
@@ -569,7 +568,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.17532" target="_blank">Robust-R1: Degradation-Aware Reasoning for Robust Visual Understanding</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiaqi Tang, Qifeng Chen</div>
@@ -580,7 +578,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.16676" target="_blank">DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="225 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>225</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hao Liang, Wentao Zhang</div>
@@ -588,7 +585,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对以数据为中心的AI开发需求，本文发布了DataFlow框架。这是一个由大语言模型驱动的系统，旨在自动化处理复杂的数据准备和工作流构建任务。DataFlow通过自然语言接口理解用户需求，自主规划并执行数据清洗、标注和增强等操作，大幅降低了高质量数据构建的门槛和人力成本。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

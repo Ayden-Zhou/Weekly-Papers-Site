@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -401,39 +407,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.08570" target="_blank">QuanBench+: A Unified Multi-Framework Benchmark for LLM-Based Quantum Code Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="126 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>126</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ali Slim, Bernard Ghanem</div>
-            <div class="note-meta-line">Affiliation: American University of Beirut</div>
-        </div>
-        <div class="note-tldr">论文提出 QuanBench+，统一在 Qiskit、PennyLane、Cirq 三个主流量子编程框架上评测大模型量子代码生成能力，覆盖算法实现、门分解与态制备等 42 个对齐任务。评测采用可执行功能测试，报告 Pass@1/Pass@5，并对概率输出引入基于 KL 散度的接受准则；同时加入基于错误反馈的修复评测。结果显示最佳模型在一次生成下分别达到 59.5%、54.8%、42.9%，反馈修复后可提升至 83.3%、76.2%、66.7%，说明多框架量子代码生成虽进步明显，但对框架知识依赖仍然较强。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.11784" target="_blank">ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="143 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>143</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">论文提出 ClawGUI 统一框架，覆盖 GUI Agent 的训练、评测与部署全流程，目标是减少不同数据、环境和执行接口之间的割裂。该框架强调可复现基准、标准化任务定义与端到端工程落地，帮助研究结果更稳定地迁移到真实 GUI 自动化场景。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.07429" target="_blank">GameWorld: Towards Standardized and Verifiable Evaluation of Multimodal Game Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="123 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>123</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">GameWorld 聚焦多模态游戏智能体评测的标准化与可验证性，尝试提供统一任务协议、评价指标和可复现实验设置。核心贡献是将“能否完成任务”与“过程是否可审计”结合，降低不同方法横向比较时的噪声，推动游戏智能体评测走向更可靠的工程范式。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.14148" target="_blank">Seedance 2.0: Advancing Video Generation for World Complexity</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="168 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>168</span></span>
         </div>
@@ -442,17 +415,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Unknown</div>
         </div>
         <div class="note-tldr">Seedance 2.0 面向复杂世界场景的视频生成，重点提升多主体、多事件和长时序下的时空一致性。论文强调对复杂物理与语义关系的建模能力，旨在在保持画质与可控性的同时，增强模型对真实世界复杂度的表达与泛化能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.11626" target="_blank">RationalRewards: Reasoning Rewards Scale Visual Generation Both Training and Test Time</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="103 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>103</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Unknown, Unknown</div>
-            <div class="note-meta-line">Affiliation: Unknown</div>
-        </div>
-        <div class="note-tldr">RationalRewards 探索将推理型奖励同时用于训练阶段与测试阶段，以提升视觉生成质量与可控性。方法通过奖励塑形让模型在生成过程中更符合结构化目标与语义约束，并展示了在不同推理预算下性能可扩展的趋势，为“测试时计算换质量”提供了系统化路径。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -467,6 +429,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.11784" target="_blank">ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="143 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>143</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Unknown, Unknown</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">论文提出 ClawGUI 统一框架，覆盖 GUI Agent 的训练、评测与部署全流程，目标是减少不同数据、环境和执行接口之间的割裂。该框架强调可复现基准、标准化任务定义与端到端工程落地，帮助研究结果更稳定地迁移到真实 GUI 自动化场景。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.14268" target="_blank">HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="127 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>127</span></span>
         </div>
@@ -478,6 +451,28 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.08570" target="_blank">QuanBench+: A Unified Multi-Framework Benchmark for LLM-Based Quantum Code Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="126 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>126</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ali Slim, Bernard Ghanem</div>
+            <div class="note-meta-line">Affiliation: American University of Beirut</div>
+        </div>
+        <div class="note-tldr">论文提出 QuanBench+，统一在 Qiskit、PennyLane、Cirq 三个主流量子编程框架上评测大模型量子代码生成能力，覆盖算法实现、门分解与态制备等 42 个对齐任务。评测采用可执行功能测试，报告 Pass@1/Pass@5，并对概率输出引入基于 KL 散度的接受准则；同时加入基于错误反馈的修复评测。结果显示最佳模型在一次生成下分别达到 59.5%、54.8%、42.9%，反馈修复后可提升至 83.3%、76.2%、66.7%，说明多框架量子代码生成虽进步明显，但对框架知识依赖仍然较强。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.07429" target="_blank">GameWorld: Towards Standardized and Verifiable Evaluation of Multimodal Game Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="123 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>123</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Unknown, Unknown</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">GameWorld 聚焦多模态游戏智能体评测的标准化与可验证性，尝试提供统一任务协议、评价指标和可复现实验设置。核心贡献是将“能否完成任务”与“过程是否可审计”结合，降低不同方法横向比较时的噪声，推动游戏智能体评测走向更可靠的工程范式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.13016" target="_blank">Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="114 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>114</span></span>
         </div>
@@ -486,6 +481,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Tsinghua University, ShanghaiTech University</div>
         </div>
         <div class="note-tldr">系统分析 LLM on-policy distillation 的成功与失败条件，指出学生和教师需具备兼容的思维模式，且强教师必须提供学生未见过的新能力。论文从 token 级机制发现有效 OPD 会在学生访问状态上逐步对齐高概率 token，并提出 off-policy cold start 与教师对齐 prompt 选择来挽救失败蒸馏。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.11626" target="_blank">RationalRewards: Reasoning Rewards Scale Visual Generation Both Training and Test Time</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="103 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>103</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Unknown, Unknown</div>
+            <div class="note-meta-line">Affiliation: Unknown</div>
+        </div>
+        <div class="note-tldr">RationalRewards 探索将推理型奖励同时用于训练阶段与测试阶段，以提升视觉生成质量与可控性。方法通过奖励塑形让模型在生成过程中更符合结构化目标与语义约束，并展示了在不同推理预算下性能可扩展的趋势，为“测试时计算换质量”提供了系统化路径。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -520,7 +526,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">综述 Transformer 中 attention sink 现象，即注意力过度集中到少数无信息 token，对训练、推理、解释性和幻觉都有影响。论文从基础利用、机制解释和缓解策略三条线整理相关工作，覆盖 sink token 保留、注意力重分配、可学习前缀、softmax 限制、预训练干预等方向，并给出应用与未来问题。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,78 +396,6 @@ h1 .archive-link:hover {
     <div class="source-header">2026-01-26 ~ 2026-02-01</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.16175" target="_blank">Learning to Discover at Test Time</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mert Yuksekgonul, Yu Sun.</div>
-            <div class="note-meta-line">Affiliation: Stanford University.</div>
-        </div>
-        <div class="note-tldr">提出 TTT-Discover：在单个测试问题上进行“测试时训练”（RL式持续更新权重），让模型边探索边学习以产出“一个最优解”。在数学、GPU kernel、算法竞赛与生物去噪等多领域多任务刷新/逼近SOTA，并强调用开源模型与公开代码可复现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://www.nature.com/articles/s44387-025-00057-z" target="_blank">A self-correcting multi-agent LLM framework for language-based physics simulation and explanation</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Donggeun Park, Seunghwa Ryu.</div>
-            <div class="note-meta-line">Affiliation: Korea Advanced Institute of Science and Technology (KAIST).</div>
-        </div>
-        <div class="note-tldr">提出 MCP-SIM 自纠错多代理框架，将自然语言需求转成物理仿真与解释。通过多代理分工（补全需求、校验一致性、引入物理/数值约束与记忆回路）缓解提示不充分、多语言与幻觉导致的失败，提高仿真可靠性与可解释性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.14192" target="_blank">Toward Efficient Agents: A Compact and Fine-grained Multi-dimensional Benchmark for LLM-based Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="57 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>57</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xiaofang Yang, Lijun Li.</div>
-            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory, Fudan University.</div>
-        </div>
-        <div class="note-tldr">构建面向 LLM Agent 的紧凑、细粒度、多维评测基准，把复杂任务拆成可控能力维度（如工具使用、规划、记忆、检索与交互等），以更精准地刻画能力画像与失败模式，并用于对比不同模型/系统，服务于更高效的Agent设计与诊断。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.07577" target="_blank">Beyond Entangled Planning: Task-Decoupled Planning for Long-Horizon Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yunfan Li, Bingbing Xu.</div>
-            <div class="note-meta-line">Affiliation: State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences, University of Chinese Academy of Sciences.</div>
-        </div>
-        <div class="note-tldr">指出长任务规划瓶颈在“上下文纠缠”：跨子任务的混合历史造成认知负载与错误传播。提出训练免的 TDP：Supervisor 构建子任务DAG并调度；Planner/Executor 仅用节点局部上下文计划与执行，并在局部范围修复偏差，从而提升鲁棒性并显著降低 token 成本。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.07136" target="_blank">A Large-Scale Study on the Development and Issues of Multi-Agent AI Systems</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Daniel Liu, Daniel Liu.</div>
-            <div class="note-meta-line">Affiliation: Louisiana State University.</div>
-        </div>
-        <div class="note-tldr">对 8 个主流开源多代理框架进行大规模仓库挖掘：汇总 4.2 万次提交与 4731 个已解决 issue，识别持续/稳定/爆发式三类演化轨迹；量化提交类型与常见问题主题、解决时延，指出测试基础设施、文档质量与维护流程是生态快速增长下的关键脆弱点。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.13597" target="_blank">AI IDEs or Autonomous Agents? Measuring the Impact of Coding Agents on Software Development</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shyam Agarwal, Shyam Agarwal.</div>
-            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
-        </div>
-        <div class="note-tldr">以匹配控制组 + 分期差分中的差分（staggered DiD）做纵向因果分析，评估“自主PR级编码代理”相对IDE助手的真实影响。结果显示：当代理是项目首次引入的AI工具时吞吐提升更明显但偏前置；若已有IDE助手收益有限。与此同时，静态告警与复杂度等质量风险更持久，提示需权衡速度与可维护性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.18491" target="_blank">AgentDoG: A Diagnostic Guardrail Framework for AI Agent Safety and Security</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="126 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>126</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Dongrui Liu, Dongrui Liu.</div>
-            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory.</div>
-        </div>
-        <div class="note-tldr">提出面向AI智能体的诊断式安全护栏：用“where/how/what”三维风险分类组织风险空间，构建细粒度ATBench，并训练AgentDoG在交互轨迹中监测并诊断不安全或“看似安全但不合理”的行为根因，提供可追溯解释以支持更有效的对齐与审计。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2601.17058" target="_blank">Can LLMs Clean Up Your Mess? A Survey of Application-Ready Data Preparation with LLMs</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="190 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>190</span></span>
         </div>
@@ -470,17 +404,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University.</div>
         </div>
         <div class="note-tldr">系统综述LLM赋能数据准备的全景：围绕数据清洗、数据集成、数据增益三大任务给出方法谱系与代表工作，整理常用数据集与评测指标，并讨论可扩展性成本、幻觉与可靠性、评测不足等核心瓶颈与未来研究路线，附资源汇总链接。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.18418" target="_blank">daVinci-Dev: Agent-native Mid-training for Software Engineering</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="126 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>126</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ji Zeng, Pengfei Liu.</div>
-            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, General Artificial Intelligence Research Group (GAIR).</div>
-        </div>
-        <div class="note-tldr">聚焦“agent-native”中期训练：从真实PR/提交历史与可执行仓库环境构造两类轨迹（上下文原生+环境原生），对齐软件工程中的行动-观察-反馈闭环，缓解静态训练数据与真实开发分布不匹配；在SWE-Bench Verified上以更少中训token获得更强开源代码代理表现。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -495,17 +418,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.16746" target="_blank">SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="92 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>92</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuhang Wang, Xiaodong Gu.</div>
-            <div class="note-meta-line">Affiliation: LLMSE Lab, Shanghai Jiao Tong University.</div>
-        </div>
-        <div class="note-tldr">针对编码代理长上下文带来的成本与噪声，提出自适应上下文剪枝：代理生成当前任务目标提示（goal hint），0.6B轻量“skimmer”按行选择最相关代码片段，尽量保持语法/逻辑结构；在多项代理与长代码理解基准上实现显著token削减（23–54%）且性能影响很小。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2601.20833" target="_blank">Idea2Story: An Automated Pipeline for Transforming Research Concepts into Complete Scientific Narratives</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="183 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>183</span></span>
         </div>
@@ -514,6 +426,50 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: AgentAlpha</div>
         </div>
         <div class="note-tldr">提出一个端到端自动化流水线，把“研究概念/想法”逐步转成完整科学论文叙事（结构、论点、相关工作串联、成稿）。核心在于把写作从一次性生成拆成多阶段可控过程，减少反复在线检索与临场总结的开销，面向更稳定的“概念→叙事→论文”转化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.20540" target="_blank">Advancing Open-source World Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="135 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>135</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zelin Gao, Ka Leong Cheng</div>
+            <div class="note-meta-line">Affiliation: Robbyant</div>
+        </div>
+        <div class="note-tldr">发布开源交互式世界模型/世界模拟器 LingBot-World（基于视频生成），强调高保真与强动态、分钟级长时程一致性（长程记忆）、以及低延迟实时交互（约 16fps、&lt;1s 延迟）。作者公开代码与模型，面向内容创作、游戏与机器人学习等需要“可交互环境动力学”的应用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.18491" target="_blank">AgentDoG: A Diagnostic Guardrail Framework for AI Agent Safety and Security</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="126 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>126</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dongrui Liu, Dongrui Liu.</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Laboratory.</div>
+        </div>
+        <div class="note-tldr">提出面向AI智能体的诊断式安全护栏：用“where/how/what”三维风险分类组织风险空间，构建细粒度ATBench，并训练AgentDoG在交互轨迹中监测并诊断不安全或“看似安全但不合理”的行为根因，提供可追溯解释以支持更有效的对齐与审计。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.18418" target="_blank">daVinci-Dev: Agent-native Mid-training for Software Engineering</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="126 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>126</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ji Zeng, Pengfei Liu.</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, General Artificial Intelligence Research Group (GAIR).</div>
+        </div>
+        <div class="note-tldr">聚焦“agent-native”中期训练：从真实PR/提交历史与可执行仓库环境构造两类轨迹（上下文原生+环境原生），对齐软件工程中的行动-观察-反馈闭环，缓解静态训练数据与真实开发分布不匹配；在SWE-Bench Verified上以更少中训token获得更强开源代码代理表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.20614" target="_blank">Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="119 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>119</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yanqi Dai, Zhiwu Lu</div>
+            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China, AMAP, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">发现 GRPO 在“难题”上的更新幅度系统性偏小，导致数学推理强化学习对关键难点覆盖不足。提出难度感知的 GRPO（按题目难度重加权优势估计/更新）+ 多维度问题改写（在保持答案不变的前提下提升难度与多样性），形成“更难数据→更有效学习”的闭环，在多项数学推理任务上显著提升。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -539,25 +495,14 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.20614" target="_blank">Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="119 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>119</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.16746" target="_blank">SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="92 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>92</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Yanqi Dai, Zhiwu Lu</div>
-            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China, AMAP, Alibaba Group</div>
+            <div class="note-meta-line">Authors: Yuhang Wang, Xiaodong Gu.</div>
+            <div class="note-meta-line">Affiliation: LLMSE Lab, Shanghai Jiao Tong University.</div>
         </div>
-        <div class="note-tldr">发现 GRPO 在“难题”上的更新幅度系统性偏小，导致数学推理强化学习对关键难点覆盖不足。提出难度感知的 GRPO（按题目难度重加权优势估计/更新）+ 多维度问题改写（在保持答案不变的前提下提升难度与多样性），形成“更难数据→更有效学习”的闭环，在多项数学推理任务上显著提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2601.20540" target="_blank">Advancing Open-source World Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="135 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>135</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zelin Gao, Ka Leong Cheng</div>
-            <div class="note-meta-line">Affiliation: Robbyant</div>
-        </div>
-        <div class="note-tldr">发布开源交互式世界模型/世界模拟器 LingBot-World（基于视频生成），强调高保真与强动态、分钟级长时程一致性（长程记忆）、以及低延迟实时交互（约 16fps、&lt;1s 延迟）。作者公开代码与模型，面向内容创作、游戏与机器人学习等需要“可交互环境动力学”的应用。</div>
+        <div class="note-tldr">针对编码代理长上下文带来的成本与噪声，提出自适应上下文剪枝：代理生成当前任务目标提示（goal hint），0.6B轻量“skimmer”按行选择最相关代码片段，尽量保持语法/逻辑结构；在多项代理与长代码理解基准上实现显著token削减（23–54%）且性能影响很小。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -570,7 +515,72 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出面向科学发现的多模态大模型 Innovator-VL，主打“可复现、透明、数据高效”。给出从数据构建到 SFT、RL 与评测的全流程配方，用不到 500 万条精选科学样本获得强科学多模态推理能力，同时保持通用视觉任务竞争力；并配套开源模型/数据与训练细节，便于社区复现与扩展。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.16175" target="_blank">Learning to Discover at Test Time</a></div>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mert Yuksekgonul, Yu Sun.</div>
+            <div class="note-meta-line">Affiliation: Stanford University.</div>
+        </div>
+        <div class="note-tldr">提出 TTT-Discover：在单个测试问题上进行“测试时训练”（RL式持续更新权重），让模型边探索边学习以产出“一个最优解”。在数学、GPU kernel、算法竞赛与生物去噪等多领域多任务刷新/逼近SOTA，并强调用开源模型与公开代码可复现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.nature.com/articles/s44387-025-00057-z" target="_blank">A self-correcting multi-agent LLM framework for language-based physics simulation and explanation</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Donggeun Park, Seunghwa Ryu.</div>
+            <div class="note-meta-line">Affiliation: Korea Advanced Institute of Science and Technology (KAIST).</div>
+        </div>
+        <div class="note-tldr">提出 MCP-SIM 自纠错多代理框架，将自然语言需求转成物理仿真与解释。通过多代理分工（补全需求、校验一致性、引入物理/数值约束与记忆回路）缓解提示不充分、多语言与幻觉导致的失败，提高仿真可靠性与可解释性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.14192" target="_blank">Toward Efficient Agents: A Compact and Fine-grained Multi-dimensional Benchmark for LLM-based Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xiaofang Yang, Lijun Li.</div>
+            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory, Fudan University.</div>
+        </div>
+        <div class="note-tldr">构建面向 LLM Agent 的紧凑、细粒度、多维评测基准，把复杂任务拆成可控能力维度（如工具使用、规划、记忆、检索与交互等），以更精准地刻画能力画像与失败模式，并用于对比不同模型/系统，服务于更高效的Agent设计与诊断。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.07577" target="_blank">Beyond Entangled Planning: Task-Decoupled Planning for Long-Horizon Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yunfan Li, Bingbing Xu.</div>
+            <div class="note-meta-line">Affiliation: State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences, University of Chinese Academy of Sciences.</div>
+        </div>
+        <div class="note-tldr">指出长任务规划瓶颈在“上下文纠缠”：跨子任务的混合历史造成认知负载与错误传播。提出训练免的 TDP：Supervisor 构建子任务DAG并调度；Planner/Executor 仅用节点局部上下文计划与执行，并在局部范围修复偏差，从而提升鲁棒性并显著降低 token 成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.07136" target="_blank">A Large-Scale Study on the Development and Issues of Multi-Agent AI Systems</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Daniel Liu, Daniel Liu.</div>
+            <div class="note-meta-line">Affiliation: Louisiana State University.</div>
+        </div>
+        <div class="note-tldr">对 8 个主流开源多代理框架进行大规模仓库挖掘：汇总 4.2 万次提交与 4731 个已解决 issue，识别持续/稳定/爆发式三类演化轨迹；量化提交类型与常见问题主题、解决时延，指出测试基础设施、文档质量与维护流程是生态快速增长下的关键脆弱点。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.13597" target="_blank">AI IDEs or Autonomous Agents? Measuring the Impact of Coding Agents on Software Development</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shyam Agarwal, Shyam Agarwal.</div>
+            <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
+        </div>
+        <div class="note-tldr">以匹配控制组 + 分期差分中的差分（staggered DiD）做纵向因果分析，评估“自主PR级编码代理”相对IDE助手的真实影响。结果显示：当代理是项目首次引入的AI工具时吞吐提升更明显但偏前置；若已有IDE助手收益有限。与此同时，静态告警与复杂度等质量风险更持久，提示需权衡速度与可维护性。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

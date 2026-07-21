@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -401,50 +407,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.02512" target="_blank">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wentao Zhang, Yuntian Deng</div>
-            <div class="note-meta-line">Affiliation: University of Waterloo</div>
-        </div>
-        <div class="note-tldr">提出 fuzzy-function programming，将自然语言函数规格编译成可本地执行的小型神经“程序”。PAW 使用 4B 编译器基于 1000 万样例 FuzzyBench 生成参数高效适配器，由冻结的 0.6B Qwen3 interpreter 执行；效果接近直接提示 Qwen3-32B，却显著降低内存、成本并支持离线复用。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.04434" target="_blank">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="15 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>15</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tianxing Chen, Masayoshi Tomizuka</div>
-            <div class="note-meta-line">Affiliation: MMLab@HKU</div>
-        </div>
-        <div class="note-tldr">提出 RoboDojo，一个同时覆盖仿真与真实世界的通用机器人操作评测基准：仿真侧包含 42 个任务，衡量泛化、记忆、精度、长程执行和开放词汇指令跟随；真实侧包含 18 个任务与标准化远程评测系统。作者还提供 XPolicyLab，使 30 个策略可统一接入评测并形成公开 leaderboard。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.05247" target="_blank">Vision Pretraining for Dense Spatial Perception</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="43 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>43</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zelin Fu, Nan Xue</div>
-            <div class="note-meta-line">Affiliation: Robbyant, Ant Group</div>
-        </div>
-        <div class="note-tldr">提出 LingBot-Vision，以边界为中心的 masked boundary modeling 进行自监督预训练：由教师在线发现边界 token 并强制学生重建，结合离散化边界场稳定训练。该方法让语义与几何表征协同，在深度、分割和视频目标传播等稠密感知任务上优于或匹配更大视觉基础模型，并推动 LingBot-Depth 2.0 在 14 个深度补全基准取得领先表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.05391" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="15 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>15</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jacky Kwok, Azalia Mirhoseini</div>
-            <div class="note-meta-line">Affiliation: Stanford University</div>
-        </div>
-        <div class="note-tldr">将“验证”视为提升智能体任务表现的新扩展轴，提出无需训练的 LLM-as-a-Verifier：用评分 token logits 的期望生成连续细粒度分数，并通过更高评分粒度、重复评估与标准分解降低方差和复杂度。在 Terminal-Bench V2、SWE-Bench Verified、RoboRewardBench、MedAgentBench 上取得 SOTA，还可为 RL 提供密集反馈。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.03118" target="_blank">Vidu S1: A Real-Time Interactive Video Generation Model</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="138 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>138</span></span>
         </div>
@@ -453,133 +415,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Tsinghua University, Shengshu Technology</div>
         </div>
         <div class="note-tldr">提出 Vidu S1，一个支持语音实时控制数字角色的视频生成模型，用户可在生成过程中随时用语音改变内容。系统结合 TurboDiffusion 与 TurboServe，在消费级 GPU 上实现最高 42 FPS 的 540p 长时生成，并避免模糊、漂移和视觉失真；实验显示其在实时性和质量指标上均表现领先。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.05147" target="_blank">DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="36 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>36</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xin Cheng, Wenfeng Liang</div>
-            <div class="note-meta-line">Affiliation: 1 Peking University, 2 DeepSeek-AI</div>
-        </div>
-        <div class="note-tldr">提出 DSpark，用半自回归 draft 架构提升并行草稿 token 的依赖建模，并用基于置信度的调度动态决定每个请求的验证长度，减少高拒绝风险 token 占用批处理容量。离线评测中它提高接受长度；在 DeepSeek-V4 线上服务中，相比 MTP-1 基线可在匹配吞吐下将单用户生成速度提升 60%-85%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.26294" target="_blank">The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Alex Iacob, Nicholas D. Lane</div>
-            <div class="note-meta-line">Affiliation: University of Cambridge</div>
-        </div>
-        <div class="note-tldr">提出 Red Queen Gödel Machine，在分阶段固定效用的前提下共同演化任务代理与评估器。编码实验用更少 token 提升测试通过率，科学写作与证明任务的接受率和评分准确率也超过既有自改进代理。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.30317" target="_blank">MCP Server Architecture Patterns for LLM-Integrated Applications</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Carson Rodrigues, Oysturn Vas</div>
-            <div class="note-meta-line">Affiliation: Celabe</div>
-        </div>
-        <div class="note-tldr">从 15 个生产与公共 MCP Server 中归纳资源网关、工具编排器、状态会话、代理聚合器和领域适配器五种架构模式，并总结四类反模式。对 54 个留出服务的分类一致性达到 Cohen&#x27;s kappa 0.76，同时量化传输与工具数量开销。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.26300" target="_blank">The Verification Horizon: No Silver Bullet for Coding Agent Rewards</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="51 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>51</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Binghai Wang, Dayiheng Liu, Xuwu Wang</div>
-            <div class="note-meta-line">Affiliation: Qwen Team, Alibaba</div>
-        </div>
-        <div class="note-tldr">将编码代理奖励的核心矛盾概括为可扩展性、忠实性与鲁棒性难以兼得，并研究测试、前端评审、用户反馈和长程代理评估四种验证器。针对性设计可抑制奖励作弊并提升多项基准表现，说明验证器必须随生成器共同演化。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.28277" target="_blank">Towards Automating Scientific Review with Google&#x27;s Paper Assistant Tool</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="9 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>9</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Rajesh Jayaram, Vincent Cohen-Addad</div>
-            <div class="note-meta-line">Affiliation: Google Research</div>
-        </div>
-        <div class="note-tldr">提出科学评审中四级人机协作分类，并构建可检查理论、实验和潜在缺陷的 Paper Assistant Tool。借助推理扩展，PAT 在 SPOT 数学错误召回上较零样本提升 34%，且已在 STOC 与 ICML 投稿前试点中发现关键问题。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.32025" target="_blank">Generative Skill Composition for LLM Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xinyu Zhao, Tianlong Chen</div>
-            <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill</div>
-        </div>
-        <div class="note-tldr">将代理技能选择建模为同时决定子集、数量和顺序的结构化序列预测，提出受约束自回归解码器 SkillComposer。它在两种生产级编码代理上较无技能基线分别提升 23.1 和 18.2 个百分点，并以更低提示成本接近金标技能检索。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.01224" target="_blank">AutoMem: Automated Learning of Memory as a Cognitive Skill</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="21 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>21</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shengguang Wu, Serena Yeung-Levy</div>
-            <div class="note-meta-line">Affiliation: Stanford University</div>
-        </div>
-        <div class="note-tldr">把文件系统记忆操作视为可训练的元记忆技能，并用两个自动循环分别优化记忆结构和模型的记忆决策能力。仅优化记忆而不改变任务动作，就让 32B 开放模型在三种长程游戏中提升约 2 至 4 倍，达到接近前沿系统的水平。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.32032" target="_blank">Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="29 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>29</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Gabrielle Kaili-May Liu, Arman Cohan</div>
-            <div class="note-meta-line">Affiliation: Yale University</div>
-        </div>
-        <div class="note-tldr">提出用模型对自身表现的判断来修正偏好排序的元认知反馈强化学习 RLMF，并用同类信号筛选高价值数据。两阶段方法先校准置信度再生成自然语言不确定性，在多任务上保持准确率并实现新的忠实校准最佳结果，最高超过标准 RL 63%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.00272" target="_blank">ASPIRE: Agentic /Skills Discovery for Robotics</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="24 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>24</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Runyu Lu, Guanzhi Wang</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 ASPIRE，让机器人代理通过闭环执行诊断、可复用技能库和进化任务搜索持续编写并修复代码策略。它在 LIBERO-Pro、Robosuite 和 BEHAVIOR-1K 上最高提升 77%，且积累的技能能零样本迁移到未见长程任务并初步实现仿真到真实迁移。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.28279" target="_blank">Agentic Hardware Design as Repository-Level Code Evolution</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Cunxi Yu, Brucek Khailany</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">提出 HORIZON，把硬件设计视为仓库级代码演化：由 Markdown 规范编译出知识、评估器、验收条件与运行策略，再由无人值守代理在隔离 worktree 中迭代。系统在 ChipBench、RTLLM、Verilog-Eval 和九类 CVDP 任务上实现 100% 基准完成率。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.26797" target="_blank">Reasoning Quality Emerges Early: Data Curation for Reasoning Models</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Hongyi Henry Jin</div>
-            <div class="note-meta-line">Affiliation: University of California, Los Angeles</div>
-        </div>
-        <div class="note-tldr">发现推理样本的难度和梯度相似性可从最初 100 至 1000 个推理 token 的损失模式中提前判断，并据此提出 TEMP 数据筛选。Qwen2.5-7B 与 Llama3.1-8B 实验较现有方法最高提升 1.7%，同时节省 91% 的 token。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.04033" target="_blank">OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="76 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>76</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Siyuan Li, Cheng Tan</div>
-            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
-        </div>
-        <div class="note-tldr">构建统一优化器综述与评测手册 OmniOpt，用五阶段更新流水线、线性最小化 oracle 和机制/目标双维分类组织百余种方法。跨语言预训练与视觉分类的统一基准系统比较不同优化器在算力、内存、调参预算和任务效果上的权衡。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -605,6 +440,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.07708" target="_blank">Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="87 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>87</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chen Tang, Lei Bai</div>
+            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
+        </div>
+        <div class="note-tldr">提出 SciReasoner，以统一结构词表原生编码蛋白质、分子和晶体的坐标、拓扑与周期连接，使结构证据可被逐项引用和推理。模型在 86 项基准中的 67 项达到最佳，并显著提升低同源蛋白注释与单步逆合成准确率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.02980" target="_blank">Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="79 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>79</span></span>
         </div>
@@ -627,19 +473,184 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2607.07708" target="_blank">Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="87 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>87</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.04033" target="_blank">OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="76 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>76</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Chen Tang, Lei Bai</div>
+            <div class="note-meta-line">Authors: Siyuan Li, Cheng Tan</div>
             <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
         </div>
-        <div class="note-tldr">提出 SciReasoner，以统一结构词表原生编码蛋白质、分子和晶体的坐标、拓扑与周期连接，使结构证据可被逐项引用和推理。模型在 86 项基准中的 67 项达到最佳，并显著提升低同源蛋白注释与单步逆合成准确率。</div>
+        <div class="note-tldr">构建统一优化器综述与评测手册 OmniOpt，用五阶段更新流水线、线性最小化 oracle 和机制/目标双维分类组织百余种方法。跨语言预训练与视觉分类的统一基准系统比较不同优化器在算力、内存、调参预算和任务效果上的权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.02512" target="_blank">Program-as-Weights: A Programming Paradigm for Fuzzy Functions</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wentao Zhang, Yuntian Deng</div>
+            <div class="note-meta-line">Affiliation: University of Waterloo</div>
+        </div>
+        <div class="note-tldr">提出 fuzzy-function programming，将自然语言函数规格编译成可本地执行的小型神经“程序”。PAW 使用 4B 编译器基于 1000 万样例 FuzzyBench 生成参数高效适配器，由冻结的 0.6B Qwen3 interpreter 执行；效果接近直接提示 Qwen3-32B，却显著降低内存、成本并支持离线复用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.04434" target="_blank">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianxing Chen, Masayoshi Tomizuka</div>
+            <div class="note-meta-line">Affiliation: MMLab@HKU</div>
+        </div>
+        <div class="note-tldr">提出 RoboDojo，一个同时覆盖仿真与真实世界的通用机器人操作评测基准：仿真侧包含 42 个任务，衡量泛化、记忆、精度、长程执行和开放词汇指令跟随；真实侧包含 18 个任务与标准化远程评测系统。作者还提供 XPolicyLab，使 30 个策略可统一接入评测并形成公开 leaderboard。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.05247" target="_blank">Vision Pretraining for Dense Spatial Perception</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zelin Fu, Nan Xue</div>
+            <div class="note-meta-line">Affiliation: Robbyant, Ant Group</div>
+        </div>
+        <div class="note-tldr">提出 LingBot-Vision，以边界为中心的 masked boundary modeling 进行自监督预训练：由教师在线发现边界 token 并强制学生重建，结合离散化边界场稳定训练。该方法让语义与几何表征协同，在深度、分割和视频目标传播等稠密感知任务上优于或匹配更大视觉基础模型，并推动 LingBot-Depth 2.0 在 14 个深度补全基准取得领先表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.05391" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jacky Kwok, Azalia Mirhoseini</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">将“验证”视为提升智能体任务表现的新扩展轴，提出无需训练的 LLM-as-a-Verifier：用评分 token logits 的期望生成连续细粒度分数，并通过更高评分粒度、重复评估与标准分解降低方差和复杂度。在 Terminal-Bench V2、SWE-Bench Verified、RoboRewardBench、MedAgentBench 上取得 SOTA，还可为 RL 提供密集反馈。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.05147" target="_blank">DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xin Cheng, Wenfeng Liang</div>
+            <div class="note-meta-line">Affiliation: 1 Peking University, 2 DeepSeek-AI</div>
+        </div>
+        <div class="note-tldr">提出 DSpark，用半自回归 draft 架构提升并行草稿 token 的依赖建模，并用基于置信度的调度动态决定每个请求的验证长度，减少高拒绝风险 token 占用批处理容量。离线评测中它提高接受长度；在 DeepSeek-V4 线上服务中，相比 MTP-1 基线可在匹配吞吐下将单用户生成速度提升 60%-85%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.26294" target="_blank">The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alex Iacob, Nicholas D. Lane</div>
+            <div class="note-meta-line">Affiliation: University of Cambridge</div>
+        </div>
+        <div class="note-tldr">提出 Red Queen Gödel Machine，在分阶段固定效用的前提下共同演化任务代理与评估器。编码实验用更少 token 提升测试通过率，科学写作与证明任务的接受率和评分准确率也超过既有自改进代理。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.30317" target="_blank">MCP Server Architecture Patterns for LLM-Integrated Applications</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Carson Rodrigues, Oysturn Vas</div>
+            <div class="note-meta-line">Affiliation: Celabe</div>
+        </div>
+        <div class="note-tldr">从 15 个生产与公共 MCP Server 中归纳资源网关、工具编排器、状态会话、代理聚合器和领域适配器五种架构模式，并总结四类反模式。对 54 个留出服务的分类一致性达到 Cohen&#x27;s kappa 0.76，同时量化传输与工具数量开销。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.26300" target="_blank">The Verification Horizon: No Silver Bullet for Coding Agent Rewards</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Binghai Wang, Dayiheng Liu, Xuwu Wang</div>
+            <div class="note-meta-line">Affiliation: Qwen Team, Alibaba</div>
+        </div>
+        <div class="note-tldr">将编码代理奖励的核心矛盾概括为可扩展性、忠实性与鲁棒性难以兼得，并研究测试、前端评审、用户反馈和长程代理评估四种验证器。针对性设计可抑制奖励作弊并提升多项基准表现，说明验证器必须随生成器共同演化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.28277" target="_blank">Towards Automating Scientific Review with Google&#x27;s Paper Assistant Tool</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Rajesh Jayaram, Vincent Cohen-Addad</div>
+            <div class="note-meta-line">Affiliation: Google Research</div>
+        </div>
+        <div class="note-tldr">提出科学评审中四级人机协作分类，并构建可检查理论、实验和潜在缺陷的 Paper Assistant Tool。借助推理扩展，PAT 在 SPOT 数学错误召回上较零样本提升 34%，且已在 STOC 与 ICML 投稿前试点中发现关键问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.32025" target="_blank">Generative Skill Composition for LLM Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinyu Zhao, Tianlong Chen</div>
+            <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill</div>
+        </div>
+        <div class="note-tldr">将代理技能选择建模为同时决定子集、数量和顺序的结构化序列预测，提出受约束自回归解码器 SkillComposer。它在两种生产级编码代理上较无技能基线分别提升 23.1 和 18.2 个百分点，并以更低提示成本接近金标技能检索。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.01224" target="_blank">AutoMem: Automated Learning of Memory as a Cognitive Skill</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shengguang Wu, Serena Yeung-Levy</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">把文件系统记忆操作视为可训练的元记忆技能，并用两个自动循环分别优化记忆结构和模型的记忆决策能力。仅优化记忆而不改变任务动作，就让 32B 开放模型在三种长程游戏中提升约 2 至 4 倍，达到接近前沿系统的水平。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.32032" target="_blank">Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Gabrielle Kaili-May Liu, Arman Cohan</div>
+            <div class="note-meta-line">Affiliation: Yale University</div>
+        </div>
+        <div class="note-tldr">提出用模型对自身表现的判断来修正偏好排序的元认知反馈强化学习 RLMF，并用同类信号筛选高价值数据。两阶段方法先校准置信度再生成自然语言不确定性，在多任务上保持准确率并实现新的忠实校准最佳结果，最高超过标准 RL 63%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.00272" target="_blank">ASPIRE: Agentic /Skills Discovery for Robotics</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Runyu Lu, Guanzhi Wang</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 ASPIRE，让机器人代理通过闭环执行诊断、可复用技能库和进化任务搜索持续编写并修复代码策略。它在 LIBERO-Pro、Robosuite 和 BEHAVIOR-1K 上最高提升 77%，且积累的技能能零样本迁移到未见长程任务并初步实现仿真到真实迁移。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.28279" target="_blank">Agentic Hardware Design as Repository-Level Code Evolution</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Cunxi Yu, Brucek Khailany</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 HORIZON，把硬件设计视为仓库级代码演化：由 Markdown 规范编译出知识、评估器、验收条件与运行策略，再由无人值守代理在隔离 worktree 中迭代。系统在 ChipBench、RTLLM、Verilog-Eval 和九类 CVDP 任务上实现 100% 基准完成率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.26797" target="_blank">Reasoning Quality Emerges Early: Data Curation for Reasoning Models</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongyi Henry Jin</div>
+            <div class="note-meta-line">Affiliation: University of California, Los Angeles</div>
+        </div>
+        <div class="note-tldr">发现推理样本的难度和梯度相似性可从最初 100 至 1000 个推理 token 的损失模式中提前判断，并据此提出 TEMP 数据筛选。Qwen2.5-7B 与 Llama3.1-8B 实验较现有方法最高提升 1.7%，同时节省 91% 的 token。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.07508" target="_blank">Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="24 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>24</span></span>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhenyu Hou, Yuxiao Dong</div>
@@ -650,6 +661,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.07459" target="_blank">EmbodiedGen V2: An Agentic, Simulation-Ready 3D World Engine for Embodied AI</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xinjie Wang, Zhizhong Su</div>
@@ -657,7 +669,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出可生成、编辑并复用仿真就绪资产和多房间任务世界的 EmbodiedGen V2，打通跨模拟器部署、交互可供性与策略训练。生成资产人工接受率达 96.5%，83.3% 任务世界无需修改即可运行；在线 RL 将仿真成功率从 9.7% 提至 79.8%。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

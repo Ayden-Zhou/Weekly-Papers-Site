@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -568,7 +574,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">本文提出了 OneThinker，一个统一图像和视频理解的全能推理模型。作者构建了包含 60 万条数据的多任务训练语料库，并设计了 EMA-GRPO 强化学习方法以平衡多任务间的奖励异质性。OneThinker 在 10 项视觉任务的 31 个基准上表现出色，展示了有效的跨任务知识迁移能力及初步的零样本泛化潜力，向统一的多模态推理迈出了一步。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

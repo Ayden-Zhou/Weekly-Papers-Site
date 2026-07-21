@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,16 +396,6 @@ h1 .archive-link:hover {
     <div class="source-header">2026-03-16 ~ 2026-03-22</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.12231" target="_blank">Temporal Straightening for Latent Planning</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ying Wang, Mengye Ren</div>
-            <div class="note-meta-line">Affiliation: New York University</div>
-        </div>
-        <div class="note-tldr">论文研究潜在世界模型中的规划表征问题，指出预训练视觉特征常含与规划无关信息且轨迹弯曲，导致优化困难。作者提出 temporal straightening，在联合学习编码器与预测器时加入曲率正则，使潜在轨迹更“平直”，让欧氏距离更接近真实测地距离并改善规划目标条件数。实验表明该方法能显著提升梯度式规划稳定性与目标到达成功率。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.14473" target="_blank">AI Can Learn Scientific Taste</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="432 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>432</span></span>
         </div>
@@ -408,50 +404,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Fudan University, Shanghai Innovation Institute, OpenMOSS Team</div>
         </div>
         <div class="note-tldr">论文提出用社区反馈训练 AI 的“科研品味”：先基于 70 万组高低被引论文对训练 Scientific Judge 学习判断研究想法潜力，再把该评审器作为奖励模型训练 Scientific Thinker 生成高潜力课题。结果显示其在多项评测中超过多种强基线模型，并在跨年份、跨领域与评审偏好迁移上保持优势，说明 AI 可学习并内化科研价值判断。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.15594" target="_blank">OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="150 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>150</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yuwen Du, Rui Ye</div>
-            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
-        </div>
-        <div class="note-tldr">OpenSeeker 面向深度检索智能体的数据瓶颈，提出两项核心方法：可控事实驱动的多跳问答合成，以及基于回溯总结的轨迹去噪，从而以较小规模高质量数据训练出强搜索代理。作者开源了训练数据与模型权重，实验表明仅用约 1.17 万样本和单次 SFT 训练，就在多项检索基准上显著优于已有开源方案，并在中文任务上接近或超过部分闭源系统。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.15583" target="_blank">Grounding World Simulation Models in a Real-World Metropolis</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Junyoung Seo, Jin-Hwa Kim</div>
-            <div class="note-meta-line">Affiliation: KAIST AI</div>
-        </div>
-        <div class="note-tldr">论文提出 Seoul World Model，将世界模型从“想象场景”推进到“真实城市”建模：通过检索增强把街景图像作为外部锚点，结合跨时间配对、合成轨迹数据与视角插值，缓解时序错位和稀疏采样问题。另引入 Virtual Lookahead Sink 在长时生成中持续重接地，实验证明其在首尔、釜山与安娜堡等城市上可生成更空间一致、时间连贯且长程稳定的真实城市场景视频。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.15031" target="_blank">Attention Residuals</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="190 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>190</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Kimi Team, Kimi Team</div>
-            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team)</div>
-        </div>
-        <div class="note-tldr">作者指出传统 PreNorm 残差的等权累加会导致层深增加时表征被稀释，提出 Attention Residuals 让每层以注意力方式选择性聚合历史层输出，并进一步给出更高效的 Block AttnRes 以降低训练显存与通信开销。缩放实验和消融显示该机制在不同参数规模上稳定增益；在 Kimi Linear 大模型预训练中还改善了深层梯度与激活分布，并带来下游任务整体提升。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.15726" target="_blank">MiroThinker-1.7 &amp; H1: Towards Heavy-Duty Research Agents via Verification</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="187 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>187</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: MiroMind Team, MiroMind Team</div>
-            <div class="note-meta-line">Affiliation: MiroMind</div>
-        </div>
-        <div class="note-tldr">论文提出面向复杂长链任务的研究智能体 MiroThinker-1.7 与强化版本 H1。前者通过 agentic mid-training 提升规划、上下文推理与工具交互稳定性；后者把局部与全局验证嵌入推理过程，在中间步骤纠偏并审计整条证据链。实验显示其在网页研究、科学推理与金融分析等深度研究基准上取得领先表现，并开源主模型与 mini 版本。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -466,25 +418,36 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.15619" target="_blank">Mixture-of-Depths Attention</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="83 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>83</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.15726" target="_blank">MiroThinker-1.7 &amp; H1: Towards Heavy-Duty Research Agents via Verification</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="187 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>187</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Lianghui Zhu, Xinggang Wang</div>
-            <div class="note-meta-line">Affiliation: School of EIC, Huazhong University of Science and Technology, ByteDance Seed</div>
+            <div class="note-meta-line">Authors: MiroMind Team, MiroMind Team</div>
+            <div class="note-meta-line">Affiliation: MiroMind</div>
         </div>
-        <div class="note-tldr">论文提出 Mixture-of-Depths Attention，通过在注意力中引入跨深度可见关系，让当前查询按需利用不同层的 K/V 表征，而非仅依赖单层上下文。该机制旨在增强信息流动与层间协同，提升模型对长程依赖和复杂语义结构的建模能力。结果表明该方法在效率与性能之间取得更优平衡，可作为解码器架构的通用增强模块。</div>
+        <div class="note-tldr">论文提出面向复杂长链任务的研究智能体 MiroThinker-1.7 与强化版本 H1。前者通过 agentic mid-training 提升规划、上下文推理与工具交互稳定性；后者把局部与全局验证嵌入推理过程，在中间步骤纠偏并审计整条证据链。实验显示其在网页研究、科学推理与金融分析等深度研究基准上取得领先表现，并开源主模型与 mini 版本。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.14935" target="_blank">Video-CoE: Reinforcing Video Event Prediction via Chain of Events</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="91 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>91</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.15583" target="_blank">Grounding World Simulation Models in a Real-World Metropolis</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Qile Su, Xiangxiang Chu</div>
-            <div class="note-meta-line">Affiliation: AMAP, Alibaba Group</div>
+            <div class="note-meta-line">Authors: Junyoung Seo, Jin-Hwa Kim</div>
+            <div class="note-meta-line">Affiliation: KAIST AI</div>
         </div>
-        <div class="note-tldr">论文面向视频事件预测（VEP）中“看得到过去、难预测未来”的问题，先系统评测主流多模态大模型在该任务上的短板，再提出 Chain of Events（CoE）框架，通过构造时序事件链强化模型对视觉证据与事件逻辑的联合建模。实验显示该方法在公开基准上显著优于现有开源与商业模型，刷新 VEP 任务性能。</div>
+        <div class="note-tldr">论文提出 Seoul World Model，将世界模型从“想象场景”推进到“真实城市”建模：通过检索增强把街景图像作为外部锚点，结合跨时间配对、合成轨迹数据与视角插值，缓解时序错位和稀疏采样问题。另引入 Virtual Lookahead Sink 在长时生成中持续重接地，实验证明其在首尔、釜山与安娜堡等城市上可生成更空间一致、时间连贯且长程稳定的真实城市场景视频。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.15594" target="_blank">OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="150 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>150</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuwen Du, Rui Ye</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">OpenSeeker 面向深度检索智能体的数据瓶颈，提出两项核心方法：可控事实驱动的多跳问答合成，以及基于回溯总结的轨迹去噪，从而以较小规模高质量数据训练出强搜索代理。作者开源了训练数据与模型权重，实验表明仅用约 1.17 万样本和单次 SFT 训练，就在多项检索基准上显著优于已有开源方案，并在中文任务上接近或超过部分闭源系统。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -499,7 +462,52 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.14935" target="_blank">Video-CoE: Reinforcing Video Event Prediction via Chain of Events</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="91 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>91</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qile Su, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: AMAP, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">论文面向视频事件预测（VEP）中“看得到过去、难预测未来”的问题，先系统评测主流多模态大模型在该任务上的短板，再提出 Chain of Events（CoE）框架，通过构造时序事件链强化模型对视觉证据与事件逻辑的联合建模。实验显示该方法在公开基准上显著优于现有开源与商业模型，刷新 VEP 任务性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.12231" target="_blank">Temporal Straightening for Latent Planning</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ying Wang, Mengye Ren</div>
+            <div class="note-meta-line">Affiliation: New York University</div>
+        </div>
+        <div class="note-tldr">论文研究潜在世界模型中的规划表征问题，指出预训练视觉特征常含与规划无关信息且轨迹弯曲，导致优化困难。作者提出 temporal straightening，在联合学习编码器与预测器时加入曲率正则，使潜在轨迹更“平直”，让欧氏距离更接近真实测地距离并改善规划目标条件数。实验表明该方法能显著提升梯度式规划稳定性与目标到达成功率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.15031" target="_blank">Attention Residuals</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kimi Team, Kimi Team</div>
+            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team)</div>
+        </div>
+        <div class="note-tldr">作者指出传统 PreNorm 残差的等权累加会导致层深增加时表征被稀释，提出 Attention Residuals 让每层以注意力方式选择性聚合历史层输出，并进一步给出更高效的 Block AttnRes 以降低训练显存与通信开销。缩放实验和消融显示该机制在不同参数规模上稳定增益；在 Kimi Linear 大模型预训练中还改善了深层梯度与激活分布，并带来下游任务整体提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.15619" target="_blank">Mixture-of-Depths Attention</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Lianghui Zhu, Xinggang Wang</div>
+            <div class="note-meta-line">Affiliation: School of EIC, Huazhong University of Science and Technology, ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">论文提出 Mixture-of-Depths Attention，通过在注意力中引入跨深度可见关系，让当前查询按需利用不同层的 K/V 表征，而非仅依赖单层上下文。该机制旨在增强信息流动与层间协同，提升模型对长程依赖和复杂语义结构的建模能力。结果表明该方法在效率与性能之间取得更优平衡，可作为解码器架构的通用增强模块。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.15569" target="_blank">Mamba-3: Improved Sequence Modeling using State Space Principles</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Aakash Lahoti, Albert Gu</div>
@@ -510,7 +518,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.14482" target="_blank">V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="36 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>36</span></span>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Lorenzo Mur-Labadia, Adrien Bardes</div>
@@ -518,7 +526,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出 V-JEPA 2.1，通过让可见与遮挡 token 同时参与的密集预测损失、跨层深度自监督、图像与视频统一 tokenizer 以及模型与数据规模扩展，显著提升视频自监督表示的时空一致性与语义结构。在 Ego4D、EPIC-KITCHENS、机器人抓取、导航和深度估计等任务上达到或刷新 SOTA，显示其在世界建模与密集视觉理解上的泛化能力。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

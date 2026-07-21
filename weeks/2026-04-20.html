@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,17 +396,6 @@ h1 .archive-link:hover {
     <div class="source-header">2026-04-20 ~ 2026-04-26</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.18168" target="_blank">Extending One-Step Image Generation from Class Labels to Text via Discriminative Text Representation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="96 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>96</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Chenxi Zhao</div>
-            <div class="note-meta-line">Affiliation: College of Computer Science, Nankai University; AMAP, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">论文研究如何把原本依赖类别标签的一步图像生成框架扩展到文本条件场景。核心思路是构建更具判别性的文本表示，并将其与一步生成器的训练目标对齐，从而在不牺牲推理效率的前提下提升文本可控性与生成质量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.19748" target="_blank">Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="252 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>252</span></span>
         </div>
@@ -423,150 +418,25 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.15804" target="_blank">Qwen3.5-Omni Technical Report</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="60 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>60</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.13346" target="_blank">AgentSPEX: An Agent SPecification and EXecution Language</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="168 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>168</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Qwen Team</div>
-            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+            <div class="note-meta-line">Authors: Pengcheng Wang, Tong Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
         </div>
-        <div class="note-tldr">这份技术报告系统介绍 Qwen3.5-Omni 的多模态能力升级，包括跨模态输入理解、统一推理链路与更高效的推理部署。报告强调在文本、视觉与语音等场景中的端到端能力融合，并通过工程优化提升实际产品化表现与稳定性。</div>
+        <div class="note-tldr">AgentSPEX 提出用 YAML 声明式语言描述 LLM agent workflow，把控制流、分支循环、并行执行、子模块和状态管理从 Python 框架中解耦。配套 harness 提供工具、沙箱、checkpoint、验证和日志，并有可视化编辑器；在 7 个基准和用户研究中展示更强可解释性和可维护性。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.18292" target="_blank">Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="89 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>89</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.18168" target="_blank">Extending One-Step Image Generation from Class Labels to Text via Discriminative Text Representation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="96 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>96</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Guanting Dong</div>
-            <div class="note-meta-line">Affiliation: Agent-World Project Team</div>
+            <div class="note-meta-line">Authors: Chenxi Zhao</div>
+            <div class="note-meta-line">Affiliation: College of Computer Science, Nankai University; AMAP, Alibaba Group</div>
         </div>
-        <div class="note-tldr">该工作聚焦于为通用智能体训练构建可规模化的“真实世界风格”环境合成体系。作者提出通过大规模环境生成、任务编排与动态评测闭环，让智能体在更接近真实约束的交互中持续进化，从而提升泛化能力和长期任务执行表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.20329" target="_blank">Image Generators are Generalist Vision Learners</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="24 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>24</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Valentin Gabeur, Radu Soricut</div>
-            <div class="note-meta-line">Affiliation: Google Research</div>
-        </div>
-        <div class="note-tldr">论文指出现代图像生成模型不仅能生成图像，还具备通用视觉表征学习能力。通过多种视觉理解任务评测，作者展示生成模型在分类、检索与跨模态对齐上的潜力，说明生成目标可反向促进更强的视觉理解与迁移性能。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.21691" target="_blank">There Will Be a Scientific Theory of Deep Learning</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jamie Simon</div>
-            <div class="note-meta-line">Affiliation: UC Berkeley and Imbue</div>
-        </div>
-        <div class="note-tldr">论文主张深度学习将形成可检验、可累积的科学理论体系，而非仅依赖经验工程。作者讨论了从经验规律到机制解释的关键路径，强调通过统一的理论框架连接优化、泛化与表示学习，以提升模型可预测性、可解释性和可控设计能力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://alignment.anthropic.com/2026/automated-w2s-researcher/" target="_blank">Automated Weak-to-Strong Researcher</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Anthropic Alignment Science Team</div>
-            <div class="note-meta-line">Affiliation: Anthropic</div>
-        </div>
-        <div class="note-tldr">Anthropic 构建自动化研究智能体，让其围绕 weak-to-strong 泛化问题提出想法、运行实验、读取日志并迭代改进。结果显示，这类 agent 在受限开放研究问题上能超过人类研究者基线，关键不只是生成想法，而是能根据早期负信号调整方向、诊断失败并持续爬坡。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.13018" target="_blank">Toward Autonomous Long-Horizon Engineering for ML Research</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="34 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>34</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Guoxin Chen, Wayne Xin Zhao</div>
-            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China</div>
-        </div>
-        <div class="note-tldr">提出 AiScientist，将论文复现和 ML 工程视为长程研究工程问题，通过轻量 orchestrator 加持久化 File-as-Bus 工作区，把实现、实验、失败诊断和结果总结外化为可检查项目状态。在 PaperBench 和 MLE-Bench Lite 上显著优于匹配基线，说明长期研究自动化的瓶颈在于累计项目状态而非单步推理。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.12162" target="_blank">AlphaEval: Evaluating Agents in Production</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Pengrui Lu, Pengfei Liu</div>
-            <div class="note-meta-line">Affiliation: SII, Shanghai Jiao Tong University, GAIR</div>
-        </div>
-        <div class="note-tldr">AlphaEval 面向真实生产环境评测 agent，收集 7 家公司 94 个任务，覆盖模糊需求、多模态输入、长程交付物和专家主观评价等生产复杂性。结果显示最佳商用 agent 配置平均仅 64.41 分，且 scaffold 影响可接近模型影响，暴露研究基准与生产可用性之间的明显差距。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.12374" target="_blank">Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="39 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>39</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: NVIDIA</div>
-            <div class="note-meta-line">Affiliation: NVIDIA</div>
-        </div>
-        <div class="note-tldr">介绍 Nemotron 3 Super，一个 120B 总参数、12B 激活参数的混合 Mamba-Attention MoE 模型，采用 LatentMoE、MTP speculative decoding 和 NVFP4 预训练。模型支持 1M 上下文，在保持接近前沿基准表现的同时，相比 GPT-OSS-120B 和 Qwen3.5-122B 获得更高推理吞吐，并开放权重与数据集。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.14004" target="_blank">Memory Transfer Learning: How Memories are Transferred Across Domains in Coding Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="30 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>30</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Kangsan Kim, Mengye Ren, Sung Ju Hwang</div>
-            <div class="note-meta-line">Affiliation: KAIST</div>
-        </div>
-        <div class="note-tldr">研究 coding agent 的跨域记忆迁移：把来自 SWE、MLE、DevOps、科学代码等异构任务的经验放入统一记忆池。实验显示跨域记忆平均提升 3.7%，收益主要来自验证流程、调试套路等元知识；抽象程度越高越容易迁移，低层轨迹则可能因过度具体而造成负迁移。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.12108" target="_blank">LLM-Based Automated Diagnosis Of Integration Test Failures At Google</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Celal Ziftci, Livio Dalloro</div>
-            <div class="note-meta-line">Affiliation: Google</div>
-        </div>
-        <div class="note-tldr">Google 提出 Auto-Diagnose，用 LLM 分析集成测试失败日志，提炼关键日志行并生成根因诊断，集成到内部 code review 系统 Critique 中。对 71 个真实失败的人工评估达到 90.14% 根因诊断准确率，部署后覆盖 52,635 个失败测试，用户反馈中仅 5.8% 被标为无帮助。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://www.nature.com/articles/s41586-026-10319-8" target="_blank">Language models transmit behavioural traits through hidden signals in data</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Alex Cloud, Owain Evans</div>
-            <div class="note-meta-line">Affiliation: Anthropic</div>
-        </div>
-        <div class="note-tldr">论文发现模型蒸馏可能发生 subliminal learning：教师模型的偏好或不安全行为可通过语义无关数据中的隐藏统计信号传给学生模型。即便训练数据表面不包含相关语义，学生仍可能继承教师的行为特质，提示未来安全评测需要关注模型和训练数据的来源链路。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://llm-as-a-verifier.github.io/" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: llm-as-a-verifier contributors</div>
-            <div class="note-meta-line">Affiliation: llm-as-a-verifier project</div>
-        </div>
-        <div class="note-tldr">LLM-as-a-Verifier 将验证器从单次离散打分扩展为细粒度分数 token 概率、重复验证和标准分解的组合奖励，并用成对锦标赛选择最佳轨迹。作为测试时扩展的 trajectory reward model，它在 Terminal-Bench 2 和 SWE-bench Verified 上提升 pass@1，说明更细粒度的验证可改善 agent 轨迹选择。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.13318" target="_blank">WebXSkill: Skill Learning for Autonomous Web Agents</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhaoyang Wang, Qianhui Wu, Huaxiu Yao</div>
-            <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill</div>
-        </div>
-        <div class="note-tldr">WebXSkill 为网页 agent 学习可执行技能，每个技能同时包含参数化动作程序和逐步自然语言指导，弥合纯文本 workflow 不可执行、代码技能不可解释的落差。框架从合成轨迹中抽取技能、按 URL 图组织检索，并支持 grounded/guided 两种执行模式，在 WebArena 和 WebVoyager 上显著提升成功率。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.08567" target="_blank">Multi-User Large Language Model Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="28 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>28</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shu Yang, Jiaxin Pei</div>
-            <div class="note-meta-line">Affiliation: KAUST</div>
-        </div>
-        <div class="note-tldr">论文将多用户 LLM agent 形式化为 multi-principal 决策问题，研究一个 agent 同时服务多个角色、偏好和权限不同的用户时的冲突、隐私和协调挑战。作者提出统一交互协议和三个压力测试场景，发现前沿模型在冲突优先级、长轮隐私保护和信息收集式协作上仍有系统性缺口。</div>
+        <div class="note-tldr">论文研究如何把原本依赖类别标签的一步图像生成框架扩展到文本条件场景。核心思路是构建更具判别性的文本表示，并将其与一步生成器的训练目标对齐，从而在不牺牲推理效率的前提下提升文本可控性与生成质量。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -581,28 +451,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.18394" target="_blank">OpenGame: Open Agentic Coding for Games</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yilei Jiang, Xiangyu Yue</div>
-            <div class="note-meta-line">Affiliation: CUHK MMLab</div>
-        </div>
-        <div class="note-tldr">OpenGame 是面向端到端网页游戏生成的开源 agentic coding 框架，针对游戏开发中的跨文件状态、引擎知识和可玩性验证问题设计 Game Skill。系统结合模板技能、调试技能和专用 GameCoder-27B，并提出 OpenGame-Bench，用构建健康度、视觉可用性和意图对齐评测生成游戏的真实可玩性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.13346" target="_blank">AgentSPEX: An Agent SPecification and EXecution Language</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="168 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>168</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Pengcheng Wang, Tong Zhang</div>
-            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
-        </div>
-        <div class="note-tldr">AgentSPEX 提出用 YAML 声明式语言描述 LLM agent workflow，把控制流、分支循环、并行执行、子模块和状态管理从 Python 框架中解耦。配套 harness 提供工具、沙箱、checkpoint、验证和日志，并有可视化编辑器；在 7 个基准和用户研究中展示更强可解释性和可维护性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.19636" target="_blank">CoInteract: Physically-Consistent Human-Object Interaction Video Synthesis via Spatially-Structured Co-Generation</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
         </div>
@@ -614,14 +462,14 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2604.20733" target="_blank">Near-Future Policy Optimization</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="77 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>77</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.18394" target="_blank">OpenGame: Open Agentic Coding for Games</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Chuanyu Qin, Peng Fu</div>
-            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences</div>
+            <div class="note-meta-line">Authors: Yilei Jiang, Xiangyu Yue</div>
+            <div class="note-meta-line">Affiliation: CUHK MMLab</div>
         </div>
-        <div class="note-tldr">NPO 针对 RLVR 中纯 on-policy 探索早期稀疏、后期平台的问题，引入同一训练 run 中“近未来 checkpoint”的轨迹作为辅助样本。该轨迹既比当前策略强，又比外部教师更接近当前分布，从而平衡质量和方差；AutoNPO 可根据在线信号自动触发干预并选择指导 checkpoint。</div>
+        <div class="note-tldr">OpenGame 是面向端到端网页游戏生成的开源 agentic coding 框架，针对游戏开发中的跨文件状态、引擎知识和可玩性验证问题设计 Game Skill。系统结合模板技能、调试技能和专用 GameCoder-27B，并提出 OpenGame-Bench，用构建健康度、视觉可用性和意图对齐评测生成游戏的真实可玩性。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -636,7 +484,173 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.20733" target="_blank">Near-Future Policy Optimization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="77 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>77</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chuanyu Qin, Peng Fu</div>
+            <div class="note-meta-line">Affiliation: Institute of Information Engineering, Chinese Academy of Sciences</div>
+        </div>
+        <div class="note-tldr">NPO 针对 RLVR 中纯 on-policy 探索早期稀疏、后期平台的问题，引入同一训练 run 中“近未来 checkpoint”的轨迹作为辅助样本。该轨迹既比当前策略强，又比外部教师更接近当前分布，从而平衡质量和方差；AutoNPO 可根据在线信号自动触发干预并选择指导 checkpoint。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.15804" target="_blank">Qwen3.5-Omni Technical Report</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qwen Team</div>
+            <div class="note-meta-line">Affiliation: Alibaba Group</div>
+        </div>
+        <div class="note-tldr">这份技术报告系统介绍 Qwen3.5-Omni 的多模态能力升级，包括跨模态输入理解、统一推理链路与更高效的推理部署。报告强调在文本、视觉与语音等场景中的端到端能力融合，并通过工程优化提升实际产品化表现与稳定性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.18292" target="_blank">Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guanting Dong</div>
+            <div class="note-meta-line">Affiliation: Agent-World Project Team</div>
+        </div>
+        <div class="note-tldr">该工作聚焦于为通用智能体训练构建可规模化的“真实世界风格”环境合成体系。作者提出通过大规模环境生成、任务编排与动态评测闭环，让智能体在更接近真实约束的交互中持续进化，从而提升泛化能力和长期任务执行表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.20329" target="_blank">Image Generators are Generalist Vision Learners</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Valentin Gabeur, Radu Soricut</div>
+            <div class="note-meta-line">Affiliation: Google Research</div>
+        </div>
+        <div class="note-tldr">论文指出现代图像生成模型不仅能生成图像，还具备通用视觉表征学习能力。通过多种视觉理解任务评测，作者展示生成模型在分类、检索与跨模态对齐上的潜力，说明生成目标可反向促进更强的视觉理解与迁移性能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.21691" target="_blank">There Will Be a Scientific Theory of Deep Learning</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jamie Simon</div>
+            <div class="note-meta-line">Affiliation: UC Berkeley and Imbue</div>
+        </div>
+        <div class="note-tldr">论文主张深度学习将形成可检验、可累积的科学理论体系，而非仅依赖经验工程。作者讨论了从经验规律到机制解释的关键路径，强调通过统一的理论框架连接优化、泛化与表示学习，以提升模型可预测性、可解释性和可控设计能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://alignment.anthropic.com/2026/automated-w2s-researcher/" target="_blank">Automated Weak-to-Strong Researcher</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Anthropic Alignment Science Team</div>
+            <div class="note-meta-line">Affiliation: Anthropic</div>
+        </div>
+        <div class="note-tldr">Anthropic 构建自动化研究智能体，让其围绕 weak-to-strong 泛化问题提出想法、运行实验、读取日志并迭代改进。结果显示，这类 agent 在受限开放研究问题上能超过人类研究者基线，关键不只是生成想法，而是能根据早期负信号调整方向、诊断失败并持续爬坡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.13018" target="_blank">Toward Autonomous Long-Horizon Engineering for ML Research</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guoxin Chen, Wayne Xin Zhao</div>
+            <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China</div>
+        </div>
+        <div class="note-tldr">提出 AiScientist，将论文复现和 ML 工程视为长程研究工程问题，通过轻量 orchestrator 加持久化 File-as-Bus 工作区，把实现、实验、失败诊断和结果总结外化为可检查项目状态。在 PaperBench 和 MLE-Bench Lite 上显著优于匹配基线，说明长期研究自动化的瓶颈在于累计项目状态而非单步推理。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.12162" target="_blank">AlphaEval: Evaluating Agents in Production</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Pengrui Lu, Pengfei Liu</div>
+            <div class="note-meta-line">Affiliation: SII, Shanghai Jiao Tong University, GAIR</div>
+        </div>
+        <div class="note-tldr">AlphaEval 面向真实生产环境评测 agent，收集 7 家公司 94 个任务，覆盖模糊需求、多模态输入、长程交付物和专家主观评价等生产复杂性。结果显示最佳商用 agent 配置平均仅 64.41 分，且 scaffold 影响可接近模型影响，暴露研究基准与生产可用性之间的明显差距。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.12374" target="_blank">Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: NVIDIA</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">介绍 Nemotron 3 Super，一个 120B 总参数、12B 激活参数的混合 Mamba-Attention MoE 模型，采用 LatentMoE、MTP speculative decoding 和 NVFP4 预训练。模型支持 1M 上下文，在保持接近前沿基准表现的同时，相比 GPT-OSS-120B 和 Qwen3.5-122B 获得更高推理吞吐，并开放权重与数据集。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.14004" target="_blank">Memory Transfer Learning: How Memories are Transferred Across Domains in Coding Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kangsan Kim, Mengye Ren, Sung Ju Hwang</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
+        </div>
+        <div class="note-tldr">研究 coding agent 的跨域记忆迁移：把来自 SWE、MLE、DevOps、科学代码等异构任务的经验放入统一记忆池。实验显示跨域记忆平均提升 3.7%，收益主要来自验证流程、调试套路等元知识；抽象程度越高越容易迁移，低层轨迹则可能因过度具体而造成负迁移。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.12108" target="_blank">LLM-Based Automated Diagnosis Of Integration Test Failures At Google</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Celal Ziftci, Livio Dalloro</div>
+            <div class="note-meta-line">Affiliation: Google</div>
+        </div>
+        <div class="note-tldr">Google 提出 Auto-Diagnose，用 LLM 分析集成测试失败日志，提炼关键日志行并生成根因诊断，集成到内部 code review 系统 Critique 中。对 71 个真实失败的人工评估达到 90.14% 根因诊断准确率，部署后覆盖 52,635 个失败测试，用户反馈中仅 5.8% 被标为无帮助。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.nature.com/articles/s41586-026-10319-8" target="_blank">Language models transmit behavioural traits through hidden signals in data</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alex Cloud, Owain Evans</div>
+            <div class="note-meta-line">Affiliation: Anthropic</div>
+        </div>
+        <div class="note-tldr">论文发现模型蒸馏可能发生 subliminal learning：教师模型的偏好或不安全行为可通过语义无关数据中的隐藏统计信号传给学生模型。即便训练数据表面不包含相关语义，学生仍可能继承教师的行为特质，提示未来安全评测需要关注模型和训练数据的来源链路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://llm-as-a-verifier.github.io/" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: llm-as-a-verifier contributors</div>
+            <div class="note-meta-line">Affiliation: llm-as-a-verifier project</div>
+        </div>
+        <div class="note-tldr">LLM-as-a-Verifier 将验证器从单次离散打分扩展为细粒度分数 token 概率、重复验证和标准分解的组合奖励，并用成对锦标赛选择最佳轨迹。作为测试时扩展的 trajectory reward model，它在 Terminal-Bench 2 和 SWE-bench Verified 上提升 pass@1，说明更细粒度的验证可改善 agent 轨迹选择。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.13318" target="_blank">WebXSkill: Skill Learning for Autonomous Web Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhaoyang Wang, Qianhui Wu, Huaxiu Yao</div>
+            <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill</div>
+        </div>
+        <div class="note-tldr">WebXSkill 为网页 agent 学习可执行技能，每个技能同时包含参数化动作程序和逐步自然语言指导，弥合纯文本 workflow 不可执行、代码技能不可解释的落差。框架从合成轨迹中抽取技能、按 URL 图组织检索，并支持 grounded/guided 两种执行模式，在 WebArena 和 WebVoyager 上显著提升成功率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2604.08567" target="_blank">Multi-User Large Language Model Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shu Yang, Jiaxin Pei</div>
+            <div class="note-meta-line">Affiliation: KAUST</div>
+        </div>
+        <div class="note-tldr">论文将多用户 LLM agent 形式化为 multi-principal 决策问题，研究一个 agent 同时服务多个角色、偏好和权限不同的用户时的冲突、隐私和协调挑战。作者提出统一交互协议和三个压力测试场景，发现前沿模型在冲突优先级、长轮隐私保护和信息收集式协作上仍有系统性缺口。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.21254" target="_blank">Hyperloop Transformers</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Abbas Zeitoun, Yoon Kim</div>
@@ -644,7 +658,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">Hyperloop Transformer 关注内存受限场景下的参数效率，把 Transformer 划分为 begin/middle/end 三段，仅循环复用 middle block，并在循环层级加入轻量 hyper-connections 扩展残差流。不同规模实验显示，它用约 50% 更少参数优于等深普通 Transformer 和 mHC Transformer，量化后优势仍保留。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

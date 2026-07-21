@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,58 +396,14 @@ h1 .archive-link:hover {
     <div class="source-header">2026-03-30 ~ 2026-04-05</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.25716" target="_blank">Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="157 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>157</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.26164" target="_blank">DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="365 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>365</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Kaijin Chen, Xiang Bai</div>
-            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology, Kling Team, Kuaishou Technology</div>
+            <div class="note-meta-line">Authors: Hao Liang, Wentao Zhang</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
         </div>
-        <div class="note-tldr">论文指出现有视频世界模型把场景当静态画布，目标离开视野后容易冻结或消失。作者提出“混合记忆”范式，并构建含 5.9 万片段的 HM-World 数据集与 HyDRA 检索式记忆架构，在动态主体一致性和整体生成质量上显著优于现有方法。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.25746" target="_blank">ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yawen Luo, Tianfan Xue</div>
-            <div class="note-meta-line">Affiliation: MMLab, CUHK, Kling Team, Kuaishou Technology</div>
-        </div>
-        <div class="note-tldr">针对多镜头视频生成交互性差、时延高的问题，ShotStream 将任务改写为基于历史上下文的因果“下一镜头”生成，并通过分布匹配蒸馏把双向模型蒸馏为因果学生。其全局/局部双缓存与两阶段自驱蒸馏可缓解跨镜头漂移和误差累积，实现单卡约 16 FPS 的实时生成。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.25723" target="_blank">Natural-Language Agent Harnesses</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="27 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>27</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Linyue Pan, Hai-Tao Zheng</div>
-            <div class="note-meta-line">Affiliation: Shenzhen International Graduate School, Tsinghua University</div>
-        </div>
-        <div class="note-tldr">论文将以往埋在控制器代码里的 agent harness 外化为可编辑自然语言工件，提出 NLAH 与配套运行时 IHR，用显式契约、可持久化产物和轻量适配器执行控制逻辑。作者在编程与计算机使用基准做可行性、模块消融和代码到文本迁移实验，验证了该范式的可移植与可研究性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.27027" target="_blank">TAPS: Task Aware Proposal Distributions for Speculative Sampling</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="147 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>147</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Mohamad Zbib, Hasan Abed Al Kader Hammoud</div>
-            <div class="note-meta-line">Affiliation: King Abdullah University of Science and Technology (KAUST), American University of Beirut (AUB)</div>
-        </div>
-        <div class="note-tldr">论文研究 speculative decoding 的提案分布是否需要“任务匹配”。作者在数学推理与通用对话数据上训练轻量 drafter，发现不同训练分布会显著影响接受长度；推理数据更适合数学题，对话数据更适合聊天评测。相比权重平均，基于置信度的路由与 merged-tree 验证能更稳健地融合专用 drafter，并获得更高加速收益。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.28052" target="_blank">Meta-Harness: End-to-End Optimization of Model Harnesses</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="22 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>22</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yoonho Lee, Chelsea Finn</div>
-            <div class="note-meta-line">Affiliation: Stanford University</div>
-        </div>
-        <div class="note-tldr">论文将 LLM 系统中的 harness（存取与组织上下文的代码）作为可优化对象，提出外循环搜索系统 Meta-Harness。其 agentic proposer 可访问历史候选代码、分数与执行轨迹，从而进行更有效的迭代。实验显示在文本分类、检索增强数学推理和 agentic coding 上，Meta-Harness 同时提升性能并降低上下文开销，证明自动化 harness engineering 可系统超过手工设计基线。</div>
+        <div class="note-tldr">该工作提出 DataFlex，将数据选择、领域配比调整与样本重加权三类数据中心训练范式统一到同一框架，并与常规 LLM 训练流程兼容。系统在模块化训练器中统一嵌入表示提取、推理与梯度计算等关键操作，支持大规模训练配置。实验显示动态数据策略在 MMLU、困惑度与效率上均优于静态全量训练或原始实现。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -467,27 +429,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.27538" target="_blank">LongCat-Next: Lexicalizing Modalities as Discrete Tokens</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="150 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>150</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Meituan LongCat Team, Ziwen Wang</div>
-            <div class="note-meta-line">Affiliation: Meituan LongCat Team, Meituan</div>
-        </div>
-        <div class="note-tldr">论文提出 DiNA 框架，将文本、视觉、音频统一到离散 token 空间做原生自回归建模；并以 dNaViT 实现任意分辨率视觉离散化与重建。基于该范式构建的 LongCat-Next 在理解与生成任务上兼顾表现，缓解离散视觉在理解侧的性能瓶颈，展示统一多模态词汇化建模的可行性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.28627" target="_blank">Shor’s algorithm is possible with as few as 10,000 reconfigurable atomic qubits</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Madelyn Cain, Dolev Bluvstein</div>
-            <div class="note-meta-line">Affiliation: Oratomic, California Institute of Technology</div>
-        </div>
-        <div class="note-tldr">论文结合高码率容错码、高效逻辑指令集与电路优化，给出 Shor 算法在密码学相关规模上可由约 1 万个可重构中性原子量子比特实现的资源估计。作者进一步分析了 2.6 万比特下离散对数与 RSA-2048 分解的时间量级，说明中性原子体系在容错量子计算落地上的现实潜力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.24414" target="_blank">ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="183 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>183</span></span>
         </div>
@@ -499,14 +440,25 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2603.26164" target="_blank">DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="365 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>365</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.25716" target="_blank">Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="157 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>157</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Hao Liang, Wentao Zhang</div>
-            <div class="note-meta-line">Affiliation: Peking University</div>
+            <div class="note-meta-line">Authors: Kaijin Chen, Xiang Bai</div>
+            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology, Kling Team, Kuaishou Technology</div>
         </div>
-        <div class="note-tldr">该工作提出 DataFlex，将数据选择、领域配比调整与样本重加权三类数据中心训练范式统一到同一框架，并与常规 LLM 训练流程兼容。系统在模块化训练器中统一嵌入表示提取、推理与梯度计算等关键操作，支持大规模训练配置。实验显示动态数据策略在 MMLU、困惑度与效率上均优于静态全量训练或原始实现。</div>
+        <div class="note-tldr">论文指出现有视频世界模型把场景当静态画布，目标离开视野后容易冻结或消失。作者提出“混合记忆”范式，并构建含 5.9 万片段的 HM-World 数据集与 HyDRA 检索式记忆架构，在动态主体一致性和整体生成质量上显著优于现有方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.25746" target="_blank">ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yawen Luo, Tianfan Xue</div>
+            <div class="note-meta-line">Affiliation: MMLab, CUHK, Kling Team, Kuaishou Technology</div>
+        </div>
+        <div class="note-tldr">针对多镜头视频生成交互性差、时延高的问题，ShotStream 将任务改写为基于历史上下文的因果“下一镜头”生成，并通过分布匹配蒸馏把双向模型蒸馏为因果学生。其全局/局部双缓存与两阶段自驱蒸馏可缓解跨镜头漂移和误差累积，实现单卡约 16 FPS 的实时生成。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -521,8 +473,63 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.27538" target="_blank">LongCat-Next: Lexicalizing Modalities as Discrete Tokens</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="150 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>150</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Meituan LongCat Team, Ziwen Wang</div>
+            <div class="note-meta-line">Affiliation: Meituan LongCat Team, Meituan</div>
+        </div>
+        <div class="note-tldr">论文提出 DiNA 框架，将文本、视觉、音频统一到离散 token 空间做原生自回归建模；并以 dNaViT 实现任意分辨率视觉离散化与重建。基于该范式构建的 LongCat-Next 在理解与生成任务上兼顾表现，缓解离散视觉在理解侧的性能瓶颈，展示统一多模态词汇化建模的可行性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.27027" target="_blank">TAPS: Task Aware Proposal Distributions for Speculative Sampling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="147 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>147</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mohamad Zbib, Hasan Abed Al Kader Hammoud</div>
+            <div class="note-meta-line">Affiliation: King Abdullah University of Science and Technology (KAUST), American University of Beirut (AUB)</div>
+        </div>
+        <div class="note-tldr">论文研究 speculative decoding 的提案分布是否需要“任务匹配”。作者在数学推理与通用对话数据上训练轻量 drafter，发现不同训练分布会显著影响接受长度；推理数据更适合数学题，对话数据更适合聊天评测。相比权重平均，基于置信度的路由与 merged-tree 验证能更稳健地融合专用 drafter，并获得更高加速收益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.25723" target="_blank">Natural-Language Agent Harnesses</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Linyue Pan, Hai-Tao Zheng</div>
+            <div class="note-meta-line">Affiliation: Shenzhen International Graduate School, Tsinghua University</div>
+        </div>
+        <div class="note-tldr">论文将以往埋在控制器代码里的 agent harness 外化为可编辑自然语言工件，提出 NLAH 与配套运行时 IHR，用显式契约、可持久化产物和轻量适配器执行控制逻辑。作者在编程与计算机使用基准做可行性、模块消融和代码到文本迁移实验，验证了该范式的可移植与可研究性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.28052" target="_blank">Meta-Harness: End-to-End Optimization of Model Harnesses</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yoonho Lee, Chelsea Finn</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">论文将 LLM 系统中的 harness（存取与组织上下文的代码）作为可优化对象，提出外循环搜索系统 Meta-Harness。其 agentic proposer 可访问历史候选代码、分数与执行轨迹，从而进行更有效的迭代。实验显示在文本分类、检索增强数学推理和 agentic coding 上，Meta-Harness 同时提升性能并降低上下文开销，证明自动化 harness engineering 可系统超过手工设计基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.28627" target="_blank">Shor’s algorithm is possible with as few as 10,000 reconfigurable atomic qubits</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Madelyn Cain, Dolev Bluvstein</div>
+            <div class="note-meta-line">Affiliation: Oratomic, California Institute of Technology</div>
+        </div>
+        <div class="note-tldr">论文结合高码率容错码、高效逻辑指令集与电路优化，给出 Shor 算法在密码学相关规模上可由约 1 万个可重构中性原子量子比特实现的资源估计。作者进一步分析了 2.6 万比特下离散对数与 RSA-2048 分解的时间量级，说明中性原子体系在容错量子计算落地上的现实潜力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2603.29957" target="_blank">Think Anywhere in Code Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="26 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>26</span></span>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xue Jiang, Yihong Dong</div>
@@ -533,6 +540,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.01178" target="_blank">Screening Is Enough</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ken M. Nakanishi, Ken M. Nakanishi</div>
@@ -543,7 +551,7 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2604.01193" target="_blank">Embarrassingly Simple Self-Distillation Improves Code Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="56 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>56</span></span>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ruixiang Zhang, Yizhe Zhang</div>
@@ -551,7 +559,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文提出无需教师模型、验证器或强化学习的简单自蒸馏 SSD：先按温度与截断策略采样模型自身解答，再用这些样本做标准监督微调。该方法将 Qwen3-30B-Instruct 在 LiveCodeBench v6 的 pass@1 显著提升，并在不同规模与家族模型上保持增益。作者进一步分析其机制在于缓解解码中的精度与探索冲突，按上下文重塑 token 分布。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

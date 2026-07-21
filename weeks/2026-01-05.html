@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,8 +396,30 @@ h1 .archive-link:hover {
     <div class="source-header">2026-01-05 ~ 2026-01-11</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.24880" target="_blank">mHC: Manifold-Constrained Hyper-Connections</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="331 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>331</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhenda Xie, Zhenda Xie</div>
+            <div class="note-meta-line">Affiliation: DeepSeek</div>
+        </div>
+        <div class="note-tldr">论文提出了流形约束超连接（mHC），这是一种即插即用的模块，用于优化Transformer架构。mHC通过将隐藏状态约束在流形空间内，改善了梯度的传播和模型的训练稳定性。实验表明，mHC在多种语言模型基准测试中提升了性能，特别是在深层网络训练中表现出更好的收敛性和鲁棒性，为构建更深、更强大的大模型提供了新的思路。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.24601" target="_blank">Recursive Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="99 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>99</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alex L. Zhang, Omar Khattab</div>
+            <div class="note-meta-line">Affiliation: MIT</div>
+        </div>
+        <div class="note-tldr">论文介绍了递归语言模型（RLMs），这是一种能够通过递归调用自身来生成中间推理步骤（“思想”）的架构。与传统的链式思维（CoT）不同，RLM允许模型在生成最终答案之前，动态地展开任意深度的推理树。这种方法显著增强了模型解决复杂问题的能力，使其能够处理需要多步规划和回溯的任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.20491" target="_blank">Step-DeepResearch Technical Report</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="89 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>89</span></span>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chen Hu, Yibo Zhu.</div>
@@ -402,7 +430,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.21218" target="_blank">Latent Implicit Visual Reasoning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="70 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>70</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kelvin Li, Roei Herzig.</div>
@@ -423,7 +450,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.22047" target="_blank">MAI-UI Technical Report: Real-World Centric Foundation GUI Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="31 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>31</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hanzhang Zhou, Steven Hoi.</div>
@@ -434,7 +460,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.23707" target="_blank">Training AI Co-Scientists Using Rubric Rewards</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="21 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>21</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shashwat Goel, Chenxi Whitehouse.</div>
@@ -445,7 +470,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.23675" target="_blank">End-to-End Test-Time Training for Long Context</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="24 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>24</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Arnuv Tandon, Yu Sun.</div>
@@ -455,36 +479,13 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2512.24880" target="_blank">mHC: Manifold-Constrained Hyper-Connections</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="331 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>331</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhenda Xie, Zhenda Xie</div>
-            <div class="note-meta-line">Affiliation: DeepSeek</div>
-        </div>
-        <div class="note-tldr">论文提出了流形约束超连接（mHC），这是一种即插即用的模块，用于优化Transformer架构。mHC通过将隐藏状态约束在流形空间内，改善了梯度的传播和模型的训练稳定性。实验表明，mHC在多种语言模型基准测试中提升了性能，特别是在深层网络训练中表现出更好的收敛性和鲁棒性，为构建更深、更强大的大模型提供了新的思路。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.23165" target="_blank">Evaluating Parameter Efficient Methods for RLVR</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="28 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>28</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qingyu Yin, Jinjin Gu</div>
             <div class="note-meta-line">Affiliation: Zhejiang University</div>
         </div>
         <div class="note-tldr">本文评估了参数高效微调（PEFT）方法（如LoRA）在验证奖励强化学习（RLVR）中的表现。研究发现，虽然PEFT方法在参数量上远小于全量微调，但在特定条件下（如适当的秩和学习率），它们能够达到与全量微调相当的性能。这项工作为在计算资源受限的情况下进行高效的强化学习对齐提供了实证依据和指导。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2512.24601" target="_blank">Recursive Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="99 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>99</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Alex L. Zhang, Omar Khattab</div>
-            <div class="note-meta-line">Affiliation: MIT</div>
-        </div>
-        <div class="note-tldr">论文介绍了递归语言模型（RLMs），这是一种能够通过递归调用自身来生成中间推理步骤（“思想”）的架构。与传统的链式思维（CoT）不同，RLM允许模型在生成最终答案之前，动态地展开任意深度的推理树。这种方法显著增强了模型解决复杂问题的能力，使其能够处理需要多步规划和回溯的任务。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -509,7 +510,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.16848" target="_blank">Meta-RL Induces Exploration in Language Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="12 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>12</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yulun Jiang, Maria Brbic</div>
@@ -530,7 +530,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.16649" target="_blank">JustRL: Scaling a 1.5B LLM with a Simple RL Recipe</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="32 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>32</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bingxiang He, Zhiyuan Liu</div>
@@ -571,7 +570,6 @@ h1 .archive-link:hover {
     <div class="note-card">
         <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.14080" target="_blank">SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="10 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>10</span></span>
         </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Wentao Guo, Tri Dao</div>
@@ -579,7 +577,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">本文提出了SonicMoE，一种针对混合专家模型（MoE）的加速与显存优化方案。随着MoE模型向高细粒度（Fine-grained）和高稀疏性发展，硬件效率面临挑战。SonicMoE通过设计内存高效的前向/后向算法，最小化后向传播的激活缓存（减少45%显存占用），并利用GPU内核重叠IO与计算。此外，文章提出了“Tile-aware Token Rounding”算法，解决了稀疏MoE中的计算浪费问题。在Hopper GPU上，SonicMoE相比ScatterMoE实现了1.86倍的吞吐量提升，有效支持了大规模细粒度MoE的高效训练。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

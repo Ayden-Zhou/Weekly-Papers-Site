@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,28 +396,6 @@ h1 .archive-link:hover {
     <div class="source-header">2026-06-15 ~ 2026-06-21</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.13432" target="_blank">OmniDirector: General Multi-Shot Camera Cloning without Cross-Paired Data</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="113 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>113</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jiwen Liu, Yan Zhou</div>
-            <div class="note-meta-line">Affiliation: Kling Team, Kuaishou Technology</div>
-        </div>
-        <div class="note-tldr">论文提出 OmniDirector，用视频中的相机运动作为直观控制信号，使用 camera grid 表示多镜头轨迹，并在百万级 camera grid-video 数据上训练统一框架。方法结合分层提示扩展 agent 协调角色、动作与镜头，在复杂 camera motion cloning 中展现更好的可控性与生成质量。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.17030" target="_blank">Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="47 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>47</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jie Zhang, Chenfei Wu</div>
-            <div class="note-meta-line">Affiliation: Qwen Team</div>
-        </div>
-        <div class="note-tldr">提出 Qwen-RobotWorld，用自然语言作为统一动作接口，把机器人操作、自动驾驶、室内导航和人到机器人迁移统一为条件视频世界建模。方法结合双流 MMDiT、Qwen2.5-VL 动作编码、8.6M 视频文本语料和渐进课程训练，在多个 embodied world model 基准上取得领先或强竞争结果。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2606.14777" target="_blank">JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="214 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>214</span></span>
         </div>
@@ -420,6 +404,28 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: JD.com</div>
         </div>
         <div class="note-tldr">提出开源 8B 视觉优先交互模型 JoyAI-VL-Interaction，使模型能持续观看视频流并自主决定沉默、回应或委托后台模型。系统支持可插拔 ASR/TTS、记忆与后台大模型，在六类实时场景中相较 Doubao 与 Gemini 视频助手获得更高人工偏好。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.18023" target="_blank">LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="210 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>210</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jian Yang, Bryan Dai</div>
+            <div class="note-meta-line">Affiliation: Beihang University, IQuest Research, Langboat, Renmin University of China</div>
+        </div>
+        <div class="note-tldr">研究 Parallel Loop Transformer 的 loop count 选择，并训练 7B LoopCoder-v2 系列。结果显示双循环模型在代码生成、推理、agentic software engineering 和工具使用上普遍优于非循环基线，SWE-bench Verified 从 43.0 提升到 64.4；三轮以上反而退化，揭示 refinement gain 与 CLP mismatch cost 的非单调权衡。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.19195" target="_blank">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="141 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>141</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kangsheng Duan, Xinggang Wang</div>
+            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">以 Local-lambda Mix Interaction 在固定大小线性矩阵中压缩局部空间与全局语义，再用潜空间自适应多粒度蒸馏释放小模型容量。0.22B Moebius 以不足 FLUX.1-Fill 2% 的参数达到或超过其修复质量，端到端推理加速超过 15 倍。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -445,112 +451,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.15956" target="_blank">You Don&#x27;t Need Strong Assumptions: Visual Representation Learning via Temporal Differences</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="12 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>12</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Ninad Daithankar, Heng Ji</div>
-            <div class="note-meta-line">Affiliation: UIUC, New York University</div>
-        </div>
-        <div class="note-tldr">提出 TDV，从视频中用“过去导致未来”的弱因果假设替代增强、mask、crop 等强归纳偏置。方法联合训练图像编码器与运动编码器，使当前帧表示加上运动编码能预测下一帧表示；实验显示数据规模增大时偏置强度应降低，TDV 在 dense spatial tasks 上可匹配现有 SOTA recipe。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.18023" target="_blank">LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="210 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>210</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jian Yang, Bryan Dai</div>
-            <div class="note-meta-line">Affiliation: Beihang University, IQuest Research, Langboat, Renmin University of China</div>
-        </div>
-        <div class="note-tldr">研究 Parallel Loop Transformer 的 loop count 选择，并训练 7B LoopCoder-v2 系列。结果显示双循环模型在代码生成、推理、agentic software engineering 和工具使用上普遍优于非循环基线，SWE-bench Verified 从 43.0 提升到 64.4；三轮以上反而退化，揭示 refinement gain 与 CLP mismatch cost 的非单调权衡。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.16140" target="_blank">VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="123 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>123</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Sen Xu, Junlin Zhang</div>
-            <div class="note-meta-line">Affiliation: Sina Weibo Inc.</div>
-        </div>
-        <div class="note-tldr">技术报告提出 3B 稠密模型 VibeThinker-3B，探索小模型承载可验证推理的上限。它沿 Spectrum-to-Signal 后训练路线，结合课程式 SFT、多领域 RL 与离线自蒸馏，在 AIME26 达 94.3（测试时扩展 97.1）、LiveCodeBench v6 Pass@1 80.2，并在未见 LeetCode 竞赛保持 96.1% 通过率，同时 IFEval 93.4，说明强推理可压缩进紧凑模型核心。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.18208" target="_blank">Looped World Models</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="482 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>482</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Hongyuan Adam Lu, Wai Lam</div>
-            <div class="note-meta-line">Affiliation: FaceMind Research Asia</div>
-        </div>
-        <div class="note-tldr">提出 LoopWM，将参数共享的循环 Transformer block 用于 latent dynamics，并用谱约束残差动态保证长 rollout 稳定。模型可按转移复杂度自适应增加循环次数，在保持或提升预测精度的同时显著减少参数，提出相对模型规模与数据量正交的 iterative latent depth scaling 轴。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.18246" target="_blank">Variable-Width Transformers</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="16 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>16</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zhaofeng Wu, Yoon Kim</div>
-            <div class="note-meta-line">Affiliation: MIT</div>
-        </div>
-        <div class="note-tldr">研究 Transformer 宽度是否应逐层均匀分配，提出 x 形 &gt; &lt;former：早晚层更宽、中间层更窄，并用无参数 residual resizing 连接不同宽度。200M-2B dense 与 3B MoE 实验显示其相对等参 uniform baseline 降低 loss，并节省约 22% FLOPs、15% KV cache/IO。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.07489" target="_blank">How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jeremy Yang, Jerry Ma</div>
-            <div class="note-meta-line">Affiliation: Harvard University</div>
-        </div>
-        <div class="note-tldr">基于 Perplexity Search 与 Computer 的生产数据，用近似相同查询作自然实验：Computer 每会话自主工作 26 分钟，将匹配任务耗时从 269 分钟降至 36 分钟，估算时间与成本分别降低 87% 和 94%，不满意率也低 55%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.07513" target="_blank">Agentopia: Long-Term Life Simulation and Learning in Agent Societies</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xintao Wang, Yunzhe Tao</div>
-            <div class="note-meta-line">Affiliation: Fudan University</div>
-        </div>
-        <div class="note-tldr">在 Agentopia 中让 100 个代理自主生活 10 个模拟年，持续成长、建立关系并追求需求目标；以类似人类福祉的生活奖励做拒绝采样训练。系统涌现丰富社会行为，训练后的模型在角色扮演基准上提升 15.6%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.04223" target="_blank">Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Michal Wawer, Jaroslaw A. Chudziak</div>
-            <div class="note-meta-line">Affiliation: Warsaw University of Technology</div>
-        </div>
-        <div class="note-tldr">指出价值敏感任务中的分歧可能是规范不确定性而非错误，不能只追求投票共识。框架按推理相似度和结论一致性划分四类符号分歧状态，并用可撤销规则路由内容审核，为 LLM 审议与符号策略推理搭桥。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.09076" target="_blank">Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="66 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>66</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xin Jin, Steven C. H. Hoi</div>
-            <div class="note-meta-line">Affiliation: Z-Image Team, Alibaba Group</div>
-        </div>
-        <div class="note-tldr">Z-Reward 用 27B 教师推理主观视觉 rubric 的分数分布，再以 RISD 把推理条件分布蒸馏进 9B 学生，推理时无需显式思维链。教师/学生人类偏好准确率达 89.6%/88.6%，作为可微奖励使文生图较 SFT 净提升 41.3%。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.17551" target="_blank">Reversal Q-Learning</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Aditya Oberai, Sergey Levine</div>
-            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
-        </div>
-        <div class="note-tldr">在扩展 MDP 中把流模型的每次细化视作动作，通过反转流生成虚拟在线轨迹以适配离线数据，并降低长时域偏差和方差。RQL 无需反向传播穿过完整生成过程，能直接训练表达力强的流策略，在 50 个机器人任务上取得最佳平均离线 RL 表现。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2606.14502" target="_blank">From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="116 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>116</span></span>
         </div>
@@ -562,28 +462,6 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.12384" target="_blank">APPO: Agentic Procedural Policy Optimization</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="79 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>79</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Xucong Wang, Xiangxiang Chu</div>
-            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
-        </div>
-        <div class="note-tldr">不再只在工具边界分支，而用结合 token 不确定性与后续似然增益的 Branching Score 定位细粒度关键决策点，并以过程级优势分配信用。13 个基准上 APPO 较强代理 RL 基线稳定提升近 4 分，同时保持工具效率与可解释性。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.06036" target="_blank">Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="75 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>75</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Shuo Ji, Yibo Li</div>
-            <div class="note-meta-line">Affiliation: National University of Singapore</div>
-        </div>
-        <div class="note-tldr">MRAgent 以 Cue-Tag-Content 图表示关联记忆，把推理嵌入访问过程，根据已获证据迭代扩展和剪枝路径，而非固定 top-k 后再推理。在 LoCoMo 与 LongMemEval 上较强基线最高提升 23%，并显著降低 token 与运行时间。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2606.16993" target="_blank">DreamX-World 1.0: A General-Purpose Interactive World Model</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="114 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>114</span></span>
         </div>
@@ -592,6 +470,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: DreamX Team</div>
         </div>
         <div class="note-tldr">通用文本/图像到视频交互世界模型支持相机导航、区域重访和可提示事件。E-PRoPE、因果强制、长滚动训练及几何记忆降低自回归漂移；混合精度和流水并行使其在 8 张 RTX 5090 上达 16 FPS，综合分超过对比模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.13432" target="_blank">OmniDirector: General Multi-Shot Camera Cloning without Cross-Paired Data</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="113 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>113</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiwen Liu, Yan Zhou</div>
+            <div class="note-meta-line">Affiliation: Kling Team, Kuaishou Technology</div>
+        </div>
+        <div class="note-tldr">论文提出 OmniDirector，用视频中的相机运动作为直观控制信号，使用 camera grid 表示多镜头轨迹，并在百万级 camera grid-video 数据上训练统一框架。方法结合分层提示扩展 agent 协调角色、动作与镜头，在复杂 camera motion cloning 中展现更好的可控性与生成质量。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -617,6 +506,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.12384" target="_blank">APPO: Agentic Procedural Policy Optimization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="79 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>79</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xucong Wang, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">不再只在工具边界分支，而用结合 token 不确定性与后续似然增益的 Branching Score 定位细粒度关键决策点，并以过程级优势分配信用。13 个基准上 APPO 较强代理 RL 基线稳定提升近 4 分，同时保持工具效率与可解释性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2606.18195" target="_blank">Learning from the Self-future: On-policy Self-distillation for dLLMs</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="77 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>77</span></span>
         </div>
@@ -628,16 +528,126 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2606.19195" target="_blank">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="141 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>141</span></span>
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.06036" target="_blank">Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="75 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>75</span></span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Kangsheng Duan, Xinggang Wang</div>
-            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
+            <div class="note-meta-line">Authors: Shuo Ji, Yibo Li</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
         </div>
-        <div class="note-tldr">以 Local-lambda Mix Interaction 在固定大小线性矩阵中压缩局部空间与全局语义，再用潜空间自适应多粒度蒸馏释放小模型容量。0.22B Moebius 以不足 FLUX.1-Fill 2% 的参数达到或超过其修复质量，端到端推理加速超过 15 倍。</div>
+        <div class="note-tldr">MRAgent 以 Cue-Tag-Content 图表示关联记忆，把推理嵌入访问过程，根据已获证据迭代扩展和剪枝路径，而非固定 top-k 后再推理。在 LoCoMo 与 LongMemEval 上较强基线最高提升 23%，并显著降低 token 与运行时间。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.17030" target="_blank">Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jie Zhang, Chenfei Wu</div>
+            <div class="note-meta-line">Affiliation: Qwen Team</div>
+        </div>
+        <div class="note-tldr">提出 Qwen-RobotWorld，用自然语言作为统一动作接口，把机器人操作、自动驾驶、室内导航和人到机器人迁移统一为条件视频世界建模。方法结合双流 MMDiT、Qwen2.5-VL 动作编码、8.6M 视频文本语料和渐进课程训练，在多个 embodied world model 基准上取得领先或强竞争结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.15956" target="_blank">You Don&#x27;t Need Strong Assumptions: Visual Representation Learning via Temporal Differences</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ninad Daithankar, Heng Ji</div>
+            <div class="note-meta-line">Affiliation: UIUC, New York University</div>
+        </div>
+        <div class="note-tldr">提出 TDV，从视频中用“过去导致未来”的弱因果假设替代增强、mask、crop 等强归纳偏置。方法联合训练图像编码器与运动编码器，使当前帧表示加上运动编码能预测下一帧表示；实验显示数据规模增大时偏置强度应降低，TDV 在 dense spatial tasks 上可匹配现有 SOTA recipe。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.16140" target="_blank">VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sen Xu, Junlin Zhang</div>
+            <div class="note-meta-line">Affiliation: Sina Weibo Inc.</div>
+        </div>
+        <div class="note-tldr">技术报告提出 3B 稠密模型 VibeThinker-3B，探索小模型承载可验证推理的上限。它沿 Spectrum-to-Signal 后训练路线，结合课程式 SFT、多领域 RL 与离线自蒸馏，在 AIME26 达 94.3（测试时扩展 97.1）、LiveCodeBench v6 Pass@1 80.2，并在未见 LeetCode 竞赛保持 96.1% 通过率，同时 IFEval 93.4，说明强推理可压缩进紧凑模型核心。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.18208" target="_blank">Looped World Models</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hongyuan Adam Lu, Wai Lam</div>
+            <div class="note-meta-line">Affiliation: FaceMind Research Asia</div>
+        </div>
+        <div class="note-tldr">提出 LoopWM，将参数共享的循环 Transformer block 用于 latent dynamics，并用谱约束残差动态保证长 rollout 稳定。模型可按转移复杂度自适应增加循环次数，在保持或提升预测精度的同时显著减少参数，提出相对模型规模与数据量正交的 iterative latent depth scaling 轴。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.18246" target="_blank">Variable-Width Transformers</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhaofeng Wu, Yoon Kim</div>
+            <div class="note-meta-line">Affiliation: MIT</div>
+        </div>
+        <div class="note-tldr">研究 Transformer 宽度是否应逐层均匀分配，提出 x 形 &gt; &lt;former：早晚层更宽、中间层更窄，并用无参数 residual resizing 连接不同宽度。200M-2B dense 与 3B MoE 实验显示其相对等参 uniform baseline 降低 loss，并节省约 22% FLOPs、15% KV cache/IO。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.07489" target="_blank">How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jeremy Yang, Jerry Ma</div>
+            <div class="note-meta-line">Affiliation: Harvard University</div>
+        </div>
+        <div class="note-tldr">基于 Perplexity Search 与 Computer 的生产数据，用近似相同查询作自然实验：Computer 每会话自主工作 26 分钟，将匹配任务耗时从 269 分钟降至 36 分钟，估算时间与成本分别降低 87% 和 94%，不满意率也低 55%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.07513" target="_blank">Agentopia: Long-Term Life Simulation and Learning in Agent Societies</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xintao Wang, Yunzhe Tao</div>
+            <div class="note-meta-line">Affiliation: Fudan University</div>
+        </div>
+        <div class="note-tldr">在 Agentopia 中让 100 个代理自主生活 10 个模拟年，持续成长、建立关系并追求需求目标；以类似人类福祉的生活奖励做拒绝采样训练。系统涌现丰富社会行为，训练后的模型在角色扮演基准上提升 15.6%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.04223" target="_blank">Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Michal Wawer, Jaroslaw A. Chudziak</div>
+            <div class="note-meta-line">Affiliation: Warsaw University of Technology</div>
+        </div>
+        <div class="note-tldr">指出价值敏感任务中的分歧可能是规范不确定性而非错误，不能只追求投票共识。框架按推理相似度和结论一致性划分四类符号分歧状态，并用可撤销规则路由内容审核，为 LLM 审议与符号策略推理搭桥。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.09076" target="_blank">Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xin Jin, Steven C. H. Hoi</div>
+            <div class="note-meta-line">Affiliation: Z-Image Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">Z-Reward 用 27B 教师推理主观视觉 rubric 的分数分布，再以 RISD 把推理条件分布蒸馏进 9B 学生，推理时无需显式思维链。教师/学生人类偏好准确率达 89.6%/88.6%，作为可微奖励使文生图较 SFT 净提升 41.3%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2606.17551" target="_blank">Reversal Q-Learning</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aditya Oberai, Sergey Levine</div>
+            <div class="note-meta-line">Affiliation: University of California, Berkeley</div>
+        </div>
+        <div class="note-tldr">在扩展 MDP 中把流模型的每次细化视作动作，通过反转流生成虚拟在线轨迹以适配离线数据，并降低长时域偏差和方差。RQL 无需反向传播穿过完整生成过程，能直接训练表达力强的流策略，在 50 个机器人任务上取得最佳平均离线 RL 表现。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

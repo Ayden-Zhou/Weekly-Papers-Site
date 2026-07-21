@@ -314,10 +314,10 @@ h1 .archive-link:hover {
 .note-title a:hover {
     text-decoration: underline;
 }
-.note-upvotes {
+.note-upvotes,
+.note-source {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.24rem;
     padding-top: 0.14rem;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -326,6 +326,12 @@ h1 .archive-link:hover {
     white-space: nowrap;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
 }
 .note-upvotes-arrow {
     color: var(--link);
@@ -390,6 +396,39 @@ h1 .archive-link:hover {
     <div class="source-header">2025-12-15 ~ 2025-12-21</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.08269" target="_blank">EgoX: Egocentric Video Generation from a Single Exocentric Video</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="124 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>124</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Taewoong Kang, Jaegul Choo</div>
+            <div class="note-meta-line">Affiliation: KAIST</div>
+        </div>
+        <div class="note-tldr">EgoX是一个新颖的框架，用于从单个外以中心（第三人称）视频生成以自我中心（第一人称）的视频。该方法利用大规模视频扩散模型的预训练知识，通过轻量级的LoRA适配和统一的条件策略，解决了视角转换中的剧烈变化和视野不重叠挑战，成功合成了几何一致且内容保真的第一人称视频。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.14691" target="_blank">MMGR: Multi-Modal Generative Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zefan Cai, Haozhe Zhao</div>
+            <div class="note-meta-line">Affiliation: University of Wisconsin - Madison</div>
+        </div>
+        <div class="note-tldr">提出了MMGR评测基准，旨在系统评估多模态生成模型的物理、逻辑、空间（2D/3D）及时间推理能力。涵盖抽象推理、具身导航和物理常识三个领域。评估显示，现有主流视频和图像模型在抽象推理和长程空间规划上表现欠佳，倾向于视觉合理性而非因果正确性。MMGR为构建具备真正推理能力的生成式世界模型提供了统一的诊断工具。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.14614" target="_blank">WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="72 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>72</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Wenqiang Sun, Chunchao Guo</div>
+            <div class="note-meta-line">Affiliation: Tencent</div>
+        </div>
+        <div class="note-tldr">推出了WorldPlay，一种支持实时交互的流式视频扩散世界模型。该模型通过双动作表示、重构上下文记忆（Reconstituted Context Memory）以及上下文强制蒸馏（Context Forcing）等创新技术，有效解决了视频生成中速度与长程几何一致性的权衡问题，实现了720p分辨率下24FPS的实时、一致且可控的世界模拟。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2512.07461" target="_blank">Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning</a></div>
         </div>
         <div class="note-meta">
@@ -427,17 +466,6 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Beijing Jiaotong University</div>
         </div>
         <div class="note-tldr">针对XR设备对高质量立体视频的需求，本文提出了StereoWorld，一种几何感知的单目到立体视频生成框架。该方法解决了单目视频转立体视频过程中常见的深度不一致和伪影问题，通过引入几何约束和视差一致性模块，生成具有精确深度感和视觉舒适度的立体视频内容。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2512.08269" target="_blank">EgoX: Egocentric Video Generation from a Single Exocentric Video</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="124 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>124</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Taewoong Kang, Jaegul Choo</div>
-            <div class="note-meta-line">Affiliation: KAIST</div>
-        </div>
-        <div class="note-tldr">EgoX是一个新颖的框架，用于从单个外以中心（第三人称）视频生成以自我中心（第一人称）的视频。该方法利用大规模视频扩散模型的预训练知识，通过轻量级的LoRA适配和统一的条件策略，解决了视角转换中的剧烈变化和视野不重叠挑战，成功合成了几何一致且内容保真的第一人称视频。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -529,29 +557,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对现有3D生成模型在复杂拓扑和细节表现上的局限，提出了一种基于原生3D数据的结构化潜在表示方法。核心是全素体（O-Voxel）稀疏结构，能同时编码几何与外观。结合稀疏压缩VAE和40亿参数的流匹配模型，该方法实现了高质量、高效率的3D资产生成，在几何完整性和纹理质量上均超越了现有最先进模型。</div>
     </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2512.14614" target="_blank">WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="72 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>72</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Wenqiang Sun, Chunchao Guo</div>
-            <div class="note-meta-line">Affiliation: Tencent</div>
-        </div>
-        <div class="note-tldr">推出了WorldPlay，一种支持实时交互的流式视频扩散世界模型。该模型通过双动作表示、重构上下文记忆（Reconstituted Context Memory）以及上下文强制蒸馏（Context Forcing）等创新技术，有效解决了视频生成中速度与长程几何一致性的权衡问题，实现了720p分辨率下24FPS的实时、一致且可控的世界模拟。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/abs/2512.14691" target="_blank">MMGR: Multi-Modal Generative Reasoning</a></div>
-            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Zefan Cai, Haozhe Zhao</div>
-            <div class="note-meta-line">Affiliation: University of Wisconsin - Madison</div>
-        </div>
-        <div class="note-tldr">提出了MMGR评测基准，旨在系统评估多模态生成模型的物理、逻辑、空间（2D/3D）及时间推理能力。涵盖抽象推理、具身导航和物理常识三个领域。评估显示，现有主流视频和图像模型在抽象推理和长程空间规划上表现欠佳，倾向于视觉合理性而非因果正确性。MMGR为构建具备真正推理能力的生成式世界模型提供了统一的诊断工具。</div>
-    </div>
-    <div class="footer">Last updated: 2026-07-21 15:44</div>
+    <div class="footer">Last updated: 2026-07-21 16:50</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
