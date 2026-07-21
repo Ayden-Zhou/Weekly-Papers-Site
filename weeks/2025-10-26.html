@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-10-26</div>
     <div class="source-header">2025-10-20 ~ 2025-10-26</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://thinkingmachines.ai/blog/on-policy-distillation/" target="_blank">On-Policy Distillation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://thinkingmachines.ai/blog/on-policy-distillation/" target="_blank">On-Policy Distillation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kevin Lu, Kevin Lu.</div>
             <div class="note-meta-line">Affiliation: Thinking Machines Lab.</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“on-policy distillation”：从学生模型的自采样轨迹出发，用教师对每个token的评分（如反向KL）提供密集监督，兼具RL的在策略与蒸馏的效率。用于数学推理与助手训练，成本远低于RL且接近教师表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://wallstreetcn.com/articles/3757435" target="_blank">Andrej Karpathy最新万字采访：AGI还需10年，RL其实很糟糕，AGI不会导致经济大爆发</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://wallstreetcn.com/articles/3757435" target="_blank">Andrej Karpathy最新万字采访：AGI还需10年，RL其实很糟糕，AGI不会导致经济大爆发</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: AI寒武纪, AI寒武纪.</div>
             <div class="note-meta-line">Affiliation: 华尔街见闻.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">整篇整理 Karpathy 在 Dwarkesh 采访中的观点：AGI距今约十年；RL信号稀疏、效率低但目前最可行；智能体将经历“十年期”；LLM缺乏记忆与持续学习，AI对经济更可能带来平滑提升而非爆炸式增长。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.25741" target="_blank">Scaling Latent Reasoning via Looped Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.25741" target="_blank">Scaling Latent Reasoning via Looped Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Rui-Jie Zhu, Jason Eshraghian</div>
             <div class="note-meta-line">Affiliation: University of California, Santa Cruz</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出LoopLM：在预训练中引入“循环”潜在推理与熵正则的自适应深度，规模至7.7T语料；小模型即可逼近/超越更大基线。优势主要来自“知识操控”而非容量扩张，推理轨迹与最终答案更一致。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23607" target="_blank">Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23607" target="_blank">Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yujia Zhang, Hengshuang Zhao</div>
             <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出联合2D-3D自监督框架Concerto：3D内模态自蒸馏与2D-3D对齐协同，学习一致、可迁移的空间表征；在线性探测与全量微调上刷新多项场景理解SOTA，并支持视频提升到点云的跨模态应用。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26697" target="_blank">AutoDeco: A Zero-shot Decorator Detector and Evaluation Engine</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26697" target="_blank">AutoDeco: A Zero-shot Decorator Detector and Evaluation Engine</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhichao Wang, Xiaoying Tang</div>
             <div class="note-meta-line">Affiliation: Tencent AI Lab, The Chinese University of Hong Kong, Shenzhen</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向装饰元素的零样本检测与评测引擎：文本可控、类别开放；构建大规模合成与标注数据，并提出端到端OmniDecor方案，显著提升图像/视频中装饰元素的识别、理解与可控生成能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.24668" target="_blank">InteractComp: Evaluating Search Agents With Ambiguous Queries</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.24668" target="_blank">InteractComp: Evaluating Search Agents With Ambiguous Queries</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Mingyi Deng, Jiayi Zhang</div>
             <div class="note-meta-line">Affiliation: DeepWisdom</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建评测搜索代理处理歧义查询的基准：210题、9领域。最强模型完整上下文71.5%，互动场景仅13.73%，暴露系统性过度自信；强制提问显著提升，适合作为RLVR训练信号以增强交互能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23538" target="_blank">JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23538" target="_blank">JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qiushi Sun, Fei Yuan</div>
             <div class="note-meta-line">Affiliation: The University of Hong Kong</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出统一的视觉-程序接口与JanusCode-800K多模态代码语料，覆盖图表、网页UI、动画等；JanusCoder/JanusCoderV（7B–14B）在多项文本与视觉代码任务接近或超越闭源模型，支持生成与精确编辑。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26692" target="_blank">Kimi Linear: An Expressive, Efficient Attention Architecture</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26692" target="_blank">Kimi Linear: An Expressive, Efficient Attention Architecture</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yu Zhang, Yulun Du.</div>
             <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team).</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 Kimi Linear：以 KDA 为核心的混合线性注意力，在一致训练下全面超越全注意力（MLA），KV 缓存最高降至 25% 且长序列解码吞吐可达 6×；并开源 KDA 内核与 vLLM 实现及 3B 激活/48B 总参模型。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23473" target="_blank">Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23473" target="_blank">Video-Thinker: Sparking &quot;Thinking with Videos&quot; via Reinforcement Learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shijian Wang, Yuan Lu.</div>
             <div class="note-meta-line">Affiliation: Southeast University, Monash University, Xiaohongshu Inc.</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 Video-Thinker，将“思考视频”的推理范式引入 MLLM：构建含工具式链路的 Video-Thinker-10K，采用 SFT→GRPO 两阶段训练，使模型在无外部工具调用下自主完成 grounding 与 captioning；7B 模型在 Video-Holmes、CG-Bench-Reasoning、VRBench 等基准达 SOTA。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.24701" target="_blank">Tongyi DeepResearch Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.24701" target="_blank">Tongyi DeepResearch Technical Report</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Baixuan Li, Xinyu Wang.</div>
             <div class="note-meta-line">Affiliation: Alibaba Group.</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向长程深度信息搜寻的代理式 LLM：通过 agentic mid/post-training 与全自动数据生成流水线，实现可扩展的推理与检索；在 Humanity’s Last Exam、BrowseComp/WebWalkerQA 等基准取得领先；同时开源模型、框架与完整解决方案。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26583" target="_blank">Emu3.5: Native Multimodal Models are World Learners</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26583" target="_blank">Emu3.5: Native Multimodal Models are World Learners</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yufeng Cui, Xinlong Wang.</div>
             <div class="note-meta-line">Affiliation: Beijing Academy of Artificial Intelligence (BAAI).</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">Emu3.5 为原生图文世界模型，在 10T+ 视频图文序列上以统一 Next-Token 目标端到端预训练并经 RL 后强化推理/生成；提出 DiDA 将逐 token 解码转为双向并行预测，单图推理约提速 20×；图像生成接近 Gemini 2.5 Flash，交错生成更优。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.21618" target="_blank">DeepAgent: A General Reasoning Agent with Scalable Toolsets</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.21618" target="_blank">DeepAgent: A General Reasoning Agent with Scalable Toolsets</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xiaoxi Li, Zhicheng Dou.</div>
             <div class="note-meta-line">Affiliation: Renmin University of China, Xiaohongshu Inc.</div>
@@ -459,7 +509,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">DeepAgent 在单一推理流中完成“思考→工具检索→调用→执行”，并以记忆折叠与 ToolOp 强化学习稳定长程交互；在 ToolBench、API-Bank 等工具用基准及 ALFWorld、WebShop、GAIA、HLE 等应用上全面优于现有方法，代码与演示开放。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23587" target="_blank">A Survey of Data Agents: Emerging Paradigm or Overstated Hype?</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23587" target="_blank">A Survey of Data Agents: Emerging Paradigm or Overstated Hype?</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yizhang Zhu, Yuyu Luo.</div>
             <div class="note-meta-line">Affiliation: The Hong Kong University of Science and Technology (Guangzhou).</div>
@@ -467,7 +519,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统梳理“数据智能体”概念混乱，提出首个L0–L5分级框架，按自治能力综述管理、准备、分析三类工作与代表系统，重点剖析从L2到L3的跃迁瓶颈，并给出面向主动、生成式智能体的研究路线图。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.24699" target="_blank">AgentFold: Long-Horizon Web Agents with Proactive Context Management</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.24699" target="_blank">AgentFold: Long-Horizon Web Agents with Proactive Context Management</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Rui Ye, Yong Jiang.</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University.</div>
@@ -475,7 +529,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“折叠式”上下文管理：将历史轨迹按多尺度摘要与最新交互组织，推理时主动折叠冗余细节，兼顾记忆完整性与长程效率。在无需持续预训练/强化学习的SFT下，BrowseComp等基准达SOTA。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23763" target="_blank">RoboOmni: Proactive Robot Manipulation in Omni-modal Context</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23763" target="_blank">RoboOmni: Proactive Robot Manipulation in Omni-modal Context</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Siyin Wang, Xipeng Qiu.</div>
             <div class="note-meta-line">Affiliation: Fudan University, Shanghai Innovation Institute.</div>
@@ -483,7 +539,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">定义跨模态情景指令：从语音、环境声与视觉联合推断意图；提出端到端“感知—思考—对话—执行”框架，并构建OmniAction(14万条)数据。仿真与真实环境均优于基线，显著提升成功率与互动效率。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://transformer-circuits.pub/2025/introspection/index.html" target="_blank">Emergent Introspective Awareness in Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://transformer-circuits.pub/2025/introspection/index.html" target="_blank">Emergent Introspective Awareness in Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jack Lindsey, Jack Lindsey.</div>
             <div class="note-meta-line">Affiliation: Anthropic.</div>
@@ -491,7 +549,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">通过在特定层注入“概念向量”并设计判据，实证LLM在部分条件下可报告自身内部状态（功能性内省觉察），但成功率有限、依赖后训练与层位。工作讨论潜在机制、失效模式与解释性影响。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23595" target="_blank">Multi-Agent Evolve: Towards Open-Endedness in Large Language Model Systems</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23595" target="_blank">Multi-Agent Evolve: Towards Open-Endedness in Large Language Model Systems</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yixing Chen, Jiaxuan You.</div>
             <div class="note-meta-line">Affiliation: University of Illinois at Urbana-Champaign.</div>
@@ -499,7 +559,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出在LLM系统中实现开放式演化的框架：通过环境、角色与目标的自举生成与选择，让多智能体持续产生新能力与任务；并给出测度与基准，展示在复杂推理与协作中的持续提升与新颖性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26692" target="_blank">A Technical Report on Linearizing Large Language Models: Training from Scratch to Inference on GPUs and TPUs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26692" target="_blank">A Technical Report on Linearizing Large Language Models: Training from Scratch to Inference on GPUs and TPUs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yu Zhang, Yulun Du.</div>
             <div class="note-meta-line">Affiliation: Moonshot AI.</div>
@@ -507,7 +569,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统化“线性化”LLM训练与推理：算子/内存重排、核融合与流水并行，使吞吐与延迟随模型与序列长度近线性扩展；并在GPU与TPU上给出端到端工程实践与实现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26788" target="_blank">Understanding FP16 Precision Mismatch in Post-training for Reasoning LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26788" target="_blank">Understanding FP16 Precision Mismatch in Post-training for Reasoning LLMs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Penghui Qi, Penghui Qi.</div>
             <div class="note-meta-line">Affiliation: Sea AI Lab, National University of Singapore.</div>
@@ -515,7 +579,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">揭示后训练中bf16与fp16数值不匹配会破坏稳定性与泛化；提出以fp16/混合精度与对齐策略修复梯度与logit偏差，在数学与通用推理上显著提升，并给出可复现实践要点。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26493" target="_blank">Context Engineering 2.0: The Context of Context Engineering</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26493" target="_blank">Context Engineering 2.0: The Context of Context Engineering</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qishuo Hua, Qishuo Hua.</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Generative AI Research Lab (GAIR).</div>
@@ -523,7 +589,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统梳理“上下文工程”的定义、历史与设计要点：从人机交互到智能体时代，强调情境建模与信息编排的方法论，并提出未来研究议程以缩短人机“认知鸿沟”。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.24684" target="_blank">SPICE: Self-Play In Corpus Environments Improves Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.24684" target="_blank">SPICE: Self-Play In Corpus Environments Improves Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bo Liu, Jack Lanchantin.</div>
             <div class="note-meta-line">Affiliation: National University of Singapore.</div>
@@ -531,14 +599,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出语料环境自博弈框架：同一模型在“挑战者/推理者”间切换，基于大规模文档生成并求解新题，形成自动课程；相较无锚自博弈，在数学与通用推理上取得稳定增益。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.25992" target="_blank">Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.25992" target="_blank">Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yihe Deng, I-Hung Hsu.</div>
             <div class="note-meta-line">Affiliation: University of California, Los Angeles.</div>
         </div>
         <div class="note-tldr">提出监督强化学习（SRL）：将解题分解为逐步“动作”，先生成内在独白，再以专家行动相似度给平滑奖励；在小模型上学到难题，并与RLVR串联达成更强整体表现。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

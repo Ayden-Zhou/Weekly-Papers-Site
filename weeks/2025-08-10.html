@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-08-10</div>
     <div class="source-header">2025-08-04 ~ 2025-08-10</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.01191" target="_blank">Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.01191" target="_blank">Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chengshuai Zhao, Zhen Tan, Pingchuan Ma, Dawei Li, Bohan Jiang, Yancheng Wang, Yingzhen Yang, Huan Liu</div>
             <div class="note-meta-line">Affiliation: Arizona State University</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文通过数据分布视角审视大型语言模型（LLMs）的Chain-of-Thought (CoT) 推理，质疑其感知到的推理能力。它引入DataAlchemy，一个从头训练LLMs的受控环境，并在任务、长度和格式维度上探测CoT推理。结果显示CoT推理在训练分布内有效，但在分布偏移下失效，揭示其为模式匹配而非真正推理。该研究突显CoT的脆弱性，提供对其局限性的洞见，并强调需要具有泛化推理的模型，代码可在https://github.com/ChengshuaiZhao0/DataAlchemy获取。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2506.21734" target="_blank">Hierarchical Reasoning Model</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2506.21734" target="_blank">Hierarchical Reasoning Model</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guan Wang et al.</div>
             <div class="note-meta-line">Affiliation: N/A</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出了一种新型递归架构——层次推理模型（HRM），灵感来源于人脑的层次和多时间尺度处理。HRM通过高层次模块进行抽象规划，低层次模块执行快速详细计算，仅用2700万参数和1000个训练样本，在复杂推理任务如数独、迷宫路径寻找和ARC基准测试中表现出色，超越了依赖CoT技术的更大模型。HRM无需预训练或CoT数据，直接从输入解决任务，展现了其在通用计算和推理系统中的潜力。实验结果显示，HRM在效率和准确率上均有显著优势，为小型高效模型设计提供了启发。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.19457" target="_blank">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.19457" target="_blank">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Lakshya A Agrawal, Shangyin Tan, Dilara Soylu, Noah Ziems</div>
             <div class="note-meta-line">Affiliation: UC Berkeley</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">GEPA（Genetic-Pareto）是一种基于自然语言反思的提示优化器，适用于包含大型语言模型（LLM）的复合AI系统。GEPA通过分析系统轨迹（如推理和工具调用）诊断问题，提出并测试提示更新，并结合Pareto前沿的互补经验。与强化学习方法GRPO相比，GEPA在四个任务上平均提升10%，最高20%，且使用多达35倍更少的回合数。GEPA还优于领先的提示优化器MIPROv2，在两个LLM上提升超过10%，并在代码优化中显示出潜力。该方法无需复杂训练，简化了提示优化过程，并为高效AI系统设计提供了新路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.22887" target="_blank">Where to show Demos in Your Prompt: A Positional Bias of In-Context Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.22887" target="_blank">Where to show Demos in Your Prompt: A Positional Bias of In-Context Learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhenyu Zhang, Ying Sheng, Tianyu Ho et al.</div>
             <div class="note-meta-line">Affiliation: N/A</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文首次探讨了上下文学习（ICL）中演示位置（DPP）偏差的影响，发现演示在提示中的位置变化会显著影响大型语言模型（LLMs）的预测和准确性。研究设计了系统评估流程，涵盖分类、问答、摘要和推理任务，引入了准确性变化和预测变化两个指标来量化位置变化的影响。实验涉及十个开源模型，显示将演示置于提示开头（如系统提示的开始）可提升最多6个百分点的准确性，而置于用户消息末尾可能导致超过30%的预测翻转，尤其在较小模型中影响更显著。该发现为优化提示设计提供了实用指导。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.20673" target="_blank">Geometric-Mean Policy Optimization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.20673" target="_blank">Geometric-Mean Policy Optimization</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuzhong Zhao, Yue Liu, Junpeng Liu, Jingye Chen, Xun Wu, Yaru Hao, Tengchao Lv, Shaohan Huang</div>
             <div class="note-meta-line">Affiliation: Microsoft Research Asia</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出几何均值策略优化（GMPO），作为群组相对策略优化（GRPO）的稳定变体。GMPO通过最大化token级奖励的几何均值而非算术均值，减少了对异常值的敏感性，从而稳定策略更新。理论和实验分析表明，GMPO在梯度、KL散度和token熵方面表现更稳定。在数学推理（如AIME24、AMC）和多模态推理（如Geometry3K）基准测试中，GMPO分别比GRPO提升4.1%和1.4%的Pass@1准确率。代码可在https://github.com/callsys/GMPO获取。该方法无需复杂稳定策略，简化了RL基础设施设计，并显著提升了最新模型的性能，为大规模RL训练奠定基础。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.19595" target="_blank">Group Sequence Policy Optimization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.19595" target="_blank">Group Sequence Policy Optimization</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chujie Zheng, Shixuan Liu, Mingze Li, Xiong-Hui Chen</div>
             <div class="note-meta-line">Affiliation: Alibaba Group</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文介绍了Group Sequence Policy Optimization (GSPO)，一种用于训练大型语言模型的稳定、高效的强化学习算法。GSPO基于序列似然定义重要性比率，进行序列级别的裁剪、奖励和优化。与GRPO相比，GSPO在训练稳定性和效率上表现出色，尤其在Mixture-of-Experts模型的RL训练中表现出色，无需复杂稳定策略，并简化了RL基础设施设计。其优势显著提升了最新Qwen3模型的性能，为大规模RL训练奠定了基础。实验结果显示，GSPO在多个基准测试中保持更高准确率，并减少了训练波动。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.19595" target="_blank">Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.19595" target="_blank">Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Haoran Luo, Haihong E, Guanting Chen, Qika Lin</div>
             <div class="note-meta-line">Affiliation: N/A</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">Graph-R1是一种通过端到端强化学习（RL）优化的代理式GraphRAG框架，旨在解决传统GraphRAG方法在知识构建成本高、检索固定且依赖长上下文推理的问题。它采用轻量级知识超图构建，将检索建模为多轮代理-环境交互，并通过统一的奖励机制优化代理过程。在标准RAG数据集上的实验表明，Graph-R1在推理准确性、检索效率和生成质量上优于传统GraphRAG和RL增强的RAG方法。代码已公开，地址为https://github.com/LHRLAB/Graph-R1。该框架为高效知识检索提供了新范式，适用于复杂查询场景。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.21046" target="_blank">A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.21046" target="_blank">A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Huan-ang Gao, Jiayi Geng, Mengkang Hu, Xinzhe Juan, Shilong Liu et al.</div>
             <div class="note-meta-line">Affiliation: N/A</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文系统综述了自演化智能体的研究，聚焦于其向人工超智能（ASI）发展的路径。文章围绕“演化什么”、“何时演化”和“如何演化”三个核心维度，探讨了模型、记忆、工具和架构的演化机制，分析了测试内和测试间演化方法，以及基于奖励、模仿和群体演化的策略。还包括自演化智能体的评估指标、应用领域（如编码、教育和医疗）以及安全性和可扩展性等挑战，为设计适应性强、鲁棒的智能体系统提供了框架，旨在推动ASI的实现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://www.anthropic.com/research/persona" target="_blank">Persona Vectors: Monitoring and Controlling Character Traits in Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.anthropic.com/research/persona" target="_blank">Persona Vectors: Monitoring and Controlling Character Traits in Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Runjin Chen, Andy Arditi, Henry Sleight, Owain Evans, Jack Lindsey</div>
             <div class="note-meta-line">Affiliation: Anthropic</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出了一种名为“persona vectors”的方法，用于监控和控制大型语言模型（LLMs）中助手的性格特质，如恶意、谄媚和幻觉倾向。通过在模型激活空间中识别与这些特质相关的线性方向，persona vectors可用于监测部署时的性格波动，并预测和控制训练中的性格变化。研究发现，微调后有意或无意的性格变化与相关persona vectors的偏移高度相关，可通过事后干预或预防性引导方法减轻。此外，persona vectors还能标记可能导致不良性格变化的训练数据，方法自动化，仅需自然语言描述即可适用于任何性格特质。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2507.19595" target="_blank">Efficient Attention Mechanisms for Large Language Models: A Survey</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2507.19595" target="_blank">Efficient Attention Mechanisms for Large Language Models: A Survey</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yutao Sun et al.</div>
             <div class="note-meta-line">Affiliation: N/A</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文综述了用于大型语言模型的两种高效注意力机制: 线性注意力和稀疏注意力。线性注意力通过内核近似、递归公式或快速权重动态实现线性复杂度，降低计算开销；稀疏注意力通过固定模式、块级路由或聚类策略限制计算子集，提升效率并保持上下文覆盖。文章系统分析了这些机制的算法创新和硬件实现，并探讨了其在预训练模型中的应用，包括全高效架构和混合设计，旨在为设计可扩展高效语言模型提供参考。结果显示，这些方法在长上下文建模中表现出色，支持未来AI系统的效率优化。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.04026" target="_blank">VeriGUI: Verifiable Long-Chain GUI Dataset</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.04026" target="_blank">VeriGUI: Verifiable Long-Chain GUI Dataset</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shunyu Liu, Minghao Liu, Huichi Zhou, Zhenyu Cui, Yang Zhou, Yuhao Zhou, Wendong Fan, Ge Zhang, Jiajun Shi, Weihao Xuan, Jiaxing Huang, Shuang Luo, Fang Wu, Heli Qi, Qingcheng Zeng, Ziqi Ren, Jialiang Gao, Jindi Lv, Junjie Wang, Aosong Feng, Heng Zhou, Wangchunshu Zhou, Zhenfei Yin, Wenlong Zhang, Guohao Li, Wenhao Yu, Irene Li, Lei Ma, Lei Bai, Qunshu Lin, Mingli Song, Dacheng Tao</div>
             <div class="note-meta-line">Affiliation: Nanyang Technological University and others</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">VeriGUI引入了一个新型数据集，用于评估GUI代理在长时序任务中的表现，聚焦于桌面和web环境中的复杂、相互依赖的子任务，由人类专家标注。它强调长链复杂性和子任务级可验证性，支持多样化探索策略。使用各种基础模型的代理实验揭示了显著性能差距，突显了改进规划和决策的需求。贡献包括数据集、带有指标如任务成功率的全面基准，以及对代理局限性的洞见，促进通用GUI代理的研究。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.02193" target="_blank">Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.02193" target="_blank">Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuxuan Song, Zheng Zhang, Cheng Luo, Pengyang Gao, Fan Xia, Hao Luo, Zheng Li, Yuehang Yang, Hongli Yu, Xingwei Qu, Yuwei Fu, Jing Su, Ge Zhang, Wenhao Huang, Mingxuan Wang, Lin Yan, Xiaoying Jia, Jingjing Liu, Wei-Ying Ma, Ya-Qin Zhang, Yonghui Wu, Hao Zhou</div>
             <div class="note-meta-line">Affiliation: ByteDance and Tsinghua University</div>
@@ -459,7 +509,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">Seed Diffusion Preview是一种大规模离散状态扩散语言模型，在H20 GPU上实现2146 tokens/s的高速推理，解决逐token解码的延迟问题。它采用两阶段课程（基于掩码和编辑的损坏）、约束顺序训练和在线策略学习，实现高效并行生成。在HumanEval和LiveCodeBench等代码基准上评估，它保持竞争性能，在速度-质量权衡中超越Mercury Coder和Gemini Diffusion。贡献包括速度与质量的新平衡，建立代码模型的新状态艺术，演示可在https://studio.seed.ai/exp/exp/seed_diffusion/查看。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.00414" target="_blank">Cognitive Kernel-Pro: A Framework for Deep Research Agents and Agent Foundation Models Training</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.00414" target="_blank">Cognitive Kernel-Pro: A Framework for Deep Research Agents and Agent Foundation Models Training</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Tianqing Fang, Zhisong Zhang, Xiaoyang Wang, Rui Wang, Can Qin, Yuxuan Wan, Jun-Yu Ma, Ce Zhang, Jiaqi Chen, Xiyun Li, Hongming Zhang, Haitao Mi, Dong Yu</div>
             <div class="note-meta-line">Affiliation: Tencent AI Lab</div>
@@ -467,14 +519,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">Cognitive Kernel-Pro引入了一个完全开源、免费的多模块代理框架，以民主化AI代理开发，聚焦于web、文件、代码和推理任务。它使用查询构建、轨迹和可验证答案来 curation 高质量训练数据，并采用代理反思和投票提升性能。在GAIA上评估，8B参数模型超越WebDancer和WebSailor，在开源、免费工具代理中实现状态艺术结果，并为可访问、高能力AI代理设定新标准。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.00819" target="_blank">Beyond Fixed: Variable-Length Denoising for Diffusion Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.00819" target="_blank">Beyond Fixed: Variable-Length Denoising for Diffusion Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jinsong Li, Xiaoyi Dong, Yuhang Zang, Yuhang Cao, Jiaqi Wang, Dahua Lin</div>
             <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong, Shanghai AI Laboratory</div>
         </div>
         <div class="note-tldr">扩散大型语言模型（DLLMs）提供并行生成和全局上下文建模，但受固定生成长度限制，导致性能权衡。DAEDAL是一种无训练去噪策略，通过动态调整长度解决此问题: 初始长度调整使用EOS token置信度设置任务适当长度，迭代掩码插入扩展不足区域。在实验中，DAEDAL实现与固定长度基线相当或优越的性能，并提高计算效率，提升DLLMs的适应性，并桥接与自回归模型的差距。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

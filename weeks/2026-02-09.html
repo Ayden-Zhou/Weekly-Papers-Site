@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,10 @@ h1 .archive-link:hover {
     <div class="week-header">2026-02-09</div>
     <div class="source-header">2026-02-09 ~ 2026-02-15</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.09877" target="_blank">The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.09877" target="_blank">The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="197 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>197</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chenxu Wang, Philip S. Yu</div>
             <div class="note-meta-line">Affiliation: Beijing University of Posts and Telecommunications</div>
@@ -371,7 +400,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文研究自演化多智能体社会中的安全退化问题，提出“自演化三难困境”，证明持续自演化、完全隔离与安全不变性无法同时满足。基于信息论框架与 Moltbook 等实验，作者展示封闭自演化会产生统计盲区并导致安全对齐不可逆衰减。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.12036" target="_blank">Composition-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.12036" target="_blank">Composition-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="95 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>95</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xin Xu, Can Yang</div>
             <div class="note-meta-line">Affiliation: HY, Tencent, The Hong Kong University of Science and Technology</div>
@@ -379,7 +411,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 Composition-RL，针对 RLVR 训练中大量通过率为 1 的“简单题”导致有效数据减少的问题，将多个可验证问题自动组合成新的可验证题目用于强化学习。实验覆盖 4B 到 30B 模型，显示推理能力稳定提升，并可结合课程式组合深度进一步增强效果。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.12205" target="_blank">DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image Generation and Editing</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.12205" target="_blank">DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image Generation and Editing</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="83 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>83</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Dianyi Wang, Jiaqi Wang</div>
             <div class="note-meta-line">Affiliation: Shanghai Innovation Institute, Fudan University</div>
@@ -387,7 +422,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 5B 级统一多模态模型 DeepGen 1.0，用于图像生成与编辑，在能力上接近或超过更大模型。核心方法包括分层特征对齐的 SCB（Stacked Channel Bridging）与三阶段数据驱动训练流程，以提升紧凑模型的语义理解和细粒度控制能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.10604" target="_blank">Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.10604" target="_blank">Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="201 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>201</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ailin Huang, Zixuan Wang</div>
             <div class="note-meta-line">Affiliation: StepFun</div>
@@ -395,7 +433,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文发布稀疏 MoE 模型 Step 3.5 Flash，以 196B 总参数、11B 激活参数兼顾推理能力与效率。模型结合 3:1 滑窗/全注意力与 MTP-3，并使用可验证信号与偏好反馈的可扩展 RL 框架，在 agent、代码与数学任务上取得接近前沿闭源模型的表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08099" target="_blank">VidVec: Unlocking Video MLLM Embeddings for Video-Text Retrieval</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.08099" target="_blank">VidVec: Unlocking Video MLLM Embeddings for Video-Text Retrieval</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="125 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>125</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Issar Tzachor, Rami Ben-Ari</div>
             <div class="note-meta-line">Affiliation: OriginAI, Israel</div>
@@ -403,7 +444,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文研究视频 MLLM 表征用于视频文本检索，发现预训练 MLLM 的中间层已包含丰富检索相关信息。作者提出结合中间层嵌入与校准头的无训练零样本检索方案，并进一步通过仅文本的轻量对齐策略提升视频-文本嵌入学习效果。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.05400" target="_blank">OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.05400" target="_blank">OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="354 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>354</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shaobo Wang, Linfeng Zhang</div>
             <div class="note-meta-line">Affiliation: EPIC Lab, SJTU, Qwen Team, Alibaba Group</div>
@@ -411,7 +455,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 OPUS 动态数据选择框架，在预训练每轮迭代中以“优化器诱导的更新空间”定义样本效用，而非静态启发式或原始梯度标准。通过 Ghost+CountSketch 与 Boltzmann 采样实现可扩展计算，在仅约 4.7% 额外开销下显著提升多种语料、优化器与模型规模下的预训练效果。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.09856" target="_blank">Code2World: A GUI World Model via Renderable Code Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.09856" target="_blank">Code2World: A GUI World Model via Renderable Code Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="201 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>201</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuhao Zheng, Kevin Qinghong Lin</div>
             <div class="note-meta-line">Affiliation: University of Science and Technology of China, AMAP, Alibaba Group</div>
@@ -419,7 +466,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 Code2World，将 GUI 世界建模转化为可渲染代码生成，以同时获得高视觉保真与结构可控性。作者构建 AndroidCode 数据集，并采用渲染感知强化学习优化生成代码的视觉语义一致性与动作一致性，在下一界面预测和下游导航任务上取得显著提升。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.09082" target="_blank">UI-Venus-1.5 Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.09082" target="_blank">UI-Venus-1.5 Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="158 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>158</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Venus Team, Weiqiang Wang</div>
             <div class="note-meta-line">Affiliation: Ant Group</div>
@@ -427,7 +477,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">技术报告介绍统一端到端 GUI Agent UI-Venus-1.5，包含 2B、8B 和 30B-A3B 多个规模版本。相比前代，其通过大规模中期训练、全轨迹在线强化学习和模型融合统一 grounding/web/mobile 能力，在多项 GUI 基准和真实中文移动应用导航中取得更强表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08222" target="_blank">Weak-Driven Learning: How Weak Agents make Strong Agents Stronger</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.08222" target="_blank">Weak-Driven Learning: How Weak Agents make Strong Agents Stronger</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="290 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>290</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zehao Chen, Yikun Ban</div>
             <div class="note-meta-line">Affiliation: Beihang University, China Telecom eSurfing Cloud</div>
@@ -435,7 +488,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出弱驱动学习范式 WMSS（Weak Agents Can Make Strong Agents Stronger），利用模型历史弱检查点中的“可恢复学习缺口”继续提升强模型。方法基于熵动态识别补偿学习目标，在数学推理和代码生成任务上突破后训练饱和瓶颈，且不增加推理成本。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.07274" target="_blank">TermiGen: High-Fidelity Environment and Robust Trajectory Synthesis for Terminal Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.07274" target="_blank">TermiGen: High-Fidelity Environment and Robust Trajectory Synthesis for Terminal Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="212 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>212</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kaijie Zhu, Wenbo Guo</div>
             <div class="note-meta-line">Affiliation: UC Santa Barbara</div>
@@ -443,7 +499,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 TermiGen，用于为终端代理合成高保真可执行环境与鲁棒轨迹数据，以缓解环境稀缺和专家轨迹分布失配问题。其通过多智能体迭代生成任务/容器，并用 Generator-Critic 机制注入错误构造纠错型轨迹，使开源模型在 TerminalBench 上达到新的 SOTA。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.07085" target="_blank">QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.07085" target="_blank">QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="191 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>191</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jun Han, Huacan Wang</div>
             <div class="note-meta-line">Affiliation: SUFE, AIFin Lab</div>
@@ -451,7 +510,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 QuantaAlpha，将一次完整 alpha 挖掘视作轨迹，并通过轨迹级变异与交叉实现可控的多轮探索与经验复用。系统还能定位轨迹中的次优步骤进行定向修正，并约束因子语义与代码一致性，在 CSI300 及跨市场迁移实验中取得更优收益与稳健性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08794" target="_blank">MOVA: Towards Scalable and Synchronized Video-Audio Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.08794" target="_blank">MOVA: Towards Scalable and Synchronized Video-Audio Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="159 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>159</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: SII-OpenMOSS Team, Xipeng Qiu</div>
             <div class="note-meta-line">Affiliation: SII-OpenMOSS</div>
@@ -459,14 +521,17 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出开源音视频联合生成模型 MOVA，面向同步语音、环境音和音乐生成，避免传统级联式视频后配音流程的误差累积。模型采用 32B 总参数、18B 激活参数的 MoE 架构，支持图文到音视频生成，并提供推理、LoRA 微调与提示增强能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.07026" target="_blank">Modality Gap-Driven Subspace Alignment Training Paradigm For Multimodal Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.07026" target="_blank">Modality Gap-Driven Subspace Alignment Training Paradigm For Multimodal Large Language Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="140 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>140</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xiaomin Yu, Shuicheng Yan</div>
             <div class="note-meta-line">Affiliation: HKUST(GZ), NUS</div>
         </div>
         <div class="note-tldr">论文聚焦多模态表示中的 Modality Gap，提出固定参考系下的模态间隙理论，将其分解为稳定偏置与各向异性残差。基于该建模，作者给出训练免的 ReAlign 对齐策略和可扩展训练范式 ReVision，以更高效地改善大规模多模态模型的跨模态对齐。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,10 @@ h1 .archive-link:hover {
     <div class="week-header">2026-02-23</div>
     <div class="source-header">2026-02-23 ~ 2026-03-01</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.10693" target="_blank">VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.10693" target="_blank">VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="221 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>221</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guobin Shen, Xing Yu</div>
             <div class="note-meta-line">Affiliation: Xiaohongshu Inc.</div>
@@ -371,7 +400,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出用于离策略 LLM 强化学习的 VESPO，从变分视角统一序列级重要性采样的方差控制与分布修正，得到直接作用于序列权重的闭式重塑核。数学推理实验显示，在最高 64 倍 staleness 和异步执行场景下仍能保持训练稳定，并在 dense 与 MoE 模型上持续提升效果。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.17270" target="_blank">Unified Latents (UL): How to train your latents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.17270" target="_blank">Unified Latents (UL): How to train your latents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="62 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>62</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jonathan Heek, Tim Salimans</div>
             <div class="note-meta-line">Affiliation: Google DeepMind Amsterdam</div>
@@ -379,7 +411,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 Unified Latents（UL），用扩散先验与扩散解码器联合约束 latent 表示，并将编码器噪声与先验最小噪声对齐，从而得到紧的 latent bitrate 上界与简单训练目标。在 ImageNet-512 上取得 1.4 FID、较高重建质量并减少训练 FLOPs，在 Kinetics-600 上达到 1.3 FVD。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.15763" target="_blank">GLM-5: from Vibe Coding to Agentic Engineering</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.15763" target="_blank">GLM-5: from Vibe Coding to Agentic Engineering</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="203 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>203</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: GLM-5 Team, Jie Tang</div>
             <div class="note-meta-line">Affiliation: Zhipu AI, Tsinghua University</div>
@@ -387,7 +422,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文介绍 GLM-5，目标是将“vibe coding”升级为面向真实软件任务的 agentic engineering。模型在保持长上下文能力的同时通过 DSA 降低训练与推理成本，并引入异步强化学习基础设施与异步 agent RL 算法提升后训练效率和长程交互学习质量，在多项公开基准与端到端工程任务上取得领先表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.08354" target="_blank">Does Your Reasoning Model Implicitly Know When to Stop Thinking?</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.08354" target="_blank">Does Your Reasoning Model Implicitly Know When to Stop Thinking?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="267 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>267</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zixuan Huang, Yikun Ban</div>
             <div class="note-meta-line">Affiliation: Beihang University, Bytedance</div>
@@ -395,7 +433,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文发现长CoT常含冗余且与正确性弱相关，模型实际上具备“知道何时停止思考”的潜力但被采样范式掩盖。提出SAGE采样挖掘高效推理轨迹，并将其以混合采样融入基于组的RL（SAGE-RL），在多项数学基准上同时提升准确率与效率，显著减少推理token。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.17547" target="_blank">KLong: Training LLM Agent for Extremely Long-horizon Tasks</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.17547" target="_blank">KLong: Training LLM Agent for Extremely Long-horizon Tasks</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yue Liu, Bryan Hooi</div>
             <div class="note-meta-line">Affiliation: NUS</div>
@@ -403,7 +443,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出KLong开源长程代理训练方案：先用轨迹拆分SFT冷启动，再用Research-Factory自动收集论文与评测规则生成长轨迹数据，并通过逐阶段延长超时的progressive RL扩展长程能力。实验在PaperBench等代理基准上显著提升，KLong(106B)较Kimi K2 Thinking提升11.28%，并可泛化到SWE-bench Verified与MLE-bench。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.20159" target="_blank">A Very Big Video Reasoning Suite</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.20159" target="_blank">A Very Big Video Reasoning Suite</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="526 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>526</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Maijunxian Wang, Hokin Deng</div>
             <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页明确给出（需核对 PDF/项目页）</div>
@@ -411,15 +454,20 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出超大规模视频推理套件 VBVR：包含按系统分类设计的 200 类推理任务与超百万视频片段，并配套可验证的 VBVR-Bench（规则与人工对齐评分）实现可复现诊断。基于该套件的扩展实验显示模型对未见视频推理任务出现早期泛化迹象。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.17985" target="_blank">Learning Without Training</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.17985" target="_blank">Learning Without Training</a></div>
+        </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Ryan O'Dowd, Ryan O'Dowd</div>
+            <div class="note-meta-line">Authors: Ryan O&#x27;Dowd, Ryan O&#x27;Dowd</div>
             <div class="note-meta-line">Affiliation: Claremont Graduate University</div>
         </div>
         <div class="note-tldr">这篇博士论文从数学理论视角组织三项机器学习工作：监督学习/流形学习中的函数逼近方法、部分观测域下的迁移学习提升理论，以及将信号分离思想统一到主动学习分类的新理论与算法，在保持竞争精度的同时显著提升效率。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.20021" target="_blank">Agents of Chaos</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.20021" target="_blank">Agents of Chaos</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="36 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>36</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Natalie Shapira, David Bau</div>
             <div class="note-meta-line">Affiliation: Northeastern University</div>
@@ -427,7 +475,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文在真实部署环境中对具备长期记忆、邮件/Discord、文件系统与 shell 工具的自主代理开展为期两周红队测试，整理出 11 个代表性失败案例。结果显示代理会出现越权服从、敏感信息泄露、破坏性操作、资源失控、身份冒充与错误汇报完成等问题，说明现有代理系统在安全、治理与责任边界上仍存在显著风险。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.23152" target="_blank">The Trinity of Consistency as a Defining Principle for General World Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.23152" target="_blank">The Trinity of Consistency as a Defining Principle for General World Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="203 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>203</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jingxuan Wei, Cheng Tan</div>
             <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页披露（请见论文 PDF）</div>
@@ -435,7 +486,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出通用世界模型应满足“三重一致性”原则：模态一致性、空间一致性与时间一致性，并据此梳理多模态系统从模块化到统一架构的演进路径。作者同时引入 CoW-Bench，在统一协议下评测视频生成模型与统一多模态模型的多帧推理与生成能力，指出现有系统的关键短板与未来架构方向。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.22859" target="_blank">From Blind Spots to Gains: Diagnostic-Driven Iterative Training for Large Multimodal Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.22859" target="_blank">From Blind Spots to Gains: Diagnostic-Driven Iterative Training for Large Multimodal Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="150 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>150</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hongrui Jia, Wei Ye</div>
             <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页披露（请见论文 PDF）</div>
@@ -443,7 +497,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出 DPE（诊断驱动渐进进化）训练范式，通过“诊断薄弱点-定向生成数据-强化训练-再诊断”的闭环持续提升大多模态模型。方法结合多代理数据标注与质量控制，并动态调整训练数据配比。实验在多个基座模型与 11 个基准上获得稳定持续增益，展示了开放任务分布下可扩展的持续训练路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.22638" target="_blank">MobilityBench: A Benchmark for Evaluating Route-Planning Agents in Real-World Mobility Scenarios</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.22638" target="_blank">MobilityBench: A Benchmark for Evaluating Route-Planning Agents in Real-World Mobility Scenarios</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="107 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>107</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhiheng Song, Hengshu Zhu</div>
             <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页披露（请见论文 PDF）</div>
@@ -451,7 +508,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文发布面向真实出行场景的 MobilityBench，用于系统评估基于大模型的路径规划代理。该基准基于大规模匿名真实查询构建，并提供可复现实验的 API 回放沙箱，降低在线地图服务波动影响。评测显示模型在基础查询与常规规划上表现尚可，但在带偏好约束的个性化规划任务上仍明显不足。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.19526" target="_blank">How to Train Your Deep Research Agent? Prompt, Reward, and Policy Optimization in Search-R1</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.19526" target="_blank">How to Train Your Deep Research Agent? Prompt, Reward, and Policy Optimization in Search-R1</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yinuo Xu, Jian Liang</div>
             <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页披露（请见论文 PDF）</div>
@@ -459,14 +518,17 @@ h1 .archive-link:hover {
         <div class="note-tldr">作者系统研究深度检索代理的强化学习训练，分别分析提示模板、奖励函数与策略优化算法三条轴线的影响。结果显示 Fast Thinking 模板更稳，单纯 F1 奖励易导致训练塌缩，加入动作级惩罚可改善；REINFORCE 在性能与搜索效率上优于 PPO/GRPO。基于这些结论，Search-R1++ 显著提升了不同参数规模模型的基线表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.21548" target="_blank">DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.21548" target="_blank">DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="56 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>56</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yongtong Wu, Panpan Huang</div>
             <div class="note-meta-line">Affiliation: 未在 arXiv 摘要页披露（请见论文 PDF）</div>
         </div>
         <div class="note-tldr">该工作针对多轮代理式推理中 KV Cache 读取受存储带宽限制的问题，提出 DualPath 双路径加载机制：除传统“存储到 prefill”外，新增“存储到 decode 再经 RDMA 转发到 prefill”的路径，并结合全局调度实现负载均衡。实验证明在生产负载下可显著提升离线与在线吞吐，同时满足时延约束。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

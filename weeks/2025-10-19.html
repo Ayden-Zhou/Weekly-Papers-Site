@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,15 +389,19 @@ h1 .archive-link:hover {
     <div class="week-header">2025-10-19</div>
     <div class="source-header">2025-10-13 ~ 2025-10-19</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.18234" target="_blank">DeepSeek-OCR: Contexts Optical Compression</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.18234" target="_blank">DeepSeek-OCR: Contexts Optical Compression</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Haoran Wei, Haoran Wei.</div>
             <div class="note-meta-line">Affiliation: DeepSeek AI.</div>
         </div>
-        <div class="note-tldr">将长上下文压缩为二维“光学映射”，以轻激活编码器与小型解码器实现高压缩比OCR：<10×压缩达97%精度，20×仍约60%；在OmniDocBench上以显著更少视觉token超越主流系统，并具大规模数据生成能力。</div>
+        <div class="note-tldr">将长上下文压缩为二维“光学映射”，以轻激活编码器与小型解码器实现高压缩比OCR：&lt;10×压缩达97%精度，20×仍约60%；在OmniDocBench上以显著更少视觉token超越主流系统，并具大规模数据生成能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.18121" target="_blank">Efficient Long-context Language Model Training by Core Attention Disaggregation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.18121" target="_blank">Efficient Long-context Language Model Training by Core Attention Disaggregation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yonghao Zhuang, Eric Xing.</div>
             <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出CAD将核心注意力计算拆分并分派到专用设备池，通过“任务化”重排与ping-pong流水并行，降低长上下文训练中的负载不均与显存压力；在512K上下文与大规模GPU上实现最高1.35×端到端加速并消除DP/PP瓶颈。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.15444" target="_blank">A Theoretical Study on Bridging Internal Probability and Self-Consistency for LLM Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.15444" target="_blank">A Theoretical Study on Bridging Internal Probability and Self-Consistency for LLM Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhi Zhou, Yu-Feng Li.</div>
             <div class="note-meta-line">Affiliation: State Key Laboratory of Novel Software Technology, Nanjing University, China.</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">建立测试时扩展的统一理论框架，分解推理误差为估计误差与模型误差；证明自一致仅线性收敛而困于采样预算，perplexity具指数收敛但模型误差大，并提出RPC将二者优点结合，性能与采样成本取得更优权衡。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.18866" target="_blank">LightMem: Lightweight and Efficient Memory-Augmented Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.18866" target="_blank">LightMem: Lightweight and Efficient Memory-Augmented Generation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jizhan Fang, Ningyu Zhang.</div>
             <div class="note-meta-line">Affiliation: Zhejiang University.</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">受人类记忆模型启发，构建轻量三阶段记忆系统：感知压缩→主题化短期整合→离线长期巩固；在LongMemEval上较强基线提升准确率并将token、API调用与时延分别降至百倍级，兼顾效果与成本。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.15103" target="_blank">Continual Learning via Sparse Memory Finetuning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.15103" target="_blank">Continual Learning via Sparse Memory Finetuning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jessy Lin, Jessy Lin.</div>
             <div class="note-meta-line">Affiliation: FAIR at Meta, University of California, Berkeley.</div>
@@ -403,14 +439,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">基于memory layer提出稀疏记忆微调，仅更新最常用的少量记忆槽以减少干扰；在事实与文档流式学习中，实现与全量微调相当的学习效果，却显著降低遗忘（如NQ仅11%降幅），优于LoRA与全量微调。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.20809" target="_blank">Real Deep Research for AI, Robotics and Beyond</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.20809" target="_blank">Real Deep Research for AI, Robotics and Beyond</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xueyan Zou, Xiaolong Wang.</div>
             <div class="note-meta-line">Affiliation: University of California, San Diego.</div>
         </div>
         <div class="note-tldr">提出通用研究情报管线RDR：系统抓取与解析海量论文，识别新兴趋势与跨域机会，并提供可执行的起点；在AI与机器人领域做端到端示范，主文阐述框架，附录给出大规模主题化结果与可复现资源。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

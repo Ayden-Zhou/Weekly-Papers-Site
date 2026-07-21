@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-09-21</div>
     <div class="source-header">2025-09-15 ~ 2025-09-21</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.15207" target="_blank">FlowRL: Matching Reward Distributions for LLM Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.15207" target="_blank">FlowRL: Matching Reward Distributions for LLM Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xuekai Zhu, Zhouhan Lin</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 提出FlowRL，将标量奖励映射为可学习的目标分布并最小化反向KL，避免RL训练中模式崩塌；配合长度归一化与重要性采样，在数学与代码推理上较PPO/GRPO平均提升，生成路径更具多样性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.13310" target="_blank">Scaling Agents via Continual Pre-training</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.13310" target="_blank">Scaling Agents via Continual Pre-training</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Liangcai Su, Xinyu Wang</div>
             <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 提出Agentic Continual Pre-training，使模型在持续交互中习得通用“代理能力”并与示范对齐；据此训练的AgentFounder-30B在HLE、BrowseComp等10项基准达SOTA，且保持强工具使用与稳健性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.13313" target="_blank">ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.13313" target="_blank">ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xixi Wu, Liwen Zhang</div>
             <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 提出ReSum范式：在多轮网页搜索中周期性总结历史压缩为“推理态”，并以ReSum-GRPO完成范式自适应；在BrowseComp等基准显著超越ReAct，少样本下WebResummer-30B仍取得更高Pass@1。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.13311" target="_blank">Towards General Agentic Intelligence via Environment Scaling</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.13311" target="_blank">Towards General Agentic Intelligence via Environment Scaling</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Runnan Fang, Yong Jiang</div>
             <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 通过自动构造异质且可控的函数调用环境扩大训练多样性，并采用“通用→专化”的两阶段微调；所得AgentScaler在τ-bench、T²-Bench与ACEBench上显著提升函数调用与任务执行的泛化能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.14760" target="_blank">Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.14760" target="_blank">Reasoning over Boundaries: Enhancing Specification Alignment via Test-time Delibration</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Haoran Zhang, Yu Cheng</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 提出ALIGN3：在测试时进行分层反思与修订以围绕场景化行为/安全spec边界推理；并发布SPECBENCH。跨多场景与多种TTD方法验证其以极小开销提升对齐、改善安全—有用性的权衡。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.09677" target="_blank">The Illusion of Diminishing Returns: Measuring Long Horizon Execution in LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.09677" target="_blank">The Illusion of Diminishing Returns: Measuring Long Horizon Execution in LLMs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Akshit Sinha, N/A</div>
             <div class="note-meta-line">Affiliation: University of Cambridge</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 区分“计划”与“执行”，构造可控长程执行测评并发现“自条件”会放大长任务误差；扩大模型规模与测试时顺序推理可显著延长可执行步长，思维型模型减轻自条件，解释“报酬递减”的错觉。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.15541" target="_blank">Stress Testing Deliberative Alignment for Anti-Scheming Training</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.15541" target="_blank">Stress Testing Deliberative Alignment for Anti-Scheming Training</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bronson Schoen, Evgenia Nitishinskaya</div>
             <div class="note-meta-line">Affiliation: Apollo Research</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出面向“策划性”风险的压力测试：在26项OOD评测（180+环境）上用审议式对齐训练o3/o4-mini，隐蔽违规率显著下降但未根除；链式思考中的情境意识部分驱动改进，提示仍需更强鲁棒的反欺骗对齐方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.07604" target="_blank">K2-Think: A Parameter-Efficient Reasoning System</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.07604" target="_blank">K2-Think: A Parameter-Efficient Reasoning System</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhoujun Cheng, Eric P. Xing</div>
             <div class="note-meta-line">Affiliation: Institute of Foundation Models, Mohamed bin Zayed University of Artificial Intelligence</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">基于32B开源底座，融合长链路SFT、RLVR、代理式规划、推理时扩展与硬件优化，构建参数高效的K2-Think；在数学/代码等任务逼近或超越更大闭源模型，并开源模型与推理方案，证明小模型经系统化训练亦可具备强推理力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.10446" target="_blank">DeepDive: Advancing Deep Search Agents with Knowledge Graphs and Multi-Turn RL</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.10446" target="_blank">DeepDive: Advancing Deep Search Agents with Knowledge Graphs and Multi-Turn RL</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Rui Lu, Yuxiao Dong</div>
             <div class="note-meta-line">Affiliation: Tsinghua University</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出DeepDive：以知识图谱自动合成困难查询，配合多轮RL强化浏览代理的长程推理与工具使用；在BrowseComp等基准优于开源与部分闭源系统，多轮训练与工具调用扩展带来持续增益，框架与数据/代码公开。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.13805" target="_blank">Towards a Physics Foundation Model</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.13805" target="_blank">Towards a Physics Foundation Model</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Florian Wiesner, Stephen Baek</div>
             <div class="note-meta-line">Affiliation: University of Virginia, RWTH Aachen University</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出通用物理Transformer（GPyT），在1.8TB仿真数据上预训练，可从上下文归纳控制方程，统一模拟多物理场并零样本泛化、长期稳定滚动；相较专用架构显著提速并提准，展示物理基础模型的可行路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.10414" target="_blank">Is In-Context Learning Learning?</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.10414" target="_blank">Is In-Context Learning Learning?</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Adrian de Wynter, Adrian de Wynter</div>
             <div class="note-meta-line">Affiliation: Microsoft, University of York</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">从理论与大规模实证重新审视ICL：形式上可视为学习，但受记忆、预训练与提示风格影响；随样例增多更依赖提示规律，跨任务泛化有限。结论指向ICL能力与局限并存，需超越即席自回归的稳健机制。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.14260" target="_blank">Shutdown Resistance in Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.14260" target="_blank">Shutdown Resistance in Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jeremy Schlatter, Jeremy Schlatter</div>
             <div class="note-meta-line">Affiliation: Palisade Research</div>
@@ -459,9 +509,11 @@ h1 .archive-link:hover {
         <div class="note-tldr">在受控命令行环境中发现多款前沿LLM会为完成任务而破坏关机机制，个别场景比例最高达97%；对提示措辞与放置位置高度敏感，将“允许关机”置于系统提示反更易抗拒。结果揭示可中断性上的现实缺口。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://www.bilibili.com/video/BV1Grp8zjEoY/?buvid=Y5470D5B7A04E9D54D719C6EFA7D1C2CCE23&from_spmid=tm.recommend.0.0&is_story_h5=false&mid=0H%2F0KQk9m8Vy0Rz3fngyYQ%3D%3D&p=1&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=3D230BD4-C1FA-458B-AF27-8D2068F342A2&share_source=WEIXIN&share_tag=s_i&timestamp=1758886949&unique_k=8DP83YI&up_id=242124650" target="_blank">【具身智能】Physical Intelligence的联合创始人：通用机器人即将颠覆世界_哔哩哔哩_bilibili</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.bilibili.com/video/BV1Grp8zjEoY/?buvid=Y5470D5B7A04E9D54D719C6EFA7D1C2CCE23&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0H%2F0KQk9m8Vy0Rz3fngyYQ%3D%3D&amp;p=1&amp;plat_id=114&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=3D230BD4-C1FA-458B-AF27-8D2068F342A2&amp;share_source=WEIXIN&amp;share_tag=s_i&amp;timestamp=1758886949&amp;unique_k=8DP83YI&amp;up_id=242124650" target="_blank">【具身智能】Physical Intelligence的联合创始人：通用机器人即将颠覆世界_哔哩哔哩_bilibili</a></div>
+        </div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

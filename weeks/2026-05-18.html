@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,10 @@ h1 .archive-link:hover {
     <div class="week-header">2026-05-18</div>
     <div class="source-header">2026-05-18 ~ 2026-05-24</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.15298" target="_blank">PhysBrain 1.0 Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.15298" target="_blank">PhysBrain 1.0 Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="145 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>145</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shijie Lian, Kai Chen</div>
             <div class="note-meta-line">Affiliation: Zhongguancun Academy, Huazhong University of Science and Technology</div>
@@ -371,7 +400,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 PhysBrain 1.0：把大规模人类第一视角视频转成结构化物理常识 QA，训练物理感知 VLM，再通过能力保持和语言敏感的 VLA 适配迁移到机器人控制。在 ERQA、PhysBench、SimplerEnv、LIBERO、RoboCasa 等任务上取得强结果，说明人类交互视频能有效补足机器人数据的物理常识覆盖。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.12882" target="_blank">CiteVQA: Benchmarking Evidence Attribution for Trustworthy Document Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.12882" target="_blank">CiteVQA: Benchmarking Evidence Attribution for Trustworthy Document Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="274 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>274</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Dongsheng Ma, Conghui He</div>
             <div class="note-meta-line">Affiliation: Peking University, Shanghai Artificial Intelligence Laboratory</div>
@@ -379,7 +411,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 CiteVQA，用 711 份跨领域、双语 PDF 构建 1897 个问题，要求模型同时给出答案和元素级 bbox 证据。新指标 SAA 只有在答案与引用区域都正确时才给分，揭示当前 MLLM 常出现“答案正确但证据错误”的 attribution hallucination，暴露文档智能可信性缺口。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.13527" target="_blank">MMSkills: Towards Multimodal Skills for General Visual Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.13527" target="_blank">MMSkills: Towards Multimodal Skills for General Visual Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="122 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>122</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kangning Zhang, Yong Yu</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Xiaohongshu Inc.</div>
@@ -387,7 +422,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 MMSkills，将可复用技能从纯文本扩展为“文本流程 + 状态卡 + 多视角关键帧”的多模态程序知识。论文给出从公开轨迹自动生成技能包的 pipeline，并通过 branch-loaded agent 在运行时对齐视觉证据，在 GUI 和游戏类视觉代理基准上稳定提升大模型与小模型表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.15155" target="_blank">Self-Distilled Agentic Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.15155" target="_blank">Self-Distilled Agentic Reinforcement Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="118 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>118</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhengxi Lu, Qi Gu, Yongliang Shen</div>
             <div class="note-meta-line">Affiliation: Zhejiang University, Meituan</div>
@@ -395,7 +433,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 SDAR，把 on-policy self-distillation 作为受控辅助目标接入多轮 agent RL。方法用教师分支的 token 级信号生成 sigmoid gate，强化正向 endorsement、弱化不可靠的负向拒绝，在 ALFWorld、WebShop、Search-QA 上相对 GRPO 明显提升，并避免朴素 GRPO+OPSD 的训练不稳定。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.18739" target="_blank">LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.18739" target="_blank">LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="116 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>116</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yukang Chen, Song Han</div>
             <div class="note-meta-line">Affiliation: NVIDIA</div>
@@ -403,7 +444,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 LongLive-2.0，一套面向长视频生成全流程的 NVFP4 并行基础设施。训练端用序列并行自回归训练和 Balanced SP 降低显存并加速 GEMM；推理端结合 W4A4 NVFP4、量化 KV cache、异步流式 VAE 解码和 SP 推理，训练最高提速 2.15x、推理最高提速 1.84x，并实现 5B 模型 45.7 FPS 长视频生成。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.19833" target="_blank">Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.19833" target="_blank">Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="137 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>137</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhifei Xie</div>
             <div class="note-meta-line">Affiliation: NTU</div>
@@ -411,7 +455,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">针对真实环境 ASR 在复杂声学扰动下易漏识别和幻觉的问题，提出 Mega-ASR，通过复合场景数据构造、渐进式声学到语义微调和 WER 门控策略优化训练。其 Voices-in-the-Wild-2M 覆盖 7 类声学现象与 54 种复合场景，在多个恶劣条件基准上显著降低 WER。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.22355" target="_blank">TransitLM: A Large-Scale Dataset and Benchmark for Map-Free Transit Route Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22355" target="_blank">TransitLM: A Large-Scale Dataset and Benchmark for Map-Free Transit Route Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="179 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>179</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hanyu Guo, Xiangxiang Chu</div>
             <div class="note-meta-line">Affiliation: AMAP, Alibaba Group, Beijing, China</div>
@@ -419,7 +466,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 TransitLM，用 1300 万条来自中国四城的公交路线规划记录构建持续预训练语料和基准，覆盖 120,845 个站点与 13,666 条线路。实验表明，基于该数据训练的 LLM 可在无显式地图和路由引擎下生成结构有效路线，并能隐式将 GPS 坐标映射到合适站点。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.21467" target="_blank">DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.21467" target="_blank">DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="207 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>207</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kaiyi Zhang, Yankai Lin</div>
             <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China, Ant International</div>
@@ -427,7 +477,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">研究 RLVR 中序列级奖励如何转化为 token 级概率更新，提出将策略梯度视为 token 梯度向量上的线性判别器。DelTA 通过估计 token 系数强化区分高低奖励响应的稀疏方向、削弱共享高频模式，在数学、代码生成和跨域评测中提升 Qwen3 系列基线表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.22109" target="_blank">Perception or Prejudice: Can MLLMs Go Beyond First Impressions of Personality?</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22109" target="_blank">Perception or Prejudice: Can MLLMs Go Beyond First Impressions of Personality?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="171 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>171</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Caixin Kang, Yifei Huang</div>
             <div class="note-meta-line">Affiliation: The University of Tokyo, Shanda AI Research Tokyo</div>
@@ -435,7 +488,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">针对 MLLM 人格识别只看 Big Five 分数、难以判断是否真正理解行为证据的问题，提出 Grounded Personality Reasoning 任务与 MM-OCEAN 数据集，并用分数、推理、证据 grounding 三层评测 27 个模型。结果显示 51% 正确评分缺乏证据支撑，揭示显著的 prejudice gap。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.19376" target="_blank">Generative Recursive Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.19376" target="_blank">Generative Recursive Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="31 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>31</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Junyeob Baek, Sungjin Ahn</div>
             <div class="note-meta-line">Affiliation: KAIST, New York University</div>
@@ -443,7 +499,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 GRAM，将递归潜变量推理从确定性单轨迹扩展为概率式多轨迹计算，支持多假设、不同求解策略，以及通过递归深度和并行采样实现推理时扩展。模型用摊销变分推断训练，在结构化推理和多解约束满足任务上优于确定性递归基线，并展示无条件生成能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.18747" target="_blank">Code as Agent Harness</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.18747" target="_blank">Code as Agent Harness</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="225 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>225</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xuying Ning</div>
             <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
@@ -451,15 +510,20 @@ h1 .archive-link:hover {
         <div class="note-tldr">综述“code as agent harness”视角：代码不只是 LLM 输出对象，也成为智能体推理、行动、环境建模和执行验证的运行底座。论文按接口、机制和多智能体扩展三层梳理规划、记忆、工具调用、反馈控制与协作验证，并指出评测、监督、安全和多模态环境等开放问题。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.19943" target="_blank">Probabilistic Tiny Recursive Model</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.19943" target="_blank">Probabilistic Tiny Recursive Model</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Amin Sghaier, Alexia Jolicoeur-Martineau</div>
-            <div class="note-meta-line">Affiliation: Mila - Quebec AI Institute, ILLS & ETS Montreal</div>
+            <div class="note-meta-line">Affiliation: Mila - Quebec AI Institute, ILLS &amp; ETS Montreal</div>
         </div>
         <div class="note-tldr">提出 Probabilistic Tiny Recursive Model (PTRM)，在 Tiny Recursive Model 的深层递归步骤中注入高斯噪声，让多条并行轨迹探索不同解盆地，并用原模型的 Q head 选择答案。该方法无需重训或任务特定扰动，却能显著提升测试时计算扩展效果：Sudoku-Extreme 从 87.4% 提升到 98.75%，PPBench 多类谜题从 62.6% 提升到 91.2%，以 7M 参数和极低成本超过强前沿 LLM。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.06554" target="_blank">Long Context Pre-Training with Lighthouse Attention</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.06554" target="_blank">Long Context Pre-Training with Lighthouse Attention</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="31 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>31</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bowen Peng, Jeffrey Quesnelle</div>
             <div class="note-meta-line">Affiliation: Nous Research</div>
@@ -467,7 +531,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出仅用于训练阶段的 Lighthouse Attention：以无梯度的层次化选择机制对查询、键和值做对称压缩，再用短暂恢复阶段转回全注意力。小规模预训练显示其在降低长上下文训练成本的同时取得更低最终损失。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.15184" target="_blank">Is Grep All You Need? How Agent Harnesses Reshape Agentic Search</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.15184" target="_blank">Is Grep All You Need? How Agent Harnesses Reshape Agentic Search</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sahil Sen, Vamse Kumar Subbiah</div>
             <div class="note-meta-line">Affiliation: PricewaterhouseCoopers, U.S.</div>
@@ -475,7 +541,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统比较 grep 与向量检索在 Chronos、Claude Code、Codex 和 Gemini CLI 等代理框架中的表现。LongMemEval 实验表明 grep 通常更准确，而结果也强烈受代理框架及工具结果呈现方式影响。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://www.goodfire.ai/research/a-geometric-calculator" target="_blank">A Geometric Calculator Inside a Neural Network</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.goodfire.ai/research/a-geometric-calculator" target="_blank">A Geometric Calculator Inside a Neural Network</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sheridan Feucht, Thomas McGrath</div>
             <div class="note-meta-line">Affiliation: Goodfire, Northeastern University</div>
@@ -483,15 +551,21 @@ h1 .archive-link:hover {
         <div class="note-tldr">对 Llama 3.1 8B 的数字表征进行机制解释，发现模型内部存在可在流形上运算的通用加法模块：它操纵数字的环形表示完成计算，为理解神经网络如何复用几何结构执行算法提供了实证。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.14892" target="_blank">Beyond Individual Intelligence: Surveying Collaboration, Failure Attribution, and Self-Evolution in LLM-based Multi-Agent Systems</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.14892" target="_blank">Beyond Individual Intelligence: Surveying Collaboration, Failure Attribution, and Self-Evolution in LLM-based Multi-Agent Systems</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="51 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>51</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shihao Qi, Jie Ma</div>
-            <div class="note-meta-line">Affiliation: MOE KLINNS Lab, School of Computer Science and Technology, Xi'an Jiaotong University</div>
+            <div class="note-meta-line">Affiliation: MOE KLINNS Lab, School of Computer Science and Technology, Xi&#x27;an Jiaotong University</div>
         </div>
         <div class="note-tldr">以 LIFE 路径统一梳理多智能体系统：能力奠基、协作整合、故障归因与自主进化。论文强调四阶段之间的因果依赖，并提出让系统持续诊断失败、重组结构和改进行为的闭环研究议程。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.08083" target="_blank">LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.08083" target="_blank">LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="70 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>70</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Tong Zheng, Heng Huang</div>
             <div class="note-meta-line">Affiliation: University of Maryland</div>
@@ -499,7 +573,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 AutoTTS，把测试时扩展策略设计转化为代理在离线轨迹环境中的控制器搜索，可决定分支、继续、剪枝与停止。数学推理实验显示其优于人工启发式的精度-成本前沿，发现成本仅 39.9 美元和 160 分钟。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.13821" target="_blank">Harnessing Agentic Evolution</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.13821" target="_blank">Harnessing Agentic Evolution</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiayi Zhang, Chenglin Wu, Yuyu Luo</div>
             <div class="note-meta-line">Affiliation: The Hong Kong University of Science and Technology (Guangzhou), DeepWisdom</div>
@@ -507,7 +583,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 AEvo，将累积的候选、反馈和失败视为过程状态，由元代理编辑后续演化程序或代理上下文，而非直接产出候选。其在代理与推理基准上相对最强基线提升 26%，开放式优化任务也达到领先水平。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.08060" target="_blank">The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.08060" target="_blank">The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiayuan Liu, Vincent Conitzer</div>
             <div class="note-meta-line">Affiliation: Carnegie Mellon University</div>
@@ -515,7 +593,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">在 7 个模型、4 类博弈和 500 轮交互中发现，扩大可见历史会在 28 个设置中的 18 个降低合作。分析表明原因是前瞻意图衰减而非猜疑增加；定向微调、记忆净化及减少显式思维链可缓解该现象。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.06546" target="_blank">Efficient Pre-Training with Token Superposition</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.06546" target="_blank">Efficient Pre-Training with Token Superposition</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="48 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>48</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bowen Peng, Jeffrey Quesnelle</div>
             <div class="note-meta-line">Affiliation: Nous Research</div>
@@ -523,7 +604,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出即插即用的 Token-Superposition Training：先把连续 token 合并成词袋并用多热交叉熵高效训练，再恢复标准训练。方法无需改变模型、优化器或并行方案，在 10B A1B MoE 上等损失训练时间最多缩短 2.5 倍。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.11609" target="_blank">Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.11609" target="_blank">Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="196 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>196</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guobin Shen, Xing Yu</div>
             <div class="note-meta-line">Affiliation: Xiaohongshu Inc.</div>
@@ -531,7 +615,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">通过逐点互信息分析发现，特权上下文会压低多步搜索所需的审慎 token。AntiSD 反向优化师生分布差异并以熵门控限制信号，在 4B-30B 模型上用少 2-10 倍训练步数达到 GRPO 精度，最终最多提升 11.5 点。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.20025" target="_blank">AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.20025" target="_blank">AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="191 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>191</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiaqi Liu, Huaxiu Yao</div>
             <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill</div>
@@ -539,7 +626,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建多智能体自主科研流水线，结合假设辩论、自愈执行、可验证结果、人机协作和跨运行经验演化。在 ARC-Bench 上较 AI Scientist v2 提升 54.7%，并发现关键节点的精准人工介入优于完全自治或全程干预。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.16403" target="_blank">When Vision Speaks for Sound</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.16403" target="_blank">When Vision Speaks for Sound</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="161 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>161</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xiaofei Wen, Peng Qi</div>
             <div class="note-meta-line">Affiliation: University of California, Davis</div>
@@ -547,7 +637,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">揭示视频多模态模型常凭视觉线索猜测声音的“视听聪明汉斯效应”。THUD 通过音频移位、静音和替换做反事实诊断；两阶段偏好对齐用 1 万样本使三类干预平均表现提升 28 个百分点，同时保持通用视听能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.14236" target="_blank">Active Learners as Efficient PRP Rerankers</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.14236" target="_blank">Active Learners as Efficient PRP Rerankers</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="98 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>98</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jeremias Figueiredo Paschmann, Luciano del Corro</div>
             <div class="note-meta-line">Affiliation: Universidad de San Martin de Porres</div>
@@ -555,7 +648,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">将有噪、顺序敏感且可能非传递的成对排序提示重构为主动学习问题，以有限调用预算直接优化 Top-K。随机化比较方向可用单次 LLM 调用消除位置偏差，主动排序器在受限预算下取得更高 NDCG@10。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.19769" target="_blank">OpenComputer: Verifiable Software Worlds for Computer-Use Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.19769" target="_blank">OpenComputer: Verifiable Software Worlds for Computer-Use Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jinbiao Wei, Arman Cohan</div>
             <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill</div>
@@ -563,7 +659,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建面向计算机操作代理的可验证软件世界，包含应用状态验证器、自进化验证层、任务生成和可审计评测框架，覆盖 33 个应用与 1000 个任务。实验显示硬编码验证器更贴近人工判断，并暴露前沿代理的端到端完成差距。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.20613" target="_blank">HRM-Text: Efficient Pretraining Beyond Scaling</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.20613" target="_blank">HRM-Text: Efficient Pretraining Beyond Scaling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="323 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>323</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guan Wang, Yasin Abbasi Yadkori</div>
             <div class="note-meta-line">Affiliation: Sapient Intelligence</div>
@@ -571,7 +670,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">以层次循环模型替代 Transformer，将慢速策略层与快速执行层解耦，并引入 MagicNorm、深层信用预热和任务完成式预训练。1B 模型仅用 400 亿独立 token、约 1500 美元训练，即可与 2B-7B 开源模型竞争。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.14747" target="_blank">Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.14747" target="_blank">Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="147 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>147</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Weimin Xiong, Sujian Li, Hao Tian</div>
             <div class="note-meta-line">Affiliation: Peking University, Xiaomi LLM-Core</div>
@@ -579,7 +681,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出从无标注互联网教程视频自动提取 GUI 操作轨迹的 Video2GUI。系统从 5 亿条视频元数据构建覆盖 1500 多个应用、1200 万条轨迹的 WildGUI，预训练后在多项 GUI 定位与动作基准上提升 5%-20%。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.18233" target="_blank">Enhancing Train-Free Infinite-Frame Generation for Consistent Long Videos</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.18233" target="_blank">Enhancing Train-Free Infinite-Frame Generation for Consistent Long Videos</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xiaokun Feng, Kaiqi Huang</div>
             <div class="note-meta-line">Affiliation: University of Chinese Academy of Sciences, Institute of Automation CAS, AMAP Alibaba Group</div>
@@ -587,7 +692,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出无需训练的无限帧视频生成方法 MIGA，以两阶段对齐缩小训练-推理噪声跨度差异，再用自反思修正高噪声早期帧、长程帧引导维持一致性。在 VBench 与 NarrLV 上达到领先表现且保持恒定内存。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.20682" target="_blank">IndusAgent: Reinforcing Open-Vocabulary Industrial Anomaly Detection with Agentic Tools</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.20682" target="_blank">IndusAgent: Reinforcing Open-Vocabulary Industrial Anomaly Detection with Agentic Tools</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Rongbin Tan, Shuhan Song</div>
             <div class="note-meta-line">Affiliation: Institute of Computing Technology CAS, University of Chinese Academy of Sciences</div>
@@ -595,7 +703,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向开放词汇工业异常检测，构建融合全局观察、局部高清块和正常先验的 Indus-CoT，并让代理按需调用裁剪、高频增强和先验检索工具。门控强化学习联合优化分类、定位、推理与工具效率，在五个基准上取得零样本领先结果。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.14678" target="_blank">$π$-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.14678" target="_blank">$π$-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="108 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>108</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Haoran Zhang, Yang Yang, Yu Cheng, Yafu Li</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Shanghai AI Laboratory</div>
@@ -603,7 +714,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出评测主动式个人助理的 π-Bench，含 5 类用户角色和 100 个多轮任务，以隐藏意图、任务依赖及跨会话连续性同时衡量主动性与完成度。实验表明主动协助仍很困难，历史交互对后续意图解析至关重要。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.16928" target="_blank">Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.16928" target="_blank">Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="99 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>99</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yanke Zhou, Yuan Yao</div>
             <div class="note-meta-line">Affiliation: Nanjing University</div>
@@ -611,14 +725,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">发现全注意力模型本身具有可利用的稀疏性，提出 RTPurbo：仅为检索头保留完整 KV 缓存，以 16 维索引器和动态 top-p 选择相关 token。仅需数百步适配，在 100 万上下文上预填加速 9.36 倍、解码约 2.01 倍且精度近乎无损。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2605.22817" target="_blank">Vector Policy Optimization: Training for Diversity Improves Test-Time Search</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2605.22817" target="_blank">Vector Policy Optimization: Training for Diversity Improves Test-Time Search</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ryan Bahlous-Boldi, Pulkit Agrawal</div>
             <div class="note-meta-line">Affiliation: Massachusetts Institute of Technology</div>
         </div>
         <div class="note-tldr">提出 Vector Policy Optimization，以向量奖励训练模型生成面向不同权衡的多样化解集，可直接替换 GRPO 优势估计。四类任务中其测试时 pass@k、best@k 随搜索预算扩大持续领先，并解锁 GRPO 无法解决的演化搜索问题。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,6 +389,7 @@ h1 .archive-link:hover {
     <div class="archive-group">
         <div class="archive-group-title">JULY 2026</div>
         <ul class="archive-list">
+            <li class="archive-item"><a class="archive-date" href="weeks/2026-07-20.html">2026-07-20</a><span class="archive-desc">Understanding Reasoning from Pretraining to Post-Training</span><span class="archive-count">1 papers</span></li>
             <li class="archive-item"><a class="archive-date" href="weeks/2026-07-13.html">2026-07-13</a><span class="archive-desc">Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents</span><span class="archive-count">27 papers</span></li>
             <li class="archive-item"><a class="archive-date" href="weeks/2026-07-06.html">2026-07-06</a><span class="archive-desc">The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</span><span class="archive-count">25 papers</span></li>
         </ul>
@@ -469,7 +496,7 @@ h1 .archive-link:hover {
             <li class="archive-item"><a class="archive-date" href="weeks/2025-08-10.html">2025-08-10</a><span class="archive-desc">Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens</span><span class="archive-count">14 papers</span></li>
         </ul>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 var _ICON_MOON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 var _ICON_SUN = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';

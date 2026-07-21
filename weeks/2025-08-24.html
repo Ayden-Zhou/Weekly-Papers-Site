@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-08-24</div>
     <div class="source-header">2025-08-18 ~ 2025-08-24</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.08221" target="_blank">Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.08221" target="_blank">Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zihe Liu, Bo Zheng</div>
             <div class="note-meta-line">Affiliation: Alibaba Group</div>
@@ -371,14 +399,18 @@ h1 .archive-link:hover {
         <div class="note-tldr">全面梳理并复现实用的推理型RL技术，解析技巧机理与适用场景，给出选择与配方指南；提出简化的Lite PPO组合，在多数学基准上优于GRPO/DAPO，提供可落地的训练建议。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.09848" target="_blank">PRELUDE: A Benchmark Designed to Require Global Comprehension and Reasoning over Long Contexts</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.09848" target="_blank">PRELUDE: A Benchmark Designed to Require Global Comprehension and Reasoning over Long Contexts</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Affiliation: WeChat AI, Tencent</div>
         </div>
         <div class="note-tldr">提出PRELUDE：判断角色前传是否与原著一致，强调跨章节证据聚合与多步推理并规避记忆捷径。实验显示主流模型较人类落后超15%，且推理正确率差距超30%，凸显长文本理解短板。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.09124" target="_blank">OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.09124" target="_blank">OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Weixuan Wang, Saravan Rajmohan</div>
             <div class="note-meta-line">Affiliation: University of Edinburgh; Microsoft</div>
@@ -386,7 +418,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出OdysseyBench，评测代理在Word/Excel/PDF/邮件/日历等多应用的长程办公流程；以HOMERAGENTS自动生成602个复杂任务，覆盖真实上下文与多步推理。结果显示主流代理明显受挫，有助于更贴近实务的能力评估与改进。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.08285" target="_blank">The Illusion of Progress: Re-evaluating Hallucination Detection in LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.08285" target="_blank">The Illusion of Progress: Re-evaluating Hallucination Detection in LLMs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Denis Janiak, Tomasz Kajdanowicz</div>
             <div class="note-meta-line">Affiliation: Wroclaw University of Science and Technology; University of Technology Sydney; New York University</div>
@@ -394,7 +428,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统重评LLM幻觉检测，发现基于ROUGE的评估高召回但精度极低，甚至被答复长度等简单特征“投机”。作者倡导语义对齐、稳健的评估框架，避免夸大检测器效果，提升输出可信度。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.10104" target="_blank">DINOv3</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.10104" target="_blank">DINOv3</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Oriane Siméoni, Piotr Bojanowski</div>
             <div class="note-meta-line">Affiliation: Meta AI Research</div>
@@ -402,7 +438,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">自监督视觉骨干DINOv3通过扩大数据与模型、并以Gram anchoring解决长程训练中稠密特征退化，辅以后处理增强分辨率与文本对齐；无需微调即在多项任务上取得领先，提供通用高质量视觉表征。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.07050" target="_blank">ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.07050" target="_blank">ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Wenhan Liu, Zhicheng Dou</div>
             <div class="note-meta-line">Affiliation: Renmin University of China; Baidu</div>
@@ -410,14 +448,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向检索重排，构建推理密集训练数据并采用两阶段SFT+RL后训；基于列表式设定设计多视角排名奖励以强化推理。ReasonRank在BRIGHT榜单达40.6，且延迟低于点式重排器，显著优于现有方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.10433" target="_blank">We-Math 2.0: A Versatile MathBook System for Incentivizing Visual Mathematical Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.10433" target="_blank">We-Math 2.0: A Versatile MathBook System for Incentivizing Visual Mathematical Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Runqi Qiao, Honggang Zhang</div>
             <div class="note-meta-line">Affiliation: WeChat Vision; Tsinghua University</div>
         </div>
         <div class="note-tldr">构建覆盖491知识点与1,819原理的MathBook体系，形成Standard/Pro数据并定义三维难度；提出“冷启动微调 + 渐进对齐RL”，并给出MathBookEval。多基准结果表明在多模态数理推理上具较强泛化。 # 2025-08-22 **#### [Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning](**https://arxiv.org/abs/2508.08221**)** - ***Authors****: Zihe Liu, Bo Zheng - ***Affiliation****: Alibaba Group - ***TLDR****: 全面梳理并复现实用的推理型 RL 技术，解析技巧机理与适用场景，给出选择与配方指南；提出简化的 Lite PPO 组合，在多数学基准上优于 GRPO/DAPO，提供可落地的训练建议。 **#### [PRELUDE: A Benchmark Designed to Require Global Comprehension and Reasoning over Long Contexts](**https://arxiv.org/abs/2508.09848**)** - ***Authors****: Mo Yu, Jie Zhou - ***Affiliation****: WeChat AI, Tencent - ***TLDR****: 提出 PRELUDE：判断角色前传是否与原著一致，强调跨章节证据聚合与多步推理并规避记忆捷径。实验显示主流模型较人类落后超 15%，且推理正确率差距超 30%，凸显长文本理解短板。 **#### [OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows](**https://arxiv.org/abs/2508.09124**)** - ***Authors****: Weixuan Wang, Saravan Rajmohan - ***Affiliation****: University of Edinburgh; Microsoft - ***TLDR****: 提出 OdysseyBench，评测代理在 Word/Excel/PDF/邮件/日历等多应用的长程办公流程；以 HOMERAGENTS 自动生成 602 个复杂任务，覆盖真实上下文与多步推理。结果显示主流代理明显受挫，有助于更贴近实务的能力评估与改进。 **#### [The Illusion of Progress: Re-evaluating Hallucination Detection in LLMs](**https://arxiv.org/abs/2508.08285**)** - ***Authors****: Denis Janiak, Tomasz Kajdanowicz - ***Affiliation****: Wroclaw University of Science and Technology; University of Technology Sydney; New York University - ***TLDR****: 系统重评 LLM 幻觉检测，发现基于 ROUGE 的评估高召回但精度极低，甚至被答复长度等简单特征“投机”。作者倡导语义对齐、稳健的评估框架，避免夸大检测器效果，提升输出可信度。 **#### [DINOv3](**https://arxiv.org/abs/2508.10104**)** - ***Authors****: Oriane Siméoni, Piotr Bojanowski - ***Affiliation****: Meta AI Research; - ***TLDR****: 自监督视觉骨干 DINOv3 通过扩大数据与模型、并以 Gram anchoring 解决长程训练中稠密特征退化，辅以后处理增强分辨率与文本对齐；无需微调即在多项任务上取得领先，提供通用高质量视觉表征。 **#### [ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability](**https://arxiv.org/abs/2508.07050**)** - ***Authors****: Wenhan Liu, Zhicheng Dou - ***Affiliation****: Renmin University of China; Baidu; - ***TLDR****: 面向检索重排，构建推理密集训练数据并采用两阶段 SFT+RL 后训；基于列表式设定设计多视角排名奖励以强化推理。ReasonRank 在 BRIGHT 榜单达 40.6，且延迟低于点式重排器，显著优于现有方法。 **#### [We-Math 2.0: A Versatile MathBook System for Incentivizing Visual Mathematical Reasoning](**https://arxiv.org/abs/2508.10433**)** - ***Authors****: Runqi Qiao, Honggang Zhang - ***Affiliation****: WeChat Vision; Tsinghua University - ***TLDR****: 构建覆盖 491 知识点与 1,819 原理的 MathBook 体系，形成 Standard/Pro 数据并定义三维难度；提出“冷启动微调 + 渐进对齐 RL”，并给出 MathBookEval。多基准结果表明在多模态数理推理上具较强泛化。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

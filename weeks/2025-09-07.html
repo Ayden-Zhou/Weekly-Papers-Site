@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-09-07</div>
     <div class="source-header">2025-09-01 ~ 2025-09-07</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf" target="_blank">Why Language Models Hallucinate</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf" target="_blank">Why Language Models Hallucinate</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Adam Tauman Kalai; Adam Tauman Kalai.</div>
             <div class="note-meta-line">Affiliation: OpenAI.</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 从统计学习视角解释“幻觉”源于训练与评测的激励错配：预训练与0/1式评测鼓励模型在不确定时“猜测”而非明示不确定。作者建议在主流基准中不惩罚弃答，以减少过度自信与幻觉的系统性产生。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.03867" target="_blank">Drivel-ology: Challenging LLMs with Interpreting Nonsense with Depth</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.03867" target="_blank">Drivel-ology: Challenging LLMs with Interpreting Nonsense with Depth</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yang Wang; Chenghua Lin.</div>
             <div class="note-meta-line">Affiliation: The University of Manchester; The University of Manchester.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建“胡言乱语”理解基准，考查模型在语法通顺但语义荒诞文本上的深层解释能力；多模型评测表明现有LLM常以貌取人、缺乏一致性与因果辨识，并给出训练与评测协议以揭示并缓解此类偏差。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.21496" target="_blank">ELV-Halluc: Evaluating Hallucinations in Visual Grounded Instruction Following</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.21496" target="_blank">ELV-Halluc: Evaluating Hallucinations in Visual Grounded Instruction Following</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hao Lu; Hao Lu.</div>
             <div class="note-meta-line">Affiliation: SenseTime Research.</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建 ELV-Halluc 基准，以执行逻辑与视觉证据联合评测视觉指令跟随中的幻觉；系统分析主流 VLM/代理在定位、动作与状态描述等环节的失真，并提供可复现实验与资源。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.18226" target="_blank">Disentangling the Factors of Convergence between Brains and Computer Vision Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.18226" target="_blank">Disentangling the Factors of Convergence between Brains and Computer Vision Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Joséphine Raugel; Jean-Rémi King.</div>
             <div class="note-meta-line">Affiliation: Meta AI; École Normale Supérieure – PSL.</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 系统训练多种 DINOv3 视觉模型并与人脑 fMRI/MEG 数据比对，发现模型规模、训练量与图像类型独立且交互地提升“脑相似度”；最大模型与人本图像最佳。相似性随训练先对齐早期视觉区，后对齐前额叶等高层区域，并与皮层厚度、髓鞘、发育扩张与时间尺度等结构功能特征相关。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.21365" target="_blank">Think in Games: Learning to Reason in Games via Reinforcement Learning with Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.21365" target="_blank">Think in Games: Learning to Reason in Games via Reinforcement Learning with Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yi Liao; Wei Yang.</div>
             <div class="note-meta-line">Affiliation: Tencent; Tencent.</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 TiG，将 RL 决策过程重构为语言建模，LLM 在游戏环境中交互学习程序性知识并生成可解释决策链；以更低数据与算力达到与传统 RL 相当的表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.02479" target="_blank">SimpleTIR: End-to-End Reinforcement Learning for Multi-Turn Tool-Integrated Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.02479" target="_blank">SimpleTIR: End-to-End Reinforcement Learning for Multi-Turn Tool-Integrated Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhenghai Xue; Zhenghai Xue.</div>
             <div class="note-meta-line">Affiliation: Nanyang Technological University; Nanyang Technological University.</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出SimpleTIR，在多轮工具调用中用RL训练并通过过滤“空转”轨迹抑制分布漂移与梯度爆炸，稳定训练并显著提升数学推理（如AIME24由22.1升至50.5，基座为Qwen2.5-7B），并诱发自纠错与交叉验证等策略。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2410.07486" target="_blank">Visual Story-Writing: Writing by Manipulating Visual Representations of Stories</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2410.07486" target="_blank">Visual Story-Writing: Writing by Manipulating Visual Representations of Stories</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Damien Masson; Damien Masson.</div>
             <div class="note-meta-line">Affiliation: University of Toronto.</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 定义“可视化写作”范式：通过实体关系图、空间位置与事件时间线等可编辑可视化来操控文本。原型编辑器两项用户研究显示，该方式有助于高层规划、跟踪故事要素与探索变体，促进创意与可控修改。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.01055" target="_blank">VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.01055" target="_blank">VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Dongfu Jiang; Wenhu Chen.</div>
             <div class="note-meta-line">Affiliation: University of Waterloo; University of Waterloo.</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">推出VerlTool，一体化ARLT训练框架：与VeRL上游对齐，标准化多模态工具API（代码、检索、SQL、视觉等），异步rollout实现近2×加速，覆盖数学、知识问答、SQL、视觉、搜索与软工6域评测，提供可扩展的工具增强RL基建。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://www.arxiv.org/abs/2508.20722" target="_blank">rStar2-Agent: Agentic Reasoning Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.arxiv.org/abs/2508.20722" target="_blank">rStar2-Agent: Agentic Reasoning Technical Report</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ning Shang; Li Lyna Zhang, Mao Yang.</div>
             <div class="note-meta-line">Affiliation: Microsoft Research.</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">**TLDR：** 训练 14B 数学推理模型 rStar2-Agent，引入在 Python 代码环境中的“智能体式”RL 与 GRPO-RoC 策略，以少量算力快速达到前沿水平；AIME24/25 等基准优于或匹敌更大模型，并在对齐、科学推理与工具使用上具备良好泛化，代码与配方已开源。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.21141" target="_blank">Adaptive LLM Routing under Budget Constraints</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.21141" target="_blank">Adaptive LLM Routing under Budget Constraints</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Pranoy Panda; Vishal Sharma.</div>
             <div class="note-meta-line">Affiliation: Fujitsu Research.</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">将 LLM 路由建模为预算约束的情境 bandit。先用人类偏好数据预训练查询与 LLM 的共享嵌入空间，再用在线 bandit 反馈持续更新；并提出与多选背包结合的在线成本策略，在不同 token 预算下最大化效用，较基线更低后悔与更高性能。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.02350" target="_blank">Implicit Reasoning in Large Language Models: A Comprehensive Survey</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.02350" target="_blank">Implicit Reasoning in Large Language Models: A Comprehensive Survey</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jindong Li; Jindong Li.</div>
             <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology (Guangzhou).</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统综述“隐式推理”，即模型在内部结构中完成推理而不输出文本链路。提出按执行范式划分：潜在优化、信号引导控制、层循环执行；汇总结构/行为/表示证据与评测基准，讨论效率、可靠性与开放问题，并维护相关资源。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.21038" target="_blank">On the Theoretical Limitations of Embedding-Based Retrieval</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.21038" target="_blank">On the Theoretical Limitations of Embedding-Based Retrieval</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Orion Weller; Jinhyuk Lee.</div>
             <div class="note-meta-line">Affiliation: Johns Hopkins University; Google DeepMind.</div>
@@ -459,7 +509,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">从理论上证明单向量嵌入检索存在“表示容量”上限：可返回的 top-k 组合受嵌入维度限制。作者据此构造 LIMIT 数据集并实证验证，显示多项 SoTA 在简单任务上仍失败；提示在复杂相关性下应考虑跨编码器或多向量等替代范式。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.07407" target="_blank">A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.07407" target="_blank">A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jinyuan Fang; Zaiqiao Meng.</div>
             <div class="note-meta-line">Affiliation: University of Glasgow.</div>
@@ -467,7 +519,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">综述自进化智能体：提出统一反馈环框架（输入-代理系统-环境-优化器），梳理在提示、记忆、工具、工作流与多智能体协作等环节的演化策略；并讨论跨领域应用（如生物医学/编程/金融）、评测指标与安全伦理，为构建可持续改进的代理系统奠基。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.02547" target="_blank">The Landscape of Agentic Reinforcement Learning for LLMs: A Survey</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.02547" target="_blank">The Landscape of Agentic Reinforcement Learning for LLMs: A Survey</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guibin Zhang; Guibin Zhang.</div>
             <div class="note-meta-line">Affiliation: National University of Singapore; National University of Singapore.</div>
@@ -475,7 +529,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">综述 Agentic RL：将LLM从一次性生成转为在POMDP中具备规划、工具使用、记忆与自改进等能力的自主体；提出能力与应用双重分类，汇编环境/基准/框架版图，强调以强化学习把模块化能力转化为稳健行为，并总结机遇与挑战。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.18106" target="_blank">A.S.E: A Repository-Level Benchmark for Evaluating Security in AI-Generated Code</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.18106" target="_blank">A.S.E: A Repository-Level Benchmark for Evaluating Security in AI-Generated Code</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Keke Lian; Hui Li; Dong Zhang.</div>
             <div class="note-meta-line">Affiliation: Tencent; Peking University.</div>
@@ -483,7 +539,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出A.S.E仓库级代码安全基准：从真实含CVE仓库构造任务、容器化可复现评测，覆盖安全/质量/稳定性三维。结果显示Claude-3.7-Sonnet总体最佳、Qwen3-235B在安全分最高，“快思考”解码普遍优于“慢思考”推理。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2508.21112" target="_blank">EmbodiedOneVision: A Unified and Scalable Vision Model for Embodied AI</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2508.21112" target="_blank">EmbodiedOneVision: A Unified and Scalable Vision Model for Embodied AI</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Delin Qu; Dong Wang.</div>
             <div class="note-meta-line">Affiliation: Fudan University; Shanghai AI Laboratory.</div>
@@ -491,7 +549,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出统一可扩展的实体智能视觉模型 EO-1，利用多源 embodied 数据预训练并适配多机器人多任务，在跨域感知与泛化上表现强劲，兼顾零/小样本能力与部署效率。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.00375" target="_blank">Open Data Synthesis For Deep Research</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.00375" target="_blank">Open Data Synthesis For Deep Research</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ziyi Xia; Zheng Liu.</div>
             <div class="note-meta-line">Affiliation: Columbia University; Microsoft Research.</div>
@@ -499,7 +559,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 InfoSeek 数据合成框架：以双代理递归构建“研究树”，再转化为可验证问答，覆盖结构化深度检索任务；生成高质量、可控复杂度数据，提升模型推理与检索协同能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.04394" target="_blank">Transition Models: Rethinking the Generative Learning Objective</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.04394" target="_blank">Transition Models: Rethinking the Generative Learning Objective</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zidong Wang; Lei Bai.</div>
             <div class="note-meta-line">Affiliation: Shanghai AI Laboratory; Shanghai AI Laboratory.</div>
@@ -507,7 +569,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 Transition Models，以解析的连续时间状态转移方程统一任意步数生成；865M 模型在少步/多步均超越 SD3.5 与 FLUX.1，随步数单调提升，并支持原生 4K 高保真合成。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.02522" target="_blank">Implicit Actor Critic Coupling via a Supervised Learning Framework for RLVR</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.02522" target="_blank">Implicit Actor Critic Coupling via a Supervised Learning Framework for RLVR</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiaming Li; Min Yang.</div>
             <div class="note-meta-line">Affiliation: University of Chinese Academy of Sciences; Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences.</div>
@@ -515,14 +579,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 PACS，将 RLVR 的策略优化改写为监督学习的打分函数，隐式耦合 actor-critic 并提升稳定性；在数学推理上优于 PPO/GRPO，AIME-2025 pass@256 达 59.78%。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2509.00244" target="_blank">Universal Deep Research: Bring Your Own Model and Strategy</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2509.00244" target="_blank">Universal Deep Research: Bring Your Own Model and Strategy</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Peter Belcak; Peter Belcak.</div>
             <div class="note-meta-line">Affiliation: NVIDIA Research.</div>
         </div>
         <div class="note-tldr">**TLDR：** 提出通用深度调研系统 UDR，可包裹任意大模型，让用户无须微调即可自定义调研策略，并提供最小/扩展/密集三类示例策略与交互界面，支持灵活试验与组合工具链的研究流程。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

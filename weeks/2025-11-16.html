@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-11-16</div>
     <div class="source-header">2025-11-10 ~ 2025-11-16</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.09263" target="_blank">Olympiad-level formal mathematical reasoning with reinforcement learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.09263" target="_blank">Olympiad-level formal mathematical reasoning with reinforcement learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Thomas Hubert, Eric Wieser.</div>
             <div class="note-meta-line">Affiliation: Google DeepMind, London, UK.</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">在 Lean 形式化系统中构建 AlphaProof，用 AlphaZero 式强化学习在海量自动形式化题库上训练，并在推理时用 Test-Time RL 生成相关变体自我改进；在 Putnam 与 2024 IMO 等竞赛题上达到接近人类银牌选手的成绩，展示“从交互经验中学证明”的可行路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26658" target="_blank">The Era of Agentic Organization: Learning to Organize with Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26658" target="_blank">The Era of Agentic Organization: Learning to Organize with Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zewen Chi, Furu Wei.</div>
             <div class="note-meta-line">Affiliation: Microsoft Research.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“异步思考”框架 AsyncThink，由一个 organizer 将复杂问题拆成可并行子任务、分配给多个 worker 并动态合并中间结论，再用强化学习优化内部思考结构；在数学推理等基准上同时降低推理延迟与提升准确率，展示组织型 LLM 在复杂任务上的优势。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.00617" target="_blank">Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.00617" target="_blank">Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Eric Bigelow, Eric Bigelow.</div>
             <div class="note-meta-line">Affiliation: Goodfire AI, Department of Psychology, Harvard University, Physics of Intelligence Group, NTT Research.</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 belief dynamics 框架，将 in-context learning 看作隐含“信念状态”在提示序列中的演化，并将 activation steering 视为对这些轨迹的干预；通过合成任务与真实语言任务分析两者何时互补或失效，为理解和控制 LLM 内部推理过程提供统一视角。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://abehrouz.github.io/files/NL.pdf" target="_blank">Nested Learning: The Illusion of Deep Learning Architectures</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://abehrouz.github.io/files/NL.pdf" target="_blank">Nested Learning: The Illusion of Deep Learning Architectures</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ali Behrouz, Vahab Mirrokni.</div>
             <div class="note-meta-line">Affiliation: Google Research, USA.</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">将深度网络重解释为一组在不同时间尺度上更新的嵌套优化问题，提出 Nested Learning 范式；据此构造“深优化器”、自我修改的序列模型 HOPE 与连续记忆系统，在语言建模、持续学习和长上下文推理任务中缓解灾难遗忘，实现在线适应与长期记忆的统一。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.01758" target="_blank">Reinforcement Learning with Adversarial Critic</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.01758" target="_blank">Reinforcement Learning with Adversarial Critic</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Mian Wu, Aviral Kumar.</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University.</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 RLAC，让一个对手式 critic 在推理过程中主动构造困难情形并提供细粒度反馈，引导 LLM 通过强化学习自我探索和修正推理链，而非仅依赖静态偏好对齐；在多种数学与推理基准上显著提升正确率与样本效率，并展现更稳定的 RL 训练行为。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.05933" target="_blank">Reinforcement Learning Improves Traversal of Hierarchical Knowledge in LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.05933" target="_blank">Reinforcement Learning Improves Traversal of Hierarchical Knowledge in LLMs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Renfei Zhang, Renfei Zhang.</div>
             <div class="note-meta-line">Affiliation: Simon Fraser University.</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">将基于知识库的推理建模为在层次概念图上的遍历问题，用强化学习学习何时向下钻取、何时回溯与切换路径，从而优化检索与思考顺序；实验表明，相比静态检索或贪心遍历，学到的策略能更高效地利用层次知识结构，在多跳问答与分层推理任务上取得更高准确率。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.09690" target="_blank">Omnilingual ASR: Open-Source Multilingual Speech Recognition for 1600 Languages</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.09690" target="_blank">Omnilingual ASR: Open-Source Multilingual Speech Recognition for 1600 Languages</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Gil Keren, Kevin Chan.</div>
             <div class="note-meta-line">Affiliation: Meta AI, Meta Platforms, Inc.</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建覆盖约 1600 种语言的开源 Omnilingual ASR 系统，基于大规模自监督音频预训练与有限标注微调，采用统一声学与词汇空间并对极低资源语种进行共享建模；在多项多语言语音识别基准上显著优于现有系统，并公开模型、训练数据管线与评测工具链。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://cdn.openai.com/pdf/41df8f28-d4ef-43e9-aed2-823f9393e470/circuit-sparsity-paper.pdf" target="_blank">Weight-sparse transformers have interpretable circuits</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://cdn.openai.com/pdf/41df8f28-d4ef-43e9-aed2-823f9393e470/circuit-sparsity-paper.pdf" target="_blank">Weight-sparse transformers have interpretable circuits</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Leo Gao, Ilya Sutskever.</div>
             <div class="note-meta-line">Affiliation: OpenAI, San Francisco, California, United States.</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">在 Transformer 中施加结构化权值稀疏约束与正则化，得到高度稀疏但性能接近甚至匹配密集模型的网络；作者展示稀疏权重自发形成局部“电路”，可与人类可理解特征一一对应，在语言建模与分析任务中提高可解释性与鲁棒性，同时带来显著压缩与推理效率收益。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.08892" target="_blank">Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.08892" target="_blank">Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Weihao Tan, Guang Shi</div>
             <div class="note-meta-line">Affiliation: ByteDance Seed</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出开放式通用体代理 Lumine，在原神等复杂 3D 开放世界中实现端到端“像人一样”玩游戏：从像素到键鼠动作，实时 5 Hz 感知、30 Hz 控制，并按需触发推理。Lumine 在原神主线任务上达到接近人类效率，并零样本泛化到鸣潮和星穹铁道等新游戏，展示了依托 VLM、长时序任务分解和大规模人类游玩数据的通用开放世界代理配方。 ([arXiv](https://arxiv.org/abs/2511.08892?utm_source=chatgpt.com))</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.07332" target="_blank">Grounding Computer Use Agents on Human Demonstrations</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.07332" target="_blank">Grounding Computer Use Agents on Human Demonstrations</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Aarash Feizi, Sai Rajeswar</div>
             <div class="note-meta-line">Affiliation: Mila - Quebec AI Institute, McGill University, ServiceNow Research</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">该工作构建桌面环境 GUI 定位数据集 GroundCUA：来自 87 个桌面应用、5.6 万张高分辨率截图、上百万人工标注 UI 元素，并据此训练 GroundNext 系列模型。通过高质量人类操作演示、密集目标框和多种指令模版，模型在多项桌面 grounding 基准和代理任务上取得 SOTA，同时只需远少于以往工作的训练数据，展示了“少但精”的数据驱动电脑使用代理的有效路径。 ([arXiv](https://arxiv.org/abs/2511.10629))</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.10629" target="_blank">One Small Step in Latent, One Giant Leap for Pixels: Fast Latent Upscale Adapter for Your Diffusion Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.10629" target="_blank">One Small Step in Latent, One Giant Leap for Pixels: Fast Latent Upscale Adapter for Your Diffusion Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Aleksandr Razin, Ilya Makarov</div>
             <div class="note-meta-line">Affiliation: Peter the Great St. Petersburg Polytechnic University</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">作者提出 Latent Upscaler Adapter（LUA），在扩散模型的 VAE 解码前直接对潜空间特征做超分，而非对像素图像做后处理或增加额外扩散阶段。LUA 以轻量 Swin 风格骨干和多比例 pixel-shuffle 头实现 2×/4× 放大，在基本不增加推理延迟的前提下，生成质量接近原生高分辨率扩散或图像域超分，并能在 SDXL、SD3、FLUX 等不同 VAE 间迁移，提供高效可部署的高分辨率生成方案。 ([arXiv](https://arxiv.org/html/2511.10629v1?utm_source=chatgpt.com))</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.06221" target="_blank">Tiny Model, Big Logic: Diversity-Driven Optimization Elicits Large-Model Reasoning Ability in VibeThinker-1.5B</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.06221" target="_blank">Tiny Model, Big Logic: Diversity-Driven Optimization Elicits Large-Model Reasoning Ability in VibeThinker-1.5B</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sen Xu, Junlin Zhang</div>
             <div class="note-meta-line">Affiliation: Sina Weibo Inc.</div>
@@ -459,7 +509,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文通过 VibeThinker-1.5B 挑战“小模型不擅长推理”的共识：在仅 1.5B 参数、约 7800 美元训练成本下，通过“两阶段多样性蒸馏 + 最大熵强化学习”框架 SSP，先放大量样本解空间多样性，再用 RL 放大正确信号。结果在多项数学与代码基准上逼近甚至超过百倍规模模型（如 DeepSeek R1），说明合理的数据与优化策略可以让小模型获得接近大模型的推理能力，从而大幅降低推理成本。 ([arXiv](https://arxiv.org/abs/2511.06221))</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.03506" target="_blank">HaluMem: Evaluating Hallucinations in Memory Systems of Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.03506" target="_blank">HaluMem: Evaluating Hallucinations in Memory Systems of Agents</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ding Chen, Xiangping Zheng</div>
             <div class="note-meta-line">Affiliation: China Telecom Research Institute</div>
@@ -467,7 +519,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">HaluMem 针对“记忆系统的幻觉”提出首个操作级评测基准，将记忆过程拆为抽取、更新和记忆问答三类任务，并构建百万级长对话数据集 HaluMem-Medium/Long，对每一步的记忆点给出精细标注。实验表明主流记忆系统在抽取与更新阶段就大量引入和累积错误，最终放大到生成阶段。该基准为分析和缓解记忆幻觉提供了可追踪的评测框架，促进更可解释、更可靠的记忆模块设计。 ([arXiv](https://arxiv.org/abs/2511.03506))</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.08923" target="_blank">TiDAR: Think in Diffusion, Talk in Autoregression</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.08923" target="_blank">TiDAR: Think in Diffusion, Talk in Autoregression</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jingyu Liu, Pavlo Molchanov.</div>
             <div class="note-meta-line">Affiliation: NVIDIA.</div>
@@ -475,7 +529,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出TiDAR，将diffusion语言模型作为“并行思考器”，再用小型AR解码器将连续扩散步转成自回归token序列，实现既高吞吐又保留AR质量的生成。相比speculative decoding与既有扩散LM，在1.5B/8B规模上同时提升速度、GPU利用率与困惑度，并保持兼容KV cache与常规推理接口。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.07327" target="_blank">IterResearch: Rethinking Long-Horizon Agents via Markovian State Reconstruction</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.07327" target="_blank">IterResearch: Rethinking Long-Horizon Agents via Markovian State Reconstruction</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guoxin Chen, Jingren Zhou.</div>
             <div class="note-meta-line">Affiliation: Gaoling School of Artificial Intelligence, Renmin University of China, Tongyi Lab, Alibaba Group, OpenRLHF.</div>
@@ -483,7 +539,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">将长程深度检索任务建模为马尔可夫决策过程，提出IterResearch：通过周期性重构“工作空间”与报告记忆，避免单一上下文不断膨胀导致的噪声与遗忘；并用效率感知RL策略EAPO优化检索-推理行为。实验显示在多项agent基准上显著超越开源系统，并可作为前沿模型的通用prompting范式。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.09057" target="_blank">PAN: A World Model for General, Interactable, and Long-Horizon World Simulation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.09057" target="_blank">PAN: A World Model for General, Interactable, and Long-Horizon World Simulation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiannan Xiang, Eric P. Xing.</div>
             <div class="note-meta-line">Affiliation: MBZUAI Institute of Foundation Models, Mohamed bin Zayed University of Artificial Intelligence.</div>
@@ -491,7 +549,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">PAN构建可交互、长时程的通用世界模型：在潜空间中预测未来状态，再用视频扩散模型解码成高质量长视频，条件来自历史观察与自然语言动作。模型采用GLP架构和Causal Swin DPM稳定长序列推演，在动作执行、长程预测与规划三类基准上全面领先开源world model，并接近或超越多款商用视频/世界建模系统。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.08217" target="_blank">MADD: Multi-Agent Drug Discovery Orchestra</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.08217" target="_blank">MADD: Multi-Agent Drug Discovery Orchestra</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Gleb V. Solovev, Andrey Savchenko.</div>
             <div class="note-meta-line">Affiliation: National Center for Cognitive Research, ITMO University.</div>
@@ -499,7 +559,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">MADD将早期药物发现拆成由多智能体协作的命题-设计-筛选-分析流程：研究者只需用自然语言描述靶点与期望性质，系统即可自动构建命中化合物发现管线，调用生成模型与对接打分工具完成虚拟筛选。作者在7个真实案例上验证其优于现有LLM方案，并为5个新靶点给出AI-first设计的候选分子与大规模评测基准。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.04962" target="_blank">Too Good to be Bad: On the Failure of LLMs to Role-Play Villains</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.04962" target="_blank">Too Good to be Bad: On the Failure of LLMs to Role-Play Villains</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zihao Yi, Linus.</div>
             <div class="note-meta-line">Affiliation: Tencent.</div>
@@ -507,7 +569,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建Moral RolePlay基准，让LLM扮演从“道德模范”到“纯反派”的多级角色，系统评估其角色扮演忠实度。结果发现：随着角色道德水平下降，几乎所有模型的演绎质量单调劣化，往往自动“洗白”或拒答，揭示现有安全对齐与真实刻画反派之间的结构性冲突，并分析不同提示与越狱策略下的折中空间。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.08633" target="_blank">Time-to-Move: Training-Free Motion Controlled Video Generation via Dual-Clock Denoising</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.08633" target="_blank">Time-to-Move: Training-Free Motion Controlled Video Generation via Dual-Clock Denoising</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Assaf Singer, Or Litany.</div>
             <div class="note-meta-line">Affiliation: Technion – Israel Institute of Technology.</div>
@@ -515,7 +579,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">Time-to-Move提出一个“零训练”的运动控制框架，可直接套在现有图像-视频扩散模型上。它将粗糙参考动画（拖拽、深度重投影等）视作运动轨迹，通过双时钟去噪分别调度运动与纹理细节，从而精确控制物体/相机运动而无需微调底模；在多种视频生成指标与运动跟踪误差上显著优于既有方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.10647" target="_blank">Depth Anything 3: Recovering the Visual Space from Any Views</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.10647" target="_blank">Depth Anything 3: Recovering the Visual Space from Any Views</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Haotong Lin, Bingyi Kang.</div>
             <div class="note-meta-line">Affiliation: Zhejiang University, ByteDance Seed.</div>
@@ -523,7 +589,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 Depth Anything 3（DA3），以统一的“深度射线”表示和单一 Transformer 主干处理任意数量、是否已知位姿的多视角输入，并通过教师–学生范式在公开数据上训练。在新构建的视觉几何基准中，DA3 在相机位姿估计、几何重建和渲染质量上显著超越 VGGT 和 DA2，同时保持对单目深度和前向 3DGS 等应用的泛化能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.10395" target="_blank">AgentEvolver: Towards Efficient Self-Evolving Agent System</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.10395" target="_blank">AgentEvolver: Towards Efficient Self-Evolving Agent System</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yunpeng Zhai, Jingren Zhou.</div>
             <div class="note-meta-line">Affiliation: Tongyi Lab, Alibaba Group.</div>
@@ -531,7 +599,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">AgentEvolver 构建了一个面向 LLM 智能体的自进化框架，引入自提问、自导航、自归因三大机制：用环境画像驱动好奇心任务生成与参考解抽取，用经验池和混合策略提升探索效率，并通过步级因果归因构造细粒度奖励。整个系统形成闭环自训练流程，在多种数字环境基准上显著提升样本利用率和收敛速度，大幅降低人工构造任务和传统 RL 管线的成本。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.10643" target="_blank">Black-Box On-Policy Distillation of Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.10643" target="_blank">Black-Box On-Policy Distillation of Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Tianzhu Ye, Furu Wei.</div>
             <div class="note-meta-line">Affiliation: Microsoft Research.</div>
@@ -539,7 +609,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 Generative Adversarial Distillation（GAD），在仅能访问教师模型文本输出、无法查看 logits 或参数的黑盒场景下，实现真正 on-policy 的知识蒸馏。学生模型作为生成器，判别器负责区分教师与学生回复并提供奖励信号，两者联训形成极小极大博弈。实验证明 GAD 在多项基准上稳定优于序列级 KD，使 Qwen2.5-14B-Instruct 的表现接近 GPT-5-Chat，展示了黑盒蒸馏的有效范式。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.08544" target="_blank">LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.08544" target="_blank">LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Randall Balestriero, Yann LeCun.</div>
             <div class="note-meta-line">Affiliation: Brown University.</div>
@@ -547,9 +619,11 @@ h1 .archive-link:hover {
         <div class="note-tldr">作者从理论上分析 JEPA，自证明对广泛下游任务而言最优表示分布应为各向同性高斯，并据此提出 Sketched Isotropic Gaussian Regularization（SIGReg），将嵌入显式正则到该分布。将 SIGReg 与预测损失结合得到 LeJEPA：仅需一个权衡超参、线性时间与内存复杂度、实现约数十行代码且无需 stop-grad、teacher-student 等经验技巧，在十余数据集与数十种架构上表现稳定，给出了自监督预训练的统一理论与实践配方。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://www.bilibili.com/video/BV1KpCFBSEc6/" target="_blank">田渊栋采访</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.bilibili.com/video/BV1KpCFBSEc6/" target="_blank">田渊栋采访</a></div>
+        </div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

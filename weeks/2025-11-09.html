@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-11-09</div>
     <div class="source-header">2025-11-03 ~ 2025-11-09</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.04570" target="_blank">Thinking with Video: Video Generation as a Promising Multimodal Reasoning Paradigm</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.04570" target="_blank">Thinking with Video: Video Generation as a Promising Multimodal Reasoning Paradigm</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jingqi Tong, Jun Zhao.</div>
             <div class="note-meta-line">Affiliation: Fudan University, Shanghai Innovation Institute.</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“用视频思考”范式：以视频生成模型（如 Sora-2）在时间维统一视觉与文本推理。构建 VideoThinkBench 覆盖视觉谜题与文本任务；在 MATH、MMMU 等上表现强劲，并分析自一致与 ICL 的增益，指向统一多模态理解与生成。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.03276" target="_blank">Diffusion Language Models are Super Data Learners</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.03276" target="_blank">Diffusion Language Models are Super Data Learners</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jinjie Ni, Jinjie Ni.</div>
             <div class="note-meta-line">Affiliation: National University of Singapore.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">在严格可比的预训练下，Diffusion 语言模型在“唯一数据”受限时通过延长训练稳定超越自回归模型。原因在于任意顺序建模、迭代去噪带来的超密计算与内置 MC 扩增；小规模数据亦能在 HellaSwag/MMLU 取得较好成绩，揭示“超数据学习”。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.02778" target="_blank">VCode: a Multimodal Coding Benchmark with SVG as Symbolic Visual Representation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.02778" target="_blank">VCode: a Multimodal Coding Benchmark with SVG as Symbolic Visual Representation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kevin Qinghong Lin, Kevin Qinghong Lin.</div>
             <div class="note-meta-line">Affiliation: University of Oxford.</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出以 SVG 为符号视觉表示的多模态代码基准 VCode，涵盖通用/专业/视觉中心三类任务并配套排行榜。通过“结构化图形→可执行代码”的设定，更公平检验模型的感知—推理—生成链路，推动视觉与代码协同能力研究。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.25616" target="_blank">Don't Blind Your VLA: Aligning Visual Representations for OOD Generalization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.25616" target="_blank">Don&#x27;t Blind Your VLA: Aligning Visual Representations for OOD Generalization</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Nikita Kachaev, Nikita Kachaev.</div>
             <div class="note-meta-line">Affiliation: Cognitive AI Lab.</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统揭示 VLA 在动作微调中出现视觉-语言表示退化；提出将 VLA 视觉特征对齐到冻结教师编码器的对齐损失，几乎无额外开销即可缓解表示漂移。在 VL-Think 等套件与 OOD 评测中显著提升泛化，优于常规 SFT/冻结策略。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.04460" target="_blank">V-Thinker: Interactive Thinking with Images</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.04460" target="_blank">V-Thinker: Interactive Thinking with Images</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Runqi Qiao, Runqi Qiao.</div>
             <div class="note-meta-line">Affiliation: Beijing University of Posts and Telecommunications.</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向图像交互式推理提出 V-Thinker：数据进化飞轮与逐步视觉课程（对齐→交互推理），并发布 VTBench。模型可编辑/标注/转换图像以化简问题，在多基准上优于强 LMM 基线，展示从“看图辅助”迈向“以图思考”的通用框架。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.22115" target="_blank">Every Activation Boosted: Scaling General Reasoner to 1 Trillion Open Language Foundation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.22115" target="_blank">Every Activation Boosted: Scaling General Reasoner to 1 Trillion Open Language Foundation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ling Team, Changxin Tian.</div>
             <div class="note-meta-line">Affiliation: Inclusion AI.</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出以高稀疏MoE为核心的Ling 2.0推理型开源基座，覆盖16B到1T参数，强调“每个激活都增强推理”。通过中期CoT激活、DFT/Evo-CoT强化与FP8全流程训练，实现推理效率与准确率的新Pareto前沿。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.27492" target="_blank">ThinkMorph: Emergent Properties in Multimodal Interleaved Chain-of-Thought Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.27492" target="_blank">ThinkMorph: Emergent Properties in Multimodal Interleaved Chain-of-Thought Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiawei Gu, Jiawei Gu.</div>
             <div class="note-meta-line">Affiliation: National University of Singapore.</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建含约2.4万条高质量“文-图交替思维链”的统一多模态模型，能在推理过程中交替生成文本与图像步骤，显著提升视觉中心任务表现，并呈现未见视觉操作、模式自适应切换与更优测试时扩展等涌现能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.03773" target="_blank">Scaling Agent Learning via Experience Synthesis</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.03773" target="_blank">Scaling Agent Learning via Experience Synthesis</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhaorun Chen, Zhaorun Chen.</div>
             <div class="note-meta-line">Affiliation: N/A.</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出DreamGym，用“推理驱动的经验模型”合成多样环境交互，替代昂贵真实rollout，支持在线RL训练与课程生成。实验在WebArena等场景显著超越基线，并在sim-to-real迁移中以更少真实交互取得更高性能。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.24411" target="_blank">OS-Sentinel: Towards Safety-Enhanced Mobile GUI Agents via Hybrid Validation in Realistic Workflows</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.24411" target="_blank">OS-Sentinel: Towards Safety-Enhanced Mobile GUI Agents via Hybrid Validation in Realistic Workflows</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qiushi Sun, Qiushi Sun.</div>
             <div class="note-meta-line">Affiliation: N/A.</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向移动端GUI智能体安全，提出混合验证框架OS-Sentinel：结合形式化验证检测系统级违规与VLM判别器评估情境风险；并发布动态沙箱与真实轨迹基准MobileRisk-Live，在多项指标上较现有方法提升10%–30%。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.27688" target="_blank">Continuous Autoregressive Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.27688" target="_blank">Continuous Autoregressive Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chenze Shao, Chenze Shao.</div>
             <div class="note-meta-line">Affiliation: WeChat AI, Tencent Inc.</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出CALM，将离散“下一词”预测转为连续“下一向量”预测：用自编码器将K个token压缩为单个向量，再以似然自由训练/评估与可控采样实现K倍步骤压缩，显著改善性能-算力比，指向超高效LLM的新路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.25602" target="_blank">INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.25602" target="_blank">INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Mengzhao Chen, Ping Luo.</div>
             <div class="note-meta-line">Affiliation: The University of Hong Kong, ByteDance Seed.</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统比较细粒度（块级）INT与FP低比特量化。发现8比特下MXINT8在准确率与硬件效率均优于MXFP8；4比特时FP常占优，但结合Hadamard旋转的NVINT4可反超NVFP4。并提出对称截断以消除INT训练梯度偏置，为算法—硬件协同提供实证与理论指引。</div>
     </div>
     <div class="note-card">
-        <div class="note-title">$\pi_{\texttt{RL}}$</div>
+        <div class="note-heading">
+            <div class="note-title">$\pi_{\texttt{RL}}$</div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kang Chen, Chao Yu.</div>
             <div class="note-meta-line">Affiliation: Peking University, Zhongguancun Academy.</div>
@@ -459,7 +509,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出面向流匹配VLA的在线强化学习框架$\pi_{\texttt{RL}}$，包含Flow-Noise与Flow-SDE两种策略以获得可处理的动作对数似然；在并行仿真中实现大规模训练。于LIBERO与ManiSkill显著提升成功率，验证在线RL对流式VLA的有效性并开源实现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.02779" target="_blank">When Visualizing is the First Step to Reasoning: MIRA, a Benchmark for Visual Chain-of-Thought</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.02779" target="_blank">When Visualizing is the First Step to Reasoning: MIRA, a Benchmark for Visual Chain-of-Thought</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yiyang Zhou, Qinghao Ye.</div>
             <div class="note-meta-line">Affiliation: ByteDance Seed.</div>
@@ -467,7 +519,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">发布MIRA基准，面向“先画再想”的视觉思维链评测，涵盖20类任务与546道带中间图示的多模态问题。实验显示主流多模态大模型在仅文本推理下表现不佳，但提供中间视觉线索可带来显著提升，凸显“可视化中间状态”对复杂推理的关键价值。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.02824" target="_blank">Kosmos: An AI Scientist for Autonomous Discovery</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.02824" target="_blank">Kosmos: An AI Scientist for Autonomous Discovery</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ludovico Mitchener, Andrew D. White.</div>
             <div class="note-meta-line">Affiliation: N/A.</div>
@@ -475,7 +529,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出自动化“AI科学家”Kosmos，通过世界模型协调文献检索、假设生成与数据分析，长程保持任务一致性，可运行数百轮并生成可追溯报告。多学科合作评估显示，其结论准确率高、可扩展性好，并能产出具价值的新发现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.03492" target="_blank">Why Less is More (Sometimes): A Theory of Data Curation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.03492" target="_blank">Why Less is More (Sometimes): A Theory of Data Curation</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Elvis Dohmatob, Elvis Dohmatob.</div>
             <div class="note-meta-line">Affiliation: N/A.</div>
@@ -483,7 +539,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建理论框架解释何时“少即是多”：当依据样本难度与正确性进行选择时，小而精的数据集可优于全量。给出测试误差随数据规模与质量的精确相变曲线，并以ImageNet实证验证，统一近期在LLM与视觉上的数据筛选悖论。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.04527" target="_blank">Are language models aware of the road not taken? Token-level uncertainty and hidden state dynamics</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.04527" target="_blank">Are language models aware of the road not taken? Token-level uncertainty and hidden state dynamics</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Amir Zur, Amir Zur.</div>
             <div class="note-meta-line">Affiliation: Stanford.</div>
@@ -491,7 +549,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">研究推理型LM在生成过程中是否隐式表征“未走之路”。通过操控隐藏激活与不确定性预测发现：当模型对某些token更不确定时，更易被激活干预引导，且隐藏态可预测未来输出分布，表明模型内部存在潜在多路径表征。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.01846" target="_blank">Towards Robust Mathematical Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.01846" target="_blank">Towards Robust Mathematical Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Thang Luong, Minh-Thang Luong.</div>
             <div class="note-meta-line">Affiliation: Google DeepMind.</div>
@@ -499,7 +559,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出IMO-Bench含“答案题+证明题”两套高难奥赛级评测，并构建自动评分基准IMO-GradingBench；实证展示Gemini在两套子基准显著领先，推动对长链路、可验证数学推理的稳健评测与训练。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.26493" target="_blank">Context Engineering 2.0: The Context of Context Engineering</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.26493" target="_blank">Context Engineering 2.0: The Context of Context Engineering</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qishuo Hua, Qishuo Hua.</div>
             <div class="note-meta-line">Affiliation: N/A.</div>
@@ -507,7 +569,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">从历史脉络与人机交互范式出发系统化界定“上下文工程”，梳理概念边界、设计要素与实践原则，提出通往具身智能体时代的框架，为构建可解释、可调控的AI语境管理提供方法论基础。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.23038" target="_blank">Incentivizing Agentic Reasoning in LLM Judges via Tool-Integrated Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.23038" target="_blank">Incentivizing Agentic Reasoning in LLM Judges via Tool-Integrated Reinforcement Learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ran Xu, Ran Xu.</div>
             <div class="note-meta-line">Affiliation: Google.</div>
@@ -515,7 +579,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出TIR-Judge：将代码执行工具纳入RL训练的评审模型框架，覆盖点对、成对与列表式评判；在7个公开基准上较纯文本推理评审显著提升，且无需蒸馏即可通过迭代RL自举获得强性能。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.27246" target="_blank">Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.27246" target="_blank">Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Mohammad Tavakoli, Mohammad Tavakoli.</div>
             <div class="note-meta-line">Affiliation: University of Alberta.</div>
@@ -523,14 +589,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">构建BEAM长对话记忆基准（最长至千万token）与LIGHT记忆架构（长期记忆+工作记忆+速记板）。结果表明现有长窗模型仍显吃力，而LIGHT在多种骨干模型上带来3.5%–12.69%的稳定增益。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.02864" target="_blank">Mathematical exploration and discovery at scale</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.02864" target="_blank">Mathematical exploration and discovery at scale</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bogdan Georgiev, Adam Zsolt Wagner.</div>
             <div class="note-meta-line">Affiliation: N/A.</div>
         </div>
         <div class="note-tldr">展示进化式编程智能体AlphaEvolve：结合LLM生成与自动评估，迭代提出—测试—改进算法构造；在分析、组合与数论等67题上复现或改进已知结果，并与Deep Think/AlphaProof协同实现自动探索与证明。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

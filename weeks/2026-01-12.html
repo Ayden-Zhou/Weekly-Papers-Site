@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,10 @@ h1 .archive-link:hover {
     <div class="week-header">2026-01-12</div>
     <div class="source-header">2026-01-12 ~ 2026-01-18</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.05242" target="_blank">GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.05242" target="_blank">GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="235 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>235</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shih-Yang Liu, Xin Dong.</div>
             <div class="note-meta-line">Affiliation: NVIDIA, HKUST.</div>
@@ -371,7 +400,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">研究指出多奖励RL中直接用GRPO做组内归一化会把不同奖励组合“压扁”成相同优势，导致训练信号分辨率下降甚至早停。作者提出GDPO：先对每个奖励维度分别做组归一化，再进行优势/更新整合，从而保留各奖励差异并提升多奖励优化的稳定性与收敛表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.03220" target="_blank">From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.03220" target="_blank">From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Marc Finzi, Andrew Gordon Wilson.</div>
             <div class="note-meta-line">Affiliation: Carnegie Mellon University.</div>
@@ -379,7 +410,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“epiplexity”作为面向计算受限观察者的信息度量，用来刻画数据中“可被学到的结构信息”，并解释香农熵/科氏复杂度在确定性变换、数据顺序、似然匹配等问题上与现代学习现象的张力。论文给出估计与实践流程，把该概念用于数据选择、数据生成/变换与提升OOD泛化。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.05230" target="_blank">Learning Latent Action World Models In The Wild</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.05230" target="_blank">Learning Latent Action World Models In The Wild</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Quentin Garrido, Quentin Garrido.</div>
             <div class="note-meta-line">Affiliation: FAIR at Meta.</div>
@@ -387,7 +420,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向无动作标注的“真实世界”视频，提出学习潜在动作的世界模型，让模型仅凭视频自动发现动作空间并预测动作后果。作者分析潜在动作应满足的性质与评估方式，发现“连续但受约束”的潜在动作比常用VQ更能表达复杂行为；还能跨视频迁移由主体引起的环境变化，并训练控制器把已知动作映射到潜在动作以支持规划任务。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.07372" target="_blank">Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.07372" target="_blank">Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xin Cheng, Huishuai Zhang.</div>
             <div class="note-meta-line">Affiliation: Peking University, DeepSeek-AI.</div>
@@ -395,7 +430,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出条件记忆作为区别于MoE“条件计算”的另一条稀疏轴：用Engram将经典N-gram式嵌入升级为O(1)确定性查表，实现可扩展知识检索。论文提出“稀疏分配”问题与U形缩放规律，指导在计算稀疏与静态记忆间分配容量；将Engram扩展到27B参数后，在同参数/同FLOPs下优于MoE，并显著提升知识、推理与长上下文检索表现。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.07055" target="_blank">Dr. Zero: Self-Evolving Search Agents without Training Data</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.07055" target="_blank">Dr. Zero: Self-Evolving Search Agents without Training Data</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="22 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>22</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhenrui Yue, Dong Wang.</div>
             <div class="note-meta-line">Affiliation: Meta Superintelligence Labs, University of Illinois Urbana-Champaign.</div>
@@ -403,7 +441,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出Dr. Zero：无需外部训练数据的搜索代理自进化框架。通过“提问者(proposer)生成多样问题—解答者(solver)求解并反馈”的闭环，自动形成从易到难的课程并共同提升；同时提出HRPO按结构相似的“hop”分组构造基线，降低多步搜索训练的采样与计算开销。实验显示其在推理/搜索任务上可追平或超过监督方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.09668" target="_blank">STEP3-VL-10B Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.09668" target="_blank">STEP3-VL-10B Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="196 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>196</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ailin Huang, Ailin Huang.</div>
             <div class="note-meta-line">Affiliation: StepFun.</div>
@@ -411,7 +452,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">STEP3-VL-10B技术报告系统总结10B级多模态模型的配方：覆盖架构与数据构建（含OCR、GUI、空间理解等）、两阶段SFT对齐，以及结合可验证/偏好约束奖励的RL训练与推理时计算扩展（如并行协同推理）。报告展示其在OCR、GUI可执行任务、空间推理与多模态基准上的领先结果，强调通过“轨迹级”训练把视觉理解落到可操作动作。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.10477" target="_blank">Urban Socio-Semantic Segmentation with Vision-Language Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.10477" target="_blank">Urban Socio-Semantic Segmentation with Vision-Language Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="155 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>155</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yu Wang, Yansheng Li.</div>
             <div class="note-meta-line">Affiliation: Wuhan University, Amap (Alibaba Group).</div>
@@ -419,7 +463,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出SocioSeg城市社会语义分割数据集，融合卫星影像与数字地图，并提供层级化的社会语义像素标注。进一步提出SocioReasoner框架，用视觉-语言推理模拟人类标注流程：先定位（框）再细化（框+点）的多阶段推理，并通过端到端RL优化训练。实验表明该方法在多项指标上优于现有SOTA，为城市理解与规划提供更细粒度语义支撑。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.08763" target="_blank">Rewarding the Rare: Uniqueness-Aware RL for Creative Problem Solving in LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.08763" target="_blank">Rewarding the Rare: Uniqueness-Aware RL for Creative Problem Solving in LLMs</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="151 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>151</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhiyuan Hu, Zhiyuan Hu.</div>
             <div class="note-meta-line">Affiliation: MIT, NUS.</div>
@@ -427,7 +474,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">针对RL后训练常见的“探索塌缩”（pass@1提升但多样性与pass@k受损），提出Uniqueness-Aware RL：用LLM评审把同题多次rollout按“高层策略”聚类，按簇大小反比重加权优势，让正确但罕见的解题策略获得更高奖励。方法忽略表面措辞差异，直接鼓励策略层多样性，在数学/物理/医学推理等任务上稳定提升pass@k与AUC@k。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.09688" target="_blank">DeepResearchEval: An Automated Framework for Deep Research Task Construction and Agentic Evaluation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.09688" target="_blank">DeepResearchEval: An Automated Framework for Deep Research Task Construction and Agentic Evaluation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="128 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>128</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhen Huang, Yuxuan Wang.</div>
             <div class="note-meta-line">Affiliation: Tsinghua University.</div>
@@ -435,7 +485,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">该论文提出 DeepResearchEval，一个用于“深度研究型任务”的自动化构建与评测框架，聚焦多步检索、证据整合与长链推理等高难度研究行为。作者通过程序化方式生成可验证的研究任务，并设计基于过程与结果的双重评估指标，系统比较不同 Agent 在规划、搜索与综合分析能力上的差异，为评估研究型 LLM Agent 提供了可扩展、低人工成本的新范式。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.07348" target="_blank">Controlled Self-Evolution for Algorithmic Code Optimization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.07348" target="_blank">Controlled Self-Evolution for Algorithmic Code Optimization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="115 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>115</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yao Fu, Yifan Hou.</div>
             <div class="note-meta-line">Affiliation: Princeton University.</div>
@@ -443,7 +496,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出一种受控自进化（Controlled Self-Evolution）框架，使 LLM 能在约束条件下自动改进算法代码。方法通过形式化性能指标与安全约束，引导模型在多轮自我修改与验证中逐步优化算法效率与正确性。实验表明，该方法在多类算法任务中实现稳定性能提升，展示了 LLM 作为“自改进程序员”的潜力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.09259" target="_blank">MAXS: Meta-Adaptive Exploration with LLM Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.09259" target="_blank">MAXS: Meta-Adaptive Exploration with LLM Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="96 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>96</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiahui Zhang, Zhiqiang Shen.</div>
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University.</div>
@@ -451,7 +507,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">MAXS 提出一种元自适应探索框架，将 LLM Agent 的探索策略视为可学习对象，通过跨任务元学习动态调整探索强度与方向。该方法在复杂环境中显著提升样本效率与收敛稳定性，尤其适用于稀疏奖励或长时依赖场景，表明 LLM 可承担高层探索控制器的角色。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.09274" target="_blank">$A^3$-Bench: Benchmarking Memory-Driven Scientific Reasoning via Anchor and Attractor Activation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.09274" target="_blank">$A^3$-Bench: Benchmarking Memory-Driven Scientific Reasoning via Anchor and Attractor Activation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="84 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>84</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Haoyu Wang, Xiang Ren.</div>
             <div class="note-meta-line">Affiliation: University of Southern California.</div>
@@ -459,7 +518,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">A³-Bench 针对科学推理中的“记忆驱动”能力提出新基准，强调锚点（Anchor）与吸引子（Attractor）概念在跨步骤推理中的作用。基准要求模型在多轮推理中正确激活并维持关键知识结构。结果显示，现有 LLM 在长期记忆一致性与结构化知识调用方面仍存在明显短板。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.09667" target="_blank">Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.09667" target="_blank">Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="92 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>92</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuxin Chen, Zhiyuan Liu.</div>
             <div class="note-meta-line">Affiliation: Tsinghua University.</div>
@@ -467,7 +529,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出一种多 Agent 协作的测试时强化学习框架，在推理阶段通过 Agent 间交互与反馈动态改进决策策略。方法无需额外训练数据，即可在测试时持续优化推理路径，在数学与逻辑推理任务上显著优于单 Agent 与静态推理方法，展示了协作式 Test-Time RL 的潜力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.10103" target="_blank">FlowAct-R1: Towards Interactive Humanoid Video Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.10103" target="_blank">FlowAct-R1: Towards Interactive Humanoid Video Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="78 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>78</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ziyi Wu, Xiaolong Wang.</div>
             <div class="note-meta-line">Affiliation: University of California, San Diego.</div>
@@ -475,7 +540,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">FlowAct-R1 探索可交互的人形视频生成，将动作流（Action Flow）建模为可控中间表示，使用户能够在生成过程中实时调整动作与行为。该方法在保持时序一致性的同时提升了动作可控性，为人形动画生成、机器人仿真与虚拟交互提供了新的技术路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.02242" target="_blank">VIBE: Visual Instruction Based Editor</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.02242" target="_blank">VIBE: Visual Instruction Based Editor</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Rui Huang, Jianwei Yang.</div>
             <div class="note-meta-line">Affiliation: Peking University.</div>
@@ -483,7 +551,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">VIBE 提出一种基于视觉指令的通用图像编辑框架，允许用户通过自然语言与示例图像联合指定编辑意图。模型能够理解复杂、多步的视觉修改需求，并在保持语义一致性的同时完成精细编辑。实验表明，VIBE 在可控性与泛化性上优于现有文本驱动图像编辑方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.06789" target="_blank">MemGovern: Enhancing Code Agents through Learning from Governed Human Experiences</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.06789" target="_blank">MemGovern: Enhancing Code Agents through Learning from Governed Human Experiences</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="82 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>82</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qihao Wang, Qihao Wang.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -491,7 +562,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 MemGovern：通过“带治理约束的人类经验”来训练/改进代码智能体。核心思路是把人类在真实开发中如何遵循规范、做取舍与复盘的轨迹结构化为可学习信号，使智能体在规划、记忆检索与行动选择时更符合工程治理要求，从而提升可控性与可靠性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.08828" target="_blank">Motion Attribution for Video Generation</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.08828" target="_blank">Motion Attribution for Video Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="72 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>72</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sihun Cha, Sihun Cha.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -499,7 +573,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">研究视频生成中的“运动归因”：将生成结果中的运动变化分解并追踪到可解释的因素（如条件、模块或时序决策），从而提供更可解释的评估与诊断手段。该方法有助于发现运动伪影来源，并支持更精细的运动控制与编辑。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.07022" target="_blank">Solar Open Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.07022" target="_blank">Solar Open Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="67 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>67</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sung-Han Kim, Sung-Han Kim.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -507,7 +584,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">Solar Open 技术报告系统梳理模型训练与后训练流程：数据构建与合成策略、双语/推理导向的课程式训练、以及结合 SFT 与 RL 的能力对齐方案，并给出多维度评测与工程实践要点，为复现实用级开源大模型训练提供参考。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.06943" target="_blank">Watching, Reasoning, and Searching: A Video Deep Research Benchmark on Open Web for Agentic Video Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.06943" target="_blank">Watching, Reasoning, and Searching: A Video Deep Research Benchmark on Open Web for Agentic Video Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="215 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>215</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Duygu Ceylan, Duygu Ceylan.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -515,7 +595,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出面向“视频深度研究”的基准：模型不仅要看视频提取跨帧线索，还要在开放网络上检索证据并进行多跳推理验证答案。数据强调可核验的证据链与工具使用能力，用于系统评估具备代理式工作流的视频理解与搜索推理能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.06521" target="_blank">BabyVision: Visual Reasoning Beyond Language</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.06521" target="_blank">BabyVision: Visual Reasoning Beyond Language</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="201 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>201</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yejin Ha, George A. Alvarez.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -523,7 +606,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">BabyVision 聚焦“语言之前”的基础视觉能力评测：细粒度辨别、视觉追踪、空间感知与模式识别等，设计灵感来自婴幼儿早期视觉发展。通过降低语言负担、对照人类发展阶段表现，揭示多模态模型在看似简单但关键的视觉推理技能上的缺口。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.05593" target="_blank">PaCoRe: Learning to Scale Test-Time Compute with Parallel Coordinated Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.05593" target="_blank">PaCoRe: Learning to Scale Test-Time Compute with Parallel Coordinated Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="87 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>87</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Siddharth Singh, Siddharth Singh.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -531,7 +617,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">PaCoRe 研究如何通过“并行+协同”的推理方式扩展测试时计算：并行生成多条推理轨迹，再通过协调/压缩机制汇总关键信息，迭代提升答案质量。作者强调需要通过结果导向的强化学习学习“综合能力”，从而在固定上下文限制下实现更强的推理与泛化。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.05432" target="_blank">Thinking with Map: Reinforced Parallel Map-Augmented Agent for Geolocalization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.05432" target="_blank">Thinking with Map: Reinforced Parallel Map-Augmented Agent for Geolocalization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="171 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>171</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuxiang Ji, Yuxiang Ji.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
@@ -539,14 +628,17 @@ h1 .archive-link:hover {
         <div class="note-tldr">针对图像地理定位，引入“用地图思考”的代理循环：模型在地图交互中提出假设、探索候选路径并逐步收敛。方法采用两阶段优化：先用强化学习增强代理能力与采样效率，再用并行测试时扩展探索多条候选路线；同时发布 MAPBench 以评测更贴近真实场景的定位能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.03017" target="_blank">MMFormalizer: Multimodal Autoformalization in the Wild</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.03017" target="_blank">MMFormalizer: Multimodal Autoformalization in the Wild</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="106 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>106</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jing Xiong, Jing Xiong.</div>
             <div class="note-meta-line">Affiliation: Unknown.</div>
         </div>
         <div class="note-tldr">MMFormalizer 将“自动形式化”扩展到多模态场景：不仅把自然语言数学转为形式化陈述，还需要从图像/物理情境中推断隐含量纲与约束。方法通过递归式的视觉实体落地与公理组合构建可编译命题，并提出 PhyX-AF 基准评测多模态形式化与物理推理的准确性与可验证性。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

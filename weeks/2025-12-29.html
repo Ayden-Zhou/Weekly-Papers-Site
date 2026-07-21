@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-12-29</div>
     <div class="source-header">2025-12-29 ~ 2026-01-04</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://openai.com/index/frontierscience/" target="_blank">Evaluating AI's ability to perform scientific research tasks</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://openai.com/index/frontierscience/" target="_blank">Evaluating AI&#x27;s ability to perform scientific research tasks</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: OpenAI.</div>
             <div class="note-meta-line">Affiliation: OpenAI.</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">介绍了FrontierScience，这是一个旨在评估AI在物理、化学和生物领域专家级科学推理能力的新基准。该基准包含Olympiad（奥林匹克竞赛风格的短期推理）和Research（由博士设计的开放式研究任务）两个赛道。评估显示，GPT-5.2在Olympiad和Research赛道上均表现最佳，但仍有很大的提升空间，特别是在开放式研究思维方面。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.18659" target="_blank">CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.18659" target="_blank">CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jie He, Yizhe Zhang.</div>
             <div class="note-meta-line">Affiliation: University of Edinburgh.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出了CLaRa，一种通过连续潜在推理连接检索和生成的框架。该方法旨在解决RAG（检索增强生成）系统中检索文档与生成答案之间的断层问题，通过在潜在空间进行推理来增强模型整合信息和生成准确回复的能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.10791" target="_blank">The FACTS Leaderboard: A Comprehensive Benchmark for Large Language Model Factuality</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.10791" target="_blank">The FACTS Leaderboard: A Comprehensive Benchmark for Large Language Model Factuality</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Aileen Cheng, Dipanjan Das.</div>
             <div class="note-meta-line">Affiliation: Google DeepMind.</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">推出了FACTS排行榜，这是一个综合性的基准测试，用于评估大型语言模型的事实准确性。该基准涵盖了多种任务和领域，旨在提供对模型在生成事实性内容方面能力的标准化评估，帮助识别模型的幻觉问题并推动更可靠模型的发展。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.15703" target="_blank">Think Visually, Reason Textually: Vision-Language Synergy in ARC</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.15703" target="_blank">Think Visually, Reason Textually: Vision-Language Synergy in ARC</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Beichen Zhang, Jiaqi Wang.</div>
             <div class="note-meta-line">Affiliation: Shanghai AI Laboratory.</div>
@@ -395,7 +429,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">针对抽象推理语料库（ARC）任务，提出了一种结合视觉感知和文本推理的方法。该研究通过视觉-语言协同（Vision-Language Synergy），利用视觉模型提取特征，并结合语言模型的推理能力，显著提高了在ARC任务上的表现，证明了多模态方法在解决复杂抽象推理问题上的有效性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.10685" target="_blank">Sharp Monocular View Synthesis in Less Than a Second</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.10685" target="_blank">Sharp Monocular View Synthesis in Less Than a Second</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="30 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>30</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Lars Mescheder, Vladlen Koltun.</div>
             <div class="note-meta-line">Affiliation: Apple.</div>
@@ -403,7 +440,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出了一种新的单目视图合成方法，能够在不到一秒的时间内生成清晰的新视图。该方法通过优化的网络架构和推理过程，在保持高质量图像生成的同时大幅降低了计算成本，适用于实时应用和移动设备上的3D场景重建与漫游。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.09882" target="_blank">Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.09882" target="_blank">Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Justin W. Lin, Daniel E. Ho.</div>
             <div class="note-meta-line">Affiliation: Stanford University.</div>
@@ -411,7 +450,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文对比了AI代理与人类网络安全专家在真实世界渗透测试中的表现。研究发现，虽然AI代理在某些自动化任务上表现出色，但在处理复杂、需要创造性思维和深层上下文理解的攻击场景时，仍不及人类专家。文章强调了AI作为辅助工具的潜力，但也指出了其在完全自主网络攻击方面的局限性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.10938" target="_blank">Stronger Normalization-Free Transformers</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.10938" target="_blank">Stronger Normalization-Free Transformers</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Mingzhi Chen, Zhuang Liu.</div>
             <div class="note-meta-line">Affiliation: Princeton University.</div>
@@ -419,7 +460,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出了更强的无归一化Transformer模型。通过改进初始化策略和训练稳定性技术，作者成功训练了深层的Transformer模型而无需传统的归一化层（如LayerNorm）。该方法在多个基准测试中展现了与标准Transformer相当甚至更好的性能，同时简化了架构并提高了训练效率。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.20619" target="_blank">SemanticGen: Video Generation in Semantic Space</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.20619" target="_blank">SemanticGen: Video Generation in Semantic Space</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="95 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>95</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jianhong Bai, Kun Gai</div>
             <div class="note-meta-line">Affiliation: Zhejiang University</div>
@@ -427,7 +471,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出了 SemanticGen，一种在语义空间进行视频生成的生成式框架。该方法基于视频内容存在冗余性的洞察，将生成过程解耦为两个阶段：首先在一个紧凑的高层语义空间中生成定义视频全局结构（如布局和运动模式）的语义特征，以此作为“剧本”；随后以此为条件，在 VAE 潜在空间中生成高频细节。这种“先规划后细化”的范式显著提高了模型收敛速度和长视频生成的时间一致性，实验表明其在生成质量和效率上优于直接在潜在空间建模的现有方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.20491" target="_blank">Step-DeepResearch Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.20491" target="_blank">Step-DeepResearch Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="89 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>89</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chen Hu, Yibo Zhu</div>
             <div class="note-meta-line">Affiliation: StepFun</div>
@@ -435,7 +482,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本报告介绍了 Step-DeepResearch，这是一个针对复杂开放式问题设计的迭代研究型智能体系统。该系统模拟人类的研究过程，能够自主进行在线搜索、信息分析和多步推理。核心技术包括用于探索用户潜在搜索意图的 Expectation-Maximization (EM) 模型，以及用于在每一步选择最佳行动路径的蒙特卡洛树搜索 (MCTS) 算法。在 FreshBench 等基准测试上的评估显示，Step-DeepResearch 能够通过持续获取新信息来回答高难度问题，性能显著超越现有模型。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.20856" target="_blank">NVIDIA Nemotron 3: Efficient and Open Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.20856" target="_blank">NVIDIA Nemotron 3: Efficient and Open Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="44 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>44</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Aaron Blakeman, Zijie Yan</div>
             <div class="note-meta-line">Affiliation: NVIDIA</div>
@@ -443,7 +493,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本技术报告详细介绍了 NVIDIA Nemotron 3 系列大语言模型。该系列模型旨在提供高效、高性能且开放的智能基础，涵盖了从基础模型到指令微调模型的多种规格。报告阐述了其在架构优化、大规模预训练数据策略及对齐技术上的改进，重点强调了模型在推理效率、长上下文处理及代码与推理任务上的卓越表现。Nemotron 3 的发布为开源社区提供了具有竞争力的工业级模型选择，推动了高效智能的普及。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.10047" target="_blank">Detailed balance in large language model-driven agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.10047" target="_blank">Detailed balance in large language model-driven agents</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhuo-Yang Song, Hua Xing Zhu</div>
             <div class="note-meta-line">Affiliation: Peking University</div>
@@ -451,7 +503,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文从统计物理学的视角研究大语言模型（LLM）驱动的智能体，发现其生成的微观状态转换在宏观上满足“细致平衡”（detailed balance）原理。这一发现表明，LLM 智能体的行为并非简单的规则学习或随机游走，而是由一个隐含的、类似于物理势能函数的全局机制所引导。通过最小作用量原理，作者构建了一个理论框架来量化和预测智能体的动力学行为，指出智能体实际上是在通过“势能”导向来优化其生成路径，为理解复杂 AI 系统的涌现行为提供了新的物理学解释。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2511.17006" target="_blank">Budget-Aware Tool-Use Enables Effective Agent Scaling</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2511.17006" target="_blank">Budget-Aware Tool-Use Enables Effective Agent Scaling</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Tengxiao Liu, Chen-Yu Lee</div>
             <div class="note-meta-line">Affiliation: University of California, Santa Barbara</div>
@@ -459,7 +513,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文针对工具增强型智能体（Tool-augmented Agents）的扩展问题，指出单纯增加工具调用预算并不能有效提升性能，因为现有智能体缺乏“预算意识”。作者提出了 Budget Tracker 插件，赋予智能体实时感知剩余预算的能力，并开发了 BATS（Budget Aware Test-time Scaling）框架。该框架使智能体能根据剩余资源动态调整策略，在“深挖”现有线索与“转向”新路径之间做决策。实验表明，预算感知设计能显著改善扩展曲线，在同等成本下获得更高的任务成功率。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.07921" target="_blank">DeepCode: Open Agentic Coding</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.07921" target="_blank">DeepCode: Open Agentic Coding</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zongwei Li, Chao Huang</div>
             <div class="note-meta-line">Affiliation: University of Hong Kong</div>
@@ -467,7 +523,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">DeepCode 是一个旨在解决复杂软件工程任务的开源编码智能体框架。它模拟了人类开发者的迭代工作流，包含需求解析、代码规划、逐步实现及自我调试等核心模块，并集成了基于代码库的检索增强生成（RAG）技术以处理复杂的项目级依赖。DeepCode 不仅在 HumanEval 等标准基准上表现优异，更在处理现实世界复杂代码库修改任务时展现出强大的鲁棒性，甚至在某些指标上超越了闭源的高级模型，为自动化编程领域提供了透明且可扩展的解决方案。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.19693" target="_blank">The Prism Hypothesis: Harmonizing Semantic and Pixel Representations via Unified Autoencoding</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.19693" target="_blank">The Prism Hypothesis: Harmonizing Semantic and Pixel Representations via Unified Autoencoding</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Weichen Fan, Ziwei Liu</div>
             <div class="note-meta-line">Affiliation: Nanyang Technological University</div>
@@ -475,7 +534,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出了“棱镜假设”（Prism Hypothesis），旨在解决视觉领域中语义表示（如CLIP）与像素表示（如VAE）分离的问题。作者通过统一自编码器（Unified Autoencoding）将两者协调起来，使模型既能具备强大的语义理解能力，又能进行高质量的像素级生成。这一统一视角为视觉理解和生成任务提供了更高效的通用表示基础。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.18746" target="_blank">MemEvolve: Meta-Evolution of Agent Memory Systems</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.18746" target="_blank">MemEvolve: Meta-Evolution of Agent Memory Systems</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="31 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>31</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Guibin Zhang, Shuicheng Yan</div>
             <div class="note-meta-line">Affiliation: National University of Singapore</div>
@@ -483,7 +545,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出了MemEvolve框架，专注于智能体（Agent）记忆系统的元进化。与传统固定结构的记忆模块不同，MemEvolve允许智能体在任务执行过程中自主优化其记忆架构和存储策略。通过这种元层面的进化，智能体能够更有效地积累经验并适应复杂环境，显著提升了长期任务中的表现和泛化能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.16969" target="_blank">Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.16969" target="_blank">Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="122 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>122</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Wanghan Xu, Lei Bai</div>
             <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
@@ -491,7 +556,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文定义了“科学通用智能”（Scientific General Intelligence, SGI），并推出了SGI-Bench基准测试。该研究通过模拟真实的科学家工作流（包括深度文献调研、创意生成、实验设计与推理等环节），全面评估大语言模型在科学发现全流程中的能力。研究发现现有模型在执行复杂科学推理时仍存在显著局限，并指出了通往AI科学家的关键路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.16793" target="_blank">PhysBrain: Human Egocentric Data as a Bridge from Vision Language Models to Physical Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.16793" target="_blank">PhysBrain: Human Egocentric Data as a Bridge from Vision Language Models to Physical Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="76 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>76</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Xiaopeng Lin, Kai Chen</div>
             <div class="note-meta-line">Affiliation: Shanghai AI Laboratory</div>
@@ -499,7 +567,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文提出了PhysBrain，旨在利用人类自我中心（Egocentric）视频数据来弥合视觉语言模型（VLM）与物理世界智能之间的鸿沟。通过在富含物理交互的自我中心数据上进行训练，PhysBrain赋予了模型更强的物理常识s和规划能力，使其能够更好地理解和执行具身智能任务，如机器人操作和导航。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.17532" target="_blank">Robust-R1: Degradation-Aware Reasoning for Robust Visual Understanding</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.17532" target="_blank">Robust-R1: Degradation-Aware Reasoning for Robust Visual Understanding</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiaqi Tang, Qifeng Chen</div>
             <div class="note-meta-line">Affiliation: The Hong Kong University of Science and Technology</div>
@@ -507,14 +578,17 @@ h1 .archive-link:hover {
         <div class="note-tldr">本文针对视觉模型在低质量图像上表现下降的问题，提出了Robust-R1模型。该方法引入了“退化感知推理”（Degradation-Aware Reasoning）机制，使模型能够主动识别图像中的噪声、模糊等退化因素，并调整推理策略。实验表明，Robust-R1在多种图像退化场景下均保持了鲁棒的视觉理解和问答能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.16676" target="_blank">DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.16676" target="_blank">DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="225 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>225</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hao Liang, Wentao Zhang</div>
             <div class="note-meta-line">Affiliation: Peking University</div>
         </div>
         <div class="note-tldr">针对以数据为中心的AI开发需求，本文发布了DataFlow框架。这是一个由大语言模型驱动的系统，旨在自动化处理复杂的数据准备和工作流构建任务。DataFlow通过自然语言接口理解用户需求，自主规划并执行数据清洗、标注和增强等操作，大幅降低了高质量数据构建的门槛和人力成本。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,10 @@ h1 .archive-link:hover {
     <div class="week-header">2026-02-16</div>
     <div class="source-header">2026-02-16 ~ 2026-02-22</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.10388" target="_blank">Less is Enough: Synthesizing Diverse Data in Feature Space of LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.10388" target="_blank">Less is Enough: Synthesizing Diverse Data in Feature Space of LLMs</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="246 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>246</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zhongzhi Li, Ninghao Liu</div>
             <div class="note-meta-line">Affiliation: University of Georgia</div>
@@ -371,7 +400,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出在 LLM 内部特征空间中度量合成数据多样性的 FAC（Feature Activation Coverage），并基于 SAE 构建 FAC Synthesis 框架，识别种子数据缺失的任务相关特征后定向生成样本。实验表明该方法可在多类任务上提升数据多样性与下游性能，并支持跨模型家族的特征迁移。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.12783" target="_blank">SQuTR: A Robustness Benchmark for Spoken Query to Text Retrieval under Acoustic Noise</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.12783" target="_blank">SQuTR: A Robustness Benchmark for Spoken Query to Text Retrieval under Acoustic Noise</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="246 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>246</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuejie Li, Caixin Kang</div>
             <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
@@ -379,14 +411,17 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 SQuTR 噪声鲁棒性基准，基于 6 个中英文检索数据集构造 37,317 条 spoken query，并用 200 位说话人合成语音，在分级 SNR 与多类真实环境噪声下建立统一评测协议。对级联式与端到端检索系统的大规模实验显示，噪声增强会显著降低检索性能，鲁棒性仍是关键瓶颈。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.13949" target="_blank">Experiential Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.13949" target="_blank">Experiential Reinforcement Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="76 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>76</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Taiwei Shi, Jieyu Zhao</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
         </div>
         <div class="note-tldr">提出 Experiential Reinforcement Learning，把“尝试-反思-巩固”的显式经验循环嵌入语言模型强化学习。面对稀疏、延迟的环境反馈，模型先生成初始尝试，再把失败和反馈转化为自然语言经验，最后用于后续行为改进，从而更有效地把过去失败迁移到未来任务迭代中。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

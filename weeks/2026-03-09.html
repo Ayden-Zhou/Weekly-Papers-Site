@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,10 @@ h1 .archive-link:hover {
     <div class="week-header">2026-03-09</div>
     <div class="source-header">2026-03-09 ~ 2026-03-15</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.03143" target="_blank">Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.03143" target="_blank">Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="145 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>145</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jiyuan Wang, Chunyu Lin</div>
             <div class="note-meta-line">Affiliation: BJTU, AMap Alibaba Group, NTU</div>
@@ -371,7 +400,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文针对 3D 场景编辑多视角不一致和缺少配对数据的问题，提出 RL3DEdit：用 3D 基础模型 VGGT 给出置信图与位姿误差奖励，在单次生成中通过强化学习把 2D 编辑先验约束到 3D 一致流形。实验显示其在编辑质量与效率上优于现有方法。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.05451" target="_blank">FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.05451" target="_blank">FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Ted Zadouri, Tri Dao</div>
             <div class="note-meta-line">Affiliation: Princeton University, Together AI</div>
@@ -379,7 +410,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向 Blackwell 平台“张量算力增长快于带宽/指数单元”的不对称扩展，FlashAttention-4 联合优化算法与内核流水：异步 MMA、大 tile、软件指数与条件重标定、2-CTA/张量内存协同。B200 上较 cuDNN 9.13 最多提速 1.3 倍，峰值达 1613 TFLOPs/s。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.07685" target="_blank">Scalable Training of Mixture-of-Experts Models with Megatron Core</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.07685" target="_blank">Scalable Training of Mixture-of-Experts Models with Megatron Core</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zijie Yan, June Yang</div>
             <div class="note-meta-line">Affiliation: NVIDIA</div>
@@ -387,7 +420,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">该技术报告系统总结 Megatron Core 在 MoE 大规模训练中的端到端协同优化：内存侧重计算与卸载、通信侧分发与重叠、计算侧 Grouped GEMM/融合/CUDA Graph，并支持并行折叠、FP8/NVFP4 与长上下文。实测在 GB300/GB200 上达到高吞吐，为万卡级训练提供可复用工程方案。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.10165" target="_blank">OpenClaw-RL: Train Any Agent Simply by Talking</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.10165" target="_blank">OpenClaw-RL: Train Any Agent Simply by Talking</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="158 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>158</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yinjie Wang, Mengdi Wang</div>
             <div class="note-meta-line">Affiliation: Gen-Verse</div>
@@ -395,7 +431,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文提出 OpenClaw-RL，把用户回复、工具输出、终端/GUI 状态变化统一视为 next-state 信号，用同一异步训练环路同时做在线服务、奖励评估和策略更新。方法结合 PRM 标量奖励与 OPD 方向性蒸馏，在个人助手与通用代理场景均显示出持续自提升能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.08660" target="_blank">How Far Can Unsupervised RLVR Scale LLM Training?</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.08660" target="_blank">How Far Can Unsupervised RLVR Scale LLM Training?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="60 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>60</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Bingxiang He, Bowen Zhou</div>
             <div class="note-meta-line">Affiliation: Tsinghua University, Shanghai AI Lab</div>
@@ -403,7 +442,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">该文系统分析无监督 RLVR 的可扩展性，给出统一理论说明内在奖励方法本质上会“锐化初始分布”，当置信度与正确性错配时会出现性能先升后崩。作者提出 Model Collapse Step 作为可训练性指标，并展示基于外在可验证信号的方法可能突破该上限。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.10145" target="_blank">Lost in Backpropagation: The LM Head is a Gradient Bottleneck</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.10145" target="_blank">Lost in Backpropagation: The LM Head is a Gradient Bottleneck</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="13 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>13</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Nathan Godey, Yoav Artzi</div>
             <div class="note-meta-line">Affiliation: Cornell University</div>
@@ -411,7 +453,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文指出语言模型输出层在反向传播中存在结构性“梯度瓶颈”：从词表维度到隐藏维度的投影会压缩并扭曲监督信号。作者结合理论分析与实证实验显示，LM head 可抑制 95%-99% 的梯度范数，使训练方向显著偏离最优更新，导致收敛变慢甚至让简单模式难以学习。该结论提示当前 LLM 训练效率受限于输出层设计，需要探索新的 LM head 架构。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.03212" target="_blank">NeuroSkill(tm): Proactive Real-Time Agentic System Capable of Modeling Human State of Mind</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.03212" target="_blank">NeuroSkill(tm): Proactive Real-Time Agentic System Capable of Modeling Human State of Mind</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Nataliya Kosmyna, Eugene Hauptmann</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -419,7 +463,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">NeuroSkill(tm) 是一个离线运行在边缘设备上的实时主动式 agentic system，通过 BCI 设备采集脑信号和生理信号，结合 EXG foundation model 与文本嵌入模型来建模人的心理状态。系统用 NeuroLoop(tm) harness 将这些状态开放给 API/CLI，使 agent 能根据用户状态主动调整行为。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2503.17523" target="_blank">Bayesian Teaching Enables Probabilistic Reasoning in Large Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2503.17523" target="_blank">Bayesian Teaching Enables Probabilistic Reasoning in Large Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Linlu Qiu, Sjoerd van Steenkiste</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -427,7 +473,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文研究如何让 LLM 在交互中形成和更新概率信念。作者先展示模型在 Bayesian inference 上的局限，再提出 Bayesian Teaching，通过精心设计的教学样例帮助模型学习从证据中更新不确定性。结果表明，合适的教学数据能显著提升 LLM 的概率推理与个性化决策能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.15029" target="_blank">Symmetry in language statistics shapes the geometry of model representations</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.15029" target="_blank">Symmetry in language statistics shapes the geometry of model representations</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Dhruva Karkada, Yasaman Bahri</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -435,7 +483,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文解释语言模型内部表示为何会出现月份环、年份流形、城市经纬度等几何结构。作者指出语言统计本身具有平移对称性，并证明这种对称会塑造模型表示空间的几何，使线性探针可解码结构化属性，从语言数据分布层面解释神经表示的规律性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.00142" target="_blank">Evaluating Theory of Mind and Internal Beliefs in LLM-Based Multi-Agent Systems</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.00142" target="_blank">Evaluating Theory of Mind and Internal Beliefs in LLM-Based Multi-Agent Systems</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Adam Kostka, Jarosław A. Chudziak</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -443,7 +493,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">面向 LLM 多智能体系统，论文评估模型是否能建模其他 agent 的心理状态、信念和意图。作者结合 Theory of Mind 与 Belief-Desire-Intention 视角，指出仅增加 agent 数量不足以保证协作智能，LLM 在动态多智能体世界中的内部信念推断仍高度不稳定。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2601.14027" target="_blank">Numina-Lean-Agent: An Open and General Agentic Reasoning System for Formal Mathematics</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2601.14027" target="_blank">Numina-Lean-Agent: An Open and General Agentic Reasoning System for Formal Mathematics</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="15 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>15</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Junqi Liu, Wenda Li</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -451,7 +504,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">Numina-Lean-Agent 将通用 coding agent 直接用于 Lean 形式化数学推理，而不是依赖任务专用 pipeline 或专门训练的形式证明器。系统通过自然的代码编辑、搜索和工具调用接口处理定理证明任务，强调开放、可复现、可泛化的 agentic formal math 工作流。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.23320" target="_blank">ParamMem: Augmenting Language Agents with Parametric Reflective Memory</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.23320" target="_blank">ParamMem: Augmenting Language Agents with Parametric Reflective Memory</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Tianjun Yao, Kun Zhang</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -459,7 +514,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">ParamMem 关注语言 agent 自反思容易重复、缺少多样性的问题。作者发现反思多样性与任务成功率正相关，并提出参数化反思记忆模块，为 agent 生成更丰富的反思信号。该方法试图把外部记忆与模型参数化经验结合，提升迭代解题时的探索质量。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2602.23720" target="_blank">The Auton Agentic AI Framework</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2602.23720" target="_blank">The Auton Agentic AI Framework</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sheng Cao, Ji Tang</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -467,7 +524,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">Auton 框架面向从生成式 AI 到 agentic AI 的架构转变，解决 LLM 随机、非结构化输出与后端数据库、API、云服务所需确定性 schema 输入之间的错配。论文提出面向外部环境执行的 agentic AI 架构原则，使 LLM 更可靠地驱动实际系统。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2512.20184" target="_blank">Reaching Agreement Among Reasoning LLM Agents</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2512.20184" target="_blank">Reaching Agreement Among Reasoning LLM Agents</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Chaoyi Ruan, Jialin Li</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -475,7 +534,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文指出多 reasoning agent 协作常依赖固定轮数和同步屏障，容易浪费计算、受慢 agent 拖累或过早接受短暂共识。作者将“达成一致”形式化，研究更可靠的终止和聚合机制，使多 agent 推理在延迟、成本和答案质量之间取得更好平衡。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.02473" target="_blank">Diagnosing Retrieval vs. Utilization Bottlenecks in LLM Agent Memory</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.02473" target="_blank">Diagnosing Retrieval vs. Utilization Bottlenecks in LLM Agent Memory</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Boqin Yuan, Kun Yao</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -483,7 +544,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文诊断 memory-augmented LLM agent 的性能瓶颈到底来自写入、检索还是使用记忆。作者交叉比较 raw chunks、fact extraction、summarization 三种写策略与三种检索方法，分析 agent 如何实际利用返回记忆，为改进长期交互记忆系统提供更细的定位工具。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.03975" target="_blank">Phi-4-reasoning-vision-15B Technical Report</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.03975" target="_blank">Phi-4-reasoning-vision-15B Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="21 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>21</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Jyoti Aneja, Eduardo Salinas</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -491,7 +555,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">报告 Phi-4-reasoning-vision-15B，一个紧凑的开源多模态推理模型。论文总结模型设计动机、训练选择和实验经验，目标是在较小参数规模下兼顾常见视觉语言任务与科学、数学推理能力，为高效多模态 reasoning model 构建提供实践参考。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.06569" target="_blank">Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.06569" target="_blank">Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="120 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>120</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Boqiang Zhang, Leoweiliang</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -499,7 +566,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">Penguin-VL 探索小型 VLM 在移动和边缘设备上的效率极限。论文挑战必须使用大规模对比预训练视觉编码器的常规做法，分析 contrastive learning 与视觉语言生成/理解目标之间的不匹配，并研究用 LLM-based vision encoder 构建紧凑 VLM 的可行性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.05890" target="_blank">Lost in Stories: Consistency Bugs in Long Story Generation by LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.05890" target="_blank">Lost in Stories: Consistency Bugs in Long Story Generation by LLMs</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Junjie Li, Yutao Xie</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -507,7 +577,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文聚焦长篇故事生成中的一致性错误：角色设定、事实和世界规则在数万字叙事中被模型遗忘或自相矛盾。作者提出 ConStory-Bench，专门评测长期叙事一致性，而不只看情节质量和流畅度，为长文本生成系统暴露更真实的稳定性问题。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.07660" target="_blank">Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelligence</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.07660" target="_blank">Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="87 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>87</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yuanyuan Gao, Zhihang Zhong</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -515,7 +588,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">Holi-Spatial 面向大规模 3D 空间智能数据瓶颈，试图从原始网络视频流系统化构建细粒度 3D 场景标注，而不是只从少量人工标注数据集生成 QA。论文强调扩大空间理解基准的数据来源和场景多样性，以降低域差距并推动更整体的 3D spatial intelligence。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.09906" target="_blank">Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.09906" target="_blank">Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="76 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>76</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Zorik Gekhman, Jonathan Herzig</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -523,7 +599,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">论文研究 reasoning 对单跳事实回忆是否有帮助。尽管这类问题表面上不需要分步推理，作者发现启用 reasoning 能显著扩展模型可访问的参数知识边界，帮助模型找回直接回答无法触达的事实，并分析推理如何改变内部回忆路径。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.04597" target="_blank">Bootstrapping Exploration with Group-Level Natural Language Feedback in Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.04597" target="_blank">Bootstrapping Exploration with Group-Level Natural Language Feedback in Reinforcement Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="211 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>211</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Lei Huang, Bing Qin</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -531,7 +610,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">GOLF 利用环境交互中丰富的自然语言反馈来指导强化学习探索，而不是只依赖标量奖励。方法聚合 group-level language feedback，提取可执行改进方向，引导 agent 进行更有针对性的探索，从而提升样本效率并缓解稀疏奖励下探索盲目性。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.09229" target="_blank">Flash-KMeans: Fast and Memory-Efficient Exact K-Means</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.09229" target="_blank">Flash-KMeans: Fast and Memory-Efficient Exact K-Means</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="85 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>85</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Shuo Yang, Ion Stoica</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -539,7 +621,10 @@ h1 .archive-link:hover {
         <div class="note-tldr">Flash-KMeans 重新审视 k-means 在现代 AI 系统中的在线使用价值，指出现有 GPU 实现瓶颈主要来自底层系统约束而非算法本身。论文设计快速、内存高效的精确 k-means，使其从离线预处理工具变成可嵌入在线系统的高性能聚类 primitive。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.12255" target="_blank">Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.12255" target="_blank">Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="91 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>91</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Fangfu Liu, Yueqi Duan</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
@@ -547,14 +632,17 @@ h1 .archive-link:hover {
         <div class="note-tldr">Spatial-TTT 关注从无限视频流中持续维护和更新空间证据的能力。论文认为空间智能的关键不只是更长上下文，而是如何选择、组织和保留空间信息；方法在测试时训练中持续适配视觉流，使模型能更稳定地进行流式空间理解。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2603.12228" target="_blank">Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2603.12228" target="_blank">Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="12 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>12</span></span>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Yulu Gan, Phillip Isola</div>
             <div class="note-meta-line">Affiliation: Unknown</div>
         </div>
         <div class="note-tldr">论文把预训练结果视为参数向量分布，而非单个固定起点，研究其附近是否已经密集存在多样任务专家。作者发现大模型预训练权重周围包含更丰富的可用专家解，说明后续适配不只是从零搜索新能力，也是在预训练分布中定位已有任务专长。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

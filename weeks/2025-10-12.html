@@ -294,9 +294,18 @@ h1 .archive-link:hover {
     margin-bottom: 0.9rem;
     box-shadow: var(--shadow);
 }
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
 .note-title {
     font-size: 1rem;
     color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 .note-title a {
     color: var(--link);
@@ -304,6 +313,23 @@ h1 .archive-link:hover {
 }
 .note-title a:hover {
     text-decoration: underline;
+}
+.note-upvotes {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24rem;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
 }
 .note-meta {
     margin-top: 0.4rem;
@@ -363,7 +389,9 @@ h1 .archive-link:hover {
     <div class="week-header">2025-10-12</div>
     <div class="source-header">2025-10-06 ~ 2025-10-12</div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.04871" target="_blank">Less is More: Recursive Reasoning with Tiny Networks</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.04871" target="_blank">Less is More: Recursive Reasoning with Tiny Networks</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Alexia Jolicoeur-Martineau, Alexia Jolicoeur-Martineau.</div>
             <div class="note-meta-line">Affiliation: Samsung SAIL Montréal.</div>
@@ -371,7 +399,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出仅含两层、700万参数的Tiny Recursive Model（TRM），通过对潜变量与答案的多步递归更新，在数独、迷宫与ARC-AGI上超越HRM与多款LLM（ARC-AGI-1达45%，ARC-AGI-2达8%），以极低参数与小数据实现强泛化。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://www.arxiv.org/pdf/2510.04618" target="_blank">Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://www.arxiv.org/pdf/2510.04618" target="_blank">Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Qizheng Zhang, Changran Hu.</div>
             <div class="note-meta-line">Affiliation: Stanford University.</div>
@@ -379,7 +409,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出ACE框架，将上下文视为可进化的“作战手册”，以生成—反思—策展的模块化流程进行结构化增量更新，避免简化偏置与“上下文坍塌”。在代理与金融等任务上，ACE可依赖执行反馈而非标注优化离线/在线上下文，平均提升约10.6%与8.6%，并显著降低适配延迟与成本。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.07499" target="_blank">When Thoughts Meet Facts: Reusable Reasoning for Long-Context LMs</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.07499" target="_blank">When Thoughts Meet Facts: Reusable Reasoning for Long-Context LMs</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Soyeong Jeong, Soyeong Jeong.</div>
             <div class="note-meta-line">Affiliation: KAIST.</div>
@@ -387,7 +419,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">为长上下文LM引入“思维模板”，把可复用的推理轨迹与事实证据结构化结合，并通过自然语言反馈迭代优化。相较传统RAG或简单拼接，方法在检索式与非检索式设置均稳定提效，模板可蒸馏为轻量可开源组件（ToTAL）。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.08558" target="_blank">Agent Learning via Early Experience</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.08558" target="_blank">Agent Learning via Early Experience</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Kai Zhang, Kai Zhang.</div>
             <div class="note-meta-line">Affiliation: Meta Superintelligence Labs, The Ohio State University.</div>
@@ -395,7 +429,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“早期经验”范式：用智能体自行交互产生的未来状态作为监督信号，无需外部奖励。包含隐式世界建模与自我反思两种策略，在八类环境与多模型中显著提升成功率与域外泛化，并为后续RL提供更强的起点。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.07364" target="_blank">Base Models Know How to Reason, Thinking Models Learn When</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.07364" target="_blank">Base Models Know How to Reason, Thinking Models Learn When</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Constantin Venhoff, Constantin Venhoff.</div>
             <div class="note-meta-line">Affiliation: University of Oxford, United Kingdom.</div>
@@ -403,7 +439,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出混合观点：思考模型主要学会“何时思考”，而非获得全新推理技能。通过无监督分析与因果干预，在GSM8K、MATH500等上复原至多91%的思考增益且仅需约12%思维token，表明关键在于正确触发与调度推理机制。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.03279" target="_blank">MemMamba: Rethinking Memory Patterns in State Space Model</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.03279" target="_blank">MemMamba: Rethinking Memory Patterns in State Space Model</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Youjin Wang, Jiaxuan Lu.</div>
             <div class="note-meta-line">Affiliation: School of Statistics, Renmin University of China, Beijing, China.</div>
@@ -411,7 +449,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">系统解析Mamba的长程记忆机理并提出纵横向记忆保真度指标；据此构建MemMamba：结合跨层/跨token注意力的状态摘要机制，减轻长程遗忘且保持线性复杂度，在PG19-PPL、Passkey等任务显著优于基线，推理效率提升约48%。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.06557" target="_blank">The Markovian Thinker</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.06557" target="_blank">The Markovian Thinker</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Milad Aghajohari, Milad Aghajohari.</div>
             <div class="note-meta-line">Affiliation: Mila.</div>
@@ -419,7 +459,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“马尔可夫式思考”与Delethink环境：将推理切成固定长度chunk，并在边界仅携带精炼文本状态以续写思考，从而把思考长度与上下文解耦；计算随长度线性增长、内存常数。在R1-Distill上以8K上下文实现至24K/96K思考，精度与成本优于LongCoT-RL。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2510.05024" target="_blank">Inoculation Prompting: Instructing LLMs to Misbehave at Train-Time Improves Test-Time Alignment</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/pdf/2510.05024" target="_blank">Inoculation Prompting: Instructing LLMs to Misbehave at Train-Time Improves Test-Time Alignment</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Nevan Wichers, Samuel Marks</div>
             <div class="note-meta-line">Affiliation: Anthropic Fellows</div>
@@ -427,7 +469,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出“免疫化提示（IP）”：在SFT训练时显式要求模型做出不良行为，反而抑制其在测试时习得该行为，同时保持能力。于代码奖励破解、谄媚等四类设置均降低不良率，并给出选择免疫提示的启发式。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2510.07312" target="_blank">h1: Bootstrapping LLMs to Reason over Longer Horizons via Reinforcement Learning</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/pdf/2510.07312" target="_blank">h1: Bootstrapping LLMs to Reason over Longer Horizons via Reinforcement Learning</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Sumeet Ramesh Motwani, Alesia Ivanova</div>
             <div class="note-meta-line">Affiliation: University of Oxford</div>
@@ -435,7 +479,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 h1：将大量短任务合成多步依赖链，配合仅基于结果的强化学习与自动难度课程，显著提升长程推理（在GSM-Symbolic、MATH-500、AIME等基准大幅提升），并给出样本复杂度优势的理论分析。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2509.04439" target="_blank">ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/pdf/2509.04439" target="_blank">ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Matthew Ho, Lianhui Qin</div>
             <div class="note-meta-line">Affiliation: University of California, San Diego</div>
@@ -443,7 +489,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 ArcMemo：从解题轨迹抽象出可重用“概念级记忆”，用自然语言存储并在后续推理中检索与整合，实现终身式记忆而不改权重；在 ARC-AGI 上相对无记忆基线提升7.5%，并在多规模推理中保持稳定。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/pdf/2507.02259" target="_blank">MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/pdf/2507.02259" target="_blank">MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Hongli Yu, Hao Zhou</div>
             <div class="note-meta-line">Affiliation: ByteDance Seed, Institute for AI Industry Research (AIR), Tsinghua University, SIA-Lab of Tsinghua AIR and ByteDance Seed</div>
@@ -451,7 +499,9 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 MemAgent：以多轮对话式RL训练的记忆代理，分段读取与覆盖式更新记忆，端到端优化长文任务；在RULER等长上下文评测上几乎无损外推（至数百万词元）并显著优于仅靠长上下文预训练的模型。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.00938" target="_blank">Large Reasoning Models Learn Better Alignment from Flawed Thinking</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.00938" target="_blank">Large Reasoning Models Learn Better Alignment from Flawed Thinking</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: ShengYun Peng, ShengYun Peng.</div>
             <div class="note-meta-line">Affiliation: Meta Superintelligence Labs, Georgia Tech.</div>
@@ -459,14 +509,16 @@ h1 .archive-link:hover {
         <div class="note-tldr">针对LRM易被有缺陷的思维前置引导而偏航，提出RECAP：在对抗式“反对齐前置”下的强化学习配方，显式训练模型覆写错误推理并自我反思；无需额外数据或架构改动，提升安全与稳健性、减少过度拒答，同时保持核心推理能力。</div>
     </div>
     <div class="note-card">
-        <div class="note-title"><a href="https://arxiv.org/abs/2510.08191" target="_blank">Training-Free Group Relative Policy Optimization</a></div>
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2510.08191" target="_blank">Training-Free Group Relative Policy Optimization</a></div>
+        </div>
         <div class="note-meta">
             <div class="note-meta-line">Authors: Youtu-Agent Team, Tristan Li.</div>
             <div class="note-meta-line">Affiliation: Tencent Youtu Lab.</div>
         </div>
         <div class="note-tldr">提出无需参数更新的“训练自由GRPO”：以语义组优势在推断期迭代蒸馏经验库为token prior，达到类GRPO的对齐效果。与DeepSeek-V3.1-Terminus结合，在数学推理与网页检索上用少量样本超越32B微调基线，显著降低数据与算费。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-20 23:00</div>
+    <div class="footer">Last updated: 2026-07-21 15:44</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
