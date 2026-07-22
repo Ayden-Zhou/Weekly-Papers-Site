@@ -396,6 +396,50 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-07-20</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.17423" target="_blank">TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="106 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>106</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuhan Zhu, Limin Wang</div>
+            <div class="note-meta-line">Affiliation: Nanjing University, Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">面向视频多模态模型“知道发生了什么但说不清证据何时出现”的问题，将时间定位建模为区间集合。TimeLens2 构建 93K 多片段监督数据，并用时间 Wasserstein 奖励与 IoU 反馈训练，在七个基准上显著超过同规模模型，4B/8B 版本达到开源前沿表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.07820" target="_blank">DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="69 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>69</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xinyu Geng, Yi R. Fung</div>
+            <div class="note-meta-line">Affiliation: HKUST, Tencent</div>
+        </div>
+        <div class="note-tldr">针对工具使用智能体难以从自身经验中提升的问题，提出可复现搜索与页面读取环境 DeepSearch-World，以及自蒸馏框架 DeepSearch-Evolve。系统用 42 万多跳问答任务支持验证、反思与失败恢复，通过轨迹生成、过滤、混合和微调迭代增强智能体，在 BrowseComp、GAIA、HotpotQA 上取得有竞争力结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.17250" target="_blank">EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="65 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>65</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qing Zong, Yangqiu Song</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">提出 EvolvingWorld，将文学互动模拟从静态人设模仿扩展为角色与世界长期共同演化。框架包含角色智能体和 LLM 世界模型，持续更新角色档案、地点实体状态与场景进展，并基于 57 本书构建训练和测试数据，显示其能提升长程模拟的一致性与发展性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.18213" target="_blank">SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuhang Wang, Xiaodong Gu</div>
+            <div class="note-meta-line">Affiliation: LLM4SE Lab, Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">研究编码智能体的长上下文裁剪，发现模型读取工具输出时的内部表示已包含代码相关性信号。SWE-Pruner Pro 在智能体内部加小型预测头，对每行工具输出判断保留或裁剪，并加入长度感知嵌入，在多轮基准上最多节省 39% token，同时基本保持或提升任务质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.16097" target="_blank">Understanding Reasoning from Pretraining to Post-Training</a></div>
             <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
@@ -405,8 +449,30 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文用国际象棋构造可控的“预训练-SFT-RL”推理实验台：在 5M 到 1B 参数模型、36 组预训练/RL 组合上系统扫描。结果显示，给定 RL 计算量时后 RL pass@1 可由预训练损失预测，RL 奖励曲线斜率随预训练 token 近似线性提升；RL 在易题上放大 SFT 已偏好的正确步，在难题上可挖出低概率正确步但也会强化错误模式，并在数学域 1B 模型上观察到相似趋势。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.17965" target="_blank">Exploration Matters for Escaping the Blur Trap in 3D Gaussian Splatting</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chengbo Wang, Yizhen Lao</div>
+            <div class="note-meta-line">Affiliation: Hunan University</div>
+        </div>
+        <div class="note-tldr">分析 3D Gaussian Splatting 优化中的梯度偏置，指出其会让非凸优化陷入“Blur Trap”局部次优。论文区分远侧与近侧两类模糊陷阱，并用 Random Seeding 与 Random Splitting 两个简单显式探索算子缓解问题，在多个数据集上互补提升重建与新视角渲染质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.17977" target="_blank">RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kehan Li, Deli Zhao</div>
+            <div class="note-meta-line">Affiliation: DAMO Academy, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">发布 RynnBrain 1.1 系列具身基础模型，覆盖 2B、9B 和 122B-A10B 规模，用统一时空与物理约束训练支持感知、空间推理、定位和规划。新版本加入接触点预测、原生 3D grounding，并构建跨本体 VLA，在具身认知、定位、真实机器人任务上优于多个通用基线。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-21 23:00</div>
+    <div class="footer">Last updated: 2026-07-22 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
