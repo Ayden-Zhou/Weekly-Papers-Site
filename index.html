@@ -407,6 +407,28 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.19191" target="_blank">ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="96 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>96</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Fan Jiang, Ning Guo</div>
+            <div class="note-meta-line">Affiliation: AMAP CV Lab, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出面向实时长程闭环交互的动作条件视频世界模型 ABot-World-0。论文构建跨 3A 游戏、仿真引擎和互联网视频的数据基础设施，用 WorldExplorer 反馈式采集与多级质量检查获得可控世界动态；再将双向教师蒸馏为因果学生，并用 LongForcing 缓解长 rollout 漂移，最终在单张 RTX 5090 上实现 720P 最高 16 FPS 的交互式世界生成。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.16617" target="_blank">DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="79 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>79</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Runming He, Wentao Zhang</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">针对 LLM 编码智能体常生成一次性脚本、难以沉淀为可编辑平台资产的 NL2Pipeline gap，提出 DataFlow-Harness。系统通过 DataFlow-Skills、MCP 暴露的实时算子/状态，以及同步的可视化 DAG 编辑器，引导智能体用类型化增量变更构建平台原生流水线。在 12 个数据工程任务上达到 93.3% 端到端通过率，并显著降低成本与延迟。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.07820" target="_blank">DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="69 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>69</span></span>
         </div>
@@ -429,6 +451,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.19139" target="_blank">Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="65 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>65</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Maohua Li, Shao-Qun Zhang</div>
+            <div class="note-meta-line">Affiliation: Nanjing University</div>
+        </div>
+        <div class="note-tldr">研究文本到图像 DiT 中模板 token 的内部作用，发现这些结构 token 虽在文本编码端几乎不含具体 prompt 信息，却在去噪阶段成为图像到文本注意力的主要汇点，并因果维持物体身份。论文提出注意力分解与干预框架，揭示语义先进入图像 latent 再回写模板 token 的机制，并据此给出免训练剪枝规则，可减少约 20% attention FLOPs。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.18213" target="_blank">SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
         </div>
@@ -437,6 +470,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: LLM4SE Lab, Shanghai Jiao Tong University</div>
         </div>
         <div class="note-tldr">研究编码智能体的长上下文裁剪，发现模型读取工具输出时的内部表示已包含代码相关性信号。SWE-Pruner Pro 在智能体内部加小型预测头，对每行工具输出判断保留或裁剪，并加入长度感知嵌入，在多轮基准上最多节省 39% token，同时基本保持或提升任务质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.18703" target="_blank">Generative World Renderer at the Speed of Play</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="63 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>63</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guixu Lin, Zhixiang Wang</div>
+            <div class="note-meta-line">Affiliation: Alaya Lab</div>
+        </div>
+        <div class="note-tldr">提出实时化的生成式世界渲染器 AlayaRenderer-Flash，把原本昂贵的 AlayaRenderer 从 0.56 FPS 推到 31.54 FPS。方法将渲染器改造成少步自回归流式模型，并用轻量蒸馏 codec 提升 latent 编码与帧重建效率，在保留 G-buffer 和文本提示接口的同时支持无界输入流，最终与物理引擎集成形成 30 FPS 可玩的生成式世界。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -471,8 +515,30 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">发布 RynnBrain 1.1 系列具身基础模型，覆盖 2B、9B 和 122B-A10B 规模，用统一时空与物理约束训练支持感知、空间推理、定位和规划。新版本加入接触点预测、原生 3D grounding，并构建跨本体 VLA，在具身认知、定位、真实机器人任务上优于多个通用基线。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.19343" target="_blank">Masked Visual Actions for Unified World Modeling</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hadi Alzayer, Jia-Bin Huang</div>
+            <div class="note-meta-line">Affiliation: Stanford University, University of Maryland, College Park</div>
+        </div>
+        <div class="note-tldr">提出 Masked Visual Actions，将动作表示为视频中任意实体的部分可见像素轨迹，让视频模型在视觉空间里接收控制信号。显示机器人运动时，模型可预测场景对低层动作的响应；显示目标物体运动时，同一模型可反推实现该结果的机器人行为。仅用 15 小时真实和仿真 masked 数据微调后，模型在多场景、多本体中支持规划、策略评估与逆向建模。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.18110" target="_blank">LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianzhu Ye, Furu Wei</div>
+            <div class="note-meta-line">Affiliation: Microsoft Research</div>
+        </div>
+        <div class="note-tldr">针对开放式、不可验证任务中标量奖励会压缩丰富反馈并诱发 reward hacking 的问题，提出 Experiential Learning，把 LLM-as-a-Judge 改造为 LLM-as-a-Coach。coach 将每次 on-policy 响应的细粒度评价蒸馏为可迁移经验知识，再通过教师模型和上下文蒸馏内化到策略中。实验显示该高带宽反馈比 rubric-based RL 更稳健，并在分布外任务上泛化更好。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-22 23:00</div>
+    <div class="footer">Last updated: 2026-07-23 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
