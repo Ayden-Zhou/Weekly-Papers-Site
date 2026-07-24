@@ -537,7 +537,18 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对开放式、不可验证任务中标量奖励会压缩丰富反馈并诱发 reward hacking 的问题，提出 Experiential Learning，把 LLM-as-a-Judge 改造为 LLM-as-a-Coach。coach 将每次 on-policy 响应的细粒度评价蒸馏为可迁移经验知识，再通过教师模型和上下文蒸馏内化到策略中。实验显示该高带宽反馈比 rubric-based RL 更稳健，并在分布外任务上泛化更好。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-23 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.20368" target="_blank">Self Gradient Forcing: Native Long Video Extrapolation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junhao Zhuang, Nan Duan</div>
+            <div class="note-meta-line">Affiliation: Joy Future Academy, JD</div>
+        </div>
+        <div class="note-tldr">论文指出 Self Forcing 虽缓解视频自回归生成的曝光偏差，但历史 KV cache 作为冻结状态无法获得未来帧损失的反向监督，形成 historical context-gradient gap。SGF 通过无梯度 rollout 记录自生成上下文，再并行重建上下文梯度，让未来 latent 损失训练更有效的因果记忆写入；实验显示其在长视频外推中提升身份、背景布局和时序稳定性，5 秒训练窗口也可外推到数分钟视频。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-24 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
