@@ -396,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-07-20</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.21461" target="_blank">AREX: Towards a Recursively Self-Improving Agent for Deep Research</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="108 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>108</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shuqi Lu, Zheng Liu</div>
+            <div class="note-meta-line">Affiliation: Beijing Academy of Artificial Intelligence (BAAI)</div>
+        </div>
+        <div class="note-tldr">提出 AREX 递归自改进深度研究代理，把“发现答案难、逐约束验证相对容易”的不对称性转化为控制信号：内循环检索证据并形成临时答案，外循环按约束审计、保留已验证进展并发起定向补查。模型还学习自主上下文更新工具，并通过代理中训与长程强化学习训练，在 BrowseComp、WideSearch、DeepSearchQA、HLE 等基准上超过同规模基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.17423" target="_blank">TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="106 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>106</span></span>
         </div>
@@ -548,8 +559,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文指出 Self Forcing 虽缓解视频自回归生成的曝光偏差，但历史 KV cache 作为冻结状态无法获得未来帧损失的反向监督，形成 historical context-gradient gap。SGF 通过无梯度 rollout 记录自生成上下文，再并行重建上下文梯度，让未来 latent 损失训练更有效的因果记忆写入；实验显示其在长视频外推中提升身份、背景布局和时序稳定性，5 秒训练窗口也可外推到数分钟视频。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.21553" target="_blank">SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junsong Chen, Enze Xie</div>
+            <div class="note-meta-line">Affiliation: NVIDIA</div>
+        </div>
+        <div class="note-tldr">提出 5B/14B 统一架构的视频扩散 Transformer SANA-Video 2.0，以 3:1 的混合线性-Softmax 注意力降低长序列成本，并用 Attention Residuals 将 softmax 锚点特征跨层复用。模型从头训练，在 480p 单 H100 上 40 步采样 VBench 84.30、13.2 秒；结合 Sol-Engine 后，5B 版可在 720p/5s 达到 13.06 秒，显著提升高分辨率视频生成效率。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-07-24 23:00</div>
+    <div class="footer">Last updated: 2026-07-25 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
