@@ -392,8 +392,21 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-07-27 23:00</div>
+    <div class="week-header">2026-07-27 ~ 2026-08-02</div>
+    <div class="source-header">Latest file: 2026-07-27</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.21585" target="_blank">Expanding Flow Maps</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sophia Tang, Pranam Chatterjee</div>
+            <div class="note-meta-line">Affiliation: University of Pennsylvania</div>
+        </div>
+        <div class="note-tldr">针对现有 flow 生成模型通常固定维度或固定序列长度的限制，论文提出 Expanding Generative Flows 与 Expanding Flow Maps：先用条件噪声扩展状态空间，再通过 transport map 推进去噪，从而在少步生成中同时扩展与生成。框架覆盖连续空间和离散 simplex，可用于可变大小图与可变长度序列生成，让输出规模本身成为可学习、可控的自由度。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-07-28 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');

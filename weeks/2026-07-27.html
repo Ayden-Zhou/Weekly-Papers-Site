@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025-09-28 - Weekly Papers</title>
+    <title>2026-07-27 - Weekly Papers</title>
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <style>
 :root {
@@ -392,97 +392,18 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
-    <div class="week-header">2025-09-28</div>
-    <div class="source-header">2025-09-22 ~ 2025-09-28</div>
+    <div class="week-header">2026-07-27</div>
+    <div class="source-header">2026-07-27 ~ 2026-08-02</div>
     <div class="note-card">
         <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.20317" target="_blank">SIM-CoT: Supervised Implicit Chain-of-Thought</a></div>
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.21585" target="_blank">Expanding Flow Maps</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
         <div class="note-meta">
-            <div class="note-meta-line">Authors: Xilin Wei, Yuhang Zang</div>
-            <div class="note-meta-line">Affiliation: Fudan University, Shanghai AI Laboratory</div>
+            <div class="note-meta-line">Authors: Sophia Tang, Pranam Chatterjee</div>
+            <div class="note-meta-line">Affiliation: University of Pennsylvania</div>
         </div>
-        <div class="note-tldr">提出针对隐式CoT“潜表不稳”的SIM-CoT：在训练中用辅助解码器为每个隐式token引入步骤级监督，保持语义多样与可解释；推理时移除辅助头，无额外开销；在多模型上显著提升准确与稳定。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.19249" target="_blank">Reinforcement Learning on Pre-Training Data</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Siheng Li, Bo Zhou</div>
-            <div class="note-meta-line">Affiliation: LLM Department, Tencent, The Chinese University of Hong Kong</div>
-        </div>
-        <div class="note-tldr">提出在预训练数据上做强化学习的RLPT：以“下一段推理”目标从未标注语料自动构造奖励，摆脱人工标注瓶颈；在通用与数学基准上持续获得提升，并展示良好随算力扩展的尺度律，同时增强RLVR基础。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.17567" target="_blank">LIMI: Less is More for Agency</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Yang Xiao, Pengfei Liu</div>
-            <div class="note-meta-line">Affiliation: PolyU, GAIR</div>
-        </div>
-        <div class="note-tldr">主张“少即是多”的能动智能培养范式：用精心策划的高质量示范而非海量数据训练代理。仅用78个示范，LIMI在AgencyBench达73.5%，显著超越多模型；提出“能动效率原则”，强调理解本质胜于扩充样本。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.17765" target="_blank">Qwen3-Omni Technical Report</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Qwen Team, Qwen Team</div>
-            <div class="note-meta-line">Affiliation: Qwen Team</div>
-        </div>
-        <div class="note-tldr">发布统一多模态模型Qwen3-Omni：Thinker-Talker MoE架构，文本/图像/音频/视频无退化并强化跨模态“思考”；覆盖多语言，语音流式端到端首包理论延迟234ms；开源多款30B变体与音频字幕器。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.20021" target="_blank">Embodied AI: From LLMs to World Models</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Tongtong Feng, Wenwu Zhu</div>
-            <div class="note-meta-line">Affiliation: Tsinghua University</div>
-        </div>
-        <div class="note-tldr">综述具身智能从LLM到世界模型的进展，系统梳理感知-认知-交互与硬件环节；提出联合MLLM-WM架构以结合语义推理与物理一致性，回顾应用与挑战，并给出未来研究方向。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.20357" target="_blank">Language Models that Think, Chat Better</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Adithya Bhaskar, Danqi Chen.</div>
-            <div class="note-meta-line">Affiliation: Princeton Language and Intelligence, Princeton University.</div>
-        </div>
-        <div class="note-tldr">提出RLMT框架：用奖励模型在开放域对“思考+回答”进行强化，兼容DPO/PPO/GRPO；相较仅限可验证域的RLVR，显著提升WildBench等通用对话与创作能力，并可零起点强化基座模型。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.13351" target="_blank">Teaching LLMs to Plan: Logical Chain-of-Thought Instruction Tuning for Symbolic Planning</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Pulkit Verma, Julie A. Shah.</div>
-            <div class="note-meta-line">Affiliation: MIT CSAIL, Massachusetts Institute of Technology.</div>
-        </div>
-        <div class="note-tldr">提出PDDL-INSTRUCT：以逻辑式CoT指令微调，使模型显式检验前置条件、状态转移与不变量，生成并自证计划；在标准规划基准最高达94%有效率，缩窄神经与符号规划的鸿沟。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://arxiv.org/pdf/2509.14476" target="_blank">AToken: A Unified Tokenizer for Vision</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Jiasen Lu, Jiasen Lu.</div>
-            <div class="note-meta-line">Affiliation: Apple.</div>
-        </div>
-        <div class="note-tldr">提出统一视觉Tokenizer——AToken：以纯Transformer与4D旋转位置编码，将图像/视频/3D映射至共享4D潜空间，兼顾重建保真与语义理解，支持连续/离散token，并在多项生成与理解任务中具竞争力。</div>
-    </div>
-    <div class="note-card">
-        <div class="note-heading">
-            <div class="note-title"><a href="https://scontent-lax3-1.xx.fbcdn.net/v/t39.2365-6/550307004_652674544550619_4057228118425369041_n.pdf?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=3c67a6&amp;_nc_ohc=hkEVli432WQQ7kNvwENU9mk&amp;_nc_oc=AdlkIhR17tWytPX17SyE8axbvCdX0KqXUQhLnkj9gFxMFpTbOG8QutcGGd1-DzdIolEu_MSgslbXyVcTyS1yxgE2&amp;_nc_zt=14&amp;_nc_ht=scontent-lax3-1.xx&amp;_nc_gid=rm0v5Y2uwkUNGrFtEHtFbA&amp;oh=00_AfaaNjR6PGGsxT8kQEZ52N1vgY1xthNAfbQL3ULJa3dIQw&amp;oe=68E152BA" target="_blank">ARE: scaling up agent environments and evaluations</a></div>
-        </div>
-        <div class="note-meta">
-            <div class="note-meta-line">Authors: Meta Superintelligence Labs, Meta Superintelligence Labs.</div>
-            <div class="note-meta-line">Affiliation: Meta Superintelligence Labs.</div>
-        </div>
-        <div class="note-tldr">介绍ARE平台与Gaia2基准：支持可扩展环境构建与异步评测，能接入真实应用与MCP；实验显示模型能力与效率存在权衡，预算曲线易平台化，强调新型架构与自适应算力以推进代理研究。</div>
+        <div class="note-tldr">针对现有 flow 生成模型通常固定维度或固定序列长度的限制，论文提出 Expanding Generative Flows 与 Expanding Flow Maps：先用条件噪声扩展状态空间，再通过 transport map 推进去噪，从而在少步生成中同时扩展与生成。框架覆盖连续空间和离散 simplex，可用于可变大小图与可变长度序列生成，让输出规模本身成为可学习、可控的自由度。</div>
     </div>
     <div class="footer">Last updated: 2026-07-28 23:00</div>
     <script>
