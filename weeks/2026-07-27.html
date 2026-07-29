@@ -396,6 +396,28 @@ h1 .archive-link:hover {
     <div class="source-header">2026-07-27 ~ 2026-08-02</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.23588" target="_blank">JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="99 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>99</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yunlong Lin, Xiangyu Yue</div>
+            <div class="note-meta-line">Affiliation: Xiamen University</div>
+        </div>
+        <div class="note-tldr">提出 JarvisHub，一个面向长程多模态创作的开放式 canvas-native agent harness。它把画布作为项目状态、外部记忆和受控动作空间，用 typed nodes/links 记录素材、版本、依赖、反馈与失败恢复，让 agent 能在可检查、可编辑的状态中持续规划、生成、修订并组织创作项目。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.24280" target="_blank">From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="63 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>63</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junlin Liu, Chenxi Zhou</div>
+            <div class="note-meta-line">Affiliation: Beijing Institute of Technology</div>
+        </div>
+        <div class="note-tldr">针对 agentic search 中 RL 奖励稀疏、闭源教师 logits 不可得且自然语言轨迹蒸馏易带来风格漂移的问题，提出 MAPD：先由离线多智能体系统把搜索轨迹转成结构化 JSON protocol，再用特权分支提供密集蒸馏信号并结合 RL 训练。七个 QA 基准上显著优于对比蒸馏和 RL 方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.21585" target="_blank">Expanding Flow Maps</a></div>
             <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
@@ -405,7 +427,29 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对现有 flow 生成模型通常固定维度或固定序列长度的限制，论文提出 Expanding Generative Flows 与 Expanding Flow Maps：先用条件噪声扩展状态空间，再通过 transport map 推进去噪，从而在少步生成中同时扩展与生成。框架覆盖连续空间和离散 simplex，可用于可变大小图与可变长度序列生成，让输出规模本身成为可学习、可控的自由度。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-28 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.24653" target="_blank">Kimi K3: Open Frontier Intelligence</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kimi Team, Xinxing Zu</div>
+            <div class="note-meta-line">Affiliation: Moonshot AI (Kimi Team)</div>
+        </div>
+        <div class="note-tldr">介绍 Kimi K3，一个 2.8T 参数、104B 激活参数的 MoE 开源前沿模型，具备原生视觉能力和 100 万 token 上下文。论文结合 Kimi Delta Attention、Attention Residuals、Stable LatentMoE、强化学习后训练和系统级训练部署优化，使其在长程代码、智能体、知识、推理和视觉任务上达到强开源前沿水平。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.24744" target="_blank">Data Pyramid for Embodied Manipulation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yifan Ye, Shanghang Zhang</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">从数据中心视角系统化具身操作训练数据，提出由真实机器人、UMI-style、第一/第三人称、仿真和通用视觉语言数据组成的 data pyramid，并围绕可扩展性与机器人对齐分析数据质量、多样性、复用性和物理保真度。论文还梳理 embodied foundation models 的数据配方，并提出触觉、失败恢复、跨本体动作对齐等开放挑战。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-29 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
