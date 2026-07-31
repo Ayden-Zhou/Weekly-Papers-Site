@@ -396,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">2026-07-27 ~ 2026-08-02</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.27205" target="_blank">TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="114 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>114</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hengyi Xie, Han Ding</div>
+            <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">针对以 LLM 为中心的 VLA 推理开销高、难以实时部署的问题，提出 TurboVLA，将传统 V→L→A 改为直接的 V+L→A：独立编码视觉和指令，用轻量双向交互与紧凑解码器预测连续动作块。在 LIBERO 上以 0.2B 参数达到 97.7% 成功率，并在 RTX 4090 上实现 31.2 ms 延迟、0.9 GB 显存和 32 Hz 控制。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.23588" target="_blank">JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="99 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>99</span></span>
         </div>
@@ -429,6 +440,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.25659" target="_blank">CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="65 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>65</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bo-Wen Zhang, Lan-Zhe Guo</div>
+            <div class="note-meta-line">Affiliation: State Key Laboratory of Novel Software Technology, Nanjing University, School of Intelligence Science and Technology, Nanjing University, ByteDance</div>
+        </div>
+        <div class="note-tldr">针对 rubric-based RL 在 GRPO 中把结构化评审压成 response-level 标量、再均匀广播到所有 token 的 credit assignment 问题，提出 CoRT。它对同一采样回答分别在含 rubric 和去 rubric 提示下重放打分，用 tokenwise likelihood contrast 生成有界权重，重分配 GRPO advantage；无需额外 token scorer，平均提升 4.4 个百分点。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.24280" target="_blank">From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="63 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>63</span></span>
         </div>
@@ -437,6 +459,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Beijing Institute of Technology</div>
         </div>
         <div class="note-tldr">针对 agentic search 中 RL 奖励稀疏、闭源教师 logits 不可得且自然语言轨迹蒸馏易带来风格漂移的问题，提出 MAPD：先由离线多智能体系统把搜索轨迹转成结构化 JSON protocol，再用特权分支提供密集蒸馏信号并结合 RL 训练。七个 QA 基准上显著优于对比蒸馏和 RL 方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.27180" target="_blank">HumanCLAW: Can Vision-Language Models Act Through a Body?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="63 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>63</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Siyao Li, Chuan Guo</div>
+            <div class="note-meta-line">Affiliation: Meta, Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">提出 HumanCLAW，用现成 VLM 在闭环物理环境中发出原子全身技能，再由运动生成器和 half-physics 模拟器执行，以把决策错误和低层控制失败解耦。HumanCLAW-Bench 覆盖 41 个室内场景、1,218 个长程 find-navigate-interact episode；9 个强 VLM 均未解决，最佳成功率仅 16.8%，暴露 embodied self-awareness 缺口。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -471,7 +504,18 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">从数据中心视角系统化具身操作训练数据，提出由真实机器人、UMI-style、第一/第三人称、仿真和通用视觉语言数据组成的 data pyramid，并围绕可扩展性与机器人对齐分析数据质量、多样性、复用性和物理保真度。论文还梳理 embodied foundation models 的数据配方，并提出触觉、失败恢复、跨本体动作对齐等开放挑战。</div>
     </div>
-    <div class="footer">Last updated: 2026-07-30 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.26037" target="_blank">Wonder: Video World Model Done Better</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiacong Xu, Yiqun Mei</div>
+            <div class="note-meta-line">Affiliation: Adobe Research</div>
+        </div>
+        <div class="note-tldr">提出 Wonder，一个实时、相机可控的视频世界模型，可从图像或条件视频生成可交互探索的长时程世界。方法结合 dense coordinate field 相机条件、高效 sparse-attention 记忆检索和改进 self-forcing 蒸馏，使模型在 16 FPS 下生成分钟级视频，同时保持几何、外观、动态和长程记忆一致，并支持对既有动态场景实时重拍。</div>
+    </div>
+    <div class="footer">Last updated: 2026-07-31 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
