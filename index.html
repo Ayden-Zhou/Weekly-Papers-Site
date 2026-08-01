@@ -396,6 +396,50 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-07-27</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.26760" target="_blank">Metis: Memory Foundation Model</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="196 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>196</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zeyu Zhang, Xu Chen, Zhiyu Li</div>
+            <div class="note-meta-line">Affiliation: MemTensor (Shanghai) Technology Co., Ltd., Renmin University of China</div>
+        </div>
+        <div class="note-tldr">针对 agent memory 仍多依赖外部模块的问题，提出 memory foundation model 概念，并实现原型 Metis：在模型内部维护可演化的 native memory state，通过 memory attention 存取历史信息。Metis 用记忆专项数据和多目标中训练学习存储/利用流程，推理时权重冻结、仅前向即可更新记忆，在多项实验中展示原生记忆能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28227" target="_blank">Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="177 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>177</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hanzhang Zhou, Steven Hoi</div>
+            <div class="note-meta-line">Affiliation: Alibaba Token Hub, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出面向真实设备的基础 GUI agent Qwen-UI-Agent，覆盖移动端、computer use、Web 和 DeepSearch。系统结合沙盒与大规模真实移动设备环境，统一 GUI 与 CLI 混合动作、单轮批量动作、数据飞轮和长轨迹在线 RL，并用轻量 harness 支持主动服务与跨平台状态化工作流，在移动端基准达到 SOTA，同时在桌面和浏览器任务上保持强竞争力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28624" target="_blank">PhiZero: A World Model Built Around Physical Language</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="147 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>147</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shuyao Shang, Lue Fan, Zhaoxiang Zhang</div>
+            <div class="note-meta-line">Affiliation: NLPR, Institute of Automation, Chinese Academy of Sciences (CASIA)</div>
+        </div>
+        <div class="note-tldr">提出 PhiZero，把物理世界模型建立在 physical language 这种离散状态转移表示上，而不是直接在像素空间隐式预测未来视频。模型先 reason：生成未来演化的 physical-language 序列，再 render：把转移渲染为视频；这种 reason-then-render 范式提升物理一致性，并展示了交互式世界建模、细粒度动作条件模拟和零样本运动迁移潜力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28618" target="_blank">AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="128 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>128</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bing Yan, Kyunghyun Cho</div>
+            <div class="note-meta-line">Affiliation: New York University</div>
+        </div>
+        <div class="note-tldr">针对化学文献综合需要跨论文定位、验证和组织具体发现的问题，提出 AskChem，将检索单元从论文改为带 provenance 的 typed claim。系统把论文转成带 DOI 与证据位置的原子 claims，并提供分面 taxonomy、evidence graph 与 living taxonomy；当前索引 14.7 万篇论文的 240 万 claims，在 AskChem-Bench 上提升 DOI 可解析率和引用密度。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.27205" target="_blank">TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="114 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>114</span></span>
         </div>
@@ -404,6 +448,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Huazhong University of Science and Technology</div>
         </div>
         <div class="note-tldr">针对以 LLM 为中心的 VLA 推理开销高、难以实时部署的问题，提出 TurboVLA，将传统 V→L→A 改为直接的 V+L→A：独立编码视觉和指令，用轻量双向交互与紧凑解码器预测连续动作块。在 LIBERO 上以 0.2B 参数达到 97.7% 成功率，并在 RTX 4090 上实现 31.2 ms 延迟、0.9 GB 显存和 32 Hz 控制。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28568" target="_blank">Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="113 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>113</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junlin Yang, Kaiyan Zhang</div>
+            <div class="note-meta-line">Affiliation: Horizon Research, Frontis.AI, Tsinghua University</div>
+        </div>
+        <div class="note-tldr">面向递归自我改进中的 AI4AI 场景，提出 OpenMLE 全栈与 Frontis-MA1：用可执行反馈的 OpenMLE-Gym、操作学习 OpenMLE-RL 和长程搜索 OpenMLE-Evo，把 Draft、Improve、Debug、Crossover 四类程序演化操作统一到训练和推理。35B 模型在 MLE-Bench Lite 上显著优于基座，Evo-Max 配置进一步接近前沿闭源系统，并在 NatureBench Lite 显示迁移性。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -473,6 +528,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.27380" target="_blank">VideoCoCo: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="61 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>61</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haodong Li, Pheng-Ann Heng</div>
+            <div class="note-meta-line">Affiliation: The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">针对文生视频难以从压缩文本提示中隐式推断完整物理演化的问题，提出 VideoCoCo，将可执行 Blender 代码作为 process-level chain of thought。coding agent 先生成描述场景和时间演化的程序，由模拟引擎产出确定性草稿，再由视频生成引擎做 photorealistic 编辑；配套 VideoCoCo-3K 训练数据，在 PhyGenBench 和 VBench-2.0 上提升物理一致性指标。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.21585" target="_blank">Expanding Flow Maps</a></div>
             <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
@@ -516,7 +582,7 @@ h1 .archive-link:hover {
         <div class="note-tldr">提出 Wonder，一个实时、相机可控的视频世界模型，可从图像或条件视频生成可交互探索的长时程世界。方法结合 dense coordinate field 相机条件、高效 sparse-attention 记忆检索和改进 self-forcing 蒸馏，使模型在 16 FPS 下生成分钟级视频，同时保持几何、外观、动态和长程记忆一致，并支持对既有动态场景实时重拍。</div>
     </div>
 
-    <div class="footer">Last updated: 2026-07-31 23:00</div>
+    <div class="footer">Last updated: 2026-08-01 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
