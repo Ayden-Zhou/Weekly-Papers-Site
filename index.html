@@ -392,8 +392,32 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-08-03 23:00</div>
+    <div class="week-header">2026-08-03 ~ 2026-08-09</div>
+    <div class="source-header">Latest file: 2026-08-03</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.23802" target="_blank">From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qinsi Wang, Wentian Zhao</div>
+            <div class="note-meta-line">Affiliation: Duke University, Adobe Inc., Pennsylvania State University</div>
+        </div>
+        <div class="note-tldr">将 RLVR 从数学、代码等可验证任务扩展到开放式任务。论文提出 RLSVR，把开放式任务转化为可自动给分的代理环境，并以 SpyRL 的“谁是卧底”式自博弈生成自验证奖励；在摘要、创作和数学推理上优于现有自提升方法，说明任务变换可降低对人类偏好和 LLM 裁判的依赖。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.29679" target="_blank">Scaling Properties of Text Conditioning in Visual Generation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zilong Chen, Haoqi Fan</div>
+            <div class="note-meta-line">Affiliation: ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">系统研究视觉生成中文本条件的 scaling 规律，发现收敛扩散损失会随提示中结构化语言增加而改善：与 GPG 近线性相关、与 ED 呈幂律关系。作者据此用语义和几何标注构造更易扩散的提示，并训练 prompter 提升可提示性，在组合、推理和世界知识基准上超过多数开源模型，部分接近或超过闭源模型。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-08-04 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
