@@ -396,6 +396,28 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-08-03</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.01964" target="_blank">LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="112 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>112</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ziyu Ma, XiangXiang Chu</div>
+            <div class="note-meta-line">Affiliation: DreamX Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">针对长程 LLM agent 在不断增长上下文中难以维护任务状态、错误自评会传播的问题，提出 LongHorizon-Harness，把执行改写为显式任务状态管理。其 MEA 循环由 manager 规划子任务、fresh-context executor 执行、read-only auditor 独立验证环境事实，并用 AgentAdapter 兼容不同后端；在 WeaveBench、Terminal-Bench 2.1、OSWorld 2.0 上显著提升 Qwen 3.7-Plus 与 Claude Opus 4.7 的完成率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.02023" target="_blank">SwanTale: Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="110 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>110</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yu Zhang, Ruiqi Li, Xiang Yin</div>
+            <div class="note-meta-line">Affiliation: ByteDance, Zhejiang University</div>
+        </div>
+        <div class="note-tldr">面向动画配音、音频剧等需要多说话人、环境声与零样本复用的生成场景，提出 SwanData-Caption 数据管线和 SwanTale 模型。方法结合 SwanVAE、奖励条件质量控制、Engram conditioning、Unified MoE、课程学习与 GRPO 后训练，同时支持自然语言指令生成和参考音频零样本生成，在多项语音/音频指标上取得领先并提升表现力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.23802" target="_blank">From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
         </div>
@@ -416,8 +438,30 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">系统研究视觉生成中文本条件的 scaling 规律，发现收敛扩散损失会随提示中结构化语言增加而改善：与 GPG 近线性相关、与 ED 呈幂律关系。作者据此用语义和几何标注构造更易扩散的提示，并训练 prompter 提升可提示性，在组合、推理和世界知识基准上超过多数开源模型，部分接近或超过闭源模型。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.02580" target="_blank">Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ye Wang, Qin Jin</div>
+            <div class="note-meta-line">Affiliation: AIM3 Lab, Renmin University of China, Qwen Team, Alibaba Inc.</div>
+        </div>
+        <div class="note-tldr">针对机器人示教数据昂贵且缺乏多样性的问题，提出 Ego2Robot，将第一视角人类操作视频通过动作重定向、机器人手臂视觉合成和多级质量筛选转换为机器人训练数据。系统产出覆盖 15 种机器人形态的 18,561 小时数据，并扩展 RoboTwin2.0 评估视觉、布局、形态和语义扰动；与真实机器人数据联合预训练可提升分布外泛化，并在真机上验证。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.02365" target="_blank">Faster-WAM: Do World Action Models Need Deep Action Modules?</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Liheng Ma, Rui Heng Yang</div>
+            <div class="note-meta-line">Affiliation: Huawei Noah&#x27;s Ark Lab</div>
+        </div>
+        <div class="note-tldr">针对 WAM 中动作模块深度通常与视频骨干绑定、导致延迟高的问题，提出 Dock of Transformer，将预训练视频 Transformer 作为表示枢纽，用 KV-Fusion 和视频-动作 RoPE 对齐为轻量动作头提供多层表示。Faster-WAM 只用单层动作 DiT 接入 30 层视频骨干，在 LIBERO、RoboTwin2.0、LIBERO-Plus 上保持强性能，并把推理延迟降至 66.5ms，较 Fast-WAM 提速 3.2 倍。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-08-04 23:00</div>
+    <div class="footer">Last updated: 2026-08-05 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
