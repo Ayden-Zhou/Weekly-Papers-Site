@@ -418,6 +418,39 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28956" target="_blank">MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="80 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>80</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qiming Shi, Chengfu Huo</div>
+            <div class="note-meta-line">Affiliation: State Key Lab of CAD&amp;CG, Zhejiang University</div>
+        </div>
+        <div class="note-tldr">提出 MerchantBench，用卖家侧电商经营检验 LLM agent 的长期一致性。环境基于 98,843 条真实商品记录，模拟 365 天订单生命周期和 26 个工具交互；8 个 LLM 在 48 次运行中仍显著落后人类，最佳配置仅达到人类平均净资产的 27.3%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.02602" target="_blank">AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="69 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>69</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiajun Liang, Chenyang Si</div>
+            <div class="note-meta-line">Affiliation: PRLab, Nanjing University, S-Lab, Nanyang Technological University, Imperial College London</div>
+        </div>
+        <div class="note-tldr">提出 AURORA-LM，将可解码文本潜表示构建与分布建模解耦：用 Query-based Encoder-Decoder 生成高容量前缀对齐 latent，再用块因果扩散 Transformer 做 flow matching。模型在 OpenWebText 自由生成和 XSum 摘要上超过同类连续/扩散语言模型。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.02711" target="_blank">Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junliang Ye, Chunchao Guo</div>
+            <div class="note-meta-line">Affiliation: Tencent Hunyuan</div>
+        </div>
+        <div class="note-tldr">提出统一 3D 多模态框架 Hunyuan3D-Buffalo 1.0，支持 3D 理解、文生 3D、指令编辑和文本定位部件生成。方法构建 87M 规模 3D 语料，并结合 Hunyuan3D-VLM 与 3D DiT；实验显示其在生成和编辑基准上达到领先表现，且理解与生成能力能共同提升编辑效果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2607.23802" target="_blank">From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
         </div>
@@ -460,7 +493,18 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">针对 WAM 中动作模块深度通常与视频骨干绑定、导致延迟高的问题，提出 Dock of Transformer，将预训练视频 Transformer 作为表示枢纽，用 KV-Fusion 和视频-动作 RoPE 对齐为轻量动作头提供多层表示。Faster-WAM 只用单层动作 DiT 接入 30 层视频骨干，在 LIBERO、RoboTwin2.0、LIBERO-Plus 上保持强性能，并把推理延迟降至 66.5ms，较 Fast-WAM 提速 3.2 倍。</div>
     </div>
-    <div class="footer">Last updated: 2026-08-05 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.03974" target="_blank">JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yicheng Xiao, Nan Duan</div>
+            <div class="note-meta-line">Affiliation: Joy Future Academy, JD</div>
+        </div>
+        <div class="note-tldr">提出 16B 参数自回归扩散视频编辑框架 JoyAI-Video-Edit，面向无固定时长的实时流式编辑。方法结合 chunk-wise 自回归适配、SA-DMD 和长程自回归蒸馏，以缓解训练推理错配、源视频漂移和长期时序累积误差；系统可在单张 Nvidia B200 上实现约 30 FPS 的 720p 编辑。</div>
+    </div>
+    <div class="footer">Last updated: 2026-08-06 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
