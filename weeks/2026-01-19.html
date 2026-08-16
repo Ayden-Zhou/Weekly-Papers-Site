@@ -503,7 +503,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">STEM提出一种“静态、按token索引”的细粒度稀疏化：将门控FFN的上投影替换为层内嵌入查表，门控与下投影保持稠密。该设计不需要运行时路由，支持CPU offload与异步预取，降低通信/访存开销并提升训练稳定性。在350M与1B规模上，相比稠密基线在知识与推理类基准取得增益，同时token索引的嵌入更便于可解释地做知识注入/编辑，并在长上下文下体现“测试时容量随序列长度增长”的效果。</div>
     </div>
-    <div class="footer">Last updated: 2026-08-15 23:00</div>
+    <div class="footer">Last updated: 2026-08-16 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
