@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-08-10 - Weekly Papers</title>
+    <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+    <style>
+:root {
+    --bg: #0f1115;
+    --panel: #141821;
+    --border: #232833;
+    --text: #e6e6e6;
+    --text-muted: #9aa3b2;
+    --link: #6ba6ff;
+    --accent: #d9dee8;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    --card-bg: linear-gradient(180deg, rgba(22, 27, 35, 0.94), rgba(18, 22, 30, 0.94));
+    --card-bg-hover: linear-gradient(180deg, rgba(30, 38, 52, 0.98), rgba(20, 26, 36, 0.98));
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-border-hover: rgba(107, 166, 255, 0.28);
+    --card-shadow-hover: 0 0 0 1px rgba(107, 166, 255, 0.12), 0 10px 18px rgba(0, 0, 0, 0.32);
+    --title-lines: 2;
+    --title-line-height: 1.55;
+    --header-border: #ffffff;
+}
+[data-theme="light"] {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --border: #dde1ea;
+    --text: #1a1c23;
+    --text-muted: #596070;
+    --link: #1d61e3;
+    --accent: #111827;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    --card-bg: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,248,252,0.98));
+    --card-bg-hover: linear-gradient(180deg, rgba(232,242,255,0.98), rgba(220,235,255,0.98));
+    --card-border: rgba(0,0,0,0.07);
+    --card-border-hover: rgba(29,97,227,0.30);
+    --card-shadow-hover: 0 0 0 1px rgba(29,97,227,0.12), 0 10px 18px rgba(0,0,0,0.08);
+    --header-border: #1a1c23;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Inter", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid var(--header-border);
+}
+h1 {
+    font-size: 1.85rem;
+    color: var(--accent);
+    letter-spacing: 0.2px;
+}
+.archive-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.archive-link:hover {
+    color: var(--link);
+}
+.archive-current {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.header-row .archive-link,
+.header-row .archive-current,
+.header-row .header-sep {
+    font-size: 1.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+.header-row .archive-current {
+    color: var(--accent);
+}
+.header-row .header-sep {
+    margin: 0 0.1rem;
+}
+.header-row .archive-link {
+    text-decoration: none;
+}
+.header-row .archive-link:hover {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+h1 .archive-link {
+    font-size: inherit;
+    color: var(--accent);
+    text-decoration: none;
+}
+h1 .archive-link:hover {
+    text-decoration: underline;
+}
+.week-header {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.week-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.action-btn:hover {
+    border-color: var(--card-border-hover);
+    background: rgba(107, 166, 255, 0.12);
+    color: var(--link);
+}
+.copy-btn {
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.copy-btn:hover {
+    color: var(--link);
+}
+.copy-btn.copied {
+    color: #79d98c;
+}
+.source-header {
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.paper-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.paper-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow);
+    min-height: calc(var(--title-lines) * var(--title-line-height) * 1em + 0.4rem);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.paper-list li:hover {
+    background: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.paper-list a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: var(--title-line-height);
+    display: -webkit-box;
+    -webkit-line-clamp: var(--title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+}
+.paper-list a:hover {
+    text-decoration: underline;
+}
+.archive-group {
+    margin: 1.2rem 0 1.8rem;
+}
+.archive-group-title {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+.archive-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.archive-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.72rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease;
+}
+.archive-item:first-child {
+    border-top: 1px solid var(--border);
+}
+.archive-item:hover {
+    background: rgba(107, 166, 255, 0.04);
+}
+[data-theme="light"] .archive-item:hover {
+    background: rgba(29, 97, 227, 0.04);
+}
+.archive-date {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 7rem;
+}
+.archive-date:hover {
+    text-decoration: underline;
+}
+.archive-desc {
+    flex: 1;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    height: calc(1.5em * 2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.archive-count {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.10);
+    min-width: 5.5rem;
+    text-align: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+.archive-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.archive-link a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.archive-link a:hover {
+    color: var(--link);
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.note-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.note-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+.note-title {
+    font-size: 1rem;
+    color: var(--link);
+    line-height: 1.5;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.note-title a {
+    color: var(--link);
+    text-decoration: none;
+}
+.note-title a:hover {
+    text-decoration: underline;
+}
+.note-upvotes,
+.note-source {
+    display: inline-flex;
+    align-items: baseline;
+    padding-top: 0.14rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.note-upvotes {
+    gap: 0.24rem;
+}
+.note-source {
+    font-weight: 500;
+}
+.note-upvotes-arrow {
+    color: var(--link);
+    opacity: 0.78;
+}
+.note-meta {
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.note-meta-line {
+    display: block;
+}
+.note-tldr {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.92rem;
+}
+.theme-toggle {
+    position: fixed;
+    top: 1.1rem;
+    right: 1.5rem;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.theme-toggle svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    flex-shrink: 0;
+}
+.theme-toggle:hover {
+    color: var(--link);
+}
+[data-theme="light"] .action-btn {
+    border-color: rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .action-btn:hover {
+    background: rgba(29, 97, 227, 0.08);
+}
+[data-theme="light"] .archive-count {
+    background: rgba(0, 0, 0, 0.07);
+}
+</style>
+</head>
+<body>
+    <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
+    <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="../archive.html">Archive</a></div>
+    <div class="week-header">2026-08-10</div>
+    <div class="source-header">2026-08-10 ~ 2026-08-16</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.00677" target="_blank">OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="147 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>147</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yunhao Chen, Yu-Gang Jiang</div>
+            <div class="note-meta-line">Affiliation: Fudan University, Shanghai Artificial Intelligence Laboratory</div>
+        </div>
+        <div class="note-tldr">针对 agent 在持久环境中累积状态带来的安全风险，提出 OpenART 开放式 red-teaming arena。它构建 50 个领域、1 万多个 stateful 场景，并用 Evolutionary Markov Hypergraph Attack 通过合法状态转移演化攻击面。结果支持跨 agent、模型和攻击向量的统一长程安全评测。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.11924" target="_blank">Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="142 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>142</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhuoyang Qian, Wenhao Wang</div>
+            <div class="note-meta-line">Affiliation: Vast Intelligence Lab</div>
+        </div>
+        <div class="note-tldr">将从研究想法到完整论文的流程实现为 13 个可组合 coding-assistant skill，覆盖文献检索、实验设计执行、证据驱动修订、图表生成和一致性检查。Spark-to-Paper 强调确定性 integrity checks 与自我批判，降低 fabrication，并在 8 个主题上生成高 citation validity、可编辑图表的 manuscript。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.10915" target="_blank">ComBodied Agents: a New Paradigm of Human-Centric Agentic AI</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="131 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>131</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qianggang Ding, Bang Liu</div>
+            <div class="note-meta-line">Affiliation: Université de Montréal, Mila</div>
+        </div>
+        <div class="note-tldr">提出 Combodied Agents 范式，把 agentic AI 的目标从软件状态或物理状态转换，转向长期感知、建模、预测和支持人的状态轨迹。框架把工具、传感器、机器人和人类服务视作行动通道，强调可纠正记忆、个人世界模型、合意干预策略，以及保护用户自主性的评测与治理。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.09819" target="_blank">Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="115 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>115</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mind Lab, Murphy Zhuang</div>
+            <div class="note-meta-line">Affiliation: Mind Lab</div>
+        </div>
+        <div class="note-tldr">发布 Macaron-V1 开放 agent-model 系列，目标是让模型在真实环境经验中持续学习。系统通过版本化 model-harness 自改进循环追求适应性，并用 Mixture-of-LoRA 在冻结基座上组合 chat、agent、coding、GenUI 等专家 LoRA。论文展示从架构、训练算法到基础设施的整体设计与初步评测。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.09888" target="_blank">BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="101 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>101</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Björn Engdahl, Richard Zhong</div>
+            <div class="note-meta-line">Affiliation: Pathway</div>
+        </div>
+        <div class="note-tldr">提出 BDH-CQ，把 in-context learning 与 recurrent latent reasoning 结合：示例在推理时更新 recurrent memory，查询则在高维 latent 空间中迭代求解，不把中间思路语言化。150M 参数模型在 ARC-AGI-1 上以极低成本达到 29.5% pass@2，刷新成本-准确率效率前沿。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.10299" target="_blank">Co-Evolution in Agentic Systems: Toward Self-Directed Evolution Beyond Human Design</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="99 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>99</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Qing Zong, Yangqiu Song</div>
+            <div class="note-meta-line">Affiliation: Hong Kong University of Science and Technology</div>
+        </div>
+        <div class="note-tldr">综述 agentic systems 中的 co-evolution：多个 agent、环境和演化机制彼此施加适应压力，使系统摆脱固定任务与静态反馈限制。论文提出 agent-agent、agent-environment、meta co-evolution 三阶段 taxonomy，并讨论评估、扩展、安全控制等开放挑战。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.10744" target="_blank">Beyond Pixels: From Video Priors to 4D Worlds</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="98 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>98</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zihao Liu, Yi Yang</div>
+            <div class="note-meta-line">Affiliation: ReLER, CCAI, Zhejiang University</div>
+        </div>
+        <div class="note-tldr">提出 Latent-to-4D，将共享 VAE 的视频扩散模型最终去噪 latent 直接作为显式 4D 预测接口，绕过 RGB 重建级联。模型把视频 latent 对齐到预训练 4D decoder token grid，并用时空注意力细化，在文本和图像条件 4D 生成中提升几何、时间稳定性和整体质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.13546" target="_blank">Alaya-EVOKE: From Linear-Scaling Supervision to Endless World</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="81 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>81</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuanyang Yin, Feng Zhao</div>
+            <div class="note-meta-line">Affiliation: MoE Key Lab of BIPC, USTC, Shanghai Innovation Institute, Alaya Lab</div>
+        </div>
+        <div class="note-tldr">提出 Alaya-EVOKE 交互式 world model，通过外部 camera-indexed world state bank 维持持久场景记忆，并设计线性增长的长程教师监督。学生模型用三步生成和 recurrent external memory 支持开放式连续生成，在 WBench 上达到 SOTA，同时保持较低延迟和长程一致性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.12307" target="_blank">AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="74 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>74</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Cheng Qian, Shelby Heinecke</div>
+            <div class="note-meta-line">Affiliation: Salesforce AI Research, University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">研究强模型能否在测试时为弱模型构建 inference-time harness，从而无需更新参数也能转移能力。强 builder 用少量验证集迭代设计脚手架，在 Theory-of-Mind 基准上几乎把弱目标模型平均表现从 0.49 提升到 0.91，主要收益来自确定性代码、路由和严格答案格式。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.12036" target="_blank">Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="71 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>71</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Mengru Wang, Huajun Chen</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University</div>
+        </div>
+        <div class="note-tldr">提出 Mechanist，把 AI 用作自动发现智能机制的科学仪器。系统构建解释性知识图谱、整合 4300 万篇跨学科论文，并维护 32 种机制分析与因果干预方法库。案例显示它能发现多模态安全风险、模型 belief 机制，并把机制洞察转化为控制和性能改进。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.05604" target="_blank">SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="62 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>62</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xingyu Tan, Wenjie Zhang</div>
+            <div class="note-meta-line">Affiliation: UNSW, CSIRO</div>
+        </div>
+        <div class="note-tldr">针对 agent skill library 变大后检索整包、文本压缩和执行图割裂的问题，提出 SkillZip：把 skill 转为 section-level graph，并在保留边界签名、依赖闭包、验证器可达性和可展开性的前提下压缩为可逆 macro。目标是在有限上下文下暴露最小但仍可执行的技能片段。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.06867" target="_blank">LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="62 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>62</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tao Feng, Jiaxuan You</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana-Champaign</div>
+        </div>
+        <div class="note-tldr">把 LLM routing 统一表述为顺序决策问题，拆成 context encoder、model encoder、scoring、decision rule 和 learning signal 五类组件。论文发布 xRouteBench 与 LLMRouter 基础设施，支持 16+ router，对质量和成本联合评测；实验显示 learned router 相比最强固定模型有明显相对提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28802" target="_blank">Model or Harness? An Interaction-Centric Taxonomy for Localizing Agent Failures</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Harsh Raj, Yunzhong He</div>
+            <div class="note-meta-line">Affiliation: Scale AI</div>
+        </div>
+        <div class="note-tldr">提出面向 agent 失败定位的交互中心 taxonomy，把 41 类失败映射到模型、harness、用户、工具、记忆、环境之间的具体边及责任侧。相比只看最终成败，该框架能区分应做模型训练、harness 修复、环境重设还是 benchmark 修补，并用独立 reasoning agent 评估显示较高可复现性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.29377" target="_blank">Zero-Mem: Zero-Token Memory Operations for LLM Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yilin Xiao, Xiao Huang</div>
+            <div class="note-meta-line">Affiliation: The Hong Kong Polytechnic University</div>
+        </div>
+        <div class="note-tldr">针对 agent 长程记忆中额外 LLM 总结和检索带来的 token、延迟与信息损失，提出 Zero-Mem：用实体-上下文图和时间层级组织原始轨迹，所有记忆操作不调用 LLM，仅最终 QA 使用模型。在长记忆问答中保持竞争性能，同时显著降低记忆操作时间成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.28576" target="_blank">Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Iliya Mirzaei</div>
+            <div class="note-meta-line">Affiliation: Department of Computer Science, Stony Brook University</div>
+        </div>
+        <div class="note-tldr">重新检验 Self-Refine、Reflexion、辩论等自我改进方法，控制总生成 token 后发现许多收益来自“多采样”本身。作者在 1.5B 到 7B 开源模型和数学任务上比较七种方法，显示重复采样多数情况下优于复杂反思流程，提示评估 agent 推理策略必须严格对齐计算预算。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.02276" target="_blank">Harness-R1: Learning to Edit Executable Runtime Harnesses from Agent Failure Trajectories</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shuai Shao, Weinan Zhang</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Xiaohongshu Inc.</div>
+        </div>
+        <div class="note-tldr">将 agent 失败轨迹用于学习编辑可执行 runtime harness，而不是只微调目标模型。Harness-R1 训练一个 harness engineer，把失败批次转为经验证的补丁，并用同批重跑结果作为奖励。在 WebShop、ALFWorld、DBBench 上提升 Qwen3.5-9B 成功率，展示 harness 与 agent 可共同演化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.03451" target="_blank">DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Boyan Li, Yuyu Luo</div>
+            <div class="note-meta-line">Affiliation: HKUST(GZ)</div>
+        </div>
+        <div class="note-tldr">提出 DataSpace，用于评估数据 agent 在包含 CSV、JSON、SQLite、Markdown、PDF、视频等异构 workspace 中完成可验证分析的能力。410 个跨语言任务要求输出完整表格结果，并提供确定性评测；实验显示现有 agent 在证据发现、表格完整性和多模态数据利用上仍有明显短板。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.01347" target="_blank">Same Task, Different Work: Prompt-Induced Waste in Coding Agents</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sarel Weinberger, Amir Hozez</div>
+            <div class="note-meta-line">Affiliation: PointFive</div>
+        </div>
+        <div class="note-tldr">研究同一代码任务在不同提示下引发的工作量差异。大规模 preregistered 实验显示，“多方案比较”会制造大量被丢弃分支，“最大确定性”会诱发重复验证、更多工具调用和上下文膨胀，却不提升成功率。论文把 prompt engineering 重新定义为 agent 工作流设计问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.27687" target="_blank">Rehearse: Stepping Back from the Confidence Cliff in Self-Improving Autoresearch</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiazhen Ji, Shouhong Ding</div>
+            <div class="note-meta-line">Affiliation: Tencent</div>
+        </div>
+        <div class="note-tldr">分析 autoresearch 循环中后期实验判断能力下滑的“confidence cliff”：有用修改比例随迭代下降，LLM judge 仍愿意决策但准确性变差。Rehearse 先比较多个候选想法，再结合相似历史结果做预执行判断，提升后期选择准确率，并在多个自动研究循环中改善固定训练预算下的最终结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.03874" target="_blank">ContinualSkillBench: Can LLM Agents Truly Evolve Their Capabilities?</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tianyi Guan, Muhan Zhang</div>
+            <div class="note-meta-line">Affiliation: Institute for Artificial Intelligence, Peking University</div>
+        </div>
+        <div class="note-tldr">提出 ContinualSkillBench，评估 agent 能否在连续任务中从反馈中演化 skill。基准覆盖五个领域、每个领域 100 个递进子任务。实验显示顺序执行通常带来适应收益，但显式维护 skill 平均上并不总优于上下文学习；当前 agent 仍难把经验稳定压缩为可迁移技能。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2607.29678" target="_blank">TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving</a></div>
+            <span class="note-source" title="Source: DAIR.ai" aria-label="Source: DAIR.ai">DAIR.ai</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhenyu Zhang, Zhichao Cao</div>
+            <div class="note-meta-line">Affiliation: Arizona State University</div>
+        </div>
+        <div class="note-tldr">针对 coding agent 反复提交长 transcript 导致前端重复 tokenization 的瓶颈，提出 TokTier：维护 stateful tokenization，针对追加内容重算小窗口并校验与全量 tokenization 完全一致。系统结合 CPU/GPU 服务，在 prompt cache 命中率高时显著降低 TTFT 中的 tokenization 成本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.09867" target="_blank">Stealing Reasoning Traces from Proprietary LLM APIs</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Alexander Panfilov, Maksym Andriushchenko</div>
+            <div class="note-meta-line">Affiliation: MATS Research, ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center</div>
+        </div>
+        <div class="note-tldr">揭示多家 API 中加密 reasoning blocks 可跨会话、用户和模型复用的系统性漏洞。攻击者可把强模型的加密 reasoning trace 注入同生态较弱模型，诱导其明文输出，从而绕过反蒸馏、泄露私密数据和隐藏危险信息。论文给出负责任披露后的密码学与系统缓解建议。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.09802" target="_blank">SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuling Shi, Xiaodong Gu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">提出 SWE-Bench ProMax，专门评估大规模、多语言、行为保持的代码重构能力。170 个实例来自 7 种语言真实 commit，经过人工重写 issue、审查测试、过滤低复杂度任务，平均改动 11.4 个文件。前沿模型最好仅 41.2% resolve，说明当前 coding agent 仍远未饱和。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.13489" target="_blank">DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: DreamX Team, Pengfei Zhang</div>
+            <div class="note-meta-line">Affiliation: AMAP-ML, DreamX Team</div>
+        </div>
+        <div class="note-tldr">提出 DreamX-Phi 1.0，用于机器人操作的 action-conditioned video world model。模型根据初始帧、语言指令和机械臂 SE(3) 动作序列预测未来观测，并用 PRoPE 几何编码、深度分支、SAM3 mask 和 V-JEPA teacher 提升动作忠实性、场景几何和物体一致性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.13331" target="_blank">Training AI Scientists to Replicate Research</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Damon Falck, Edward Hughes</div>
+            <div class="note-meta-line">Affiliation: Inherent</div>
+        </div>
+        <div class="note-tldr">面向论文复现实验提出 Replica 任务空间和自动生成 rubric judge，并训练 27B 参数 AI Scientist agent Faraday，让它调用 coding agents 作为工具处理开放式、欠规范的复现问题。实验显示 Faraday 在 held-out 复现任务上超过 Claude Opus 4.8 和 GPT-5.5，并表现出更科学的探索策略。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.11859" target="_blank">Small-Scale Experiments: Are We There Yet?</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Nicholas Lourie, Sanae Lotfi</div>
+            <div class="note-meta-line">Affiliation: FAIR at MSL Meta, New York University</div>
+        </div>
+        <div class="note-tldr">重新分析小规模实验为何难以外推到大模型，指出关键混杂因素是超参数：小模型更敏感，只有充分调参后 scaling laws 才显现。作者发现随规模增大超参数损失面维度降低，并提出更整体的模型中心研究方法；在 normalization 位置问题上，小规模实验也能恢复大规模结论。</div>
+    </div>
+    <div class="footer">Last updated: 2026-08-21 23:00</div>
+    <script>
+async function copyLinks(btn) {
+    const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
+    try {
+        await navigator.clipboard.writeText(links);
+    } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.value = links;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+    }
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy Links';
+            btn.classList.remove('copied');
+        }, 2000);
+}
+</script>
+    <script>
+var _ICON_MOON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+var _ICON_SUN = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+function _themeIcon(t) { return t === 'light' ? _ICON_MOON : _ICON_SUN; }
+function toggleTheme() {
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    var btn = document.getElementById('theme-toggle-btn');
+    if (btn) btn.innerHTML = _themeIcon(next);
+}
+(function(){
+    var btn = document.getElementById('theme-toggle-btn');
+    if (!btn) return;
+    var t = document.documentElement.getAttribute('data-theme');
+    btn.innerHTML = _themeIcon(t);
+})();
+</script>
+</body>
+</html>

@@ -392,8 +392,164 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-08-20 23:00</div>
+    <div class="week-header">2026-08-17 ~ 2026-08-23</div>
+    <div class="source-header">Latest file: 2026-08-17</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.14391" target="_blank">Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="175 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>175</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Shuo Liang, Wangbo Zhao</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore, Xidian University</div>
+        </div>
+        <div class="note-tldr">提出 RA-Bench，系统评估 AI 生成视频在战争、灾害、公共危机等真实事件中的检测与传播风险。基准包含 1830 个真实锚视频和 16056 个生成视频，覆盖多类开闭源生成器。论文分析检测器泛化、生成条件影响、人类感知和社交传播后检测可靠性，为危机场景防御提供系统证据。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.17426" target="_blank">SemComp-Bench: Benchmarking Semantic Task Completion in Video Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="151 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>151</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Keyu Tu, Yongdong Zhang</div>
+            <div class="note-meta-line">Affiliation: University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">定义 outcome-oriented 的 Semantic Task Completion Video Generation：视频成功不只看外观一致，还要达成目标结果并保持任务相关语义 grounding。SemComp-Data 覆盖六个领域，SemComp-Bench 用 VLM 结构化二元问题评估 outcome achievement 和 generation reliability，显示现有视频模型仍难稳定完成语义任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.16590" target="_blank">Zetta $ζ$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="127 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>127</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xin Ding, Ting Cao</div>
+            <div class="note-meta-line">Affiliation: Institute for AI Industry Research (AIR), Tsinghua University, Z-Trans AI</div>
+        </div>
+        <div class="note-tldr">提出 Zetta，一个闭环 embodied harness，在冻结基础策略的同时在线演化 runtime critics 和 recovery skills。三层时间尺度分别处理动作频率治理、rollout 级恢复提案和验证门控 skill 更新，并结合 Z-Infra 解耦执行资源。在 LIBERO-Pro 与 RoboCasa 上取得高成功率和 11.1× 推理加速。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.14144" target="_blank">Self-Supervised Visual On-Policy Distillation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yijiang Li, Nuno Vasconcelos</div>
+            <div class="note-meta-line">Affiliation: UC San Diego</div>
+        </div>
+        <div class="note-tldr">提出 S2VOPD，在没有更强教师、奖励或标注的情况下，通过给学生减去视觉信息制造 teacher-student asymmetry。教师看原图，学生看强增强视图，on-policy 蒸馏由此产生自监督信号。六个细粒度视觉基准上，Qwen3.5-4B 从 70.7% 提升到 77.4%，接近 privileged 方法收益。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.18565" target="_blank">SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="110 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>110</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yanlun Tu, Yi Xu</div>
+            <div class="note-meta-line">Affiliation: Midea AIRC</div>
+        </div>
+        <div class="note-tldr">面向工业 PLC 代码生成提出 SemaPLC，一个 project-grounded、verification-gated agent harness。它只有在规格、编译和 live runtime 行为都有外部日志确认时才判定完成。在独立 POU 和真实项目集成任务上均提升严格通过率，尤其动态运行验证能显著区分静态评分看不出的错误。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.13558" target="_blank">OmniScientist: An Omni-Modal Omni-Discipline AI Scientist</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="79 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>79</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bobo Li, Wynne Hsu</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出 OmniScientist，让 AI scientist 直接处理图像、信号、音频、视频、3D、轨迹、表格、公式和图等原始证据。系统由感知层和 ideation、experiment、writeup 三个 autonomous agents 组成，并用代码检查新颖性、统计有效性和数值可追踪性；36 个真实数据案例显示直接感知显著优于只用预计算特征。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.17253" target="_blank">Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="77 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>77</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yunhao Yang, Yijiang Li</div>
+            <div class="note-meta-line">Affiliation: Johns Hopkins University</div>
+        </div>
+        <div class="note-tldr">提出 Co-RL，用多个参数解耦模型组成多样化 cohort，通过彼此生成的 reward 信号进行无监督 RL，从而降低单模型 self-rewarding 的偏差强化和训练塌缩。模型家族、规模和样本改写带来的多样性可减少相关错误，在文本和多模态 reasoning 基准上无标注也能接近或超过监督方法。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.17310" target="_blank">Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="69 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>69</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhi Zheng, Wee Sun Lee</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">主张用 evolution strategies 替代传统 RL 来微调长程 LLM agents。ES 只需推理级显存、黑盒反馈接口，并可与 prompt-space evolution、skill 优化和 test-time compute 组合，更适合分支多、奖励稀疏的 agentic 任务。论文展示 Agentic ESOpt 能以较低 GPU 要求优化长 horizon 行为。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.14036" target="_blank">Demystifying Agent Skills: Why They Work-Until They Don&#x27;t</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhiyuan Jiang, Yijiang Li</div>
+            <div class="note-meta-line">Affiliation: Princeton University</div>
+        </div>
+        <div class="note-tldr">通过控制实验和轨迹对比解释 agent skills 何时有效、为何有效、何时失败。研究发现 skill 主要充当 procedural anchor，而非注入缺失事实；相比 workflow memory 有稳定收益，但大 skill pool 中检索精度急剧下降。失败常来自脆弱假设、不兼容上下文或缺乏适配。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.13040" target="_blank">Latent On-Policy Self-Distillation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Guibin Zhang, Shuicheng Yan</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出 LOPD，把 on-policy self-distillation 中的 privileged context 从人工设计变为可学习 latent tokens。系统检索相关经验并组合成连续 latent 条件教师，学生在自身轨迹每个前缀上获得 dense token-level supervision；privileged-margin objective 稳定 latent 学习，提升 self-evolving agent 的可扩展性。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.16859" target="_blank">HarnessEval-W: Agentifying the Evaluation of Visual Worlds</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Weiliang Chen, Fangfu Liu</div>
+            <div class="note-meta-line">Affiliation: Mirros Lab</div>
+        </div>
+        <div class="note-tldr">提出 HarnessEval-W，把 LLM harness 思路用于 world model 评测。它不只输出标量分数，而是把每个视觉世界评估问题分解给专门子 agent，用证据树解释物理、因果和世界状态是否正确。对 18 个 world models、330 个案例的评测与人类偏好高度一致，并提供可审查诊断。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.16844" target="_blank">Proteus: Incremental Memory Activation for Long-Context Sequence Modeling</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Reza Bayat, Aaron Courville</div>
+            <div class="note-meta-line">Affiliation: Mila, Université de Montréal</div>
+        </div>
+        <div class="note-tldr">针对长上下文记忆模型一开始就暴露完整静态 memory 导致早期 token 污染容量的问题，提出 Proteus：随上下文增长逐步激活更多 memory block。早期瓶颈迫使有效压缩，后期新容量减少覆盖和干扰。该机制可无额外成本接入 SWLA、Comba、Titans、Hope-Attention 等模型并稳定提升长程任务。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.16753" target="_blank">Mathematics in the age of AI</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Terence Tao</div>
+            <div class="note-meta-line">Affiliation: University of California, Los Angeles</div>
+        </div>
+        <div class="note-tldr">Terence Tao 基于 2026 ICM 公开演讲撰写的 essay，讨论当 AI 工具具备研究级数学能力时，数学共同体应如何回应。文章不争论能力是否会出现，而是假设其到来，转向澄清数学研究的目标、价值、贡献评价与问题解决实践，为 AI 时代的数学制度变迁提供框架。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.17981" target="_blank">Recirculation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Michael C. Mozer, Rosanne Liu</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind</div>
+        </div>
+        <div class="note-tldr">提出 recirculation，一种训练无关的推理时架构增强：在 prefill 阶段引入特定 recurrence，使现有 foundation model 像 dynamical system 一样跟踪 belief state。该方法生成阶段几乎不增延迟，在 Gemma3 系列上降低困惑度并提升 GSM8k 等任务准确率，区别于 chain-of-thought 和昂贵 recurrent transformer 训练。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-08-21 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
