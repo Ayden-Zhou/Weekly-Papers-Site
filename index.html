@@ -396,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-08-17</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.19880" target="_blank">EnvHarness: Awakening Static Worlds for Agent Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="217 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>217</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chengsong Huang, Chen-Yu Lee</div>
+            <div class="note-meta-line">Affiliation: Washington University in St. Louis</div>
+        </div>
+        <div class="note-tldr">提出 EnvHarness，用可编程插件层包装静态交互环境，在不改底层逻辑和验证器的前提下动态调整起点、约束与任务链。EnvRigger 通过观察 agent 轨迹诊断弱点并合成 harness 组件，在五个基准上提升 held-out 表现，并为强化学习提供更有针对性的环境信号。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2608.14391" target="_blank">Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="175 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>175</span></span>
         </div>
@@ -448,6 +459,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Midea AIRC</div>
         </div>
         <div class="note-tldr">面向工业 PLC 代码生成提出 SemaPLC，一个 project-grounded、verification-gated agent harness。它只有在规格、编译和 live runtime 行为都有外部日志确认时才判定完成。在独立 POU 和真实项目集成任务上均提升严格通过率，尤其动态运行验证能显著区分静态评分看不出的错误。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.18580" target="_blank">FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="100 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>100</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Kou Shi, Feng Zhao</div>
+            <div class="note-meta-line">Affiliation: MoE Key Lab of BIPC, University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">面向 terminal agent 训练，提出 FACET 合成框架，先从可复用 agent skills 中重构场景、依赖和工作流，再构建并修复共享的可执行容器状态，使 instruction、solution 与 verifier 对齐。生成任务具有更密集的可执行检查，微调后在 Terminal-Bench 2.1 上稳定提升。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -548,8 +570,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 recirculation，一种训练无关的推理时架构增强：在 prefill 阶段引入特定 recurrence，使现有 foundation model 像 dynamical system 一样跟踪 belief state。该方法生成阶段几乎不增延迟，在 Gemma3 系列上降低困惑度并提升 GSM8k 等任务准确率，区别于 chain-of-thought 和昂贵 recurrent transformer 训练。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.18388" target="_blank">Depth Anything V4: Dynamic 4D Scene Reconstruction via Riemannian Flow Matching on 4D Gaussian Splatting</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiaming Fan, Chenbin Zhang</div>
+            <div class="note-meta-line">Affiliation: College of Artificial Intelligence, Nanjing University of Posts and Telecommunications</div>
+        </div>
+        <div class="note-tldr">提出 Depth Anything V4，用 Riemannian Flow Matching 建模 4D Gaussian Splatting 的尺度、旋转、透明度等非欧参数，保证中间状态有效。受控实验隔离出 RFM 相比同设置 MLP 基线带来 +0.044 F-score，并在动态重建与新视角合成上优于既有 Depth Anything 和逐场景 4D-GS。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-08-21 23:00</div>
+    <div class="footer">Last updated: 2026-08-22 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
