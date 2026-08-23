@@ -581,7 +581,18 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Depth Anything V4，用 Riemannian Flow Matching 建模 4D Gaussian Splatting 的尺度、旋转、透明度等非欧参数，保证中间状态有效。受控实验隔离出 RFM 相比同设置 MLP 基线带来 +0.044 F-score，并在动态重建与新视角合成上优于既有 Depth Anything 和逐场景 4D-GS。</div>
     </div>
-    <div class="footer">Last updated: 2026-08-22 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.20335" target="_blank">4DAnyone: Create Anyone in 4D from a Casual Monocular Video</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yudong Jin, Xiaowei Zhou, Yinghao Xu</div>
+            <div class="note-meta-line">Affiliation: State Key Lab of CAD&amp;CG, Zhejiang University, Robbyant</div>
+        </div>
+        <div class="note-tldr">提出 4DAnyone，用随手拍单目视频重建动态人体 4DGS。方法先用稀疏 3D 骨架条件生成多视角一致视频，再通过 Reference Context Packing 压缩不断增长的参考视角、Target Context Routing 在分组去噪间交换上下文。实验在 DNA-Rendering 和 DyMVHumans 上提升新视角视频质量与下游 4DGS 重建，并展示野外视频泛化。</div>
+    </div>
+    <div class="footer">Last updated: 2026-08-23 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
