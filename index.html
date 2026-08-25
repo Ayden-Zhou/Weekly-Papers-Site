@@ -392,8 +392,21 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-08-24 23:00</div>
+    <div class="week-header">2026-08-24 ~ 2026-08-30</div>
+    <div class="source-header">Latest file: 2026-08-24</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.20169" target="_blank">Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Atsuyuki Miyai, Toshihiko Yamasaki</div>
+            <div class="note-meta-line">Affiliation: The University of Tokyo</div>
+        </div>
+        <div class="note-tldr">提出 Task-CoEvolve，让验证任务与 LLM harness 优化共同演化：用历史结果的方差加权采样挑选更能区分候选 harness 的任务，并按采样概率估计全验证集分数。实验在在线文本分类和 Terminal-Bench 2.1 上匹配 full-set search 的最终性能，同时减少 80% 优化期评估次数。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-08-25 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
