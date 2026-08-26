@@ -396,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">2026-08-24 ~ 2026-08-30</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.23189" target="_blank">EchoWM: Open and Enterable Omnimodal World Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="61 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>61</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Songchun Zhang, Nan Duan</div>
+            <div class="note-meta-line">Affiliation: HKUST</div>
+        </div>
+        <div class="note-tldr">提出 EchoWM，一个可进入、可连续导航的全模态世界模型，以 camera intent 统一第一/第三人称交互，把离散命令和连续姿态映射为公制度量的相对 6-DoF 轨迹，并联合生成 720p 视频、环境声、音乐和语音。论文通过互补数据引擎、渐进训练与自回归后训练，提升长程轨迹跟随、视听同步和多主体交互质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2608.20169" target="_blank">Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection</a></div>
             <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
         </div>
@@ -405,7 +416,29 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Task-CoEvolve，让验证任务与 LLM harness 优化共同演化：用历史结果的方差加权采样挑选更能区分候选 harness 的任务，并按采样概率估计全验证集分数。实验在在线文本分类和 Terminal-Bench 2.1 上匹配 full-set search 的最终性能，同时减少 80% 优化期评估次数。</div>
     </div>
-    <div class="footer">Last updated: 2026-08-25 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.23283" target="_blank">Apodex 1.1: Scaling Agentic Intelligence for Complex Work</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: B. An, Z. Zhang</div>
+            <div class="note-meta-line">Affiliation: Apodex Team</div>
+        </div>
+        <div class="note-tldr">提出 working capability 概念与 Apodex 1.1，将复杂任务能力拆成环境扩展与代理协作扩展：前者覆盖可执行文件、搜索和代码环境，后者训练任务分解、并行委托、异步整合与重规划。共享 harness 与 AgentOS 维护状态和溯源，使模型在专业工作、金融、科研、数学、编码和搜索中完成可验证的长程任务，35B Mini 版本也保留本地可部署能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.23552" target="_blank">Prime Agent: A Self-Improving RLM Harness</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Seth Karten, Alex L. Zhang</div>
+            <div class="note-meta-line">Affiliation: Princeton University, Prime Intellect</div>
+        </div>
+        <div class="note-tldr">开源长程评测与 coding-agent harness，将持久 IPython REPL 作为 Recursive Language Model 的程序化上下文处理器，并用 Continual Harness 保存历史、记忆、技能、提示和子代理配置。系统标准化执行、恢复、验证和资源计量，让模型策略自由发挥；在 ARC-AGI-3 RHAE、长上下文编码、GPU kernel、模拟器构建和 Factorio 等任务上提升表现。</div>
+    </div>
+    <div class="footer">Last updated: 2026-08-26 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
