@@ -396,6 +396,72 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-08-24</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.26005" target="_blank">VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="137 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>137</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhifei Xie, Shuicheng Yan</div>
+            <div class="note-meta-line">Affiliation: Nanyang Technological University, Open Interaction Lab</div>
+        </div>
+        <div class="note-tldr">提出 VoiceMem，为实时语音交互构建双脑式流式记忆：左脑负责事实检索，右脑建模情绪、偏好与 persona，并支持可替换后端的解耦部署。系统在 top-5 检索、persona 基准和真实部署中提升准确性与情感个性化，同时 134ms 检索延迟不增加对话等待。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.24979" target="_blank">FrontierChallenge: Evaluating Scientific Workflow Completion</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="121 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>121</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Liangcai Su, Xinyu Wang</div>
+            <div class="note-meta-line">Affiliation: Apodex Team</div>
+        </div>
+        <div class="note-tldr">提出 FrontierChallenge，用跨领域端到端科学工作流评测科研代理是否真正完成任务，而不只给出最终答案或局部代码。论文发布 97 个任务，覆盖量化、分子动力学、材料、分析化学、生命科学等领域；结果显示最佳配置只完成 20.6% 任务，且部分高分常伴随错误完成声明。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.19583" target="_blank">VGI-Bench: Probing Visual Intelligence in Video Generation Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="110 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>110</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xuan He, ChengXiang Zhai</div>
+            <div class="note-meta-line">Affiliation: University of Illinois Urbana Champaign</div>
+        </div>
+        <div class="note-tldr">提出 VGI-Bench，用 27 类任务、810 个实例评测视频生成模型是否具备视觉推理能力，而非只看生成质量。基准强调符合当前视频模型视觉先验、要求过程演化有效且难度可控；评测显示最强模型也只有 51.0%，并揭示输入敏感、失败模式和去噪过程自纠错有限等问题。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.24479" target="_blank">WarpSAC: Towards the Pinnacle of Scalable Off-policy RL by Rethinking Exploration and Exploitation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="100 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>100</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zihao Wu, Jianye Hao</div>
+            <div class="note-meta-line">Affiliation: Tianjin University</div>
+        </div>
+        <div class="note-tldr">研究大规模并行仿真下 off-policy RL 的数据机制变化，发现参数归一化、clipped double-Q 等稳定器会随数据覆盖度改变效果。论文提出 WarpSAC：用 Sample Weight Decay 作为通用利用机制，并区分数据受限的 WarpSAC-L 与数据充足的 WarpSAC-A，在 CPU/GPU 多基准和 Unitree G1 sim-to-real 上提升效率。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.20492" target="_blank">Annotations as Rollouts: Efficient and Scalable Reinforcement Learning for Video MLLMs</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="79 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>79</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yunheng Li, Qibin Hou</div>
+            <div class="note-meta-line">Affiliation: VCIP, School of Computer Science, Nankai University</div>
+        </div>
+        <div class="note-tldr">提出 OraRL，把标注本身作为 oracle rollout 加入视频 MLLM 的强化学习后训练，以缓解 on-policy rollout 质量不足。核心是解耦优势估计与符号均衡剪枝，避免 advantage inversion，并在更低训练/推理成本下提升时序定位、跟踪、分割和空间智能表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.15875" target="_blank">GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="78 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>78</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: GigaBrain Team, Zheng Zhu</div>
+            <div class="note-meta-line">Affiliation: GigaAI</div>
+        </div>
+        <div class="note-tldr">提出 GigaBrain-0.7，将理解规划、预测评估、动作控制整合为三系统 embodied foundation model，并把预训练扩展到 37000 小时以上异构具身数据。通过一阶段对齐训练联合优化视觉语言理解和多机器人动作生成，在零样本、指令跟随与后训练任务成功率上优于前代和多种 VLA 基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2608.23189" target="_blank">EchoWM: Open and Enterable Omnimodal World Models</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="61 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>61</span></span>
         </div>
@@ -438,8 +504,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">开源长程评测与 coding-agent harness，将持久 IPython REPL 作为 Recursive Language Model 的程序化上下文处理器，并用 Continual Harness 保存历史、记忆、技能、提示和子代理配置。系统标准化执行、恢复、验证和资源计量，让模型策略自由发挥；在 ARC-AGI-3 RHAE、长上下文编码、GPU kernel、模拟器构建和 Factorio 等任务上提升表现。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.25927" target="_blank">Code World Model: Coding Agent as World Brain</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yiwen Chen, Chi Zhang</div>
+            <div class="note-meta-line">Affiliation: AGI Lab, Westlake University, Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">提出 Code World Model，把世界演化从视觉渲染中分离：编码代理作为“world brain”用可执行代码维护状态、推理事件后果，再把状态编译为时空约束 proxy video 供视频模型生成观察。该框架在游戏与真实视频数据上训练后，能保持更持久一致的开放式世界演化。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-08-27 23:00</div>
+    <div class="footer">Last updated: 2026-08-28 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
