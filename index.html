@@ -418,6 +418,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.25518" target="_blank">Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="112 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>112</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Pengfei Zhou, Wangbo Zhao, Yang You</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore, HPC-AI Lab</div>
+        </div>
+        <div class="note-tldr">论文认为单纯扩大抓取视频与算力不足以高效扩展世界模型，关键缺口是可验证奖励。作者把游戏开发视为可执行的空间世界规范，利用引擎检查碰撞、物理、可导航性和可玩性，并结合人类接受反馈提出 RLHEV，用于训练 AWoMo。实验显示该范式在 UnitySceneBench、跨引擎迁移和具身任务上带来更强的泛化信号。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2608.19583" target="_blank">VGI-Bench: Probing Visual Intelligence in Video Generation Models</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="110 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>110</span></span>
         </div>
@@ -459,6 +470,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: GigaAI</div>
         </div>
         <div class="note-tldr">提出 GigaBrain-0.7，将理解规划、预测评估、动作控制整合为三系统 embodied foundation model，并把预训练扩展到 37000 小时以上异构具身数据。通过一阶段对齐训练联合优化视觉语言理解和多机器人动作生成，在零样本、指令跟随与后训练任务成功率上优于前代和多种 VLA 基线。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.27345" target="_blank">PAWBench: How Far Are We from Probabilistically Aligned World Modeling?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="72 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>72</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuandong Pu, Xi Chen</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Shanghai AI Laboratory</div>
+        </div>
+        <div class="note-tldr">论文指出视频生成式世界模型不仅要生成单条合理轨迹，还应在同一初始观测和动作下匹配多种可能未来的概率分布。作者提出 probabilistic alignment 定义、PAWBench 基准和 PAWEval 评估协议，将重复 rollout 转成结果分布。在 50 个场景和 11 个系统上，现有模型普遍无法同时恢复有效行为范围和参考概率。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -515,8 +537,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Code World Model，把世界演化从视觉渲染中分离：编码代理作为“world brain”用可执行代码维护状态、推理事件后果，再把状态编译为时空约束 proxy video 供视频模型生成观察。该框架在游戏与真实视频数据上训练后，能保持更持久一致的开放式世界演化。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.26070" target="_blank">Prefix Sliding for efficient test-time scaling</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Niklas Muennighoff, Mike Lewis</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">论文针对长推理 test-time scaling 的注意力与 KV 缓存成本，观察到多数中间推理 token 随过程推进会失去重要性。Prefix Sliding 只保留提示前缀和最近窗口，丢弃中间 token，从而让长程推理的内存需求有上限。无需训练即可在保持性能下约 3 倍提速；结合强化学习训练还能支持超过十万 token 的推理轨迹。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-08-28 23:00</div>
+    <div class="footer">Last updated: 2026-08-29 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
