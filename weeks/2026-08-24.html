@@ -548,7 +548,29 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">论文针对长推理 test-time scaling 的注意力与 KV 缓存成本，观察到多数中间推理 token 随过程推进会失去重要性。Prefix Sliding 只保留提示前缀和最近窗口，丢弃中间 token，从而让长程推理的内存需求有上限。无需训练即可在保持性能下约 3 倍提速；结合强化学习训练还能支持超过十万 token 的推理轨迹。</div>
     </div>
-    <div class="footer">Last updated: 2026-08-29 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.26701" target="_blank">Accelerating Scientific Research with Gemini in the Real-World</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Samuel Schmidgall, Tao Tu</div>
+            <div class="note-meta-line">Affiliation: Google DeepMind</div>
+        </div>
+        <div class="note-tldr">扩展并验证 Co-Scientist：一个基于 Gemini 的多智能体科学研究系统，从假设生成走向实验执行与论文生成。它在材料、合成生物和医疗问答架构搜索中完成闭环案例，包括设计 MXene 前驱体路线、一次合成 MoS2/MoSe2/WS2、预测 engineered E. coli 群游表型，并通过可靠性模块降低自动写作中的幻觉、抄袭和安全风险。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.27448" target="_blank">TTPO: Test-Time Policy Optimization</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Aozhe Wang, Yongliang Shen</div>
+            <div class="note-meta-line">Affiliation: Zhejiang University, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">提出 Test-Time Policy Optimization，用多数投票伪标签替代测试时不可得的真值监督。方法利用不对称观察：与伪标签不一致的 rollouts 通常确实错误，因此对其用 Grouped RL 惩罚；一致样本用 OPSD 蒸馏，并做 token-level selection。无标签条件下在五个竞赛数学基准接近监督 OPSD，将 Qwen3-1.7B TTT 平均准确率从 38.0% 提升到 45.2%。</div>
+    </div>
+    <div class="footer">Last updated: 2026-08-30 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
