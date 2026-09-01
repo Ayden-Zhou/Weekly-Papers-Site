@@ -392,8 +392,21 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-08-31 23:00</div>
+    <div class="week-header">2026-08-31 ~ 2026-09-06</div>
+    <div class="source-header">Latest file: 2026-08-31</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.28281" target="_blank">LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="78 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>78</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yi Wang, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: DreamX Team, Alibaba Group, Beijing University of Posts and Telecommunications</div>
+        </div>
+        <div class="note-tldr">提出 LoopArena，把模型作为 Controller，基于运行摘要指挥固定 Worker coding agent 下一步做什么或是否停止。基准覆盖单步决策、任务片段和完整长程任务；最佳全任务严格成功率仅 24.69%，Type II 排名与全任务高度一致并平均节省 64.4% 推理成本。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-09-01 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
