@@ -396,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">2026-08-31 ~ 2026-09-06</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.31106" target="_blank">DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="84 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>84</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiashu Zhu, Xiangxiang Chu</div>
+            <div class="note-meta-line">Affiliation: DreamX Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">介绍 DreamX-Creator 1.0：以 7B 生成器原生联合生成音频与视频，通过 Gated Cross-Modal Attention、统一音视频数据系统、渐进联合训练和多模态反馈 RL 提升同步性与质量，并用 1-step 2K Refiner 支持高分辨率输出。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2608.28281" target="_blank">LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="78 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>78</span></span>
         </div>
@@ -405,7 +416,29 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 LoopArena，把模型作为 Controller，基于运行摘要指挥固定 Worker coding agent 下一步做什么或是否停止。基准覆盖单步决策、任务片段和完整长程任务；最佳全任务严格成功率仅 24.69%，Type II 排名与全任务高度一致并平均节省 64.4% 推理成本。</div>
     </div>
-    <div class="footer">Last updated: 2026-09-01 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.31036" target="_blank">Normalized Low-Rank Adaptation</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jiale Kang, Weiyang Liu</div>
+            <div class="note-meta-line">Affiliation: Yuanshi Intelligence, The Chinese University of Hong Kong</div>
+        </div>
+        <div class="note-tldr">提出 NoRA：在 LoRA 训练中归一化 down-projection 矩阵，并指出仅初始化时归一化也能改善标准 LoRA。方法不增加参数和推理开销，在预训练、监督微调和强化学习中提升收敛速度、稳定性与性能，并缓解灾难性遗忘。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.31046" target="_blank">Does On-Policy Distillation Really Distill? From Noisy Teacher to Self-Improvement</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yi Ding, Ruqi Zhang</div>
+            <div class="note-meta-line">Affiliation: Department of Computer Science, Purdue University, USA</div>
+        </div>
+        <div class="note-tldr">重新审视 on-policy distillation：教师给学生生成轨迹打分时噪声很大，但学生改进主要来自抑制低概率 token，而非真实蒸馏。基于此提出无需教师的 OPSA，用熵自适应负优势重分配概率，在 AIME 等数学基准上超过 OPD。</div>
+    </div>
+    <div class="footer">Last updated: 2026-09-02 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
