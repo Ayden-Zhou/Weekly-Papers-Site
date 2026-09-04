@@ -396,6 +396,17 @@ h1 .archive-link:hover {
     <div class="source-header">2026-08-31 ~ 2026-09-06</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.02749" target="_blank">Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="347 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>347</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianlyu Chen, Zheng Liu</div>
+            <div class="note-meta-line">Affiliation: Beijing Academy of Artificial Intelligence, University of Science and Technology of China</div>
+        </div>
+        <div class="note-tldr">提出 DisCo，把 GitHub repo 里的 operational knowledge 蒸馏成可复用、可验证的 AI4AI skills，并构建 AREX-Skill Library（1000 个 ML repo、5000+ skills）。在固定 GPT-5.5 backbone、harness 与预算下，加入 skills 的研究 agent 在 MLE-bench、PaperBench、FrontierCS、PassNet 上均明显优于无 skill 版本。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.01591" target="_blank">StudentSim: Training LLM-based Student Simulators</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="303 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>303</span></span>
         </div>
@@ -418,6 +429,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.02783" target="_blank">EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="104 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>104</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuling Shi, Xiaodong Gu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Shanghai, China</div>
+        </div>
+        <div class="note-tldr">提出 EarlyEval，通过 early outcome prediction 在单个 agent 任务中提前判断成功/失败，而不是只缩小 benchmark。它用 LightGBM 分类器读取轨迹行为、文本和 reference-solution 特征，一旦置信度达阈值就停止；在 SWE-bench Verified、TerminalBench、Toolathlon 上节省 13%–26% steps、最多 44.1% input tokens，且成功率扰动很小。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2608.31106" target="_blank">DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="84 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>84</span></span>
         </div>
@@ -426,6 +448,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: DreamX Team, Alibaba Group</div>
         </div>
         <div class="note-tldr">介绍 DreamX-Creator 1.0：以 7B 生成器原生联合生成音频与视频，通过 Gated Cross-Modal Attention、统一音视频数据系统、渐进联合训练和多模态反馈 RL 提升同步性与质量，并用 1-step 2K Refiner 支持高分辨率输出。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.01437" target="_blank">HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="83 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>83</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuhao Wu, Wenxuan Zhang</div>
+            <div class="note-meta-line">Affiliation: ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">提出 HarnessDev，把评测对象从 agent 输出转为可运行 harness infrastructure，考察 LLM 从最小 seed 创建 harness 并基于反馈迭代演化的能力。结果显示自动生成 harness 在代码、搜索、研究任务上仍落后人工参考，在写作和 ML 实验中可接近或超过参考；演化收益不稳定且跨执行模型迁移有限。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -440,6 +473,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.31111" target="_blank">Aspire: Can Models Self-Evolve from Vague Goals?</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="72 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>72</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuhao Wu, Ge Zhang</div>
+            <div class="note-meta-line">Affiliation: ByteDance Seed</div>
+        </div>
+        <div class="note-tldr">提出 ASPIRE，用“模糊目标”测试模型自我演化：只给自然语言能力目标，隐藏下游评测，要求 agent 自行选择数据、训练/验证信号与评估时机。520 个专家题显示，当前 agent 能完成训练和 harness 编辑循环，但权重增益稀疏不稳，常因数据错配和狭窄 self-eval 无法泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.01343" target="_blank">SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
         </div>
@@ -448,6 +492,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Tsinghua University</div>
         </div>
         <div class="note-tldr">提出 SMELT，在 MoE Transformer 中让中间一半层循环执行两次，并同时匹配 per-token FLOPs、总参数与 KV cache。作者将方法扩展到最高 54B 非 embedding 参数并拟合缩放律，显示在 compute-optimal frontier 可节省 6.8%–18.0% 训练 FLOPs；收益在代码、长样本和更多 in-context 示例下更明显。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.00638" target="_blank">It Takes Two to Match: Co-Evolving Generative Retriever with Reinforcement Learning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="61 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>61</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Runpeng Dai, Ciya Liao</div>
+            <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill, Apple</div>
+        </div>
+        <div class="note-tldr">提出 CoGR，让 LLM 在 query 端和 item 端直接生成可倒排索引匹配的关键词表示，而非只做 query expansion。方法先用 SFT 对齐关键词空间，再用 GRPO 交替优化两端生成器；在内部 APP Marketplace 和 WANDS 上超过稀疏、稠密、生成式基线，F1 较最强基线提升 10.9% 和 36.1%。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -471,7 +526,29 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">重新审视 on-policy distillation：教师给学生生成轨迹打分时噪声很大，但学生改进主要来自抑制低概率 token，而非真实蒸馏。基于此提出无需教师的 OPSA，用熵自适应负优势重分配概率，在 AIME 等数学基准上超过 OPD。</div>
     </div>
-    <div class="footer">Last updated: 2026-09-03 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.02886" target="_blank">SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Junchao Huang, Li Jiang</div>
+            <div class="note-meta-line">Affiliation: CUHK-SZ, SLAI</div>
+        </div>
+        <div class="note-tldr">提出 SolarWM，一个 fully open interactive video world model foundation，将 10 个数据集的 143 万 clips 统一成 frame-aligned contract，并在 Wan2.2/LTX-2.5/MiniMax-H3 backbone 上提供 data engine、adaptation framework、三阶段训练与长程实时 rollout，释放数据、代码、权重以支持可复现实验。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.01481" target="_blank">Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haoyang Yan, Shuyue Hu</div>
+            <div class="note-meta-line">Affiliation: Shanghai Artificial Intelligence Laboratory</div>
+        </div>
+        <div class="note-tldr">提出 Harness-of-Harness (HoH)，在已有 coding-agent harness 外组织 planning-coding-testing 循环，让 agent 持续修复并增长能力。它用小步可验证增量、独立评测和版本化历史支撑多轮改进，在 GameCraft-Bench、FrontierSWE、ProgramBench 上平均相对提升 52.25%，并多日迭代出可玩的 FPS 游戏。</div>
+    </div>
+    <div class="footer">Last updated: 2026-09-04 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
