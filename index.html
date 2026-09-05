@@ -429,6 +429,28 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2608.26730" target="_blank">Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="144 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>144</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Tingyun Li, Yuewei Zhang</div>
+            <div class="note-meta-line">Affiliation: Alibaba Cloud Computing</div>
+        </div>
+        <div class="note-tldr">提出 conditional experience transfer 问题：自动化 post-training 中，过去有效的更新证据未必适用于已变化的当前模型。BCIT 记录来源条件、检查适用边界、在冲突时拒绝或用小试验验证，在金融推理、text-to-SQL 与函数调用中减少有害复用并提升等预算最终模型质量。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.04148" target="_blank">Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="141 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>141</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jie Wu, Dayiheng Liu</div>
+            <div class="note-meta-line">Affiliation: Qwen Team, Alibaba Group</div>
+        </div>
+        <div class="note-tldr">将已有终端 agent 轨迹还原为可复用、可验证的代码环境，再合成原始任务、新任务、跨仓库任务和多轮反馈会话。Terminal-Universe 从公开轨迹生成 37.3k 个任务充分环境，并让 Qwen3.5-27B 在 Terminal-Bench 2.1 与 EvoCode-Bench v2 多轮评测上明显提升。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.02783" target="_blank">EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="104 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>104</span></span>
         </div>
@@ -437,6 +459,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Shanghai, China</div>
         </div>
         <div class="note-tldr">提出 EarlyEval，通过 early outcome prediction 在单个 agent 任务中提前判断成功/失败，而不是只缩小 benchmark。它用 LightGBM 分类器读取轨迹行为、文本和 reference-solution 特征，一旦置信度达阈值就停止；在 SWE-bench Verified、TerminalBench、Toolathlon 上节省 13%–26% steps、最多 44.1% input tokens，且成功率扰动很小。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.03796" target="_blank">LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="103 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>103</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chuyan Chen, Jun Xie</div>
+            <div class="note-meta-line">Affiliation: AGI Research Center, Inclusion AI</div>
+        </div>
+        <div class="note-tldr">提出 fully open 的 LLaDA-Image：从零训练 6B DiT，并接入基于 LLaDA2.0-Mini 的冻结视觉语言理解模块。通过图像-only 预训练/中训、RMSNorm、Muon 优化器和 Turbo 蒸馏，模型在中英文 Qwen-Image-Bench 开源模型中达到新 SOTA，并公开权重、代码和训练配方。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -484,6 +517,50 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.01507" target="_blank">LatentPress: Context Compression Beyond Text and Vision</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="71 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>71</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zhengze Zhou, Hejian Sang</div>
+            <div class="note-meta-line">Affiliation: Cornell University</div>
+        </div>
+        <div class="note-tldr">提出 LatentPress，把对话历史和长文档压成可被冻结 decoder 直接读取的连续 memory tokens，而非文本摘要或渲染图片。小型 writer 仅训练适配器即可实现 4-16x 压缩，在 LongMemEval 与 LongBench-QA 上优于文本/OCR 压缩，并显著降低写入和读取开销。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.03430" target="_blank">Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="69 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>69</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Heng Wang, Huan Wang</div>
+            <div class="note-meta-line">Affiliation: Salesforce AI Research</div>
+        </div>
+        <div class="note-tldr">质疑 KV cache eviction 必须精确打分的假设。Random Attention 保留 prompt，并在每个 attention head 内随机淘汰生成 trace 的 KV；在 4 个模型、6 个推理任务上匹配强基线，同时 vLLM 吞吐提升 32-43%。分析认为 prompt 最脆弱，而推理 trace 具有文本和多头冗余。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.04199" target="_blank">Compile by Training: Turning Natural-Language Specifications into Local Neural Functions</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="67 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>67</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuntian Deng, Stuart Shieber</div>
+            <div class="note-meta-line">Affiliation: University of Waterloo</div>
+        </div>
+        <div class="note-tldr">提出 compile by training：用 teacher model 为自然语言规格生成任务样例，再训练小 adapter，使紧凑 interpreter 本地运行可复用 neural function。它在 FuzzyBench-Hard 上达到 83.6% 语义准确率，代价是编译时间从秒级变为约一分钟，并展示网页助手、3D avatar 与语言转换等应用。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.04098" target="_blank">Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="65 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>65</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Sergii Kozyrev, Davyd Maiboroda</div>
+            <div class="note-meta-line">Affiliation: Minima AI, Inc.</div>
+        </div>
+        <div class="note-tldr">研究 hybrid LLM 中 Gated DeltaNet 是否必须保留高精度。Minima 将全部 496 个线性层（含 GDN）量化到 NVFP4 W4A4，在多项指标上接近 BF16，模型更小且 prefill 更快。机制分析表明块缩放、门控非线性和 delta-rule recurrence 共同抑制误差累积。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.01343" target="_blank">SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="64 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>64</span></span>
         </div>
@@ -503,6 +580,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: University of North Carolina at Chapel Hill, Apple</div>
         </div>
         <div class="note-tldr">提出 CoGR，让 LLM 在 query 端和 item 端直接生成可倒排索引匹配的关键词表示，而非只做 query expansion。方法先用 SFT 对齐关键词空间，再用 GRPO 交替优化两端生成器；在内部 APP Marketplace 和 WANDS 上超过稀疏、稠密、生成式基线，F1 较最强基线提升 10.9% 和 36.1%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.04172" target="_blank">Rethinking On-Policy Distillation of Large Language Models II: One Training Example</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="61 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>61</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zixuan Fu, Chaojun Xiao</div>
+            <div class="note-meta-line">Affiliation: Tsinghua University</div>
+        </div>
+        <div class="note-tldr">从最小数据极限重新审视 OPD：单个 query 训练数百步即可恢复大部分 full-data OPD 增益。作者用 state coverage 解释这一现象，发现一个 query 已覆盖 71.5% 状态，16 个语义多样 query 可达 98.9% 并接近全量训练，说明 OPD 更像 data-overfed、algorithm-starved。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -548,8 +636,30 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 Harness-of-Harness (HoH)，在已有 coding-agent harness 外组织 planning-coding-testing 循环，让 agent 持续修复并增长能力。它用小步可验证增量、独立评测和版本化历史支撑多轮改进，在 GameCraft-Bench、FrontierSWE、ProgramBench 上平均相对提升 52.25%，并多日迭代出可玩的 FPS 游戏。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.01938" target="_blank">One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Satvik Sharma, Jeannette Bohg</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">提出 DemoMimic，用单个人类演示和局部接触几何学习灵巧手操作策略。方法通过接触中心奖励提升 sim-to-real 一致性，在 16 个物体、4 个任务和两种机器人手上达到 71% 真实成功率，并能跨形状、尺度、质量和摩擦变化泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.02702" target="_blank">Trace as State: Reasoning Traces as Conditional States for Long-Context Transformers</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xu Zou, Jie Tang</div>
+            <div class="note-meta-line">Affiliation: Z.ai</div>
+        </div>
+        <div class="note-tldr">将推理轨迹视为长上下文任务的条件状态：先收集 trace，再把它放到长上下文前重新读取，使后续发现的状态能影响早期内容编码。与把 trace 追加到末尾相比，该方法在 3 个模型、3 个数据集的 26/27 个组合上更优，GraphWalks Parents 上提升尤为明显。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-09-04 23:00</div>
+    <div class="footer">Last updated: 2026-09-05 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
