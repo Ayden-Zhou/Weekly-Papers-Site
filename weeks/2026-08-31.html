@@ -658,7 +658,18 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">将推理轨迹视为长上下文任务的条件状态：先收集 trace，再把它放到长上下文前重新读取，使后续发现的状态能影响早期内容编码。与把 trace 追加到末尾相比，该方法在 3 个模型、3 个数据集的 26/27 个组合上更优，GraphWalks Parents 上提升尤为明显。</div>
     </div>
-    <div class="footer">Last updated: 2026-09-05 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.04010" target="_blank">Unlocking Lossless Speedups in LLMs via Discrete Diffusion</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Subham Sekhar Sahoo</div>
+            <div class="note-meta-line">Affiliation: Institute of Foundation Models</div>
+        </div>
+        <div class="note-tldr">提出 diffusion-augmented LLMs：保留高质量 AR 分布，用轻量 diffusion weights 并行采样多个 token。Uno 通过 Diffusion Distillation 与 Ψ-Spec 实现无需 draft model 的无损加速，在各 batch size 下优于 speculative decoding 基线，最高约 3× 提速，8B 模型在工具、代码和长上下文评测上超过主流 d-LLM。</div>
+    </div>
+    <div class="footer">Last updated: 2026-09-06 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
