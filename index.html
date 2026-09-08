@@ -392,8 +392,21 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-09-07 23:00</div>
+    <div class="week-header">2026-09-07 ~ 2026-09-13</div>
+    <div class="source-header">Latest file: 2026-09-07</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.02750" target="_blank">Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="83 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>83</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yihang Chen, Jun Wang</div>
+            <div class="note-meta-line">Affiliation: UCL Centre for Artificial Intelligence</div>
+        </div>
+        <div class="note-tldr">这篇论文把 orchestrator-worker 多智能体 LLM 系统建模为双层协调博弈，并将反思记忆视为语义状态上的随机过程，解释分解质量如何控制 worker 均衡松弛，以及无约束反思为何可能停滞。作者提出环境验证器门控的 SRMA，只在 grounded evaluation 风险下降时写入记忆，并用 SWE-bench 等实验验证协调与漂移规律。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-09-08 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
