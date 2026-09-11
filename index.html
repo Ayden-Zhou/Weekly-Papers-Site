@@ -396,6 +396,28 @@ h1 .archive-link:hover {
     <div class="source-header">Latest file: 2026-09-07</div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.08183" target="_blank">NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="243 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>243</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: NeoHorse Team, Yingjie Zong</div>
+            <div class="note-meta-line">Affiliation: TokenRhythm Technologies</div>
+        </div>
+        <div class="note-tldr">提出 NeoHorse-1，把部署中的路由 harness 转化为自我改进数据飞轮：记录能力需求、服务层级和交互轨迹，经结构与语义过滤后用于 SFT、路由引导课程学习和 on-policy distillation，从而提升 4B/9B agent-native 模型表现。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.08977" target="_blank">Omni Interaction Agent Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Orantqing, Shengpeng Ji</div>
+            <div class="note-meta-line">Affiliation: Hunyuan Speech Team, Tencent</div>
+        </div>
+        <div class="note-tldr">介绍端到端 omni interaction agent Gander，统一视频、语音和文本流式输入，采用 Cerebellum-Brain 协同与 streaming Thinker-Talker 架构支持实时全双工交互、打断、中间反馈和复杂 agentic 任务，在对话、全模态理解与代理能力上系统评测。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.02750" target="_blank">Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="83 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>83</span></span>
         </div>
@@ -405,8 +427,63 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">这篇论文把 orchestrator-worker 多智能体 LLM 系统建模为双层协调博弈，并将反思记忆视为语义状态上的随机过程，解释分解质量如何控制 worker 均衡松弛，以及无约束反思为何可能停滞。作者提出环境验证器门控的 SRMA，只在 grounded evaluation 风险下降时写入记忆，并用 SWE-bench 等实验验证协调与漂移规律。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.08798" target="_blank">Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="75 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>75</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Youngrok Park, Se-Young Yun</div>
+            <div class="note-meta-line">Affiliation: KAIST AI</div>
+        </div>
+        <div class="note-tldr">提出 OPRD，在学生 rollout 上比较弱教师相对参考策略的 policy shift，并只放大学生 verifier-driven gradient 中与该方向一致的分量，从而在不把弱教师当成最终目标的情况下加速弱到强迁移和多教师整合。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.07398" target="_blank">OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuran Wang, Hang Zhao</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出开放的 World-Action Model 研究栈 OpenWAM，将架构、表示、信息流、推理与数据配方模块化，并通过 OpenWAM-Study 总结预训练原则，最终训练 OpenWAM-alpha，在仿真和真实机器人任务上验证跨域泛化能力。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.08936" target="_blank">AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Ziyang Ma, Xie Chen</div>
+            <div class="note-meta-line">Affiliation: Shanghai Jiao Tong University, Tencent Hunyuan Team, Shanghai Innovation Institution</div>
+        </div>
+        <div class="note-tldr">介绍开源语音生成与编辑基础模型 AuK，用自然语言指令和音频上下文统一 TTS、内容编辑、增强分离、韵律与声学编辑等任务，并通过偏好优化、RL 与任务路由蒸馏得到 4 步推理的 AuK-Flash。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.10522" target="_blank">Show-Harness: Just a VLM Agent Can Play Robots</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yanzhe Chen, Mike Zheng Shou</div>
+            <div class="note-meta-line">Affiliation: Show Lab, National University of Singapore</div>
+        </div>
+        <div class="note-tldr">提出 Show-Harness，把机器人控制抽象为可解释的离散语义动作，由 embodiment-specific interpreter 落到真实控制，使前沿 VLM 可零样本操控机器人，也让小型开源 VLM 通过少量微调获得跨任务、环境和本体泛化。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.09155" target="_blank">SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Yuncong Yang, Chuang Gan</div>
+            <div class="note-meta-line">Affiliation: UMass Amherst</div>
+        </div>
+        <div class="note-tldr">提出 SyncWorld，用短视觉校准片段在上下文中指定动作到视觉变化的映射，让 action-conditioned world model 能在未见相机视角、环境和机械臂设置中零样本模拟 rollout，并用想象结果进行测试时策略改进。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-09-10 23:00</div>
+    <div class="footer">Last updated: 2026-09-11 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
