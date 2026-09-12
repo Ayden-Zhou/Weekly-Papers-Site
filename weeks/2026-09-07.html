@@ -407,6 +407,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.10715" target="_blank">NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="127 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>127</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: The Intern-NCP Team, Bowen Zhou</div>
+            <div class="note-meta-line">Affiliation: Shanghai AI Lab, LUMIA Lab, Shanghai Jiao Tong University</div>
+        </div>
+        <div class="note-tldr">提出 NCP-ArchPreview，在自回归预训练中联合 next-token 与 Next Concept Prediction：从隐状态构建产品量化概念词表并预测多 token 概念，再反馈到生成。8.9B 模型在 5.73T tokens 上训练，用 51.3% token 达到 OLMo-3-7B 最终 loss，下游宏平均高 2.45 分，并支持轻量适配与解码加速。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.08977" target="_blank">Omni Interaction Agent Technical Report</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="93 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>93</span></span>
         </div>
@@ -482,7 +493,18 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 SyncWorld，用短视觉校准片段在上下文中指定动作到视觉变化的映射，让 action-conditioned world model 能在未见相机视角、环境和机械臂设置中零样本模拟 rollout，并用想象结果进行测试时策略改进。</div>
     </div>
-    <div class="footer">Last updated: 2026-09-11 23:00</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.11929" target="_blank">SenseNova-U1.5: Towards Native Unified Visual Intelligence</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Haiwen Diao, Dahua Lin</div>
+            <div class="note-meta-line">Affiliation: S-Lab, Nanyang Technological University</div>
+        </div>
+        <div class="note-tldr">提出 8B-MoT 原生统一多模态模型 SenseNova-U1.5，以无编码器/无 VAE 架构统一视觉理解、推理与生成。方法通过空间联合 patch 重建、4K 原生分辨率训练、专家强化学习与多专家 on-policy 蒸馏，提升图像保真、文字渲染、多参考编辑和交错生成，并显示理解能力可迁移到视觉规划与创作。</div>
+    </div>
+    <div class="footer">Last updated: 2026-09-12 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
