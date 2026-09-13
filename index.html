@@ -504,8 +504,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 8B-MoT 原生统一多模态模型 SenseNova-U1.5，以无编码器/无 VAE 架构统一视觉理解、推理与生成。方法通过空间联合 patch 重建、4K 原生分辨率训练、专家强化学习与多专家 on-policy 蒸馏，提升图像保真、文字渲染、多参考编辑和交错生成，并显示理解能力可迁移到视觉规划与创作。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.11917" target="_blank">Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Atindra Jha, Margaret Li</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">研究数据重复与 MoE 稀疏结构的相互作用，发现 MoE 比 dense 模型更容易在重复数据上过拟合，且稀疏度越高越严重；dropout 和输出 masking 可缓解但无法完全替代唯一数据。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-09-12 23:00</div>
+    <div class="footer">Last updated: 2026-09-13 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
