@@ -392,8 +392,43 @@ h1 .archive-link:hover {
 <body>
     <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题"></button>
     <div class="header-row"><h1>📚 Weekly Papers</h1><span class="header-sep">|</span><a class="archive-link" href="archive.html">Archive</a></div>
-    <div class="week-header">本周暂无详细笔记</div>
-    <div class="footer">Last updated: 2026-09-14 23:00</div>
+    <div class="week-header">2026-09-14 ~ 2026-09-20</div>
+    <div class="source-header">Latest file: 2026-09-14</div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.06107" target="_blank">DataFlex-RL: An Evaluation Platform for RLVR Data Policies</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="84 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>84</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hao Liang, Wentao Zhang</div>
+            <div class="note-meta-line">Affiliation: Peking University</div>
+        </div>
+        <div class="note-tldr">提出 DataFlex-RL，用统一 GRPO 配方评测 RLVR 中的选择、重加权和域混合数据策略。591 次运行显示，虽然统一 GRPO 显著提升基线，但各类数据策略相对均匀采样没有可复现优势，且评测域覆盖会改变方法排名。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.08418" target="_blank">Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="74 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>74</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zongjie Li</div>
+            <div class="note-meta-line">Affiliation: Vera Praxis Lab</div>
+        </div>
+        <div class="note-tldr">展示七人独立团队如何以数据为中心训练开放权重 cyber agent：构建可执行环境、验证轨迹并进行长上下文 SFT。三个检查点在 CyberGym 和 CTF 套件上明显提升，其中 Feyospace-s1 在官方榜单达到第 10。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.12641" target="_blank">Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="61 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>61</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Jianman Lin, Jiafei Duan</div>
+            <div class="note-meta-line">Affiliation: School of Future Technology, South China University of Technology</div>
+        </div>
+        <div class="note-tldr">针对机器人基础模型在视觉分布偏移下依赖无关视觉线索的问题，提出两阶段 Latent Interface Training：先用末端位姿训练无图像动作先验，再用位姿监督的视觉潜接口约束条件输入；在多种 VLA/WAM 架构和真实任务中提升泛化成功率。</div>
+    </div>
+
+    <div class="footer">Last updated: 2026-09-15 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
