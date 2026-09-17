@@ -418,6 +418,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.06986" target="_blank">Continual Learning Mechanisms Compose for Long-Horizon Memorization</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="281 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>281</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Zheyuan Zhang, Tianmin Shu</div>
+            <div class="note-meta-line">Affiliation: Johns Hopkins University</div>
+        </div>
+        <div class="note-tldr">提出 long-horizon memorization，用 100 个连续问答任务评估模型参数记忆。论文组合数据、函数、权重锚点与 merged LoRA，经 successive halving 和因子实验筛选，使平均最终保留率从 naive SFT 的 1.2% 提升到 34.9%，显示互补机制组合可显著缓解长期遗忘。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.14858" target="_blank">Dream-RSI: Recursive Self-Improvement through Evolving Worlds</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="251 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>251</span></span>
         </div>
@@ -440,6 +451,28 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.16679" target="_blank">AI for Games in the Foundation Model Era</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="101 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>101</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Meng Luo, Wynne Hsu</div>
+            <div class="note-meta-line">Affiliation: National University of Singapore</div>
+        </div>
+        <div class="note-tldr">综述基础模型时代的游戏 AI，将系统按游玩行动、玩家/世界建模、设计、构建维护、运行时生成适配、测试评估六类组织。论文梳理跨角色复用路径，也指出控制接口、规则、状态表示和玩家语境高度依赖具体游戏，迁移能力需在目标场景重新验证。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.14005" target="_blank">StepAudio 3 Realtime Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="88 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>88</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Bin Lin, Zixuan Wang</div>
+            <div class="note-meta-line">Affiliation: StepFun</div>
+        </div>
+        <div class="note-tldr">发布 StepAudio 3 Realtime，把语音交互组织为 listen-converse-think-act 循环。模型用 Deep Perception、Seamless Duplex 和 Think-While-Speaking 在实时说话中并行私有推理，并集成异步 Voice Agent；在 MMSU、全双工和语音工具任务上报告强结果。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.06107" target="_blank">DataFlex-RL: An Evaluation Platform for RLVR Data Policies</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="84 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>84</span></span>
         </div>
@@ -459,6 +492,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: Vera Praxis Lab</div>
         </div>
         <div class="note-tldr">展示七人独立团队如何以数据为中心训练开放权重 cyber agent：构建可执行环境、验证轨迹并进行长上下文 SFT。三个检查点在 CyberGym 和 CTF 套件上明显提升，其中 Feyospace-s1 在官方榜单达到第 10。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.16034" target="_blank">StepAudio 3 Music Technical Report</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Chengli Feng, Chao Yan</div>
+            <div class="note-meta-line">Affiliation: StepFun</div>
+        </div>
+        <div class="note-tldr">介绍 StepAudio 3 Music，一个长篇音乐生成系统：用 50Hz 单码本 tokenizer 表示音乐，MoE 自回归模型先生成 ABC-CoT 结构化编曲计划，再由 flow-matching DiT 和 VAE 渲染 48kHz 音频。模型支持歌曲、伴奏和 cover 生成，并在多项音乐质量评测中领先或接近头部系统。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -493,7 +537,7 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">介绍面向科研与工程工作流的 agentic 模型 Atria Dawn Preview，通过 Verifiable Experience Pipeline 连接工具交互、可执行环境和外部验证结果；在 16 个基准上具备前沿竞争力，并用 769 条任务记录分析人类与智能体在 AI 研发中的分工变化。</div>
     </div>
-    <div class="footer">Last updated: 2026-09-16 23:00</div>
+    <div class="footer">Last updated: 2026-09-17 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
