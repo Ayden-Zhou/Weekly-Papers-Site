@@ -484,6 +484,17 @@ h1 .archive-link:hover {
     </div>
     <div class="note-card">
         <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.17488" target="_blank">LimiX-2: A Contextual Mechanism Network Towards General Structured-Data Intelligence</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="83 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>83</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Xingxuan Zhang, Peng Cui</div>
+            <div class="note-meta-line">Affiliation: Stable AI, Tsinghua University</div>
+        </div>
+        <div class="note-tldr">发布面向通用结构化数据智能的 LimiX-2，采用 Contextual Mechanism Networks 与 Context-Conditional Masked Modeling，从传统目标条件预测转向学习上下文相关的联合生成机制。模型在由结构因果模型生成的合成数据上预训练，在 TabArena、TALENT、BCCO 上超过现有专用模型和表格基础模型，并通过特征注意力恢复因果骨架。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
             <div class="note-title"><a href="https://arxiv.org/abs/2609.08418" target="_blank">Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models</a></div>
             <span class="note-upvotes" title="Hugging Face upvotes" aria-label="74 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>74</span></span>
         </div>
@@ -503,6 +514,17 @@ h1 .archive-link:hover {
             <div class="note-meta-line">Affiliation: StepFun</div>
         </div>
         <div class="note-tldr">介绍 StepAudio 3 Music，一个长篇音乐生成系统：用 50Hz 单码本 tokenizer 表示音乐，MoE 自回归模型先生成 ABC-CoT 结构化编曲计划，再由 flow-matching DiT 和 VAE 渲染 48kHz 音频。模型支持歌曲、伴奏和 cover 生成，并在多项音乐质量评测中领先或接近头部系统。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.19134" target="_blank">ScienceIDE: Turning World&#x27;s Scientific Codebase into Agent Learnable Environments</a></div>
+            <span class="note-upvotes" title="Hugging Face upvotes" aria-label="68 Hugging Face upvotes"><span class="note-upvotes-arrow" aria-hidden="true">↑</span><span>68</span></span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Hejia Geng, Ling Yang</div>
+            <div class="note-meta-line">Affiliation: AItonomy Foundation, University of Oxford</div>
+        </div>
+        <div class="note-tldr">提出 ScienceIDE，将科学代码仓库转化为可执行、可验证的 agent 学习环境，以缓解科学经验难以沉淀为训练信号的问题。系统用专家定义的科学案例和验收标准构建任务、环境与验证轨迹，支持 SFT、强化学习和评测；基于这些轨迹训练的 PhAI-IDE 系列在科学代码修复及部分通用代码、推理和知识基准上获得提升。</div>
     </div>
     <div class="note-card">
         <div class="note-heading">
@@ -537,8 +559,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">介绍面向科研与工程工作流的 agentic 模型 Atria Dawn Preview，通过 Verifiable Experience Pipeline 连接工具交互、可执行环境和外部验证结果；在 16 个基准上具备前沿竞争力，并用 769 条任务记录分析人类与智能体在 AI 研发中的分工变化。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.19138" target="_blank">In-Context Robot Learning with VLM Agents</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Dongzhou Cheng, Tong Wu</div>
+            <div class="note-meta-line">Affiliation: Morphi Robot, Shanghai Innovation Institute</div>
+        </div>
+        <div class="note-tldr">提出 GPT-Policy，让通用 VLM agent 在不更新参数的情况下利用人类视频、机器人轨迹、目标图像、交互反馈和历史经验生成可验证机器人动作。框架结合上下文编译、VLM 动作建议与受约束控制器，真实机器人实验显示视频示范和对齐动作参考能提升任务完成率，展示了机器人部署期 in-context learning 的潜力与局限。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-09-17 23:00</div>
+    <div class="footer">Last updated: 2026-09-18 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
