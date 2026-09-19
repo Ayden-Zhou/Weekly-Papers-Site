@@ -570,8 +570,30 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">提出 GPT-Policy，让通用 VLM agent 在不更新参数的情况下利用人类视频、机器人轨迹、目标图像、交互反馈和历史经验生成可验证机器人动作。框架结合上下文编译、VLM 动作建议与受约束控制器，真实机器人实验显示视频示范和对齐动作参考能提升任务完成率，展示了机器人部署期 in-context learning 的潜力与局限。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.18207" target="_blank">Reinforcement Learning for Real-Time Vision-Language-Action Policies</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Perry Dong</div>
+            <div class="note-meta-line">Affiliation: Stanford University</div>
+        </div>
+        <div class="note-tldr">面向推理延迟导致观测过期的实时机器人控制，提出 Real-Time EXPO-FT：让大 VLA 生成动作块，小型编辑策略基于最新观测快速修正。方法在 Kinetix 10/10 环境最优，并在4个真实动态任务中用10分钟在线数据把平均成功率从42%提到97%。</div>
+    </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.20807" target="_blank">Score Centering Stabilizes Off-policy Reinforcement Learning</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: Martin Marek, Max Ryabinin</div>
+            <div class="note-meta-line">Affiliation: Together AI</div>
+        </div>
+        <div class="note-tldr">研究 LLM 强化学习中训练/推理引擎不一致造成的不稳定，指出关键是随训练累积的 drift。提出加性 score centering 修正来抵消偏差，在0.6B到30B模型、量化和 stale rollout 设置下匹配或优于 importance sampling，并可与其组合。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-09-18 23:00</div>
+    <div class="footer">Last updated: 2026-09-19 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
