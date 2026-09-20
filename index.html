@@ -592,8 +592,19 @@ h1 .archive-link:hover {
         </div>
         <div class="note-tldr">研究 LLM 强化学习中训练/推理引擎不一致造成的不稳定，指出关键是随训练累积的 drift。提出加性 score centering 修正来抵消偏差，在0.6B到30B模型、量化和 stale rollout 设置下匹配或优于 importance sampling，并可与其组合。</div>
     </div>
+    <div class="note-card">
+        <div class="note-heading">
+            <div class="note-title"><a href="https://arxiv.org/abs/2609.19969" target="_blank">DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression</a></div>
+            <span class="note-source" title="Source: AlphaXiv" aria-label="Source: AlphaXiv">AlphaXiv</span>
+        </div>
+        <div class="note-meta">
+            <div class="note-meta-line">Authors: DeepSeek-AI, Ziyi Wan</div>
+            <div class="note-meta-line">Affiliation: DeepSeek-AI</div>
+        </div>
+        <div class="note-tldr">面向长程代理的输入密集型负载，提出552B MoE多模态模型DeepSeek-V4.1-Flash：用CED降低prefill激活量，并以CSA2跨层KV复用、FP4 KV缓存和SWA Bounded Replay压缩缓存；全局KV降至890B/token，约为V4-Flash的1/4，持久缓存约为1/8，同时性能优于基线。</div>
+    </div>
 
-    <div class="footer">Last updated: 2026-09-19 23:00</div>
+    <div class="footer">Last updated: 2026-09-20 23:00</div>
     <script>
 async function copyLinks(btn) {
     const links = Array.from(document.querySelectorAll('.paper-list a')).map(a => a.href).join('\n');
